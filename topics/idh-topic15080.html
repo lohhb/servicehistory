@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0318-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15080;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0318-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15070.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15090.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS7KW-08 due to hang-up problem</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W (S/N: 121401, NS7KW-08)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N:01-25413)</span></p>
+<p class="ps3"><span class="ts0">Date: 28 Aug 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">Quick Pause DAEMON 03 failed. (Error: 7101) - encountered quick pause daemon error(G-7101) during auto run</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2 Sep 2011:</span></p>
+<p class="ps3"><span class="ts0">Encountered for Input Arm Error 2031 The subscription of Array Variable is out of the user-defined range.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="420" height="332" border="0" src="images/0318-ns7kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">12 Sep 2011 </span><span class="ts15">NS08 encountered several time of SRC error (output arm). </span></p>
+<p class="ps2"><img width="437" height="207" border="0" src="images/0318-ns7kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">-Execute xilinx.reg to apply patch. </span><br /><span class="ts0">-Restart handler. </span><br /><span class="ts0">-Heat up to 105 deg dry cycle run. </span><br /><span class="ts0">-Dummy run with units (CS324 15x15 hot) with automat slot 1,3 and 10. </span><br /><span class="ts0">SR: 013171</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts14">Type: NS-7000</span></p>
+<p class="ps3"><span class="ts14">Customer: Xilinx</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts14">The detail of question:</span></p>
+<p class="ps3"><span class="ts14">What is different TAG_TRY variable over flow =0 and TAG_TRY variable overflow=100</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts14">=0</span></p>
+<p class="ps3"><span class="ts14">To appear the error</span></p>
+<p class="ps3"><span class="ts14">When BIN assign is changed </span></p>
+<p class="ps3"><span class="ts14">It is affected the handler is picking up device by hand.</span></p>
+<p class="ps3"><span class="ts14">There is no released position.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts14">=100</span></p>
+<p class="ps3"><span class="ts14">To appear the error</span></p>
+<p class="ps3"><span class="ts14">When BIN assign is changed </span></p>
+<p class="ps3"><span class="ts14">It is affected the handler is picking up device by hand.</span></p>
+<p class="ps3"><span class="ts14">There is no released position to FIX tray and it is selected &quot;link&quot;.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

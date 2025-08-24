@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0317-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15760;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0317-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15750.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15770.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: ASE NS-8080 temperature offset issue</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 22, 23 Mar, 14 Apr 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps4"><span class="ts6">ASE setup up the Infineon device which reads&nbsp; the die temperature. ASE feedback during the meeting, the temperature offsets needed is to be a large a value (20-55C) on the chamber, socket, jet heater and still the temp read is around 103-115C. </span></p>
+<p class="ps6"><span class="ts6">Test temperature&nbsp; is 125C. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">22 Mar 2011NS-8080 LQFP176 125DegC Octal site evaluation.Octal changkit contactors, socket guide plate and loadboard checking.Hidaka-san to feedback findings to SEC.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">23 Mar 2011</span></p>
+<p class="ps3"><span class="ts1">EPSON request for manifold on octal site loadboard to be removed but impossible because it was locked to loadboard.</span><span class="ts0">Ambient mode trigger Socket Air 1 &amp; 2, found air leak around socket guide jig. Rework by ASE to prevent air leak.Upgrade HMI to Ver 3.6 found improvement on die core temperature.Downgrade back to HMI P10.14-SAS but encountered error.Uninstalled HMI and removed NS8000 folders.Re-install HMI P10.14-SAS and restore backup, ok.Hidaka to feedback information collected to SEC and wait for improvements.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Email from Meno &amp; Hidaka-san:</span></p>
+<p class="ps4"><span class="ts5">From my observation seems like the NS8080 chamber there are a lot of openings. I just need to understand on the following:</span></p>
+<p class="ps6"><span class="ts5">1. Is it possible for cooler air to go in the chamber coming from the ionizer fans at the input and output shuttle areas?</span></p>
+<p class="ps6"><span class="ts13">-&gt; No, in chamber keep the temperature even if ionizer fans at the input and output shuttle area.</span></p>
+<p class="ps6"><span class="ts5">2. Would there be an issue if we install a plate on the edge of the Input shuttle to cover the opening of the chamber?</span></p>
+<p class="ps6"><span class="ts13">-&gt; It do not affect the temperature accuracy in chamber.</span></p>
+<p class="ps6"><span class="ts13">When we have developed the handler, it was evaluated.</span></p>
+<p class="ps6"><span class="ts5">3. Why on the output shuttle have a plate but not high enough to cover the exit?</span></p>
+<p class="ps6"><span class="ts13">-&gt; it is same as No.2 It do not need. </span></p>
+<p class="ps6"><span class="ts5">4. Is it feasible to install an accordion fold cover on the chamber roof where the index arm y moves?</span></p>
+<p class="ps6"><span class="ts13">-&gt; It is not affected temperature accuracy around socket area.</span></p>
+<p class="ps6"><span class="ts5">5. Can covering these areas help to lower down the temp offset as not to make the heater work harder or have a more uniform </span></p>
+<p class="ps6"><span class="ts5">chamber temperature?</span></p>
+<p class="ps6"><span class="ts13">-&gt; </span><span class="ts106">It is not affected temperature accuracy around socket area.</span></p>
+<p class="ps6"><span class="ts5">Do you also have updates on the improvement proposal? Thanks!</span></p>
+<p class="ps6"><span class="ts13">-&gt; We will offer to you soon.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;</span></p>
+<div class="block0" align="left">
+  <table class="tbl42">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Input Shuttle entry (viewpoint from inside the chamber):</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Output Shuttle (viewpoint from inside the chamber):</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Chamber roof (index arm opening)</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps5"><img width="349" height="261" border="0" src="images/0317-ns8kb1.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><img width="370" height="277" border="0" src="images/0317-ns8kb2.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><img width="293" height="399" border="0" src="images/0317-ns8kb3.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">14 Apr 2011</span></p>
+<p class="ps3"><span class="ts0">Received 175ºC parts from Epson.</span></p>
+<p class="ps131"><span class="ts14">&ndash;&nbsp;&nbsp; &nbsp;&nbsp;</span><span class="ts0">De-installed existing jet heater and air flow meter.</span></p>
+<p class="ps131"><span class="ts14">&ndash;&nbsp;&nbsp; &nbsp;&nbsp;</span><span class="ts0">Installed jet heater and air flow meter from Epson.</span></p>
+<p class="ps131"><span class="ts14">&ndash;&nbsp;&nbsp; &nbsp;&nbsp;</span><span class="ts0">Found out heater connector type for Air 1 and 2 different from existing. Replaced correct connectors.</span></p>
+<p class="ps131"><span class="ts14">&ndash;&nbsp;&nbsp; &nbsp;&nbsp;</span><span class="ts0">Heat up to 125ºC with setting of 30KPa on air flow meter. Found out socket air 1 and 2 unable to heat up properly.</span></p>
+<p class="ps131"><span class="ts0">&ndash;&nbsp;&nbsp; &nbsp;Performed heater auto tuning using omron utility program. Input SP 90ºC, PV of socket air 1 and 2 unable to heat up to 90ºC properly with great fluctuation. If set SP to 70ºC OK. </span></p>
+<p class="ps3"><span class="ts0">-Tried adjusting flow switches air flow from 30~50l/min, remove temperature offset, set to 175 deg PID values, same.</span></p>
+<p class="ps131"><span class="ts14">&ndash;&nbsp;&nbsp; &nbsp;&nbsp;</span><span class="ts0">Feedback situation to Hidaka, awaiting for Epson solution.</span></p>
+<p class="ps131"><span class="ts0">&ndash;&nbsp;&nbsp; &nbsp;TBC.</span><br /><span class="ts0">15 Apr 2011</span></p>
+<p class="ps3"><span class="ts1">-Remove socket plate and auto tuning individual air heater&ndash; not ok.</span></p>
+<p class="ps3"><span class="ts1">-Checked air flow of socket air 1 and 2 ok.</span></p>
+<p class="ps3"><span class="ts1">-Changed back original pt sensor of socket air heater 1 &ndash; not ok.</span></p>
+<p class="ps3"><span class="ts1">-Found socket air 1 TC X241 connector red/white wires different configuration as original socket air heater. Same for socket air 2 TC X242.</span></p>
+<p class="ps3"><span class="ts1">-Swapped back to original socket air 1 and 2 heater, revert original PID values and heat up ok. Only different now is the 2pcs flow switches.</span></p>
+<p class="ps3"><span class="ts1">Both set of heater set(H01-NS88 and 175 deg) are same spec(200v 440W).</span></p>
+<p class="ps3"><span class="ts1">-Awaiting ASE to schedule temp eval when tester available.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

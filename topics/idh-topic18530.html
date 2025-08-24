@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0451-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18530;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0451-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18520.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18540.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 Rotator stages installation</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N: 182238)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520&nbsp; HMI P11.510SAS</span></p>
+<p class="ps3"><span class="ts0">Date: 4~6 Nov 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">ASE NS-8080 onsite rotator stages installation.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Background: 4~6 Nov Daryl followed rotator stages installation procedures given by Ogata.</span></p>
+<p class="ps3"><span class="ts0">This rotation stages are old one that was removed from previous loan NS-8080 at Xilinx.</span></p>
+<p class="ps3"><span class="ts0">Handler HOME correctly after pressed HOME.</span></p>
+<p class="ps3"><span class="ts0">But found out that even after finished teaching the mcal position using AutoTeach for Rotator, the rotator during running will rotate 270deg even setting to CW or CCW during running. </span></p>
+<p class="ps3"><span class="ts0">Additional information was installed the rotator hardware, electrical wiring and enable &ldquo;exist&rdquo; for rotator option in HMI config(by re-install HMI CD) </span></p>
+<p class="ps199"><span class="ts0">The handler still unable to recognize rotator and prompt &ldquo;Uni-wire disconnection error&rdquo; during handler homing. </span></p>
+<p class="ps199"><span class="ts0">It was found out&nbsp; that need to check(tick) both robot 9 and 10 in SPEL robot manipulator.</span></p>
+<p class="ps3"><span class="ts0">At another NS-8080 S/N: 182241 that was factory installed with rotator stages, </span></p>
+<p class="ps3"><span class="ts0">- select Robot 9</span></p>
+<p class="ps3"><span class="ts0">- execute Go P*+x(20)</span></p>
+<p class="ps3"><span class="ts0">- input rotator turn CW about 10 Deg</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">At NS-8080 S/N: 182238</span></p>
+<p class="ps3"><span class="ts0">- select Robot 9</span></p>
+<p class="ps3"><span class="ts0">- execute Go P*+x(20)</span></p>
+<p class="ps3"><span class="ts0">- input rotator turn CW about 90 Deg, this rotation amount was much more as compared to the other handler</span></p>
+<p class="ps3"><span class="ts0">- suspect PG parameters for Robot 9&amp;10 for rotator has problem/incompatiable</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Copied CurrentMnp09.PRM, CurrentMnp10.PRM, MCSys09.MCD, MCSys10.MCD from 182241 to 182238 PSPELWORK folder, NG</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Copied&nbsp; Mnp09.OPT, Mnp09.OPT </span></p>
+<p class="ps3"><span class="ts0">from another NS-8080 into the Backup SPEL SYSTEM folder of NS-8080 S/N: 182241 and using SPEL to do SYSTEM Restore back to 182238.</span></p>
+<p class="ps3"><span class="ts0">Rotators able to rotates correctly.</span></p>
+<p class="ps2"><img width="347" height="315" border="0" src="images/0451-ns8kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="382" height="458" border="0" src="images/0451-ns8kb2.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Handler Input &amp; Output Hand Height calibration was carried out.</span></p>
+<p class="ps3"><span class="ts0">Ambient jamrate 1/5000 was carried out, ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps197"><span class="ts0">HMI Manipulator Configuration was not updated, so it did not update to SPEL.</span></p>
+<p class="ps197"><span class="ts0">Copied&nbsp; Mnp09.OPT, Mnp09.OPT from another NS-8080 into the Backup SPEL SYSTEM folder of NS-8080 S/N: 182241 and using SPEL to do SYSTEM Restore back to 182238.</span></p>
+<p class="ps197"><span class="ts0">Rotators able to rotates correctly.</span></p>
+<p class="ps197"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps197"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps197"><span class="ts0">Advice by Ogata-san by email on 11 Dec 2012:</span></p>
+<p class="ps197"><span class="ts0">1. Install HMI, at the &ldquo;Handler Configuration&rdquo; Windows.</span></p>
+<p class="ps137"><span class="ts0">2. Select Rotator Stage Exists</span></p>
+<p class="ps137"><span class="ts0">3. Click [Manipulator Configuration] then press Update.</span></p>
+<p class="ps3"><span class="ts0">4. Click [Generate] and close &ldquo;Handler Configuration&rdquo;&nbsp; window.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

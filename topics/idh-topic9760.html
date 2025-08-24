@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0143-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 9760;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0143-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic9750.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic9770.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps133"><span class="ts23">Subject: Xilinx NS-7080W Shuttle thermal expansion </span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 12 Mar 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps165"><span class="ts23">10 Mar 2009 </span><span class="ts60">Floating Device on Unloading Tray Report</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Customer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xilinx Asia Pacific Pte. Ltd. (XAP)</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Problem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Floating device on Unloading Tray</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Handler:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NS7080W </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Action Plan:&nbsp;&nbsp;&nbsp;&nbsp;Select the newest handler as a &ldquo;Golden Handler&rdquo; (GH) with 4 packages </span></p>
+<p class="ps166"><span class="ts6">selected from XAP process team to be fine tuned by GETECH Systems </span></p>
+<p class="ps166"><span class="ts6">Solution.</span></p>
+<p class="ps166"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">S/N:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;121298</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">4 Packages:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FT256 17x17 @ 100 degrees with CW/CCW rotation</span></p>
+<p class="ps2"><span class="ts6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FG400 21x21 @ 100 degrees with CW/CCW rotation</span></p>
+<p class="ps2"><span class="ts6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FG320 19x19 @ 100 degrees with CW/CCW rotation</span></p>
+<p class="ps2"><span class="ts6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CP132 8x8 @ 100 degrees with CW/CCW rotation</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Duration:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24</span><sup><span class="ts6">th</span></sup><span class="ts6">&nbsp;February 2009 - 5</span><sup><span class="ts6">th</span></sup><span class="ts6">&nbsp;March 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Findings w.r.t device floating issues as follows:</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps159"><span class="ts6">1)&nbsp; &nbsp;Thermal Expansion: - This causes overall floating on unloading trays.</span></p>
+<p class="ps159"><span class="ts6">2)&nbsp; &nbsp;Fix Tray: - Tray clamp design allows slight play of top right or bottom right alignment from handler rear. But it should be bottom right. In the event operator place tray top right, device will float.</span></p>
+<p class="ps159"><span class="ts6">3)&nbsp; &nbsp;Position drift: - Substantial drift on Y direction but X direction drift is quite bad on CP132 8x8. </span></p>
+<p class="ps159"><span class="ts6">4)&nbsp; &nbsp;Shuttle vibration: - This cause irregular pick up. Not centering causing floating during placement.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Please refer to next page for detail information on each finding.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts61">Item 1: - Thermal expansion</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps159"><span class="ts6">1)&nbsp; &nbsp;Heater &ldquo;ON&rdquo;. With XAP initial wait of only 60seconds.</span></p>
+<p class="ps159"><span class="ts6">2)&nbsp; &nbsp;When device pick up, can see pick up not center in x-direction.</span></p>
+<p class="ps159"><span class="ts6">3)&nbsp; &nbsp;When place on unloader tray, device floating in y-direction.</span></p>
+<p class="ps159"><span class="ts6">4)&nbsp; &nbsp;Offset of x on shuttle pick up is -0.1mm.</span></p>
+<p class="ps159"><span class="ts6">5)&nbsp; &nbsp;After this tray running complete, found about 20 devices floating on Auto Unloader 1.</span></p>
+<p class="ps159"><span class="ts6">6)&nbsp; &nbsp;After this tray complete, allow 600seconds waiting time (actually 600seconds + 1</span><sup><span class="ts6">st</span></sup><span class="ts6">&nbsp;tray complete running is about 1800seconds total waiting).</span></p>
+<p class="ps159"><span class="ts6">7)&nbsp; &nbsp;New offset of x -0.6mm, after 1800seconds, device pick up center and placement is &ldquo;Good&rdquo; on Auto Unloader 1. No floating of 1 full tray (360 devices).</span></p>
+<p class="ps159"><span class="ts6">8)&nbsp; &nbsp;Initial wait time with shuttle in &ldquo;HOME&rdquo; position for thermal expansion.</span></p>
+<p class="ps159"><span class="ts6">9)&nbsp; &nbsp;Conclusion is XAP need to increase initial wait from 60seconds to 1800seconds followed by normal alignment offset. Need to wait for thermal expansion stability before doing alignment offset.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts61">Item 2: - Fix Tray</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps159"><span class="ts6">1)&nbsp; &nbsp;Fix Tray has fixed guide pins for empty tray to be bottom right alignment.</span></p>
+<p class="ps159"><span class="ts6">2)&nbsp; &nbsp;Possibility of operator to insert empty tray top right alignment.</span></p>
+<p class="ps159"><span class="ts6">3)&nbsp; &nbsp;This case, device will float.</span></p>
+<p class="ps159"><span class="ts6">4)&nbsp; &nbsp;Conclusion is need to highlight this human error possibility.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts61">Item 3: - Position Drift</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps159"><span class="ts6">1)&nbsp; &nbsp;This is a known problem of NS7000 capability to handle small packages as encountered in UTAC before.</span></p>
+<p class="ps159"><span class="ts6">2)&nbsp; &nbsp;Both x and y direction, can been seen position drift between first row and last row.</span></p>
+<p class="ps159"><span class="ts6">3)&nbsp; &nbsp;Substantial / marginal float in y direction.</span></p>
+<p class="ps159"><span class="ts6">4)&nbsp; &nbsp;Position drift however, is not acceptable x direction on automat and fix tray.</span></p>
+<p class="ps159"><span class="ts6">5)&nbsp; &nbsp;First row placement is ok. Last row placement, can be seen x direction more positive.</span></p>
+<p class="ps159"><span class="ts6">6)&nbsp; &nbsp;Fix Tray Org and X-way point data, x-point reduced 0.4mm.</span></p>
+<p class="ps159"><span class="ts6">7)&nbsp; &nbsp;Automat Org and X-way point data, x-point reduced 0.4mm.</span></p>
+<p class="ps159"><span class="ts6">8)&nbsp; &nbsp;This drift is causing placement drift especially in CP132 8x8 package.</span></p>
+<p class="ps159"><span class="ts6">9)&nbsp; &nbsp;This is possibly because device is smaller and more tray matrix as compared to FT256, FG400 and FG320. </span></p>
+<p class="ps159"><span class="ts6">10) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Running check conduction and able to achieve 1 full tray no device floating on Fix tray and Automat.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts61">Item 4: - Shuttle Vibration</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps159"><span class="ts6">1)&nbsp; &nbsp;Slight shuttle vibration causing pick up not center.</span></p>
+<p class="ps159"><span class="ts6">2)&nbsp; &nbsp;Vibration is more especially when Input/Output arm moving at speed and accel 100%.</span></p>
+<p class="ps159"><span class="ts6">3)&nbsp; &nbsp;When contactor arm pick from input side, also cause the vibration.</span></p>
+<p class="ps159"><span class="ts6">4)&nbsp; &nbsp;With handler legs fully locked, able to reduce vibration.</span></p>
+<p class="ps159"><span class="ts6">5)&nbsp; &nbsp;Conclusion is all handler legs must be lowered and tightened. As the test time generally for XAP product is long, to use &ldquo;Auto Speed Down&rdquo; option.</span></p>
+<p class="ps159"><span class="ts6">6)&nbsp; &nbsp;For shuttle vibration, it seems it is happening to XAP handlers. Few handlers, shuttle motor gain settings changed to reduce vibration. Please check with Ogata-san for this issue. </span></p>
+<p class="ps3"><span class="ts0">Just a few things to note:</span></p>
+<p class="ps3"><span class="ts0">1) Initial Wait Time for these 4 packaged has been changed from 60seconds -&gt; 1800seconds.</span></p>
+<p class="ps3"><span class="ts0">2) Anything to be done ONLY after 1800seconds upon switching from AMBIENT -&gt;HOT.</span></p>
+<p class="ps3"><span class="ts0">3) During this initial wait time, please ensure handler in &quot;HOME&quot; condition. This is to ensure the output shuttles are in chamber.</span></p>
+<p class="ps3"><span class="ts0">4) Please note to operators/technician that for Fix Tray, the tray alignment is bottm right from the handler rear. If aligned top right, there will be device floating.</span></p>
+<p class="ps3"><span class="ts0">5) Please note to operator loading of empty tray into Automat is also critical. Slight tilt of tray in automat may cause device floating too especially for CP132.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps131"><span class="ts0">To verify thermal expansion with dial gauge.</span></p>
+<p class="ps130"><span class="ts0">Temperature @ 130 degrees and interval of 10 mins for data collection.</span></p>
+<p class="ps130"><span class="ts0">Output shuttle not in chamber.</span></p>
+<p class="ps130"><span class="ts0">Total 6 hours for data collection and found only -0.044mm expansion on shuttle.</span></p>
+<p class="ps130"><span class="ts0">Output shuttle itself is only @ 50 degrees.</span></p>
+<p class="ps130"><span class="ts0">To use EPSON method of shuttle teaching jig in chamber to verify again.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

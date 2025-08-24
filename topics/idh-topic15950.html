@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0096-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15950;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0096-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15940.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15960.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps13"><span class="ts26">Subject:</span><span class="ts42">&nbsp;</span><span class="ts43">SEP NS-6040 HDD Recovery</span></p>
+<p class="ps3"><span class="ts0">Handler Model: </span><span class="ts1">NS-6040 S/N: 15678 (NS6040-2)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520 (S/N: 02087)</span></p>
+<p class="ps3"><span class="ts0">Date: 4~6 Jan 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">SEP NS-6040 HDD Recovery.</span></p>
+<p class="ps3"><span class="ts1">Mfg: Aug 2002</span></p>
+<p class="ps3"><span class="ts0">2.5&quot; Fujitsu 20GB HDD</span></p>
+<p class="ps3"><span class="ts0">Win95(J)</span></p>
+<p class="ps3"><span class="ts0">SPEL95(J) 2.53i</span></p>
+<p class="ps3"><span class="ts0">MMI 1.4a-JPN</span></p>
+<p class="ps3"><span class="ts0">Pentium MMX 200MHz</span></p>
+<p class="ps3"><span class="ts0">SRC520CE S/N: 02087 (MT355, CU-M313)</span></p>
+<p class="ps3"><span class="ts0">DU 1 S/N: 02947,&nbsp; &nbsp;&nbsp; DU2 S/N: 02948,&nbsp; &nbsp;&nbsp; DU3 S/N: 02949</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">4 Jan 2012</span></p>
+<p class="ps3"><span class="ts1">HDD Recovery for English Win95, SPEL95 Ver 2.53i &amp; MMI Ver 2.0c1</span></p>
+<p class="ps130"><span class="ts1">Restore SPEL Pos &amp; System and setup files provided by customer.</span></p>
+<p class="ps130"><span class="ts0">Calibration of all robot axes(robot 1~6) by MCORG in SPEL95(E).</span></p>
+<p class="ps130"><span class="ts0">Encountered handler dry run with IFUNT100 error due to unable to open QAsample.def.</span></p>
+<p class="ps130"><span class="ts0">Also encountered runtime error #75.</span></p>
+<p class="ps130"><span class="ts0">It could be that backup files in japanese unable to restore to working condition in the english MMI &amp; SPEL.</span></p>
+<p class="ps130"><span class="ts0">HDD Recovery to Japanese language from another NS-6040.</span></p>
+<p class="ps130"><span class="ts0">Restore SPEL Pos &amp; System files from another backup.</span></p>
+<p class="ps130"><span class="ts0">Calibration of all robot axes(robot 1~6) by MCORG in SPEL95(J).</span></p>
+<p class="ps130"><span class="ts0">Dry run handler, found pick and place position out.</span></p>
+<p class="ps130"><span class="ts0">In SPEL teach position(pos) data for Index Arm(Robot 1), Shuttle 1 (Robot 5)&nbsp;&nbsp; &amp; Shuttle 2 (Robot 6).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">5 Jan 2012</span></p>
+<p class="ps3"><span class="ts1">Empty Tray Arm(robot 4) unable to pick up empty tray as Empty Tray Arm not at centre of tray.</span><span class="ts3">Some trays, due to design of the tray, the tray pickup area for vacuum suction may not be at the centre of tray.In [Tray form], usually, &quot;Pick Up Position&quot; is 67.90mm.So may need to change this&nbsp; &quot;Pick Up Position&quot; value if the Empty Tray pad cannot pick up at tray's centre.</span></p>
+<p class="ps130"><span class="ts1">Teach SPEL position(pos) for Empty Tray Arm(robot 4)</span></p>
+<p class="ps130"><span class="ts0">Running check with dummy devices, found Input Arm, Shuttles &amp; Output pick &amp; place position out</span></p>
+<p class="ps130"><span class="ts0">Encountered Index Arm unable to pick device during AutoContact Height.</span></p>
+<p class="ps130"><span class="ts0">Reteach Index Arm Z &amp; U height (about -101mm)</span></p>
+<p class="ps130"><span class="ts0">Index Arm AutoContact Height, able to pickup devices.</span></p>
+<p class="ps130"><span class="ts0">Running check with dummy devices, found all pick &amp; place positions out by at least 3mm when MMI offset is 0.</span></p>
+<p class="ps130"><span class="ts0">Suspect SPEL robots position(pos) data in backup are wrong.</span></p>
+<p class="ps130"><span class="ts0">During running, after release devices to Output Shuttles, devices fly off to outside of shuttle&rsquo;s pocket.</span></p>
+<p class="ps130"><span class="ts0">Adjustment of Index purge air volume.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">6 Jan 2012</span></p>
+<p class="ps3"><span class="ts1">Use NS-6000 teaching jig to teach SPEL positions(pos) data for:</span></p>
+<p class="ps130"><span class="ts1">- Input Arm(robot 2)</span></p>
+<p class="ps130"><span class="ts0">- Output Arm(robot 3)</span></p>
+<p class="ps130"><span class="ts0">Use setup file VFB10-144-02-02.</span></p>
+<p class="ps130"><span class="ts0">Index Arm AutoContact Height, able to pickup devices.</span></p>
+<p class="ps130"><span class="ts0">Run dummy device found pickup from loader drift.</span></p>
+<p class="ps130"><span class="ts0">Check Tray Matrix in MMI, found it does not match with current tray.</span></p>
+<p class="ps130"><span class="ts0">Key in new Tray Matrix.</span></p>
+<p class="ps130"><span class="ts0">Running check with dummy devices, pick and place offset alignment in MMI.</span></p>
+<p class="ps130"><span class="ts0">During running, after release devices to Output Shuttles, devices fly off to outside of shuttle&rsquo;s pocket.</span></p>
+<p class="ps130"><span class="ts0">Adjustment of Index Counter-Air on time to 0.5sec and adjustment of Index purge air volume.</span></p>
+<p class="ps130"><span class="ts0">Reload IFUNT100 driver using Loader.exe.</span></p>
+<p class="ps130"><span class="ts0">Release handler to customer.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">12 Jan 2012, </span><span class="ts1">after setup package 1-QFP05-100-3-2-01. &ndash; Output Arm error code T- 4001 </span><span class="ts0">&quot;The Arm reached the limit of motion range&quot;</span><span class="ts1">&nbsp;during cycling and running mode.</span></p>
+<p class="ps3"><span class="ts1">Usually, after HDD Recovery if Input or Output Hands encountered error 4001 </span><span class="ts0">&quot;The Arm reached the limit of motion range&quot;, it is advisable to make sure that Input or Output Arm Z &amp; U in mnp02.pos or mnp03.pos are not zero,</span><span class="ts1">&nbsp;usually Z &amp; U are -20 to -25mm.</span></p>
+<p class="ps3"><span class="ts1">Use GenPos in SPEL to teach the Z &amp; U height for Input Hands height teaching with jig place on Input Shuttle and for Output Hands height teaching with jig place on Output Shuttle.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">For Robot 2 Input Arm, make sure Z &amp; U are not zero, around -20 to -25mm for the following points:</span></p>
+<p class="ps3"><span class="ts1">P50&nbsp; ' Load Tray</span></p>
+<p class="ps3"><span class="ts1">P51&nbsp; 'Input Shuttle1</span></p>
+<p class="ps3"><span class="ts1">P52&nbsp; 'Input Shuttle2</span></p>
+<p class="ps3"><span class="ts1">P53&nbsp; 'HotPlate1</span></p>
+<p class="ps3"><span class="ts1">P54&nbsp; 'HotPlate2</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">For Robot 3 Output Arm, make sure Z &amp; U are not zero, around 20 to -25mm&nbsp; for the following points:</span></p>
+<p class="ps3"><span class="ts1">P81&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Auto1</span></p>
+<p class="ps3"><span class="ts1">P82&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Auto2</span></p>
+<p class="ps3"><span class="ts1">P83 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Auto3</span></p>
+<p class="ps3"><span class="ts1">P84 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Fix1</span></p>
+<p class="ps3"><span class="ts1">P85&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Fix2</span></p>
+<p class="ps3"><span class="ts1">P94 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Fix3</span></p>
+<p class="ps3"><span class="ts1">P95 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'AutoMat</span></p>
+<p class="ps3"><span class="ts1">P96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Fix4</span></p>
+<p class="ps3"><span class="ts1">P86 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Output Shuttle1</span></p>
+<p class="ps3"><span class="ts1">P87 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Output Shuttle2</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Refer </span><a href="idh-topic15960.html" class="hs0">0097-NS6K</a><span class="ts0">&nbsp;and </span><a href="idh-topic16020.html" class="hs0">0103-NS6K</a><span class="ts0">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts1">For flying device after release from Index Arm to Output Shuttle, check points:</span></p>
+<p class="ps127"><span class="ts1">1) Redo Auto Contact Height (after AutoContact Height increase the device release height by 0.5mm to 3mm)</span></p>
+<p class="ps127"><span class="ts1">2) Index Nest (worn out? such as chip off?) </span></p>
+<p class="ps127"><span class="ts1">3) O-ring worn out on plunger (harden? broken?) </span></p>
+<p class="ps127"><span class="ts1">4) Plunger in the contactor(dirty? plunger able to spring out?)</span></p>
+<p class="ps127"><span class="ts1">5) Spring in Contactor (is it dirty? in good condition?)</span></p>
+<p class="ps127"><span class="ts1">6) Rubber cup in Contactor (sticky? that stick device? harden? worn out?)</span></p>
+<p class="ps127"><span class="ts1">7) Index Counter Air On Time (increase or decrease?)</span></p>
+<p class="ps127"><span class="ts1">8) For 1x2 or inline4, Output Shuttle Device Detection sensor(horizontal) alignment &amp; working condition</span></p>
+<p class="ps3"><span class="ts1">9) Index Counter Air (purge air) volume eg. is it too strong or weak</span></p>
+</body>
+</html>

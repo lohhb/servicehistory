@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0294-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14840;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0294-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14830.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14850.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-7000 Sensor Detection error at Output Shuttle 1</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7000 (UNISEM IPOH)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 21~25 Feb 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps130"><span class="ts1">NS-7000 Sensor Detection error at Output Shuttle 1.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps131"><span class="ts1">21 Feb 2011</span></p>
+<p class="ps131"><span class="ts1">Replace Shuttle board, check sensor wiring, check sensor alignment. </span></p>
+<p class="ps130"><span class="ts1">With side device sensor option checked, both shuttle 1&amp;2 unable to run.</span></p>
+<p class="ps130"><span class="ts1">Only possible to run without side sensor for shuttle 2.</span></p>
+<p class="ps3"><span class="ts1">Temporary disable shuttle 1.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">24 &amp; 25 Feb 2011</span></p>
+<p class="ps131"><span class="ts1">Side sensor not used, J0505 Detection sensor error on shuttle 1. </span></p>
+<p class="ps130"><span class="ts1">Side sensor used, J502 and J503 on both shuttles.</span></p>
+<p class="ps130"><span class="ts1">Based on side sensor not used, check timing sensor and top sensor alignment. OK</span></p>
+<p class="ps130"><span class="ts1">Checked 16CH Shuttle 2 Input I/O module for Gate Motion Sensor, OK.</span></p>
+<p class="ps130"><span class="ts1">Checked Shuttle board SKP-412 LED feedback and table on MMI error code. It seems, software and hardware is OK but rather the feedback to shuttle board is N.G.</span></p>
+<p class="ps130"><span class="ts1">Checked Shuttle board connection for Shuttle 1 and 2.</span></p>
+<p class="ps130"><span class="ts1">Found Shuttle 1 connector, swapped. (CNS1-SLT and CNS1-D1 connector)</span></p>
+<p class="ps130"><span class="ts1">Revert to correct connection. Checked timing sensor and gate sensor alignment, cycle run from initial start and continuous start mode, no more error.</span></p>
+<p class="ps130"><span class="ts1">Side sensor used however, J502 persists. Due to time constraint, handler to release in side sensor not used as agreed by customer as their change kit has through hole.</span></p>
+<p class="ps130"><span class="ts1">Cycle run 7x7 and 4x4, able to plug and play without further adjustment of timing and gate sensors.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps130"><span class="ts1">Wrong connection for Shuttle 1 connectors on Shuttle Board; Found Shuttle 1 connector, swapped. (CNS1-SLT and CNS1-D1 connector).</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

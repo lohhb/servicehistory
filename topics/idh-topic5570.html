@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>NS-8040 Double Devices Detection Sensor Adjustment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 5570;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">NS-8040 Double Devices Detection Sensor Adjustment</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="ns7000upgradefrom4sitesto8sites.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="vacuum-sensitivity-adjustment.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 Double Devices Detection Sensor Adjustment</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8020/NS-8040</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 12 May 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps4"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">The Double-device detection sensor is for NS8020/8040. </span></p>
+<p class="ps3"><span class="ts0">This sensor has two purposes:</span></p>
+<p class="ps3"><span class="ts0">1) for IC stack condition detection in socket (Double-device), </span></p>
+<p class="ps3"><span class="ts0">2) for Index arm height calibration (Contact height detection). </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Install Socket Guide Base jig and Contactors.</span></p>
+<p class="ps3"><span class="ts0">The sensor position has to be adjusted to contact height calibration position. </span></p>
+<p class="ps3"><span class="ts0">Contact height calibration position is from full stroke position(touch Socket Guide Base jig) above 1mm. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts25">&lt;Method&gt; </span></p>
+<p class="ps3"><span class="ts0">Eg. Arm 1 case:</span></p>
+<p class="ps3"><span class="ts0">1) selrb 1</span></p>
+<p class="ps3"><span class="ts0">2) motor on</span></p>
+<p class="ps3"><span class="ts0">3) mcal</span></p>
+<p class="ps3"><span class="ts0">4) motor off</span></p>
+<p class="ps3"><span class="ts0">5) Manually move Index Arm Down to full stroke position by hand(with break release). </span></p>
+<p class="ps3"><span class="ts0">6) Move Up index arm 1mm from full shrink position by SPEL CT. </span></p>
+<p class="ps3"><span class="ts0">Eg. ARM1 case: </span></p>
+<p class="ps3"><span class="ts0">SELRB 1 </span></p>
+<p class="ps3"><span class="ts0">MOTOR ON </span></p>
+<p class="ps3"><span class="ts0">GO P*+z(1)&nbsp;&nbsp;&nbsp;&nbsp; ; for Arm 2 is&nbsp;&nbsp; Go P*+u(1)</span></p>
+<p class="ps3"><span class="ts0">7) Activate the E/P regulator by supply air to expand compliance unit using I/O bit&nbsp; (Out 240 - 249) for E/P regulator, eg On Output Bit 246. </span></p>
+<p class="ps3"><span class="ts0">8) Adjust(using size 13 spanner) the double-device detection sensor height from turn off condition to turn on condition. </span></p>
+<p class="ps3"><span class="ts0">The point of setting, full stroke position is double-device detection sensor turn off and </span></p>
+<p class="ps3"><span class="ts0">from full stroke position to 1mm up position is sensor turn off condition. </span></p>
+<p class="ps3"><span class="ts0">From 1mm up position to 2mm full expand position is double-device detection sensor turn on condition. Compliance unit gap fully open is 2mm and double-device detection sensor turn on.</span></p>
+<p class="ps3"><span class="ts0">Adjustment is that's all. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts25">&lt;Motion&gt; </span></p>
+<p class="ps3"><span class="ts0">For index arm height calibration. </span></p>
+<p class="ps3"><span class="ts0">Index arm detect double-device detection sensor turn on(Orange LED ON) condition from turn off condition. </span></p>
+<p class="ps3"><span class="ts0">This is from full stroke position from 1mm up position. </span></p>
+<p class="ps3"><span class="ts0">After that, index arm calculate more 0.5mm up position as contact height. </span></p>
+<p class="ps3"><span class="ts0">So, index arm compliance unit shrink 0.5mm when contact. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">For double-device detect function. </span></p>
+<p class="ps3"><span class="ts0">Index arm detect double-device condition when device thickness over 1.0mm. </span></p>
+<p class="ps3"><span class="ts0">This function effective when device thickness from 0.5*** to under 1.0mm. </span></p>
+<p class="ps3"><span class="ts0">Eg.&nbsp; Device thickness is 0.6mm. When double-device situation is device thickness is 1.2mm. 0.2mm is over 1.0mm. </span></p>
+<p class="ps3"><span class="ts0">Double-device sensor detect that socket has double-devices. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Note: </span></p>
+<p class="ps3"><span class="ts0">Arm 1 all heads ( head 1 and 2) or Arm 2 all heads( head 4 and 5) has to be adjusted to same sensor position, which mean that the same Index Arm Double Devices detection sensor turn off at the same time. </span></p>
+<p class="ps3"><span class="ts0">If one Head is lower (less than 1mm up position), contact height has priority to near (lower) sensor position. </span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

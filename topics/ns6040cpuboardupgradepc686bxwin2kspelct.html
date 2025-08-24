@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>NS6040 CPU Board Upgrade PC-686BX Win2k SPEL CT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 270;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">NS6040 CPU Board Upgrade PC-686BX Win2k SPEL CT</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="s0560.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="ns8040manualcalibration.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-6040 CPU Board Upgrade PC-686 BX (Windows 2000 / SPEL CT)</span></p>
+<p class="ps3"><span class="ts0">Date: 18 Dec 2007</span></p>
+<p class="ps2"><span class="ts84">Backup</span></p>
+<p class="ps2"><span class="ts5">1) Setup files (By Export in MMI)</span></p>
+<p class="ps2"><span class="ts5">2) [Config] folder (in C:\NS6000)</span></p>
+<p class="ps2"><span class="ts5">3) [Run] folder (in C:\NS6000)</span></p>
+<p class="ps2"><span class="ts5">4) SPEL Project in SPEL95</span></p>
+<p class="ps2"><span class="ts5">5) SPEL SYSTEM in SPEL95</span></p>
+<p class="ps2"><span class="ts5">6) DU 1, 2, 3 data in SPEL95</span></p>
+<p class="ps2"><span class="ts5">7) Robot Manipulator in SPEL95</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts84">Hardware Replacement</span></p>
+<p class="ps2"><span class="ts5">8) CPU Board Replacement (For Type 2 &amp; 3, need to change CPU Fan with thermal paste and it's harness)</span></p>
+<p class="ps2"><span class="ts5">9) * Replace MIB boards for Type 1 &amp; 2</span></p>
+<p class="ps2"><span class="ts5">10) * Replacement to System Panel II for Type 1</span></p>
+<p class="ps2"><span class="ts5">11) * Replacement to 2.5&rdquo; HDD for Type 1</span></p>
+<p class="ps2"><span class="ts5">12) Remove sub panel board(RS232 port with parallel port)</span></p>
+<p class="ps2"><span class="ts5">13) Remove LAN card</span></p>
+<p class="ps2"><span class="ts5">14) Insert new Parallel Port</span></p>
+<p class="ps2"><span class="ts5">15) Insert new COMM Port (COMM 1 &amp; 2)</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts84">Recovery</span></p>
+<p class="ps2"><span class="ts5">16) in BIOS, set&nbsp; [PnP/PCI Configurations] to Yes, Resources controlled By [Manual], Set IRQ 5 &amp; IRQ 10 to Legacy ISA</span></p>
+<p class="ps2"><span class="ts5">17) Use Recovery CD (FD07S057, ver 3.0c, 2007/06/20) to do recovery of Windows 2000, MM1 and SPEL CT(CPU 850MHz)</span></p>
+<p class="ps2"><span class="ts5">18) Install PC I/O driver (Multimedia controller) (Contec Driver in Recovery CD)</span></p>
+<p class="ps2"><span class="ts5">19) Install IFUN100 driver (Driver in Recovery CD)</span></p>
+<p class="ps2"><span class="ts5">20) Use Loader.exe (in C:\NS6000\Exe) to load hex file (Hex file in Recovery CD)</span></p>
+<p class="ps2"><span class="ts5">21) Restore DU 1, 2 &amp; 3 data in SPEL CT</span></p>
+<p class="ps2"><span class="ts5">22) Restore Robot Manipulator data in SPEL CT</span></p>
+<p class="ps2"><span class="ts5">23) Copy pos data files from backup project to SPEL CT project</span></p>
+<p class="ps2"><span class="ts5">24) Copy &amp; paste backup [RUN] folder to C:\NS6000</span></p>
+<p class="ps2"><span class="ts5">25) Copy &amp; paste backup [Config] folder to C:\NS6000</span></p>
+<p class="ps2"><span class="ts5">26) Edit &ldquo;Product.dat&rdquo; in C:\NS6000\Log folder to change the Handler Serial Number</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">Remarks:</span></p>
+<p class="ps4"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><img width="359" height="278" border="0" src="images/ns6040cpuboardupgradepc686bxwin2kspelctb1.jpg" /></p>
+<div align="left">
+  <table class="tbl4">
+    <tr class="row0">
+      <td class="cell0" colspan="4">
+        <p class="ps125"><span class="ts11">SKP372-2</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps217"><span class="ts11">DU1</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps217"><span class="ts11">DU2</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps217"><span class="ts11">DU3</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP1</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2, 3-4 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2, 3-4 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2, 3-4 short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP2</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">3-4 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">Open</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">Open</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP3</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">Open</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">Open</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP4</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">Open </span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">3-4 short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP5</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2, 3-4, 5-6 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">3-4, 5-6 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2, 5-6 short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP6</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP7</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP8</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Open</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Open</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Open</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP9</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP10</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">1-2 short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">JP11</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Short</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Short</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">I/O Address</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">300h</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">320h</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">340h</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><span class="ts11">Memory Address</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">D8000h</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">D0000h</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">C8000h</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">MIB1 : Connect the cable connected to the system panel.</span></p>
+<p class="ps3"><span class="ts0">MIB2,3 : Connect the short connector(short pin 6-10, short pin 9-11) on the same position as the old MIB.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl59">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="547" height="257" border="0" src="images/ns6040cpuboardupgradepc686bxwin2kspelctb2.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="261" height="184" border="0" src="images/ns6040cpuboardupgradepc686bxwin2kspelctb3.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl60">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="673" height="262" border="0" src="images/ns6040cpuboardupgradepc686bxwin2kspelctb4.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps218"><img width="196" height="239" border="0" src="images/ns6040cpuboardupgradepc686bxwin2kspelctb5.jpg" /></p>
+        <p class="ps1"><span class="ts125">The Front Panel connector</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps219"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

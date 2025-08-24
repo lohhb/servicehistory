@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0245-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12540;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0245-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12530.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12550.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: T-4241 The detected speed at the Low-power state is too fast occurred intermittently on Shuttle 2 </span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18606)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 10 Aug 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Intel (M'sia) NS-7000 encountered T-4241 &quot;The detected speed at the Low-power state is too fast&quot; intermittently on Shuttle 2 for the past 6 months.</span></p>
+<p class="ps130"><span class="ts0">Already checked motor, belt tension, servo driver, drive unit and slider motion smooth.</span></p>
+<p class="ps130"><span class="ts0">Advised Sean to patch MCD file, update manipulator configuration, tighten belt tension despite same as shuttle 1, swap linear slide for error migration to shuttle 1. </span></p>
+<p class="ps130"><span class="ts0">To wait for system time to try and monitor accordingly.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">MCD 06 file replaced and manipulator settings updated.</span></p>
+<p class="ps130"><span class="ts0">Found both shuttle 1 and 2 N.G upon position jump in SPEL.</span></p>
+<p class="ps130"><span class="ts0">Original MCD file returned and manipulator settings updated.</span></p>
+<p class="ps130"><span class="ts0">Still found shuttle 1 and 2 N.G upon position jump in SPEL.</span></p>
+<p class="ps130"><span class="ts0">Both scenario, found both having device exist on loading stage and pocket is not in line with device present sensor.</span></p>
+<p class="ps130"><span class="ts0">Restored original MCD file again but this time update manipulator with direct drive for shuttle motor.</span></p>
+<p class="ps130"><span class="ts0">Only T-4241 &quot;The detected speed at the Low-power state is too fast&quot;&nbsp; remains. Other errors OK.</span></p>
+<p class="ps130"><span class="ts0">To send back original MCD for 05 and 06 to edit for LP monitoring to be OFF and try.</span></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts0">17 Aug 2010</span></p>
+<p class="ps170"><span class="ts47">NS7000 has shuttle design changed after 2003. Default selection for Manipulator configuration for shuttle motor is with reducer but depending on mechanical hardware to select accordingly.</span></p>
+<p class="ps170"><span class="ts47">To edit existing MCD file for 4241 error.</span></p>
+<p class="ps170"><span class="ts47">For INTEL M'sia, shuttle without reducer so cannot select with reducer when update manipulator.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps13"><span class="ts47">For INTEL M'sia, shuttle without reducer so cannot select with reducer when update manipulator.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

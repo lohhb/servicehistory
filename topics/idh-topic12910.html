@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0090-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12910;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0090-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12900.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15900.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-6040 HDD corrupted</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040 (ASE(M)) </span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 20 Jul 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS6040 Hard disk (win95) corrupted.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps140"><span class="ts0">1.&nbsp; &nbsp;NS6040 Hard disk corrupted.</span></p>
+<p class="ps140"><span class="ts0">2.&nbsp; &nbsp;Customer does not have clone image and recovery CD.</span></p>
+<p class="ps140"><span class="ts0">3.&nbsp; &nbsp;Unable to install MMI and SPEL as they do not have the CD.</span></p>
+<p class="ps140"><span class="ts0">4.&nbsp; &nbsp;Upgrade to Win98 with MMI and SPEL but backup is old version. Unable to restore.</span></p>
+<p class="ps140"><span class="ts0">5.&nbsp; &nbsp;Advise to carry out manual recovery of handler data.</span></p>
+<p class="ps140"><span class="ts0">6.&nbsp; &nbsp;Confirm original 2.5&quot; 20 GB HDD spoilt, use another 3.5&quot; 20GB HDD ok, unable to motor on due to T-4216 Servo real time command overrun.</span></p>
+<p class="ps140"><span class="ts0">7.&nbsp; &nbsp;Unable to detect 20GB and in the process of HDD swap, controller PSU burnt as 230V supply was used.</span></p>
+<p class="ps140"><span class="ts15">8.&nbsp; &nbsp;</span><span class="ts0">Monday to install new PSU and continue troubleshoot.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">Before you swap CU or DU.</span></p>
+<p class="ps127"><span class="ts0">Can you check the following:</span></p>
+<p class="ps127"><span class="ts3">1) &ldquo;</span><span class="ts37">Hardware </span><span class="ts40">a</span><span class="ts37">cceleration</span><span class="ts3">&rdquo; is reduced by 1 level from Full</span></p>
+<p class="ps2"><img width="1274" height="424" border="0" src="images/0090-ns6kb1.png" /></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps126"><span class="ts3">2) Check that Harddisk&rsquo;s DMA is selected</span></p>
+<p class="ps2"><img width="781" height="311" border="0" src="images/0090-ns6kb2.png" /></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps126"><span class="ts3">But for item 2), even if &ldquo;DMA&rdquo; already ticked, you can try to un-tick it to see if it will solve the </span><span class="ts0">&quot;</span><span class="ts3">T-4216</span><span class="ts0">&quot; error &quot;</span><span class="ts3">Servo real-time command overrun.</span><span class="ts0">&quot; Error.</span></p>
+<p class="ps127"><span class="ts0">Just give a try because I saw the photo of the 3.5&rdquo; HDD is ATA133 and not the usual ATA66 or ATA100 that we are using, so I am not sure if DMA setting will have effect.</span></p>
+<p class="ps127"><span class="ts0">(Hardware compatible ?)Base on the CPU Board photo you sent, the printing shows that it is a Pentium 1 board (P5/6x86) and the BIOS clock is DALLAS so CPU speed is 200 or 233MHz, but I am not sure the memory controller on the CPU Board can support an ATA133 HDD as normal.</span></p>
+<p class="ps141"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;PSU replaced and upon motor on, T-4216 &quot;Servo real-time command over-run&quot; for all robots.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;Motor ??? and Power ??? can be seen from SPEL bottom-right the task bar.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;Restore SPEL System file from any know good handler, same T-4216</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;Used HDD from known good handler, same T4216</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;Used existing HDD to try on known good handler, no more T4216.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;Existing HDD (NST-25) recovery process should be ok and not the cause of T4216.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;Swap in NST-26 control unit. Able to motor on. </span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;NST-26 CU with NST-25 HDD. Able to motor on.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;NST-25 CU with NST-26 HDD. T4216 error.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;NST-25 CU with NST-26 CPU board and NST-25 HDD. Able to motor on.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;NST-25 uses Pentium I P5/6x86 and Maxtor ATA100 HDD with windows 98 recovery for PI board as original Fujitsu HDD damaged.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;NST-26 uses PC-686BX and ok with NST-25 and NST-26 HDD.</span></p>
+<p class="ps142"><span class="ts41">?</span><span class="ts0">&nbsp;&nbsp; &nbsp;&nbsp;Suspect NST-25 CPU board not compatible with Maxtor ATA100 HDD and communication/data synchronization between CPU Board and HDD led to T4216.</span></p>
+<p class="ps126"><span class="ts0">Customer has to either buy compatible HDD for P5/6x86 or upgrade CPU board for current HDD.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Finally encounter that this NST 6040 # 25, CPU Board cannot support the &quot;Maxtor&quot; HDD, is too high end for this CPU Board on this NS-6040.</span></p>
+</body>
+</html>

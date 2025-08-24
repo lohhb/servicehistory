@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0463-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 19040;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0463-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic19030.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic19050.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080HW Direct High Contact Force with Online give Error 4024 &amp; RC520 Error 99 sub 3</span></p>
+<p class="ps3"><span class="ts0">Handler Model: </span><span class="ts1">NS-8080HW (S/N: 182025)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 03-2061)</span></p>
+<p class="ps3"><span class="ts0">Date:</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">Qualcomm(S) NS-8080HW (S/N: 182025) setup file 15x15 990 CAFFEINE UNSTACKED 4DUT KA AMB </span><span class="ts0">Direct HFC+Online+Dummy Contact give Errors:- 4024 Arm positioning cannot be completed as specified by Fine for Index- Robot controller C520 Error 99 sub 3.</span><img width="1195" height="365" border="0" src="images/0463-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">Handler received bin result but Index Arm 1 did not move up from socket then</span></p>
+<p class="ps130"><span class="ts1">RC520 controller error(Error 99, sub 3) followed by Error 4024 Arm positioning cannot be completed as specified by FINE.</span></p>
+<p class="ps130"><span class="ts0">Online Contact test at Direct HCF with devices, no error.</span></p>
+<p class="ps3"><span class="ts1">-Online test time about 1 sec</span></p>
+<p class="ps3"><span class="ts1">Offline dummy test time have set to 2 sec and 12 sec for testing. Dummy test time has no effect on the errors.</span></p>
+<p class="ps130"><span class="ts1">-Use another 2 DUT setup file also same error 4204 and RC520 error</span></p>
+<p class="ps130"><span class="ts0">-Reload IFUNT100B17.Hex, same error 4204 and RC520 error</span></p>
+<p class="ps130"><span class="ts0">-Reload IFUNT100B16.Hex, same error 4204 and RC520 error</span></p>
+<p class="ps130"><span class="ts0">-Reload IFUNT100B17.Hex, same error 4204 and RC520 error</span></p>
+<p class="ps130"><span class="ts0">-Even Enable only Index Arm 2 also same error.</span></p>
+<p class="ps130"><span class="ts0">-Unistall SPEL, delete PSPELWORK folder. SYSTEM &amp; Pos restored, same errors.</span></p>
+<p class="ps130"><span class="ts0">-Re-installed HMI T11.52-KSS. same errors.</span></p>
+<p class="ps130"><span class="ts0">-Imported setup file CSP-0505 from 1.2 year ago backup in thumbdrive.</span></p>
+<p class="ps130"><span class="ts0">-Using imported setup file CSP-0505 and create new setup file Test 15x15 990 CAFFIENE.</span></p>
+<p class="ps130"><span class="ts0">-Re key in correct tray matrix, number of sites, Contact parameters and etc to Test 15x15 990 CAFFIENE</span></p>
+<p class="ps130"><span class="ts0">- Using setup file Test 15x15 990 CAFFIENE, set ONLINE, Direct HCF mode, running without error.</span></p>
+<p class="ps130"><span class="ts0">- tested afew times also no error for ONLINE + Direct HCF</span></p>
+<p class="ps130"><span class="ts0">- Customer also use my backup setup file 976 NSP 14x14 AMB with Online+ Direct HCF mode, no error</span></p>
+<p class="ps147"><img width="747" height="308" border="0" src="images/0463-ns8kb2.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">12 Mar 2013, EPSON informed that Online Bin for enable Double Contact for High Contact Force has bug.</span></p>
+<p class="ps3"><span class="ts0">New HMI T13.70-KSS release to correct the bug of:</span></p>
+<p class="ps3"><span class="ts0">1) High Contact Force + Online + Dummy Contact error</span></p>
+<p class="ps3"><span class="ts0">2) Empty Tray Arm crash into Output Arm (from ASE).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

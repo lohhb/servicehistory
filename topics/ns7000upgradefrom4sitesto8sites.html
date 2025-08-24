@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>NS-7000 upgrade from 4 sites to 8 sites</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 920;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">NS-7000 upgrade from 4 sites to 8 sites</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="ns6040howtodiasableuphdisplay.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic5570.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 upgrade from 4 sites to 8 sites</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 16 May 2007</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Items Required</span></p>
+<p class="ps3"><span class="ts0">- 1 piece of Air Regulator (for Counter Air)</span></p>
+<p class="ps3"><span class="ts0">- 2 sets of vacuum units</span></p>
+<p class="ps3"><span class="ts0">- 3 pieces of Remote I/O modules in a pack</span></p>
+<p class="ps3"><span class="ts0">- 1 uniwire set</span></p>
+<p class="ps3"><span class="ts0">- 4 M4x8 bolts</span></p>
+<p class="ps3"><span class="ts0">- 3 pieces of rectangle white spacer</span></p>
+<p class="ps3"><span class="ts0">- 3 pieces of manifold mounted on L shape plate</span></p>
+<p class="ps3"><span class="ts0">- air tubing 0.5m long of 8mm in diameter</span></p>
+<p class="ps3"><span class="ts0">- air tubing 0.5m long of 12mm in diameter</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1) Mount the above items to the handler eg. Counter Air Regulator for Arm 1&amp;2 E, F, G &amp; H. </span></p>
+<p class="ps3"><span class="ts0">2) Refer Picture 1, connect air tubings on the Rear-Right and Rear-Left above chamber </span></p>
+<p class="ps3"><span class="ts0">for Arm1 and Arm 2 air tubings to E, F, G, H.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><img width="231" height="109" border="0" src="images/ns7000upgradefrom4sitesto8sitesb1.png" /><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class="ps3"><span class="ts25">Picture 1) Handler Rear-Right or Rear-Left above chamber </span></p>
+<p class="ps3"><span class="ts25">for Arm1 and Arm 2 air tubings to E, F, G, H</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span><img width="269" height="117" border="0" src="images/ns7000upgradefrom4sitesto8sitesb2.png" /></p>
+<p class="ps3"><span class="ts25">&nbsp; Picture 2) Top view inside chamber above Arm1 or Arm2</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3) Power up handler</span></p>
+<p class="ps3"><span class="ts0">4) Reset the Remote I/O Board by press &amp; hold for 3sec the white reset button </span></p>
+<p class="ps3"><span class="ts0">5) Launch </span><span class="ts25">C:\NS7000\exe\config.exe</span><span class="ts0">, select &quot;</span><span class="ts25">Site Type</span><span class="ts0">&quot; as </span><span class="ts25">8 site</span><span class="ts0">.</span></p>
+<p class="ps3"><span class="ts0">6) In MMI, click </span><span class="ts25">Deviceset</span><span class="ts0">-&gt;</span><span class="ts25">Tester I/F</span><span class="ts0">, for </span><span class="ts25">tester Interface</span><span class="ts0">&nbsp;select &quot;</span><span class="ts25">ADVAN 8site</span><span class="ts0">&quot;.</span></p>
+<p class="ps3"><span class="ts0">If &quot;ADVAN 8site&quot; cannot be found for GPIB, execute C:\NS7000\Tool\Loader.exe, and load the latest tester Hex file.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">7) In MMI, use the I/O monitor to activate vacuum &amp; counter air for Arm 1 and Arm 2 for checking 8 sites function.</span></p>
+</body>
+</html>

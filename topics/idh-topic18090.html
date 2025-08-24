@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0407-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18090;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0407-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18080.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18100.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8080HW 976BGA 14x14 hot mode device drop issue at index</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080HW (S/N: 182025)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520&nbsp; (S/N: 03-2061)</span></p>
+<p class="ps3"><span class="ts1">Date: 28 Dec 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">NS8080HW 976BGA 14x14 hot mode device drop issue at index.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">1. Informed by QC members that socket guide pin loose. Checked and found that screws for tightening socket plate onto loadboard was not tighten properly. This was found out by QC members themselves. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2. Checked handler&rsquo;s jam history and observed some index device drop error on arm 1 and 2. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3. Removed arm 1 and 2 SLK and checked/tighten again all contactors. Found 1 contactor guide holes condition worn out. Checked all screws on socket plate/loadboard tightened properly. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">4. Docked up with socket and ran dummy units at 100% speed and 60% speed, encountered index arm 2 site A device drop errors. When error happened, device was stuck in socket and difficult to remove. No issue on index arm 1. </span></p>
+<p class="ps4"><span class="ts5">Docking plate below moved a little up and down during contact with the index arm</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">5. Undocked and checked site A socket. By using hand to put and push the device into socket A, sometimes device can get stuck. Rest of socket was ok. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">6. Rotated socket plate orientation on loadboard, tried to swapped index arm 2 site A contactor with site B contactor. Changed index arm 2 P51 Y pose from &ndash;1.05133 to &ndash;1.165 after we observed the contactors twisting when going into socket. Checked index arm 2 vacuum ok. After all the above, problem still persisted. Device still get stuck at site A for index arm 2. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">7. Undocked again and QC members removed socket A and checked that socket no issue. Swapped the socket to site G. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">8. This time docked up with test head and ran dummy units at 60% speed. After about 5 trays, encountered index arm 1 device drop error at site G. Problem seems to migrate over after swapping the socket. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">9. CK Tan asked us to run the handler till 5pm to confirm that issue was due to socket and no more issue at site A. Then they will disable that site G and release for production setup. After we completed one hour&rsquo;s dummy run, there were about 4 device drop errors on site G and 3 on site C for both arm 1 and arm 2. No occurrence on site A. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">10.Towards the end of dummy run, while I was clearing stuck device in site G, I accidentally touched the device at index arm 2 site A contactor and resulted in smashed device after I resumed running again. They setup handler with KGU but encountered conty error at site A, and found some damaged pins on this socket. All other sites accept G(disabled) able to pass. It could be due to the smashed device. I informed to CK Tan and he said his tech encountered the same problem before while clearing jam in the index area also. He feedback that it could be due to the design of the nest which does not have anvil guide. </span></p>
+<p class="ps2"><img width="366" height="320" border="0" src="images/0407-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">11.They removed the socket to change the damaged pins and CK Tan released us.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Socket tolerance too tight causing device drop at Index after Index Arms move up.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">29 Dec 2011 Imai-san emailed Qualcomm:</span></p>
+<p class="ps3"><span class="ts0">Summary is that,</span></p>
+<p class="ps3"><span class="ts0">1) Device drop error issue seems to be due to setup.</span></p>
+<p class="ps3"><span class="ts0">2) Contactor nest design may need to be considered, and we will check with KA. </span></p>
+<p class="ps3"><span class="ts0">At the same time, we will check with Qualcomm USA and DB how they are running now.</span></p>
+<p class="ps3"><span class="ts0">3) Some Socket seems to have issue, which pocket is a little tight so that sometimes </span></p>
+<p class="ps3"><span class="ts0">device stuck inside.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0263-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13960;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0263-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13950.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13970.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: </span><span class="ts24">IDT(M) NS-8080 check ionizer close loop</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 9~23 Nov 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">IDT(M) NS8080 suspect close loop not installed.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps130"><span class="ts1">FAN OFF simulation but no error.</span></p>
+<p class="ps130"><span class="ts1">SPEL I/O reflect 283 OFF indicating OPEN. </span></p>
+<p class="ps130"><span class="ts1">Physically checked and IN235 is not bypass connector. Suspect during initial start check, operator already clear jam by SKIP+START. </span></p>
+<p class="ps130"><span class="ts1">After which any simulation of FAN OFF, no alarm as already SKIP this error.</span></p>
+<p class="ps130"><span class="ts1">Advice Chuah to PAUSE+RESET+START again. With Fan off this time, alarm. Verified that with SKIP+START, subsequent fan OFF will have no alarm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Attached are pictures of bypass connector(short/dummy) and IO module for close loop.</span></p>
+<p class="ps3"><span class="ts0">SPEL I/O assignment is 283</span></p>
+<p class="ps3"><span class="ts0">I/O module assignment is 283 - 48 = 235.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<div align="left">
+  <table class="tbl39">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="252" height="480" border="0" src="images/0263-ns8kb1.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="318" height="480" border="0" src="images/0263-ns8kb2.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">So you should be looking at attached picture 232 (EIN30) module and the 4th connector(235) should be for fan.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Close Loop to all fans:</span></p>
+<p class="ps3"><span class="ts0">You should see like attached picture of IO Remote.jpg</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Close Loop by bypass connector:</span></p>
+<p class="ps3"><span class="ts0">You should see a connector&nbsp; like the picture instead of wiring directly to fan.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If you say off fan and no alarm, it should be with bypass connector.</span></p>
+<p class="ps3"><span class="ts0">BUT, SPEL I/O 282 and 283 must be always ON. If you say OFF, it means it's open loop and everytime you start handler, will prompt alarm.</span></p>
+<p class="ps3"><span class="ts0">BUT if you SKIP alarm, handler will not alarm anymore. Purpose of SKIP is to continue run even of fan is OFF.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If handler is in production, just ONE CYCLE or PAUSE+RESET so that you can start handler for the check. In case someone already SKIP alarm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Found out Penang IDT their Handler NS8080, one of the I/O Remote's connector label is wrong. I/O Remote 232 (EIN30) 5th connector, the label should be &quot;IN283&quot; not &quot;OUT276&quot;.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Found out Penang IDT their Handler NS8080, one of the I/O Remote's connector label is wrong. I/O Remote 232 (EIN30) 5th connector, the label should be &quot;IN283&quot; not &quot;OUT276&quot;.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Use multi-meter to check below when handler is power off:</span></p>
+<p class="ps3"><span class="ts0">1. Between D-G&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;200 Ohm( Value will be depended on equipment))</span></p>
+<p class="ps3"><span class="ts0">2. Between 0-24V&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;few kOhm (Value will be depended on equipment))</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Input Bit 282 for Socket/chamber ionizer alarm.</span></p>
+<p class="ps3"><span class="ts1">Input Bit 283 for Top Blower ionizers alarm</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">To turn on Chamber fan, ON SPEL I/O Output Bit 272 &amp; 273.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Skip Enable switch Input Bit is 280.</span></p>
+<p class="ps3"><span class="ts0">Skip Enable Switch's LED is Output Bit 130.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Chamber Door sensor is Input Bit 284.</span></p>
+<p class="ps3"><span class="ts0">Total there are 2 Chamber Door sensors(SQ284A and SQ284B) linked in series.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts55">Email by Hidaka, 25 May 2011:</span></p>
+<p class="ps144"><span class="ts55">To change EIN30 label of 240&nbsp; Input Module 16 CH (located at Loader area)</span></p>
+<p class="ps144"><span class="ts55">EIN30&nbsp;&nbsp;&nbsp; -&gt; OP IN</span></p>
+<p class="ps3"><span class="ts55">EOUT30 -&gt;OP OUT</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps150"><span class="ts37">1) EIN 30 of 16CH (located below Loader unit) include Cover Open Switch(Input Bit 299)</span></p>
+<p class="ps144"><span class="ts37">2) EIN7 consist of Input Bit( 104~110 connected to SKP452 E-stop board) for Doors</span></p>
+<p class="ps3"><span class="ts37">3) EIN30 of 8 CH (located above Index) include Input Bit 284 for Index side cover door</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

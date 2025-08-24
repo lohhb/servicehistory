@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0101-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 16000;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0101-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15990.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic16010.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps13"><span class="ts27">Subject:</span><span class="ts46">&nbsp;NS-6000 Unable to install MMI X12.10-SAS from CD. </span><br /><span class="ts46">&ldquo;NSSETUP.exe has generated error and will be closed by Windows.&rdquo; </span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6000 (S/N: 12469)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520&nbsp; (CPU Board SPI-6941, MMI 3.0e&nbsp; SPEL CT 2.81b)</span></p>
+<p class="ps3"><span class="ts0">Date: 5 Sep 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">AMD &ndash; 2D Bar Code Software X12.10-SAS installtion to NS-6000 (S/N: 12469)</span></p>
+<p class="ps127"><span class="ts0">Unable to install MMI X12.10-SAS from CD. </span><br /><span class="ts0">&ldquo;NSSETUP.exe has generated error and will be closed by Windows.&rdquo; </span><br /><br /><span class="ts0">Handler installed with ATC for site 1 on both Index Arm. </span><br /><span class="ts0">Backup existing data in controller. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Copy files from CD to USB thumbdrive. </span><br /><span class="ts0">Install MMI from CD, ok. </span></p>
+<p class="ps3"><br /><span class="ts0">&nbsp;Press START, MMI status changed from RUNNING to PAUSE. Handler pause. </span><br /><span class="ts0">In SPEL, found that in Cont.prg, command execution stop at line &ldquo;ROPENT q NsRootDir$ + &ldquo;RUN\2DRoffset.dat&rdquo; as #DIR&rdquo;&rdquo; </span><br /><span class="ts0">In MMI OFFSET, change 2D barcode offset for Shuttle position to 0.01, ok. </span><br /><span class="ts0">This is software bug. </span><br /><span class="ts0">Time stamp error encountered for COMDLG32.OCX and TABCTL32.OCX, resolved by changing the date and file size in ver.dat. </span><br /><span class="ts0">After tray with device feed to pickup area, Input hands above shuttle and Error code 50, sub code 7; Decode Unit Initializing error. </span></p>
+<p class="ps3"><br /><span class="ts0">&nbsp;Was informed to change C:\NS6000\CONFIG\Codereader.def, changed COM Port No to 2 from 1. </span><br /><span class="ts0">(For NS-8000, Heater comm using COM2, COM1 for 2DBarCode.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;For NS-6000, Heater use COM1 on SRC520 and COM2 for 2Dbarcode) </span></p>
+<p class="ps3"><br /><span class="ts0">&nbsp;Input Shuttles scanning position for site1, site2 and dual sites for 2D code reader are incorrect. </span><br /><span class="ts0">Decode unit initialisation error. </span><br /><span class="ts0">KG(S) trigger sub-con programmer to come to AMD(S) on 10 Sep for Decoder and protocol issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">&ldquo;NSSETUP.exe has generated error and will be closed by Windows.&rdquo; could be CD ROM drive is faulty.</span></p>
+</body>
+</html>

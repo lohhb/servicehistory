@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0005-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 440;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0005-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic430.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic450.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS80-99 Operation panel IO no response</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 5 Dec 2007</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">Cannot HOME or START from Front and Rear Operation Panel.</span></p>
+<p class="ps3"><span class="ts1">Remote I/O card red ALM LED lighted.&nbsp; </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Swap with another Remote I/O card to confirm card faulty.</span></p>
+<p class="ps3"><span class="ts1">Suspect card was swapped as there was marker pen marking on the card.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">Faulty Remote I/O card.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps126"><span class="ts1">Use multi-meter to check below</span><span class="ts0">&nbsp;when handler is power off:</span></p>
+<p class="ps127"><span class="ts1">1. Between D-G NO short-circuit.</span></p>
+<p class="ps127"><span class="ts1">(Resistance: &gt;200 Ohm( Value will be depended on equipment))</span></p>
+<p class="ps127"><span class="ts1">2. Between 0-24V NO short-circuit.</span></p>
+<p class="ps127"><span class="ts1">(Resistance: &gt;few kOhm (Value will be depended on equipment))</span></p>
+<p class="ps6"><img width="731" height="355" border="0" src="images/0005ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">SPEL &quot;Main&quot; prg if not selected for Auto mode will also cause Operation panel no response.</span></p>
+<p class="ps128"><span class="ts89">In NS-8000 series, there is no PC IO card, so Operation panel operation is linked to Input Remote IO Module EIN30 (16 CH below Loader), wiring diagram </span><span class="ts30">SKH0811- E02</span><span class="ts89">&nbsp;.</span></p>
+<p class="ps144"><span class="ts55">Email by Hidaka, 25 May 2011:</span></p>
+<p class="ps144"><span class="ts55">To change EIN30 label of 240&nbsp; Input Module 16 CH (located at Loader area)</span></p>
+<p class="ps144"><span class="ts55">EIN30&nbsp;&nbsp;&nbsp; -&gt; OP IN</span></p>
+<p class="ps3"><span class="ts55">EOUT30 -&gt;OP OUT</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl29">
+    <tr class="row0">
+      <td class="cell0" colspan="2">
+        <p class="ps0"><span class="ts25">EIN30&nbsp;&nbsp; 16CH&nbsp; (OP IN)</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0" colspan="2">
+        <p class="ps0"><span class="ts25">EOUT30&nbsp;&nbsp; 16CH&nbsp; (OP OUT)</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts25">Input</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts25">Output</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">288</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">RESET SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">288</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">RESET LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">289</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">PAUSE SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">289</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">PAUSE LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">290</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">START SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">290</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">START LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">291</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">HOME SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">291</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">HOME LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">292</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">RETRY SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">292</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">RETRY LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">293</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">SKIP SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">293</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">SKIP LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">294</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">CLEAN OUT SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">294</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">CLEAN OUT LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">295</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">TRAY FEED SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">295</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">TRAY FEED LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">296</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">TRAY END SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">296</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">TRAY END LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">297</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">ALARM SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">297</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">ALARM LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">298</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">ONE CYCLE SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">298</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">ONE CYCLE LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">299</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">COVER OPEN SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">299</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">STEP LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">300</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">STEP SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">300</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">TESTER START LED</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">301</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">TESTER START SW</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">301</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">302</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Remote recover input</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">302</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Remote recover input</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">303</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Remote start input</span></p>
+      </td>
+      <td class="cell1">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">303</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Remote start input</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="967" height="789" border="0" src="images/0005ns8kb2.png" /></p>
+</body>
+</html>

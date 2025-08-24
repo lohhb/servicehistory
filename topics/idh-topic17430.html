@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0338-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17430;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0338-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17420.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17440.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7080W Drive Unit 2 Input &amp; Output Arm </span><span class="ts24">encountered F5001: Encoder signal cable disconnection</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W (S/N: 121223, NS7080-05) UTL</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 31 Jan 2012 to 3 Feb 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">UTL &ndash; NS-7080W(121223) DU 2 input and output arm encountered F-</span><span class="ts1">5001</span><span class="ts0">: Encoder signal cable disconnection.</span></p>
+<p class="ps3"><span class="ts0">Reported input arm done calibration on the 17/Jan and after shutdown and power up on the 20/Jan, encountered encoder signal disconnection error and SPEL robot 2 status showing '???'. Followed by output arm(robot 3) encountered same issue the next day.</span></p>
+<p class="ps3"><span class="ts0">DU slot 2 displayed status 1 error led. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">1. Checked DU lithium battery voltage 3.6v ok. </span><br /><span class="ts0">2. Checked all other robots able to motor on. </span><br /><span class="ts0">3. Swapped DU2 from NS7080-04 to NS7080-05, same issue. </span><br /><span class="ts0">4. Swapped NS7080-04 RC520 controller to NS7080-05, same issue. </span><br /><span class="ts3">5. Swapped DU2 motors power and encoder connection with DU1. Both input and output arm X-axis showed '???' on DU1. Problem migrated over. </span><br /><span class="ts0">6.</span><span class="ts1">&nbsp;</span><span class="ts0">Performed reset encoder and calibration of input/output arm XY axis and home handler ok. </span><br /><span class="ts0">7. After shutdown handler and reboot again, encountered same issue on input arm.</span></p>
+<p class="ps3"><span class="ts0">The encoder signal cable was detected to be disconnected either at Phase A or Phase B.</span></p>
+<p class="ps3"><span class="ts0">Check on the M/C signal cable connection.</span></p>
+<p class="ps3"><span class="ts0">Check on the signal cables inside the Manipulator for any loose pins, cable disconnection or short-circuit.</span></p>
+<p class="ps3"><span class="ts0">Replace the motor in case of the encoder failure.</span></p>
+<p class="ps3"><span class="ts0">Replace the Drive Unit in case of DMB or Power unit</span></p>
+<p class="ps3"><span class="ts0">failure.</span></p>
+<p class="ps3"><span class="ts0">Check on the cable connection between the control and peripheral units; Check on the connectors:</span></p>
+<p class="ps3"><span class="ts0">EMERGENCY, D-I/O and Expansion I/O; Check on the short-circuits with the connecting cables or/and inside the peripheral units.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Initialise &amp; calibrate Input &amp; Output Arms:</span></p>
+<p class="ps126"><span class="ts3">- (for DU2/Slot2) set DIP switch Bit 1,2,3,4 all to ON</span></p>
+<p class="ps127"><span class="ts3">-press &amp; hold white RESET button for 3 sec or more (this will reset the encoders&rsquo; of the motors)</span></p>
+<p class="ps127"><span class="ts3">- (for DU2/Slot2) set DIP switch Bit 1,2,3,4 all to OFF</span></p>
+<p class="ps127"><span class="ts3">- in SPEL and switch to &ldquo;P&rdquo; mode , &ldquo;Abort all&rdquo; then close SPEL and Restart SPEL </span></p>
+<p class="ps127"><span class="ts3">- SPEL is launched, switch to &ldquo;P&rdquo; mode press &ldquo;Abort all&rdquo; then should see pop up message &ldquo;F-5136 Absolute Encoder has been initialized&rdquo;.</span></p>
+<p class="ps127"><span class="ts3">-make sure correct robot is selected, eg in SPEL Command Execution Windows, select selrb 2 then type &quot;reset&quot;.</span></p>
+<p class="ps127"><span class="ts3">- Robot 2 with X &amp; Y move to mechanical pulse 0 position</span></p>
+<p class="ps127"><span class="ts3">- calpls 0,0,0,0 and calib 1,2 (in this case for Axis 1 and 2)</span></p>
+<p class="ps127"><span class="ts3">-make sure correct robot is selected, eg in SPEL Command Execution Windows, select selrb 3 then type &quot;reset&quot;.</span></p>
+<p class="ps127"><span class="ts3">- Robot 3 with X &amp; Y move to mechanical pulse 0 position</span></p>
+<p class="ps127"><span class="ts3">- calpls 0,0,0,0 and calib 1,2 (in this case for Axis 1 and 2)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Input arm X-axis 400W motor&nbsp; and 400W servo driver are spoilt.</span></p>
+</body>
+</html>

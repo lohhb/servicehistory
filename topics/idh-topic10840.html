@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0094-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10840;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0094-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10830.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10850.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 encountered hang up during running production</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 2 Sep 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS8080 encountered hang up during running production</span></p>
+<p class="ps3"><span class="ts0">Data taken from NS88-03 with serial number 181594. The scenario was the handler hang up (no mechanical moment) during half way running in production time, the tower light was with green light and the handler screen showing &ldquo;Running&rdquo;. </span></p>
+<p class="ps3"><span class="ts0">As we have checked the handler while it was still having hang up, please help to elaborate the handler condition in details, so that Epson will have the detail data for investigation.</span></p>
+<p class="ps3"><span class="ts0">Software: HMI v2.1</span></p>
+<p class="ps3"><span class="ts0">Factory: Epson-M</span></p>
+<p class="ps3"><span class="ts0">S/n: 181594</span></p>
+<p class="ps3"><span class="ts0">MFG: Sep 2008</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="466" height="291" border="0" src="images/0094-ns8kb1.png" /></p>
+<p class="ps2"><span class="ts6">The following are the observations:</span></p>
+<p class="ps187"><span class="ts6">1)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No alarm encountered</span></p>
+<p class="ps187"><span class="ts6">2)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loading tray finished</span></p>
+<p class="ps187"><span class="ts6">3)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Auto 1 Full with device (indexed to stacking area)</span></p>
+<p class="ps187"><span class="ts6">4)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Auto 1 Stage waiting for empty tray</span></p>
+<p class="ps187"><span class="ts6">5)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output arm still holding 1 device on Hand D</span></p>
+<p class="ps187"><span class="ts6">6)&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Empty 2 standing by with 1 empty tray</span></p>
+<p class="ps181"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Error Code&nbsp;&nbsp; -Error Message----------------------&nbsp; Manipulator&nbsp; Joint&nbsp; -Time-------------Function-------------------- Code</span></p>
+<p class="ps2"><span class="ts6">F-5020&nbsp;&nbsp;&nbsp; Absolute Encoder overspeed.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 09/01/2009 20:59:50 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">F-5020&nbsp;&nbsp;&nbsp; Absolute Encoder overspeed.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 09/01/2009 20:59:47 WB:InitIP:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">M-3302&nbsp;&nbsp;&nbsp; A output command is attempted when the Safety Door is open.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 08/24/2009 06:42:30&nbsp; :MONITOR:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57466</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:15 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:15 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:15 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:15 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:15 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:15 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:15 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4009&nbsp;&nbsp;&nbsp; Timeout error within Motion Control Module.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/12/2009 09:26:14 COMMON:HAND_UP_WAIT:19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57581</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/10/2009 05:03:28 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/10/2009 05:03:28 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/10/2009 05:03:28 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/10/2009 05:03:28 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/10/2009 05:03:28 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/10/2009 05:03:28 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/01/2009 07:01:50 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/01/2009 07:01:50 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/01/2009 07:01:50 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/01/2009 07:01:50 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/01/2009 07:01:50 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 08/01/2009 07:01:50 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">I-2031&nbsp;&nbsp;&nbsp; The subscription of Array Variable is out of the user-defined range.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 07/27/2009 12:39:36&nbsp; COMMON:TASK_DUMP:27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 65460</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/27/2009 12:39:35 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/27/2009 12:39:35 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/27/2009 12:39:35 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/27/2009 12:39:35 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/27/2009 12:39:35 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/27/2009 12:39:35 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">F-5044&nbsp;&nbsp;&nbsp; Speed error overflow in the High-power state.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 07/26/2009 09:38:40 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">F-5044&nbsp;&nbsp;&nbsp; Speed error overflow in the High-power state.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 07/26/2009 09:38:40 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">F-5044&nbsp;&nbsp;&nbsp; Speed error overflow in the High-power state.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 07/26/2009 09:38:37 WB:InitIP:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/18/2009 10:19:19 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/18/2009 10:19:19 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/18/2009 10:19:19 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/18/2009 10:19:19 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/18/2009 10:19:19 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/18/2009 10:19:19 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/17/2009 20:58:20 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/17/2009 20:58:20 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/17/2009 20:58:20 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/17/2009 20:58:20 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/17/2009 20:58:20 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/17/2009 20:58:20 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/17/2009 20:58:20 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/12/2009 10:33:08 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/12/2009 10:33:08 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/12/2009 10:33:08 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><span class="ts6">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 07/12/2009 10:33:08 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">3 Sep 2009 email from Ogata</span></p>
+<p class="ps3"><span class="ts0">Currently EPSON is still investigating of this issue, please wait for a while.</span></p>
+<p class="ps3"><span class="ts0">I just would like to check with you regarding situation of this hung up issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">1. Does this hung up happen at 8site with Hot mode and it's happen after tray exchange?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Probably this issue due to software issue.</span></p>
+<p class="ps3"><span class="ts0">You&nbsp; may need to upgrade the software to Ver2.5.</span></p>
+<p class="ps3"><span class="ts0">Because Ver2.5 already have solved the real time command overrun error which is you sent us the spel error log.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3 Sep 2009 email from EEMS KateLeong</span></p>
+<p class="ps3"><span class="ts0">We are not sure the 8 site condition, because we use NS8080 mostly on quad site setup. And this hung up is not happening every time after tray change, only intermittently. So far we have not much data on the hang-up issue as this time was the 1st time we captured and gathered data. I will continue to monitor and gather more data.</span></p>
+<p class="ps3"><span class="ts0">We may try the Ver. 2.5 HMI on 1 handler to see whether it can resolve the hang-up issue. Please arrange with Getech to have 1 machine upgrade.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">HMI Ver 2.5 Release Note</span></p>
+<p class="ps3"><span class="ts3">-------------------------------------------------------------------------------</span></p>
+<p class="ps3"><span class="ts3">&lt;Ver2.5&gt; 2009/06/01</span></p>
+<p class="ps3"><span class="ts3">-------------------------------------------------------------------------------</span></p>
+<p class="ps3"><span class="ts3">***** Added Points ***************************</span></p>
+<p class="ps3"><span class="ts3">(1)Addition of offset to Tray form.</span></p>
+<p class="ps3"><span class="ts3">(2)Addition of EPSON ATC.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">***** Modified Points ************************</span></p>
+<p class="ps3"><span class="ts3">(1)Modification of RTC error.</span></p>
+<p class="ps3"><span class="ts3">RTC error is Real Time Command error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">NS-8000 series HMI Ver 2.5 will solve Real Time Command error.</span></p>
+<p class="ps3"><span class="ts0">( </span><span class="ts15">T-4216&nbsp;&nbsp;&nbsp; Servo real-time command overrun. SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000 )</span></p>
+</body>
+</html>

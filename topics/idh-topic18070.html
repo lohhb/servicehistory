@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0405-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18070;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0405-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18060.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18080.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 </span><span class="ts23">&ldquo;The Arm reached the limit of XY motion range&rdquo; error occurred during homing</span><span class="ts24">,&nbsp;</span><span class="ts23">&nbsp;&ldquo;The Arm reached the limit of motion range&rdquo; happened during running check. </span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040 (S/N: </span><span class="ts0">182184 )</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 03-30076)</span></p>
+<p class="ps3"><span class="ts0">Date: 13 Dec 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">SCS </span><span class="ts0">NS-8040 &ldquo;The Arm reached the limit of XY motion range&rdquo; error occurred during homing, &ldquo;The Arm reached the limit of motion range&rdquo; happened during running check. </span></p>
+<p class="ps3"><span class="ts0">This controller S/N: 03-30076 is a black colour controller.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">- Recovery of HDD carried out using Recovery CD Ver 4.0 (FD11S057, 04/28/2011).</span><br /><span class="ts0">&nbsp;- Latest version of HMI and SPEL installed. </span><br /><span class="ts0">- Restore pose data but unable to restore. </span><br /><span class="ts0">- Try to copy and paste the pose data but the HMI unable to launch. </span><br /><span class="ts0">- Reboot system still the same, so recovery again. </span><br /><span class="ts0">- After recovery, restore system followed by pose data. Everything look good. </span><br /><span class="ts0">- &ldquo;The Arm reached the limit of XY motion range&rdquo; error occurred during homing. So carried out calibration of robots. Thereafter, homing completed. </span><br /><span class="ts0">- &ldquo;The Arm reached the limit of motion range&rdquo; happened during running check. </span><br /><span class="ts0">- Compared the robot parameters and manipulators with the other system and changed some value but still persist and another error &ldquo;communication error with temperature controller&rdquo; happened. </span><br /><span class="ts0">- Swapped another system HDD over to try and the system did not shows &ldquo;communication error with temperature controller&rdquo; error and no error in homing. </span><br /><span class="ts0">- Considered to clone the HDD and do restoration but customer cloning software does not work on NS8040. </span><br /><span class="ts0">- Tried recovery and restore using another system recovery CD, HMI CD and backup. Everything looking fine. </span><br /><span class="ts0">- Restored the original System and pose data and calibration carried out on all robots. </span><br /><span class="ts0">- System able to run but pickup position out by about one and a half pocket. </span><br /><span class="ts0">- Compared the points with another system found not much different. </span><br /><span class="ts0">- Tried to teach the points using auto teaching jig but unsuccessful. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Bug in Recovery CD Ver 4.0 (FD11S057, 04/28/2011).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Recovery CD Ver 4.0 (FD11S057, 04/28/2011) for NS-8000 4 hands</span><span class="ts1">&nbsp;has a bug.</span></p>
+<p class="ps3"><span class="ts1">NS8000 Handler which using the new controller (Black) RC520 S/N: 03-3**** has problem when doing recovery using Recovery CD Ver 4.0 (04/28/2011) FD11S057 for SPI-IB945 CPU Board.</span></p>
+<p class="ps3"><span class="ts1">After recovery, &ldquo;The arm reached the limit of motion range&rdquo; error happened at input/output arms.</span></p>
+<p class="ps3"><span class="ts1">Only POSE and SYSTEM data were restored at the point of recovery. </span></p>
+<p class="ps3"><span class="ts1">Tried open up the range for both input/output arms but result still the same.</span></p>
+<p class="ps3"><span class="ts1">After recovery, the Hand Pitch at Handler Configuration for X-pitch was at 40mm. these pitch couldn&rsquo;t be changed even HMI was reinstalled.</span></p>
+<p class="ps3"><span class="ts1">The only way to changed was to through the handler.def from the config file and the X-pitch value should be 80mm.</span></p>
+<p class="ps3"><span class="ts1">or copy back the Config folder.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Use Recovery CD Ver 4.1 (FD12S019, 02/13/2012) for 4 hands to solve the problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Refer </span><a href="idh-topic18450.html" class="hs0">0443-NS8K</a><span class="ts0">&nbsp;for same issue.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

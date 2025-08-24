@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0051-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7450;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0051-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7440.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7460.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS80-12 unable to start, door open error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040 UTAC(NS80-12, S/N: 181312)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 29 Nov 2008(week 48)</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-8040 (NS80-12) unable to start, door open error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps131"><span class="ts0">Advised customer to check all door sensor I/O, ok.</span></p>
+<p class="ps131"><span class="ts0">Check and swap remote I/O, ok.</span></p>
+<p class="ps131"><span class="ts0">Check I/O module EIN7(module for door sensor signal), ok.</span></p>
+<p class="ps131"><span class="ts0">Replaced I/O module EIN30 (located below Loader unit), problem resolved.</span></p>
+<p class="ps131"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps131"><span class="ts1">EIN7 consist of Input Bit( 104~110 connected to SKP452 E-stop board)</span><span class="ts0">:</span></p>
+<p class="ps131"><span class="ts0">IN104, Tester Side 1 , Off when door close</span></p>
+<p class="ps131"><span class="ts0">IN105, Tester Side 2 , Off when door close</span></p>
+<p class="ps131"><span class="ts0">IN106, Loading Side 1 , Off when door close</span></p>
+<p class="ps131"><span class="ts0">IN107, Loading Side 2 , Off when door close</span></p>
+<p class="ps131"><span class="ts0">IN108, Unloading Side 1 , Off when door close</span></p>
+<p class="ps131"><span class="ts0">IN109, Unloading Side 2 , Off when door close</span></p>
+<p class="ps131"><span class="ts0">IN110, option Loader/Unloader cover , Off when door close</span></p>
+<p class="ps3"><span class="ts0">IN111, Input Air Pressure sensor, On when there is incoming air supply</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">As for Index side cover door it is Input Bit 284.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Faulty</span><span class="ts1">&nbsp;Input(Green) I/O Module EIN 30 of 16CH (located below Loader unit).</span></p>
+<p class="ps3"><span class="ts0">IN288 to IN301, START1, HOME1 to Front &amp; Rear Operation panel.</span></p>
+<p class="ps3"><span class="ts0">IN299 is for Cover Open Switch.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">(Where as EOUT30 Output to Front &amp; Rear Operation Panel)</span></p>
+<p class="ps3"><span class="ts0">(EIN30 has 14CH &amp; 15CH connected to EOUT30 )</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts92">Remarks</span></p>
+<p class="ps2"><img width="904" height="410" border="0" src="images/0051-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">There are 2 I/O modules labeled with EIN30</span><span class="ts0">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">1st EIN30 (240) Input I/O Module 16 CH </span><span class="ts0">(located below Loader unit)</span></p>
+<p class="ps3"><span class="ts0">Page 26, Drawing No. Operation panel 2</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">2nd EIN30 (232) Input I/O Module 8CH (located at Index area)</span></p>
+<p class="ps3"><span class="ts0">Refer page 89 of Wiring diagram on EIN30.</span></p>
+<p class="ps3"><span class="ts0">Draw No: Remote I/O 16 (&lt;= misleading actually is 8 CH)</span></p>
+<p class="ps3"><span class="ts0">Draw Name: Skip enable SW wiring</span></p>
+<p class="ps3"><span class="ts0">Sheet No: SKH0811-G16-3</span></p>
+<p class="ps3"><span class="ts3">EIN30 for Index( 8 CH )</span><span class="ts0">:</span></p>
+<p class="ps3"><span class="ts0">1) IN280, SKIP ENABLE</span></p>
+<p class="ps3"><span class="ts0">2) IN281, </span><span class="ts1">not use for NS-8040 (NS-8080/8160 Chamber Fan Driver Alarm)</span></p>
+<p class="ps3"><span class="ts0">3) IN282, ionizer for chamber(test area)</span></p>
+<p class="ps3"><span class="ts0">4) IN283, Ionizer for Loader &amp; Unloader (Ionizer Alarm 2A &amp; 2B)</span></p>
+<p class="ps3"><span class="ts0">5) IN284, Index Cover Unit</span></p>
+<p class="ps3"><span class="ts0">6) IN285, not use in NS-8040 (NS-8080/8160 Test Hand spring compliance sensor)</span></p>
+<p class="ps3"><span class="ts0">7) IN286, Index Cooling Fan for Z motor</span></p>
+<p class="ps3"><span class="ts0">8) IN287, Index Cooling Fan for </span><span class="ts1">U motor</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Note: IN283 for Ionizer Alarm 2A &amp; 2B are linked in series.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts3">Email by Hidaka, 25 May 2011:</span></p>
+<p class="ps144"><span class="ts3">To change EIN30 label of 240&nbsp; Input Module 16 CH (located at Loader area)</span></p>
+<p class="ps144"><span class="ts3">EIN30&nbsp;&nbsp;&nbsp; -&gt; OP IN</span></p>
+<p class="ps144"><span class="ts3">EOUT30 -&gt;OP OUT</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts37">1) EIN 30 of 16CH (located below Loader unit) include Cover Open Switch(Input Bit 299)</span></p>
+<p class="ps144"><span class="ts37">2) EIN7 consist of Input Bit( 104~110 connected to SKP452 E-stop board) for Doors</span></p>
+<p class="ps3"><span class="ts37">3) EIN30 of 8 CH (located above Index) include Input Bit 284 for Index side cover door</span></p>
+</body>
+</html>

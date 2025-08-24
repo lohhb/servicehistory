@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0286-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14390;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0286-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14380.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14400.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 ESD class 0 EP5 controller unable to control the ion balance for the chamber</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (NS70-34, S/N: 181008)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 9~11 Feb 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Problem encountered:</span></p>
+<p class="ps3"><span class="ts0">1.This upgrade kit came with a new EP5 controller and non-sensor ionizer electrode for chamber. However, the ionizer electrode screw hole is size m3, and cannot secure to the m4 screw hole in the chamber.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2.The EP5 controller unable to control the ion balance for the chamber. Slight adjustment to the ionizer controller adjustment knob will see the ion balance going to +30 or ¨C30 volts. St Calamba encountered same problem when they installed the EP5 and Suzuki went down to troubleshoot this issue. Request Iwata san to share their findings.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3. When triggered the 128 and 129 ionizer fan SPEL I/O, fan and ionizer can work. But when pushed start button to run handler, ionizer controller unable to turn on itself. Need to verify again tomorrow if the chamber fan is enabled in temperature parameter. Maybe ionizer controller will turn on only when fan is ON.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">10 Feb 2011</span></p>
+<p class="ps3"><span class="ts0">- Verified with spare EP4 controller but still unable to control the ion balance in chamber.</span></p>
+<p class="ps3"><span class="ts0">- Checked MKS controller control 1 RJ-9 connector and found wrong wiring connection. Confirmed again on other ESD class 0 handlers for the correct connection.</span></p>
+<p class="ps3"><span class="ts0">As confirmed by Iwata san, he has spare wiring and will bring in the part tomorrow morning.</span></p>
+<p class="ps131"><span class="ts0">Continue buy off items. Add extra groundings to input/output arm and empty tray arm.</span></p>
+<p class="ps131"><span class="ts0">Completed resistivity check and partial ionizer cpm check(without the chamber).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">11 Feb 2011</span></p>
+<p class="ps3"><span class="ts0">- Replaced spare MKS control 1 RJ-9 cable and verified chamber ion balance able to control within range.</span></p>
+<p class="ps3"><span class="ts0">- Replaced new set of chamber discharge needles. Completed chamber ionizer cpm check and manual trigger check.</span></p>
+<p class="ps3"><span class="ts0">- Release handler.</span></p>
+<p class="ps3"><span class="ts0">SR ref: 013155</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">MKS controller control 1 RJ-9 connector and found wrong wiring connection.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

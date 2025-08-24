@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0004-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 430;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0004-NS8K (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic420.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic440.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: DU2 Axis 4 Motor Driver Module and AC/DC Board faulty</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040 (NS80-98) S/N: 181208</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 16 Nov 2007</span></p>
+<p class="ps3"><span class="ts0">Warranty claim: S0267</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Drive Unit 2 (DU2) Axis 4 Motor Driver Module (servo driver) burnt and AC/DC board (Motor Power Unit) faulty.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">SPEL encountered &ldquo;Absolute Encoder Backup Alarm&rdquo; after burnt Motor Driver Module replaced, in SPEL, status for all robots in DU 2 with ??? . </span></p>
+<p class="ps3"><span class="ts0">Reset Encoder from SPEL </span></p>
+<p class="ps3"><span class="ts0">(In SPEL CT, click [Setup]-&gt;[Robot Manipulator]-&gt;[Reset Enc] tab.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Tick the Joint to initialize and click [Reset] button.)</span></p>
+<p class="ps2"><img width="419" height="579" border="0" src="images/0004ns8kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Restore SPEL system files. Encountered &ldquo;SRCLoad.DLL initialization routine failed Error code:0202&rdquo; and &ldquo;E-9202 SRCMng event resource allocation error&rdquo; after restore system files.</span></p>
+<p class="ps2"><img width="358" height="186" border="0" src="images/0004ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">MMI and SPEL unable to launch, perform recovery on HDD and restore files through backup san. Now all robots pulse 0 positions out.</span></p>
+<p class="ps3"><span class="ts0">Require manual calibration of all motors with reference with another handler.</span></p>
+<p class="ps126"><span class="ts0">After manual calibration, Teaching perform on Index Arm Y,Z and U axis of both arm 1 and 2 ref height of both index arms, contact position and both shuttles loading and unloading positions. Verified input/output arm open/close pitch and adjusted in SPEL hofs of robot 7 and 8.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Refer procedure on NS-8040 Manual Calibration Of Motors.</span></p>
+<p class="ps3"><span class="ts0">400 W Motor Driver Module R13B070114</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Use Recovery CD </span><span class="ts25">FD07S109</span><span class="ts0">&nbsp; ver1.56 (12/11/2007) will also solve Encoder Backup Alarm error as the SPEL CT is 3.11ds is installed during recovery.</span></p>
+<p class="ps3"><span class="ts0">Refer </span><a href="idh-topic460.html" class="hs0">0007-NS8K</a></p>
+<p class="ps3"><span class="ts0">Refer </span><a href="ns8040manualcalibration.html" class="hs0">NS-8040 Manual Calibration</a><span class="ts0">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">One same case of </span><span class="ts1">SRCLoad DLL, Initialization routine failed:</span></p>
+<p class="ps3"><span class="ts1">After 2 pieces of the Remote IO Boards were installed, the error was detected.</span></p>
+<p class="ps3"><span class="ts1">The error, 0202; &quot;SRCLoad DLL, Initialization routine failed&quot;, </span></p>
+<p class="ps3"><span class="ts1">Error 9202; SRCMng event resource allocation erro</span><span class="ts0">r occurred.</span></p>
+<p class="ps3"><span class="ts0">After remove the extra Remote IO Board, no more error.</span></p>
+<p class="ps3"><span class="ts0">There was conflict when the 2 Remote IO boards were having same address.</span></p>
+</body>
+</html>

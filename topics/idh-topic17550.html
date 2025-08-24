@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0350-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17550;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0350-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17540.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17560.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-7000 during dry cycle with tray, encountered #Jam 1406&nbsp;&nbsp; Tray separation cylinder (lower) error on Reloader 2 but handler is using tray drawer 1 only</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7000 (S/N: 18606) </span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 10~13 Dec 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Intel Penang NS-7000 d</span><span class="ts0">uring dry cycle with tray, encountered #Jam 1406 Tray separation cylinder (lower) error on Reloader 2 but handler is using tray drawer 1 only.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">1</span><span class="ts0">) Reinstall MMI. Same. </span><br /><span class="ts0">2) Reinstall SPEL. Same. </span><br /><span class="ts0">3) Reload config.exe Same. </span><br /><span class="ts0">4) New HDD recovery. Same. </span><br /><span class="ts0">5) Wiring check. No problem. </span><br /><span class="ts0">6) IO module for 72 IO module checked and swap. Same. </span><br /><span class="ts0">7) Checked wiring for SQ121, SQ122, SQ123. No problem. </span><br /><span class="ts0">8) Checked uniwire for short condition. No problem. </span><br /><span class="ts0">9) Found SQ120-SQ127 always ON condition in SPEL. </span><br /><span class="ts0">10) SQ124 and SQ125 for drawer lane 2 not installed but also ON in SPEL IO </span><br /><span class="ts0">11) Physically cut sensor, physical sensor able to ON/OFF but SPEL always ON. </span><br /><span class="ts0">12) Physically cut sensor and IO module 72 able to ON/OFF. </span><br /><span class="ts0">13) Removed uniwire for IO module 72 but SQ120-SQ127 still ON. </span><br /><span class="ts0">14) Suspect short condition from path of IO module to SPEL Physical short or IO address short. </span><br /><span class="ts0">15) Checked all IN IO module for handler and no IO module with same address. </span><br /><span class="ts0">16) 1 by 1 IO module removed unwire to check for SQ120-SQ127 OFF. </span><br /><span class="ts0">17) Found Shuttle 1 IO module removed, able to trigger ON/OFF with SQ121-SQ123 SPEL IO. </span><br /><span class="ts0">18) Dry cycle with tray and no error. </span><br /><span class="ts0">19) With uniwire connector in but connectors to sensor removed, able to trigger SQ121-SQ123. </span><br /><span class="ts0">20) With uniwire and sensor connectors in, unable to trigger SQ121-SQ123 </span><br /><span class="ts0">21) Shuttle 1 Input IO module replaced. Same. </span><br /><span class="ts0">22) Found shuttle 1 Input&nbsp; IO module address at 64 and is wrong for 16CH because will cause short with 72 Tray IN module addressing. (I/O bit overlapping)</span><br /><span class="ts0">&nbsp;23) Change Shuttle 1 IO module address to 32. </span><br /><span class="ts0">24) Dry run with try. No error. </span></p>
+<p class="ps3"><img width="145" height="361" border="0" src="images/0350-ns7kb1.png" /><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Wrong IO address setting on Shuttle 1 16 Ch Input I/O module.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0287-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14200;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0287-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14190.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14210.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8080&nbsp;</span><span class="ts23">&nbsp;8 Hands Input arm hand up sensor doesn't turn on issue</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (NS8080-03, S/N: 181695) 8 Hands High UPH</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 13~14 Jan 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">UTAC&nbsp; NS8080-03(181695) input arm hand up sensor doesn't turn on issue</span></p>
+<p class="ps3"><span class="ts1">When input arm at shuttle 1 and 2 position, can see in SPEL&nbsp; IO #48 delay to ON.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">Checked all z-axis module and found one of the ball spline o-ring stuck between the shaft spring. </span></p>
+<p class="ps3"><span class="ts0">Removed all o-rings from the input arm.</span></p>
+<p class="ps3"><span class="ts0">Can see improvement in the responds of IO #48.</span></p>
+<p class="ps3"><span class="ts0">Under monitoring.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">14 Jan 2011</span></p>
+<p class="ps3"><span class="ts0">Handler when boot into HMI will prompt either input or output z-axis servo error. Unable to home or run. Check on SPEL IO #48, 49, 50, 52, 53, 54 not ON.</span></p>
+<p class="ps3"><span class="ts0">Found IO Arm IN1 module address set wrongly. Address same as IO Arm IN2.</span></p>
+<p class="ps3"><span class="ts0">Revert address back to original setting and resolved z-axis servo error. </span></p>
+<p class="ps3"><span class="ts0">Suspected someone might have accidentally changed it as the event log registered uni-wire cable 1 disconnection error around 8am.</span></p>
+<p class="ps3"><span class="ts0">For hand up sensor doesn't turn on error, Check all cables behind distribution board SKP479-1A and 1B and re-sit all connectors on them. Dry cycle handler and released for production. Handler still in production as of 7pm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Use multi-meter to check below</span></p>
+<p class="ps3"><span class="ts0">1. Between D-G&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;200 Ohm( Value will be depended on equipment))</span></p>
+<p class="ps3"><span class="ts0">2. Between 0-24V&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;few kOhm (Value will be depended on equipment))</span></p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0084-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12850;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0084-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12840.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12860.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-6040 Software Hang up</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-6040</span></p>
+<p class="ps3"><span class="ts1">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts1">Date: 12 Nov 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">SCS NS-6040 MMI 10.23 hang whenever PAUSE+RESET.</span></p>
+<p class="ps130"><span class="ts0">Irregardless of new or old CPU.</span></p>
+<p class="ps130"><span class="ts0">All hang after PAUSE+RESET</span></p>
+<p class="ps3"><span class="ts1">Control panel no response.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps130"><span class="ts0">Found SPEL has error and stop at START.prg and trying to call a function but no found.</span></p>
+<p class="ps130"><span class="ts0">Found program with function is in working memory but unable to link and compile. Thus, all functions in this program not found in programming window.</span></p>
+<p class="ps130"><span class="ts0">Upon compile, always has memory error.</span></p>
+<p class="ps130"><span class="ts0">Reinstall MMI, same.</span></p>
+<p class="ps130"><span class="ts0">Found program memory 2046, increase to 4096.</span></p>
+<p class="ps130"><span class="ts0">Able to compile, verified and no hang.</span></p>
+<p class="ps130"><span class="ts0">SCS to continue verify other functions and feedback.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Customised MMI software bug caused software hang up.</span></p>
+</body>
+</html>

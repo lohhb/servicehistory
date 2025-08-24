@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0102-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10960;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0102-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10950.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10970.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: UTAC NS-8080 Chamber soak time and Retrofit InLine 4 site</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N:181641)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 8 Oct 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">1. Chamber soak time</span></p>
+<p class="ps3"><span class="ts0">In temperature parameter, high mode setting, when set chamber soak time( example: 3600s ).</span></p>
+<p class="ps3"><span class="ts0">When device place on the input shuttle before going into chamber and jamming occur, after clearing jam and press start, the chamber soak timer will display on screen and count down from 3600s.</span></p>
+<p class="ps3"><span class="ts0">When I pressed pause + reset during timer count down, the timer will stop. When i press start again the timer will remain same. Until the handler clean out and finish cycle the timer display still remain on the screen. Not sure if this is bug. I will confirm again and send screenshot if possible tomorrow.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2. No retrofit inline 4 site</span></p>
+<p class="ps3"><span class="ts0">As advised from you, reinstall HMI and select retrofit handling, setup will have retrofit inline 4 site.</span></p>
+<p class="ps3"><span class="ts0">But before reinstall HMI, I tried inline 4 site(4x1) with NS6000 4x1 change kit installed. Output shuttle is with thru holes. Check &quot;Use Gate device exist sensor&quot;, and handler able to run. Actually I should use retrofit inline 4 site? normal inline 4 site is for NS8040?</span></p>
+<p class="ps3"><span class="ts0">Operation manual state that vacuum/coutner air ports for retrofit inline 4 site are different from inline 4 site but now I can also run NS-6000 changekit with normal inline 4 site selected and Gate sensor checked. Pls confirm on this.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1) For chamber soak timer display hang up, I confirmed again and attached pictures(both timer remain same after reset start and cycle finish). Sequence is during chamber soak timer countdown, press pause+reset, soak timer display will stop, even after resume operation by start button. </span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Also when arm 1 pickup devices for chamber soak, timer display is showing arm2 chamber soak...</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Encountered retrofit handling option not in setup option, have to re-install HMI and enable option. Tried to run normal inline 4 site with gate device exist sensor checked and handler able to run.</span></p>
+<p class="ps3"><span class="ts1">Chamber soak timer hang up on HMI screen after pause+reset during chamber soak time countdown. Even after cycle finish, timer still on HMI screen.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="640" height="480" border="0" src="images/0102-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="640" height="480" border="0" src="images/0102-ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2) I confirmed Your operation is perfect.</span></p>
+<p class="ps3"><span class="ts0">Even if you use retrofit Inline4 CK, you select &ldquo;Inline 4 sites(4x1)&rdquo; and &ldquo;Use gate device exist sensor&rdquo; </span></p>
+<p class="ps3"><span class="ts0">I selected Inline 4 sites(4x1) and able to run without having to check &quot;Use gate device exist sensor&quot;. So it is running fine with side fiber sensor.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">So when do we need to use Retrofit Inline 4 sites(4x1)? When i use this setup, index arm vacuum ports used are e,f,g,h. So encountered Start Error. But manual already state NS8080 use this Retrofit Inline 4 sites(4x1). Pls clarify on manual information.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Confirmed with Hidaka san NS8080 running retrofit kit 1x4 sites use normal inline 4 sites option in setup menu. If select &iexcl;°Retrofit inline 4 sites&iexcl;± option, index arm use vacuum ports e,f,g,h and encounter Start Error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

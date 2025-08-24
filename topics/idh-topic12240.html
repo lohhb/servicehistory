@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0166-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12240;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0166-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12230.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12250.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 175DegC Handler device stuck in socket</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040 175DegC (S/N: 151205)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 6 Apr 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-8040(NS-200, S/N: 151205) @160DegC PG-LGBA-208-4 17x17 evaluation support.</span></p>
+<p class="ps3"><span class="ts0">1st lot size is 1137 but only managed to test about 500pcs of device.</span><br /><span class="ts0">&nbsp;Test time is about 30 sec at 160DegC.</span><br /><span class="ts0">&nbsp;During the first hour test, no jam. After that there were jam for device </span><br /><span class="ts0">drop(stuck) in socket after test.</span><br /><span class="ts0">&nbsp;JAM0303, Device drop error (Arm 1) : 12 times</span><br /><span class="ts0">&nbsp;JAM0304, Device drop error (Arm 2): 6 times</span><br /><span class="ts0">&nbsp;Most of the time, using vacuum pen to pick up the drop device(after test) </span><br /><span class="ts0">was impossible because the device were actually stuck in socket.</span><br /><span class="ts0">&nbsp;- all 4 sockets were tightened properly but the external area that device </span><br /><span class="ts0">does not sit on can be compressed down, Infineon member said that this is </span><br /><span class="ts0">normal</span><br /><span class="ts0">&nbsp;- all device drop/stuck in socket happened after test AND only happen on </span><br /><span class="ts0">test site C &amp; D</span><br /><span class="ts0">&nbsp;- have swapped socket B with D, and C with A but still of device stuck in </span><br /><span class="ts0">Test site C or D</span><br /><span class="ts0">&nbsp;- have swapped the contactors for Arm 1 ; Head 1/2 with Head 3/4 but still </span><br /><span class="ts0">of device stuck in Test site C or D</span><br /><span class="ts0">&nbsp;- unable to find any damaged to the nests for Head 1/2 &amp; Head 3/4</span><br /><span class="ts0">&nbsp;According to Vincent, last week when testing 60pcs of devices, during the last few cycles of test only Arm 1 device drop/stuck in test site D only </span><br /><span class="ts0">afew times.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">7 Apr 2010</span></p>
+<p class="ps3"><span class="ts1">Device drop in socket for Site C &amp; D investigation offline, but offline run encountered only device drop in Site A</span></p>
+<p class="ps3"><span class="ts1">- Ambient mode, 3 trays of unmark dummy devices run for 2 cycles with dummy test time 30sec, ok, no jam at socket</span></p>
+<p class="ps130"><span class="ts1">- Hot mode 160DegC, 1 tray of production devices cycle run with dummy test time 30sec, 3 device drop at socket Site A all for Arm 2</span></p>
+<p class="ps130"><span class="ts1">-&nbsp; Hot mode 160DegC, only enable Site A &amp; using the 3 dropped device, cycle run and only 1 pc of device drop</span></p>
+<p class="ps130"><span class="ts1">-remove socket guide plate and loadboard, KA member check/measured at 4 sockets and production device, suspect socket issue due to wear &amp; tear and also design issue.</span></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts99">Cause of reason (We guess)</span></p>
+<p class="ps13"><span class="ts99">1. Socket problem</span></p>
+<p class="ps13"><span class="ts99">2. Different height of socket base for right side and left side 3. Slant on test hand base plate 4. Insufficient the projection of test hand vacuum pad.</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts99">Countermeasure:</span></p>
+<p class="ps13"><span class="ts99">1. I already ask to socket supplier (Agent) and make the schedule to check condition.</span></p>
+<p class="ps13"><span class="ts99">&nbsp; I'm waiting for their reply.</span></p>
+<p class="ps13"><span class="ts99">2. To adjust shim on the socket base.</span></p>
+<p class="ps13"><span class="ts99">3. Execute Height calibration during 160 degree</span></p>
+<p class="ps13"><span class="ts99">4. To adjust the value of projection of test hand vacuum pad&nbsp;&nbsp; </span></p>
+<p class="ps13"><span class="ts99">&nbsp;&nbsp; Current condition: Around 0.3mm</span></p>
+<p class="ps13"><span class="ts99">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change to 0.5mm (Adjusted by shim) 5. CK matter:</span></p>
+<p class="ps13"><span class="ts99">&nbsp;&nbsp; Guide pin hole on the nest.</span></p>
+<p class="ps13"><span class="ts99">&nbsp;&nbsp; One is for circle, the other one is for ellipse.</span></p>
+<p class="ps147"><span class="ts100">&nbsp;&nbsp; Set the circle guide hole position to center side.</span></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">8 Apr 2010</span></p>
+<p class="ps3"><span class="ts1">Socket condition &amp; devices checking with reference with NHK Japan's socket drawing with Hidaka-san.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">9 Apr 2010</span></p>
+<p class="ps3"><span class="ts1">- File away part of the socket&nbsp; to improve ball guide as requested by Hidaka-san, total 4 pcs</span></p>
+<p class="ps3"><span class="ts1">- Check Ambient running by 3 trays of Dummy device, ok.</span></p>
+<p class="ps137"><span class="ts1">- Check 160 degree running by 3 trays of Dummy device, ok</span></p>
+<p class="ps130"><span class="ts1">- Check 160 degree running by 1 tray of Engineering device, occur device pickup error on test site A.</span></p>
+<p class="ps137"><span class="ts1">- file some lines on the bottom of device guide to allow air to flow into socket to fill up vacuum during Index Arm pull up from socket.-</span></p>
+<p class="ps137"><span class="ts1">-Check 160 degree running by same tray of Engineering device, Disable test site C &amp; D , no device drop in socket</span></p>
+<p class="ps137"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">27 May 2010</span></p>
+<p class="ps3"><span class="ts0">-Installed 4 new improved sockets from EPSON/NHK to loadboard.</span></p>
+<p class="ps3"><span class="ts0">-Ambient run check with devices that encountered stuck in sock, ok</span></p>
+<p class="ps3"><span class="ts0">-Hot mode set at 35DegC, running check with devices, ok</span></p>
+<p class="ps3"><span class="ts0">-Dummy test time set 30 sec at 160DegC:</span></p>
+<p class="ps3"><span class="ts0">1</span><sup><span class="ts0">st</span></sup><span class="ts0">&nbsp;try 1 tray, ok</span></p>
+<p class="ps3"><span class="ts0">2</span><sup><span class="ts0">nd</span></sup><span class="ts0">&nbsp;try 1 tray, ok</span></p>
+<p class="ps3"><span class="ts0">3</span><sup><span class="ts0">rd</span></sup><span class="ts0">&nbsp;try 1 tray, ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

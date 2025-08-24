@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0125-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11440;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0125-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11430.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11450.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:</span><span class="ts20">&nbsp;</span><span class="ts24">Infineon NS-102 (S/N: 151244) During ONLINE Production hang up</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040 (NS-102, S/N: 151244)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 28 Dec 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">26 Dec handler encountered the following in HMI:</span></p>
+<p class="ps3"><span class="ts1">&quot;Index Unit&quot;,&quot;WAR0399&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;Robot controller (RC520) error occurs.</span></p>
+<p class="ps3"><span class="ts1">&quot;Input Arm&quot;,&quot;WAR0199&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;Robot controller (RC520) error occurs.&quot;,&quot;12/26/2009 7:29:16 AM&quot;,&quot;reset&quot;,&quot;87&quot;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">SPEL CT errors:</span></p>
+<p class="ps3"><span class="ts1">T-4102&nbsp;&nbsp;&nbsp; The Drive Unit power is not turned on.&nbsp; </span></p>
+<p class="ps3"><span class="ts1">T-4003&nbsp;&nbsp;&nbsp; Communication error within the Motion Control Module.&nbsp; </span></p>
+<p class="ps3"><span class="ts68">&nbsp;</span><span class="ts1">I-2031&nbsp;&nbsp;&nbsp; The subscription of Array Variable is out of the user-defined range.</span></p>
+<p class="ps3"><span class="ts1">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 12/26/2009 07:46:08 SYSTEMTASK:QPDAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps3"><span class="ts1">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 12/26/2009 07:46:08 COMMON:ANA_CNT:32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57500</span></p>
+<p class="ps3"><span class="ts1">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 12/26/2009 07:43:30 COMMON:EmptyLD_UL:405&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57500</span></p>
+<p class="ps3"><span class="ts1">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 12/26/2009 07:36:52 COMMON:FIX_MONITOR:15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57500</span></p>
+<p class="ps3"><span class="ts1">M-3302&nbsp;&nbsp;&nbsp; A output command is attempted when the Safety Door is open.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 12/26/2009 07:24:59&nbsp; :MONITOR:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57495</span></p>
+<p class="ps3"><span class="ts1">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 12/26/2009 07:21:30 COMMON:FIX_MONITOR:15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57500</span></p>
+<p class="ps3"><span class="ts1">T-4004&nbsp;&nbsp;&nbsp; Event waiting error with the Motion Control Module.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 12/26/2009 05:43:24 SYSTEMTASK:DAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps3"><span class="ts1">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 12/26/2009 03:43:30 SYSTEMTASK:QPDAEMON:0</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">WFWLB 183/217 dummy devices run OFFLINE unable to see error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Check :</span></p>
+<p class="ps3"><span class="ts1">- Product ID : NS-8040, ok</span></p>
+<p class="ps3"><span class="ts1">-&nbsp; TESTER_COMM.PRG in SPEL project</span><span class="ts97">, ok.</span></p>
+<p class="ps3"><span class="ts97">Reload&nbsp; GPIB driver IF100B17.HEX in Loader.exe of NS-8000</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Unknown.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts1">The following errors in SPEL:</span></p>
+<p class="ps3"><span class="ts1">1) T-4102&nbsp;&nbsp;&nbsp; The Drive Unit power is not turned on.&nbsp; </span></p>
+<p class="ps3"><span class="ts1">2) T-4003&nbsp;&nbsp;&nbsp; Communication error within the Motion Control Module.</span></p>
+<p class="ps3"><span class="ts1">3) Error G-7101&nbsp;&nbsp;&nbsp; Unknown Error !! </span></p>
+<p class="ps3"><span class="ts0">are the same that occurred in </span><a href="idh-topic10200.html" class="hs0">0087-NS8K</a><span class="ts1">&nbsp;and </span><a href="idh-topic11460.html" class="hs0">0127-NS8K</a><span class="ts1">.</span></p>
+<p class="ps3"><span class="ts3">HMI Ver 2.5 Release Note</span></p>
+<p class="ps3"><span class="ts3">-------------------------------------------------------------------------------</span></p>
+<p class="ps3"><span class="ts3">&lt;Ver2.5&gt; 2009/06/01</span></p>
+<p class="ps3"><span class="ts3">-------------------------------------------------------------------------------</span></p>
+<p class="ps3"><span class="ts3">***** Added Points ***************************</span></p>
+<p class="ps3"><span class="ts3">(1)Addition of offset to Tray form.</span></p>
+<p class="ps3"><span class="ts3">(2)Addition of EPSON ATC.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">***** Modified Points ************************</span></p>
+<p class="ps3"><span class="ts3">(1)Modification of RTC error.</span></p>
+<p class="ps3"><span class="ts3">RTC error&nbsp; is Real Time Command error.</span></p>
+</body>
+</html>

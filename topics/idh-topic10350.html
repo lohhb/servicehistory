@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0044-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10350;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0044-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10340.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10360.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-6040 CPU Board downgrade from CPU BoardPC-686BX (Windows 2000) to P5/6X86 CPU Board (Windows98) issues</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date:</span><span class="ts27">&nbsp;</span><span class="ts0">28 May ~ 12 Jun 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-6040 CPU Board downgrade from CPU BoardPC-686BX (Windows 2000) to P5/6X86 CPU Board (Windows98) issues relating to backplane board.</span></p>
+<p class="ps3"><span class="ts0">Keyboard unable to detect after downgrade.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts36">11 Jun 2009</span></p>
+<p class="ps3"><span class="ts0">Take CPU board PC-686BX(PC)-EEP850 from NS60-35T(S/N:15904) put into NS60-54 s/n:121024 which they want to downgrade from Win2k to Win98 but encounter Keyboard unable to detect error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">We found both controller have different backplane board. </span></p>
+<p class="ps3"><span class="ts0">NS60-35T which is running Win98 has an older backplane board, while NS60-54 which is running Win2k has a newer board and controller is RC520 type.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Can you advise whether CPU board PC-686BX(PC)-EEP850 can be install onto the newer backplane board?</span></p>
+<p class="ps3"><span class="ts0">PC-686BX can be used newer backplane board.</span></p>
+<p class="ps3"><span class="ts0">PC-686BX has keyboard plug on the back side.</span></p>
+<p class="ps3"><span class="ts0">You can connect keyboard plug to back side of CPU board directly.</span></p>
+<p class="ps3"><span class="ts0">The other idea: Keyboard for USB type</span></p>
+<p class="ps3"><span class="ts0">You should check PC condition.</span></p>
+<p class="ps3"><span class="ts0">It is available to set USB legacy support on the computer setup.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">14 Jun 2009</span></p>
+<p class="ps3"><span class="ts0">The CPU board which cannot detect keyboard is P5/6X86. This is the earlier cpu type used on NS60-02.</span></p>
+<p class="ps3"><span class="ts0">CPU PC-686BX from NS60-35T can be used on NS60-54 on Win98 platform.</span></p>
+<p class="ps3"><span class="ts0">We have tried and it worked. However, we have not try CPU board SPI-6941 from NS60-54 on NS60-35T yet.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Tried cpu board PC-686BX from NS60-35T on NS60-54 and it can boot up with Win98 OS, keyboard can also be used</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Refer email 28 May 2009 for P5/6X86 CPU Board connections and jumpers' setting.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">15 Jun 2009 Pre-check condition or returning NS60-35T</span></p>
+<p class="ps3"><span class="ts0">Recovered system using Win2k recovery cd with cpu board SPI-6941 from NS60-54 but encountered hang up/no response from operation panel after restoration of system data.</span></p>
+<p class="ps3"><span class="ts0">As discussed with Iwata san, handler will be brought back to Getech and try to recover with teaching, calibration, set up data etc.</span></p>
+<p class="ps3"><span class="ts0">Also found vacuum pump faulty, thus unable to verify index arm and tray arm vacuum units condition.</span></p>
+<p class="ps3"><span class="ts0">Remarks: Do not restore SPEL95 system data into a CPU Upgrade(PC-686-BX or SPI-6941) system that using SPEL CT, this will cause hang up.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">NS60-54 backplane board not compatible to use with P5/6X86 CPU Board.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Old type Backplane</span></p>
+<p class="ps3"><span class="ts0">specification: MBP-PC114R (R35N600000100)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">another old type Backplane is SRC520CE is MBP-PCI13L</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">New type Backplane</span></p>
+<p class="ps3"><span class="ts1">Spec:PCI-14S-RS-R30</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Lastest Backplane is MB-PCI14/9(PC) which is also use in NS-7000.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

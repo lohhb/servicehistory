@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0085-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10180;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0085-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10170.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10190.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS8080 Temperature Priority Mode different from NS-7000 series</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080/NS-7000 series</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 22 Jul 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Enquiry</span></p>
+<p class="ps3"><span class="ts0">Xilinx Alan Teoh asked why new NS-8080 handler software temperature priority mode is not same as NS7080W handler software:</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Reply</span></p>
+<p class="ps144"><span class="ts0">For NS8080, in temperature offset window, in priority mode, when we choose</span></p>
+<p class="ps144"><span class="ts0">1) &lt;</span><span class="ts25">Speed Priority Mode</span><span class="ts0">&gt; means that test arm 1 will wait with devices in nests when test arm 2 is testing. Input shuttle will be in chamber. &ndash; Temperature has been found to be more stable. (Using chamber temperature to control K1)</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">2) &lt;</span><span class="ts25">Temperature Priority Mode</span><span class="ts0">&gt; means that devices will be in input shuttle 1 pockets in the chamber, while test arm 2 is testing. &ndash; This mode has been found to be harder to control temperature as device usually fail K1 (Too hot).</span></p>
+<p class="ps144"><span class="ts0">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">For NS7KW software when set to temperature priority mode, input shuttle is outside chamber, ensuring better temperature control as it is not impacted by chamber temperature.</span></p>
+<p class="ps144"><span class="ts0">We need the NS8080 handler to follow the temperature priority mode of the NS7080W handler software.</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">24 Jul 2009 email from Hidaka-san:</span></p>
+<p class="ps144"><span class="ts0">we evaluated temperature priority mode NS7 style and NS8 style.</span></p>
+<p class="ps144"><span class="ts0">(Detail of evaluation data, please see attached file &quot;NS8000 temperature priority mode.pdf&quot;.) </span></p>
+<p class="ps144"><span class="ts0">We found both of styles have good point and weak point.</span></p>
+<p class="ps144"><span class="ts0">However, we decided to use NS8 style temperature priority mode in NS8.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps144"><span class="ts0">1) For NS-8080 standard, Temperature priority mode (Input Shuttle standby Inside chamber).</span></p>
+<p class="ps144"><span class="ts0">2) For NS-7000 standard, Temperature priority mode (Input Shuttle standby Outside chamber).</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">Weak point of NS8K&nbsp; Temperature priority mode:</span></p>
+<p class="ps144"><span class="ts0">- Necessary to change Shuttle temperature offset for long and short test time.</span></p>
+<p class="ps144"><span class="ts0">&nbsp; The reason is because Input shuttle go to chamber in standby while test arm in contact to socket. It affect chamber temperature, so it is difficult to adjust temperature by waiting time on the shuttle.</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">Weak point of NS7K Temperature priority mode:</span></p>
+<p class="ps3"><span class="ts0">- Cold material(Output Shuttle) go into chamber during test process, it does not stablise chamber temperature.</span></p>
+</body>
+</html>

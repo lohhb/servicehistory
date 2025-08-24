@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0113-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7830;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0113-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7820.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7840.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS7000 EPSON 3, S/N:181098 Rotator Hands upgrade</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000(Unisem Batam)</span></p>
+<p class="ps3"><span class="ts0">Controller: Rc520</span></p>
+<p class="ps3"><span class="ts0">Date: 22 Oct 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">NS7000 EPSON 3, s/n:181098 rotator arm upgrade.</span></p>
+<p class="ps3"><span class="ts1">-remove open/close arm and install rotator arm.</span></p>
+<p class="ps3"><span class="ts1">-check vacuum, counter air and sensors condition.</span></p>
+<p class="ps3"><span class="ts1">-check alignment using shuttle jig</span></p>
+<p class="ps3"><span class="ts1">-edit config.exe option for rotator and hand pitch setting to 80x60.</span></p>
+<p class="ps3"><span class="ts1">-height calibration for z height of hands.</span></p>
+<p class="ps3"><span class="ts1">-change rotation parameter in SPELCT &lt;CONST.INC&gt; file.</span></p>
+<p class="ps3"><span class="ts1">-run 7x7 QFN dummy devices to confirm offset and rotation.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts11">Removal of Open/Close Arm</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps159"><span class="ts5">1)&nbsp; &nbsp;Label the tubing before removing tubing.</span></p>
+<p class="ps159"><span class="ts5">2)&nbsp; &nbsp;Remove all covers.</span></p>
+<p class="ps159"><span class="ts5">3)&nbsp; &nbsp;Disconnect the all connectors.</span></p>
+<p class="ps159"><span class="ts5">4)&nbsp; &nbsp;Remove the Open/Close Arm by loosen M4 screw x 4.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts11">Fitment of Rotation Arm</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps159"><span class="ts5">1)&nbsp; &nbsp;Fit up the Rotation Arm (M4 screw x 4).</span></p>
+<p class="ps159"><span class="ts5">2)&nbsp; &nbsp;Align the arm using alignment jig.</span></p>
+<p class="ps159"><span class="ts5">3)&nbsp; &nbsp;Connect and fit up the tubing and connectors.</span></p>
+<p class="ps159"><span class="ts5">4)&nbsp; &nbsp;Turn on the Vacuum and Counter Air of each arm and check the condition. Also check the sensors.</span></p>
+<p class="ps159"><span class="ts5">5)&nbsp; &nbsp;Fix up all the covers.</span></p>
+<p class="ps159"><span class="ts5">6)&nbsp; &nbsp;Change the setting of arm from Open/Close Arm to Rotating Arm and Hand Pitch to 80mm(X-Pitch) and 60mm(Y-Pitch) in Config.exe.</span></p>
+<p class="ps159"><span class="ts5">7)&nbsp; &nbsp;Ensure that the rotation speed is 80%.</span></p>
+<p class="ps159"><span class="ts5">8)&nbsp; &nbsp;Carried out Height Calibration for both Arm.</span></p>
+<p class="ps159"><span class="ts5">9)&nbsp; &nbsp;Carried out alignment check with Dummy Devices.</span></p>
+<p class="ps159"><span class="ts5">10) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change the Parameter as shown below.</span></p>
+<p class="ps160"><span class="ts5">a)&nbsp; &nbsp;Enter &lt;SPEL CT&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;&lt;Abort All&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;&lt;P&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;Click on &lt;CONST.INC&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;&lt;Edit&gt;</span></p>
+<p class="ps160"><span class="ts5">b)&nbsp; &nbsp;Click &lt;Edit&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;&lt;Find…&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;Key in &lt;CKD&gt; </span></p>
+<p class="ps160"><span class="ts5">c)&nbsp; &nbsp;Change the values shown below</span></p>
+<div align="left">
+  <table class="tbl11">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts57">CKD</span><span class="ts21">_</span><span class="ts57">RotationHandSpeed</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps162"><span class="ts57">8550</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts57">CKD</span><span class="ts21">_</span><span class="ts57">RotationHandAccel</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps162"><span class="ts57">333333</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts57">CKD</span><span class="ts21">_</span><span class="ts57">RotationHandDecel</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps162"><span class="ts57">333333</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps160"><span class="ts5">d)&nbsp; &nbsp;Click &lt;Save&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;&lt;Close&gt; </span></p>
+<p class="ps160"><span class="ts5">e)&nbsp; &nbsp;Click on &lt;CONST.INC&gt; </span><span class="ts56">?</span><span class="ts5">&nbsp;&lt;Add&gt;</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

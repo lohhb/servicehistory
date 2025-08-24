@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0091-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15900;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0091-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12910.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15910.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-6040 CPU Board upgrade problem</span></p>
+<p class="ps3"><span class="ts1">Handler Model: </span></p>
+<p class="ps3"><span class="ts1">Controller: </span></p>
+<p class="ps3"><span class="ts1">Date: Jul 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps126"><span class="ts0">Amkor(philippines) is continuing doing their CPU upgrade project for NS6040 handler from (200 MHz to 850 MHz), they encounter some incompatibility between the CPU board and SRC-Mother board(backplane board).</span></p>
+<p class="ps3"><span class="ts1">Notice that one LED is not&nbsp; light (3V supply) on backplane board MBP-PCI14R when new cpu board SPI-6941 is used. Even peripheral boards are not yet installed.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Effect of no +3V supply, Using NEW CPU board:</span></p>
+<p class="ps3"><span class="ts1">a) IFUNT100 cannot be detected as well as other PCI bridge device for Device Manager</span></p>
+<p class="ps3"><span class="ts1">b) 3V in mother board is not light on backplane board.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">The old cpu board before CPU upgrade, the backplane board, notice that all power indicator LED is light and all peripheral boards are installed. Compared to new CPU board (SPI-6941-LV), +3V LED is not light up even without peripheral boards installed</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">They are using new CPU board which is CPU (SPI-6941-LV), and they have some inquiry about it, attached is the report they created on this issue.</span></p>
+<p class="ps143"><span class="ts35">&bull;</span><span class="ts30">&nbsp;</span><span class="ts35">Need to know if new CPU boardSPI-6941 has a compatibility issue on mother board?</span></p>
+<p class="ps143"><span class="ts35">&bull;</span><span class="ts30">&nbsp;</span><span class="ts35">Need to know if new CPU require higher power supply wattage</span></p>
+<p class="ps143"><span class="ts35">&bull;</span><span class="ts30">&nbsp;</span><span class="ts35">Need to re-confirm jumper setting of New CPU (SPI-6941-LV)</span></p>
+<p class="ps143"><span class="ts35">&bull;</span><span class="ts30">&nbsp;</span><span class="ts35">Need to re-confirm BIOS setting of New CPU (SPI-6941-LV) during installation</span></p>
+<p class="ps127"><span class="ts0">They also want to know if this is the same CPU board that is compatible to all SRC.</span></p>
+<p class="ps127"><span class="ts0">&nbsp;If not, they need the quotation for the new CPU board that will compatible to all.</span></p>
+<p class="ps127"><span class="ts0">1. Backplane board use for upgraded CPU(SPI-6941-LV) is CONTEC MB-PCI 4/9(PC) while Mother board use for old CPU (P5/6x86 SBC ver. G5) is MBP-PCI14R.</span><br /><span class="ts15">&nbsp;</span><span class="ts0">2. Power supply requirement for CPU(SPI-6941-LV) is 200 watts minimum.</span></p>
+<p class="ps3"><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Suspect existing 200W PC power supply in SRC520 is not in good condition.</span></p>
+<p class="ps3"><span class="ts1">Should replace to a 300W power supply unit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Old type Backplane</span></p>
+<p class="ps3"><span class="ts0">specification: MBP-PCI14R (R35N600000100)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">another old type Backplane is SRC520CE is MBP-PCI13L</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">New type Backplane</span></p>
+<p class="ps3"><span class="ts1">Spec:PCI-14S-RS-R30</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Lastest Backplane is MB-PCI14/9(PC) which is also use in NS-7000.</span></p>
+</body>
+</html>

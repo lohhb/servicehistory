@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0067-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11760;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0067-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11750.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11770.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-6040 Input Hand 1 unable to pickup device and Output </span><span class="ts24">Arm reached the limit of motion range</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-6040 (S/N: 18579)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 23~25 Feb 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">NS-6040 Input Hand 1 unable to pickup device and Output Arm reached the limit of motion range</span><span class="ts0">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">23 Feb 2010</span></p>
+<p class="ps3"><span class="ts1">-Teaching for teaching points and running check found input arm Hand 1 unable to pickup device and output arm homing sensor error. Input arm vacuum switches wring wrong connection and output arm U &amp; Z height too low. Vacuum switch wring connection changed for input arm and output arm U &amp; Z height re-teach. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">24 Feb 2010</span></p>
+<p class="ps3"><span class="ts1">-Install Win98 recovery CD but unable to install. Tried a few different version of recovery CD but still unable to install. Install Win95 using clone CD from other system, teaching of teaching points all locations except for Index Arm teaching and mcorg done but handler unable to start. Tried another clone CD and it works fine but &quot;Arm reached the limit of motion range&quot; error occurred </span><span class="ts0">after output arm pick up device from output shuttle 1 before moving to auto1 unloader. </span></p>
+<p class="ps3"><span class="ts0">Tried bin to Auto 2 also same problem</span><span class="ts1">.</span></p>
+<p class="ps3"><span class="ts1">Restored back previous robot 3 pose data and it works fine.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">25 Feb 2010</span></p>
+<p class="ps3"><span class="ts0">1) Encountered output arm limit error. Found out Output Arm(robot 3) Auto1,2,3, Fix 1,2 and 3 the value of, Z and U are is 0.</span></p>
+<p class="ps3"><span class="ts0">2) Re-do Output arm Z and U height teaching for Output Arm robot3. </span></p>
+<p class="ps3"><span class="ts0">Verified pose data in SPEL, Z and U axis data exist after teaching.</span></p>
+<p class="ps3"><span class="ts0">3) Verified output arm, running check ok</span></p>
+<p class="ps3"><span class="ts0">4) Replaced controller cooling fan. Power on and verified cooling fan OK</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">T- 4001 </span><span class="ts1">&quot;The Arm reached the limit of motion range&quot;</span><span class="ts0">&nbsp;during cycling and running mode.</span></p>
+<p class="ps3"><span class="ts0">Usually, after HDD Recovery if Input or Output Hands encountered error 4001 </span><span class="ts1">&quot;The Arm reached the limit of motion range&quot;, it is advisable to make sure that Input or Output Arm Z &amp; U in mnp02.pos or mnp03.pos are not zero,</span><span class="ts0">&nbsp;usually Z &amp; U are -20 to -25mm.</span></p>
+<p class="ps3"><span class="ts0">Use GenPos in SPEL to teach the Z &amp; U height for Input Hands height teaching with jig place on Input Shuttle and for Output Hands height teaching with jig place on Output Shuttle.</span></p>
+<p class="ps3"><span class="ts0">For Robot 2 Input Arm, make sure Z &amp; U are not zero, around -20 to -25mm for the following points:</span></p>
+<p class="ps3"><span class="ts0">P50 ' Load Tray</span></p>
+<p class="ps3"><span class="ts0">P51 'Input Shuttle1</span></p>
+<p class="ps3"><span class="ts0">P52 'Input Shuttle2</span></p>
+<p class="ps3"><span class="ts0">P53 'HotPlate1</span></p>
+<p class="ps3"><span class="ts0">P54 'HotPlate2</span></p>
+<p class="ps3"><span class="ts0">For Robot 3 Output Arm, make sure Z &amp; U are not zero, around 20 to -25mm for the following points:</span></p>
+<p class="ps3"><span class="ts0">P81 'Auto1</span></p>
+<p class="ps3"><span class="ts0">P82 'Auto2</span></p>
+<p class="ps3"><span class="ts0">P83 'Auto3</span></p>
+<p class="ps3"><span class="ts0">P84 'Fix1</span></p>
+<p class="ps3"><span class="ts0">P85 'Fix2</span></p>
+<p class="ps3"><span class="ts0">P94 'Fix3</span></p>
+<p class="ps3"><span class="ts0">P95 'AutoMat</span></p>
+<p class="ps3"><span class="ts0">P96 'Fix4</span></p>
+<p class="ps3"><span class="ts0">P86 'Output Shuttle1</span></p>
+<p class="ps3"><span class="ts0">P87 'Output Shuttle2</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

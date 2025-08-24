@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0134-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11530;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0134-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11520.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11540.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 8 Hands High UPH and NS70-99C issues</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 #1, #2 8 Hand High UPH and NS70-99C</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 28 Jan 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps13"><span class="ts64">1. NS8080-01 I/O pick up hand abnormal threshold reading</span></p>
+<p class="ps13"><span class="ts64">- Pls see attached file with pictures taken on abnormal threshold reading condition when vacuum not turn on. Maybe we can calibrate/zero the threshold back to 0?</span></p>
+<p class="ps2"><img width="753" height="508" border="0" src="images/0134-ns8kb1.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="749" height="480" border="0" src="images/0134-ns8kb2.png" /></p>
+<p class="ps2"><img width="720" height="479" border="0" src="images/0134-ns8kb3.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts64">- Also, for the RS485 unknown error which I reported earlier when operation panel power is OFF, I also attached it in the same file under another sheet 'RS485 Unknown error'. This error may be normal and due to no communication between RC520 controller and RS485 board because panel power not turn on? Pls confirm with Japan.</span></p>
+<p class="ps3"><span class="ts51">Step 1: Load HMI with operation panel power OFF</span></p>
+<p class="ps3"><span class="ts51">Step 2: Go into Vac Monitor and&nbsp; check all reading as -150Kpa.</span></p>
+<p class="ps2"><img width="371" height="453" border="0" src="images/0134-ns8kb4.png" /></p>
+<p class="ps3"><span class="ts98">&nbsp;</span><span class="ts51">Step 3: Power ON operation panel and RS485 Unknow error will appear.</span></p>
+<p class="ps2"><img width="486" height="319" border="0" src="images/0134-ns8kb5.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts64">2. Tray Pick up error</span></p>
+<p class="ps13"><span class="ts64">- NS8080-02 tray pad was replaced by their own spare yesterday and so far no report on tray pick up error. Roel said after replacing their new tray pad which feels softer , warp trays also can pick up. Today I went in to replace NS8080-01 tray pad with Getech spare. I have raised warranty for these 2 claims.</span></p>
+<p class="ps13"><span class="ts64">Laurence wants to know why there are 2 different types of tray pad . Their spare one is softer, while the other one from the handler is harder.</span></p>
+<p class="ps13"><span class="ts64">Pls confirm whether different types of tray pad material are used in sub-con factory.</span></p>
+<p class="ps13"><span class="ts64">&nbsp;</span></p>
+<p class="ps13"><span class="ts64">&nbsp;</span></p>
+<p class="ps13"><span class="ts64">3. Tray Separation Error on Loader and Empty Tray buffer</span></p>
+<p class="ps13"><span class="ts64">- I have checked and done some adjustment to the loader, reloader 1 and reloader 2 cylinder middle height position. The 4 claws are inserted in even distance between the top and bottom tray. No adjustment has been done on the upper sensor height.</span></p>
+<p class="ps13"><span class="ts64">But I noticed sometimes the tray cannot stack properly on top of another tray. Refer to the picture taken below. Not sure if this will cause separation error but it did not occur when i simulated this condition.</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts58">New contactor design for P and C package:</span><br /><span class="ts58">&nbsp;1) The old design give us 2 errors:</span><br /><span class="ts58">&nbsp;a)&nbsp; Shuttle 1/2 Device Condition Error</span><br /><span class="ts58">&nbsp;:- After some confirmation with EPSON and Hidaka-san, this is a result of </span><br /><span class="ts58">&quot;Device Floating&quot; in pocket of output shuttle. Depending on how bad the </span><br /><span class="ts58">floating, if top sensor is not blocked, it becomes like a sensor detection </span><br /><span class="ts58">error also.</span><br /><span class="ts58">&nbsp;b) Detection Sensor Error</span><br /><span class="ts58">&nbsp;:- Based on timing sensor and top sensor combinition, this is the likely </span><br /><span class="ts58">error when device is stucked to plunger.</span><br /><span class="ts58">&nbsp;:- So important is we checked with operator if device is missing or stuck to </span><br /><span class="ts58">plunger after change design, they said no more It is just device &quot;not </span><br /><span class="ts58">sitting in pocket properly&quot; suggesting device floating.</span><br /><br /><span class="ts58">&nbsp;Now both handlers running with new design change kit and the error frequency </span><br /><span class="ts58">as follows:</span><br /><span class="ts58">&nbsp;#1 jam data untill 28/01/10 0800hrs</span><br /><span class="ts58">&nbsp;Shuttle 1 Device Condition Error 4502 Shuttle 1 JAM0403 0 1 0 0 Shuttle 1 </span><br /><span class="ts58">device condition error&nbsp; 1/25/2010 12:02 retry 51</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5212 Shuttle 1 JAM0403 8 0 0 0 Shuttle 1 device condition error </span><br /><span class="ts58">1/28/2010 2:43 retry 109</span><br /><br /><span class="ts58">&nbsp;Shuttle 2 Device Condition Error4817 Shuttle 2 JAM0503 4 0 0 0 Shuttle 2 </span><br /><span class="ts58">device condition error 1/26/2010 13:49 retry 121</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5243 Shuttle 2 JAM0503 0 1 0 0 Shuttle 2 device condition error </span><br /><span class="ts58">1/28/2010 8:04 retry 49</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5244 Shuttle 2 JAM0503 0 1 0 0 Shuttle 2 device condition error </span><br /><span class="ts58">1/28/2010 8:05 retry 44</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5247 Shuttle 2 JAM0503 0 1 0 0 Shuttle 2 device condition error </span><br /><span class="ts58">1/28/2010 8:07 retry 29</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5248 Shuttle 2 JAM0503 0 0 0 0 Shuttle 2 device condition error </span><br /><span class="ts58">1/28/2010 8:08 retry 2</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5249 Shuttle 2 JAM0503 0 0 0 0 Shuttle 2 device condition error </span><br /><span class="ts58">1/28/2010 8:08 skip 21</span><br /><br /><span class="ts58">&nbsp;But you can see 28/01/10, it's just 1 occurence because operator did not </span><br /><span class="ts58">clear jam properly.</span><br /><span class="ts58">&nbsp;Detection Sensor Error4823 Shuttle 2 JAM0505 0 0 0 0 Detection sensor error </span><br /><span class="ts58">(unloading side) 1/26/2010 13:54 retry 18</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4928 Shuttle 2 JAM0505 0 0 0 0 Detection sensor error (unloading side) </span><br /><span class="ts58">1/27/2010 0:57 retry 94</span><br /><br /><br /><span class="ts58">&nbsp;#2 jam data untill 28/01/10</span><br /><span class="ts58">&nbsp;Shuttle 1 Device Condition Error2229 Shuttle 1 JAM0403 1 0 0 0 Shuttle 1 </span><br /><span class="ts58">device condition error&nbsp; 1/25/2010 10:42 retry 91</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2600 Shuttle 1 JAM0403 0 4 0 0 Shuttle 1 device condition error </span><br /><span class="ts58">1/27/2010 3:35 skip 153</span><br /><br /><span class="ts58">&nbsp;Shuttle 2 Device Condition Error2171 Shuttle 2 JAM0503 0 1 0 0 Shuttle 2 </span><br /><span class="ts58">device condition error 1/25/2010 3:25 retry 90</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2221 Shuttle 2 JAM0503 0 1 0 0 Shuttle 2 device condition error </span><br /><span class="ts58">1/25/2010 10:21 retry 73</span><br /><br /><span class="ts58">&nbsp;Detection Sensor Error</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2192 Shuttle 2 JAM0505 0 0 0 0 Detection sensor error (unloading side) </span><br /><span class="ts58">1/25/2010 7:08 retry 28</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2268 Shuttle 2 JAM0505 0 0 0 0 Detection sensor error (unloading side) </span><br /><span class="ts58">1/25/2010 15:21 retry 48</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2269 Shuttle 2 JAM0505 0 0 0 0 Detection sensor error (unloading side) </span><br /><span class="ts58">1/25/2010 15:22 retry 21</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2270 Shuttle 2 JAM0505 0 0 0 0 Detection sensor error (unloading side) </span><br /><span class="ts58">1/25/2010 15:23 retry 30</span><br /><br /><span class="ts58">&nbsp;But you can see on 25/01/10, based on the timing, it's just 2 occurence </span><br /><span class="ts58">although there were 4 entries in the log file.</span><br /><br /><span class="ts58">&nbsp;I think this issue is considered closed as you can see based on the log file </span><br /><span class="ts58">till today 28/01/10, it looks good.</span><br /><br /><span class="ts58">&nbsp;2) Tray Pick up error</span><br /><span class="ts58">&nbsp;:- Both handlers has this error.</span><br /><span class="ts58">&nbsp;:- We found the empty tray is warp leading to empty tray arm cannot pick up.</span><br /><span class="ts58">&nbsp;:- UTAC however refuse to accept this as reason.</span><br /><span class="ts58">&nbsp;:- KuoHong will replace 2 new vacuum pads today for both and continue to </span><br /><span class="ts58">monitor.</span><br /><span class="ts58">&nbsp;:- As discussed with Hidaka-san, it seems this new square pad may not be </span><br /><span class="ts58">able to pick up a warp tray but the old rectangle type may be ok like STM </span><br /><span class="ts58">Muar issue.</span><br /><span class="ts58">&nbsp;:- In fact, IFX also has this issue. Just few weeks running and same problem </span><br /><span class="ts58">happen.</span><br /><span class="ts58">&nbsp;:- We'll monitor how fast this problem comes back and have an internal </span><br /><span class="ts58">discussion that maybe...revert to rectangle pad may be better than 2-3 weeks </span><br /><span class="ts58">warranty once for vacuum pad? Because 2-3weeks running and claim warranty of </span><br /><span class="ts58">pad is not logic...</span><br /><br /><span class="ts58">&nbsp;3) Tray Separation Error on Loader and Empty Tray buffer</span><br /><span class="ts58">&nbsp;:- Everytime we at handler to monitor for 2-3 hours, it does not happen.</span><br /><span class="ts58">&nbsp;:- Difficult for us to adjust anything if we cannot see problem.</span><br /><span class="ts58">&nbsp;:- However, we analyze log file and try to image what possible cause this </span><br /><span class="ts58">error. Maybe too many trays stack or too heavy for cylinder? Maybe some </span><br /><span class="ts58">mis-operation by operator? We've discussed with Hidaka-san to check with </span><br /><span class="ts58">EPSON if our image is possible and how to avoid this problem.</span><br /><span class="ts58">&nbsp;:- For now, we'll adjust the cylinder height for loader tray and reloader 1 </span><br /><span class="ts58">based on our image.</span><br /><span class="ts58">&nbsp;#1 jam data untill 28/01/10</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5137 Loader JAM0904 0 0 0 0 Tray separation cylinder (upper) error </span><br /><span class="ts58">1/27/2010 22:02 retry 10</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5227 Empty 2 JAM1404 0 0 0 0 Tray separation cylinder (upper) error </span><br /><span class="ts58">1/28/2010 6:10 retry 14</span><br /><br /><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3789 Empty 2 JAM1407 0 0 0 0 Tray separation error 1/22/2010 2:46 </span><br /><span class="ts58">retry 15</span><br /><span class="ts58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5102 Loader JAM0907 0 0 0 0 Tray separation error 1/27/2010 20:06 </span><br /><span class="ts58">retry 96</span><br /><br /><br /><span class="ts58">&nbsp;4) Inout/Output pickup hand. This is new issue. #1 is this situation but #2 </span><br /><span class="ts58">is still ok...meaning 0kPa..</span><br /><span class="ts58">&nbsp;:- With vacuum not turn ON, reading already -20kPa to -30kpa. With Vaccum </span><br /><span class="ts58">turn on and no deivce, reading some above -35kPa. This is higher than our </span><br /><span class="ts58">set threshold of -35, -40 and -70. This may result in false device pick up.</span><br /><span class="ts58">&nbsp;:- Currently, UTAC is not aware of this and we're checking on this.</span><br /><span class="ts58">&nbsp;:- If we can zero the vaccum sensor to 0kPa with vaccum not ON, but when </span><br /><span class="ts58">vaccum ON/no device and reading still -35kPa, we may have to clean filter </span><br /><span class="ts58">which requires alignment and we need the jig.</span><br /><span class="ts58">&nbsp;:- If we can zero the vaccum sensor to 0kPa with vaccum not ON, but when </span><br /><span class="ts58">vaccum ON/no device and reading drops to -15kPa for example, situation is </span><br /><span class="ts58">ok....</span><br /><br /><span class="ts58">&nbsp;5) 99C rental handler</span><br /><span class="ts58">&nbsp;:- We are waiting for system time to install the SKIP enable switch.</span><br /><br /><span class="ts58">&nbsp;So it seems, no more outstanding except for 4) which is for today and we're </span><br /><span class="ts58">checking. Temporary increase threshold to -40, -45 and -70. But for 4), UTAC </span><br /><span class="ts58">is not aware yet...</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The value is seemed to abnormal condition. </span></p>
+<p class="ps3"><span class="ts0">When you re-install HMI software with 8 hands option, it will be back correct value.</span></p>
+<p class="ps3"><span class="ts0">So, We will try to install Ver1.1 software next Monday.</span></p>
+<p class="ps3"><span class="ts0">If it can not be back normal condition, some of air tube have problem.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note: We would like to analyze the situation, so please take the data as follows;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C:\NS8000\Config\Table\*.*</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RS485 unknown error</span></p>
+<p class="ps3"><span class="ts0">It is occurred on the display because of Power off.</span></p>
+<p class="ps3"><span class="ts0">Vmonitor check the value from servo driver directly.</span></p>
+<p class="ps3"><span class="ts0">So when you use Vmonitor in HMI, 24V should be ON condition. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Summary</span></p>
+<p class="ps3"><span class="ts0">NS8080-01</span></p>
+<p class="ps3"><span class="ts0">- replaced empty tray vacuum pad due to unable to pick up empty tray intermittently. Raise warranty S0406.</span></p>
+<p class="ps191"><span class="ts30">&ndash;&nbsp;&nbsp; &nbsp;&nbsp;</span><span class="ts35">Input and output arm 8 hands abnormal threshold reading. All range from -20 to -30 plus Kpa. Low limit setting is -35Kpa and it will trigger false pick up. Temp solution is to set low limit to -40Kpa and check with EPSON on how to zero back the threshold reading.</span></p>
+<p class="ps3"><span class="ts0">Adjustment to loader, reloader 1 and reloader 2 cylinder middle height position to solve tray separation error. Under monitoring.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">NS8080-02</span></p>
+<p class="ps131"><span class="ts0">One to one exchange of tray pad as UTAC replaced it on Wed due to unable to pick up empty tray intermittently. Raise warranty S0407.</span></p>
+<p class="ps191"><span class="ts30">&ndash;&nbsp;&nbsp; &nbsp;&nbsp;</span><span class="ts35">Adjustment to loader, reloader 1 and reloader 2 cylinder middle height position to solve tray separation error. Under monitoring.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

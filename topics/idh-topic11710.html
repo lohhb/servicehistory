@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0062-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11710;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0062-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11700.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11720.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: UTAC NS-6040 T4216-Servo real time cmd overrun issue</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040 (NS60-60, S/N: 15542)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 5 Feb 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">Feedback by UTAC handler long history of problems and stopped production 6 months ago.</span></p>
+<p class="ps3"><span class="ts1">Latest issue was replaced faulty 2.5&quot; HDD and recovery with&nbsp; NS-6040 Recovery CD FD03S028 Ver 2.0 but encountered T-4216 Servo Real Time Command overrun.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">In SPEL95, Robot 1~6 Robot status &quot;???&quot;.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">NS-6040 Recovery CD FD03S028&nbsp; Ver 2.0 content:</span></p>
+<p class="ps3"><span class="ts0">(EasyRestore) Win98, MMI 2.0c1, SPEL 95 Ver 2.53i</span></p>
+<p class="ps3"><span class="ts0">To use with Pentium 200MHz CPU board </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">-Uninstalled Spel95 and MMI and reinstalled Spel95 version 2.53i and MMI 2.0c12. </span></p>
+<p class="ps3"><span class="ts1">Resolved T-4216 Servo Real Time Command overrun problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">-Restored system and POSE data and MCORG all robots but encountered input and output arm F-5041 Torque error in low power state.</span></p>
+<p class="ps3"><span class="ts1">-Swapped DU 2 with DU3 with all servo packs remain in respective axis and problem migrated to shuttle 1 and 2. Confirmed DU2 faulty.</span></p>
+<p class="ps3"><span class="ts1">-MCORG and Mcal input arm ok but output arm unable to complete Y axis MCORG and Mcal.</span></p>
+<p class="ps3"><span class="ts1">-Swapped input and output Y axis servo pack but problem still remain on output arm.</span></p>
+<p class="ps3"><span class="ts1">-UTAC provide spare DU2 and output arm Y axis 400W motor. </span></p>
+<p class="ps3"><span class="ts1">-2</span><sup><span class="ts1">nd</span></sup><span class="ts1">&nbsp;set DU2 also encountered same F5041 torque error in low power state issue and found that the SSR (Solid State Relay) in DU2 was missing.</span></p>
+<p class="ps3"><span class="ts1">-UTAC provide 3</span><sup><span class="ts1">rd</span></sup><span class="ts1">&nbsp;set DU2 and replaced with output arm Y axis 400W motor ¨C OK.</span></p>
+<p class="ps3"><span class="ts1">-MCORG output arm and dry cycle run handler in 100% speed and release</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">Service report 011919</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Corrupted SPEL95 and MMI.</span></p>
+<p class="ps3"><span class="ts0">Faulty Drive Unit 2.</span></p>
+<p class="ps3"><span class="ts0">Faulty 400W Servo Driver for Output Arm Y Axis.</span></p>
+</body>
+</html>

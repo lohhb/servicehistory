@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0223-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11620;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0223-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11610.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11630.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps3"><span class="ts27">Subject: NS-7000 Difference between</span><span class="ts0">&nbsp;</span><span class="ts27">Direct Contact Mode and Direct and Torque Control Mode</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 26 Feb 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Q&amp;A</span></p>
+<p class="ps3"><span class="ts0">This is regarding your question on difference between Direct Contact Mode and Direct and Torque Control Mode. Regarding our handler's contact force, you need to understand there are 2 limits you have to note.</span></p>
+<p class="ps3"><span class="ts0">1) Compliant cylinder specifications of 60kgf (max).</span></p>
+<p class="ps3"><span class="ts0">2) Servo Motor Torque of 120kgf (max).</span></p>
+<p class="ps3"><span class="ts0">Which means when it comes to total contact force, the limit will be which ever comes first. That is why you see the specifications from our manual, single site is 60kgf even though our handler specifications is 120kgf. Even for dual site, 60kgf is still the max force because 60x2=120kgf is still within servo motor specifications.</span></p>
+<p class="ps13"><span class="ts64">&nbsp;</span></p>
+<p class="ps13"><span class="ts69">Direct Contact Mode</span></p>
+<p class="ps3"><span class="ts0">1) Accuracy of contact force is best achieved in this mode because it uses air based on your force per pin (FPP) x No. of pins (NoP) to control the contact force.</span></p>
+<p class="ps3"><span class="ts0">2) This mode however, the allowable contact force is capped @ 60kgf per site if total force per arm does not exceed 120kgf.</span></p>
+<p class="ps3"><span class="ts0">3) Motion wise, servo motor function is just pick from shuttle and goes to contact position (according to your contact height calibration).</span></p>
+<p class="ps3"><span class="ts0">4) Compliance unit base from FPP x NoP gives you the calculated contact force not exceeding 60kgf/site is the one that is giving you the pass/fail of contact device testing.</span></p>
+<p class="ps3"><span class="ts0">5) As long as you're still within 60kgf/site or 60kgf/arm, 1mm compliant stroke is sufficient to give you a pass.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps13"><span class="ts69">Direct and Torque Control Mode</span></p>
+<p class="ps3"><span class="ts0">1) Accuracy of contact force is compromised here. </span></p>
+<p class="ps3"><span class="ts0">2) This mode however, should be used best when your contact force per site exceeds that of 60kgf.</span></p>
+<p class="ps3"><span class="ts0">3) Motion wise, when this is selected, servo motor takes over the contact after servo motor has completed its task of pick from shuttle to contact height.</span></p>
+<p class="ps3"><span class="ts0">4) Compliance unit will no longer be the one giving you the contact pass/fail of contact device testing.</span></p>
+<p class="ps3"><span class="ts0">5) As long as you exceed 60kgf, it exceeds compliance unit specifications that is why you have a better contact if you use this mode in this case.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">At a snapshot as per EPSON recommendation:</span></p>
+<p class="ps3"><span class="ts0">1) 120N -&gt; 600N, able to use DIRECT CONTACT mode.</span></p>
+<p class="ps3"><span class="ts0">2) 600N -&gt; 800N, better to use DIRECT and TORQUE CONTROL mode as it is still within continuous max.</span></p>
+<p class="ps3"><span class="ts0">3) 800N -&gt; 1200N, better to use DIRECT and TORQUE CONTROL mode as it is still within instantaneous max.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">EPSON recommendation is to use DIRECT and TORQUE CONTROL mode as long as you exceed 60kgf for better contact. You are able to use this mode as long as contact force is 13kgf onwards. The only drawback is the tolerance for contact force in this mode is bigger than using direct contact mode (EP). Direct contact mode although only until 60kgf/site, but it is more accurate for contact force.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

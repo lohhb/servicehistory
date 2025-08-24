@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0265-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13980;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0265-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13970.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13990.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 ATC water on socket caused Bin 7 and Temperature Controller A3h1 error</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 26 Nov 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Information provided by Roel:</span></p>
+<p class="ps3"><span class="ts1">1) Water found on socket and causing Bin 7.</span></p>
+<p class="ps3"><span class="ts1">2) Temperature controller having A3h1 error, set temp 110DegC but thermal head temperature displayed 17DegC and causing condensation.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">Troubleshoot:</span></p>
+<p class="ps3"><span class="ts0">1) Intermittently thermal head unable to heat up to 110DegC, once reached more than 80 to 90DegC, controller will have A3h1 error and thermal head temperature will drop back to chiller temperature(19DegC).</span></p>
+<p class="ps3"><span class="ts0">2) Swapped thermal to another controller, also same.</span></p>
+<p class="ps3"><span class="ts0">3) Borrow thermal head from NS-6040 ATC, thermal able to heat up to 110DegC without having any A3h1 error.</span></p>
+<p class="ps3"><span class="ts0">4) Measured NS-8040 TC resistance on connector, found out to be 39&Omega;.</span></p>
+<p class="ps3"><span class="ts0">5) Measured NS-6040 TC resistance on connector less than .</span></p>
+<p class="ps3"><span class="ts0">6) Replaced TC on thermal head, measured resisitance less than 6&Omega; and heat up to 110DegC without A3h1 error.</span></p>
+<p class="ps3"><span class="ts0">7) Informed Roel to monitor situation as root-cause still unknown. It could be other parts on the thermal head which is defective.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Another issue is when thermal controller with A3h1 error thermal head temperature drop to less than 110°C, handler can run without any error. </span></p>
+<p class="ps3"><span class="ts0">The TC spare i used to replaced on NS-8040 ATC was from the spare UTAC received during NS-6040 ATC installation. </span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Action to be taken:</span></p>
+<p class="ps3"><span class="ts0">1) Please check current software v2.6 whether able to detect controller error and will the modified HMI software will be able to get feedback from thermal controller when having error.</span></p>
+<p class="ps3"><span class="ts0">2) Please check specification on TC for both NS-6040 and NS-8040, and prepare spare TC, thermistor and Peltier for thermal head as we still do not know which are the items are defective.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

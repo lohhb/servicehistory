@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0466-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 19070;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0466-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic19060.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic19080.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 </span><span class="ts24">During hot mode running at 100 deg, encountered chamber ionizer warning alarm. Found Kasuga ionizer EP3 alarm light sometimes blink</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N: 182284, H47-NS88)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520&nbsp; HMI Ver 8G11.51-SAS</span></p>
+<p class="ps3"><span class="ts0">Date: 13 Mar 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">H47-NS88(182284)&nbsp; during Amb/Hot jamrate. </span><br /><span class="ts0">-Issue: During hot mode running at 100 deg, encountered chamber ionizer warning alarm.</span></p>
+<p class="ps3"><span class="ts0">Found Kasuga ionizer EP3 alarm light sometimes blink.</span></p>
+<p class="ps3"><span class="ts0">No blinking when handler is at pause state or ambient mode.</span></p>
+<p class="ps3"><span class="ts0">Decay time measured (+)1.4sec, (-)1.5sec, Balance 0.4 volt which is normal. </span></p>
+<p class="ps3"><span class="ts0">Customer feedback many of their NS8080 having the same condition. </span></p>
+<p class="ps126"><span class="ts0">This error happed mainly in NS-8080 with 4 Input Hands(HMI VerP12.57-SAS)</span></p>
+<p class="ps3"><span class="ts0">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Feedback to Ogata san and sent video to EPSON.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">15 Apr 2013 email by Ogata-san:</span></p>
+<p class="ps3"><span class="ts0">Regarding During Hot mode, blinking chamber Ionizer&rsquo;s LED issue,</span></p>
+<p class="ps3"><span class="ts0">According to EPSON said, &ldquo;This is under EPSON specification and normal.&rdquo;</span></p>
+<p class="ps3"><span class="ts0">They roughly explain to me about mechanism or sequence of the error…But I need to double check with them something.</span></p>
+<p class="ps3"><span class="ts0">So I will be share with you it later on.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">16 Apr 2013 email by Ogata-san:</span></p>
+<p class="ps3"><span class="ts0">Finally I received their comments.</span></p>
+<p class="ps3"><span class="ts0">I told you guys that it is EPSON specification and it is normal.</span></p>
+<p class="ps3"><span class="ts0">Basically Ionizer is controlling Ion balance and discharge.</span></p>
+<p class="ps3"><span class="ts0">Condition of the alarm is; (For Handler alarm)</span></p>
+<p class="ps3"><span class="ts0">1. To be over ion current.</span></p>
+<p class="ps3"><span class="ts0">2. To be ion balance unstable.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Specification of the above two items.</span></p>
+<p class="ps3"><span class="ts0">1. Ion current: 2uA±0.5uA for more than 100msec.</span></p>
+<p class="ps3"><span class="ts0">2. Ion balance: 0V±30V(Static voltage) for more than 100msec.</span></p>
+<p class="ps3"><span class="ts0">Condition of Alarm (Warning) is; (For ND503T)</span></p>
+<p class="ps3"><span class="ts0">It should be above specification situation for more than 20usec.</span></p>
+<p class="ps3"><span class="ts0">Hence ASE-S condition could be ion current or ion balance out of spec for 20usec.</span></p>
+<p class="ps3"><span class="ts0">During Hot mode, Corona discharge could be more appear then Ambient.</span></p>
+<p class="ps3"><span class="ts0">Then Corona discharge is disturbing (Break) an ion balance.</span></p>
+<p class="ps3"><span class="ts0">Hence ND503T is more blinking the Warning LED then ambient mode.</span></p>
+<p class="ps3"><span class="ts0">All specifications already set by Ionizer makers. We(included EPSON) are unable to change.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

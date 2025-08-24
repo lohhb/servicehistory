@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0046-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10370;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0046-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10360.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10380.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Restored SPEL System data, encountered MMI status &quot;Power down&quot;, unable to home or start handler.</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040 (NS60-35, S/N: 15904)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 15 Jun 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">Requested by customer to try using SPI-6941 CPU Board in NS60-35 S/N:15904.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts31">15 Jun 2009</span></p>
+<p class="ps3"><span class="ts1">1) Backup setupfiles, system and projects from SPEL and backupsan of handler.</span></p>
+<p class="ps3"><span class="ts1">2) Converted CPU Board PC-686BX(PC)-EPC850 to SPI-6941.</span></p>
+<p class="ps3"><span class="ts1">3) Performed HDD recovery.</span></p>
+<p class="ps3"><span class="ts1">4) Restored OS Win2k, MMI 2.0a11 and SPEL 2.81b.</span></p>
+<p class="ps3"><span class="ts1">5) Restored SPEL System data, encountered MMI status &quot;Power down&quot;, unable to home or start handler.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">17 Jun 2009</span></p>
+<p class="ps3"><span class="ts1">1) Converted CPU Board PC-686BX(PC) to SPI-6941.</span></p>
+<p class="ps3"><span class="ts1">2) Manually restored MIB data(Motor drivers CT gain and offsets)</span></p>
+<p class="ps3"><span class="ts1">3) Restored POS data.</span></p>
+<p class="ps3"><span class="ts1">4) Calibrate/ MCAL all robots.</span></p>
+<p class="ps3"><span class="ts1">5) Restored setupfile.</span></p>
+<p class="ps3"><span class="ts1">6) Installed changekit and dry cycle run, OK.</span></p>
+<p class="ps3"><span class="ts1">7) Performed teaching on Index P70 and P71 as seen position out during Auto-height calibration.</span></p>
+<p class="ps3"><span class="ts1">8) Replaced faulty vacuum pump.</span></p>
+<p class="ps3"><span class="ts1">9) Check for vacuum units for index and empty tray arm, OK.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">Found out that System data from SPEL 95 v2.53i is not compatible to use in SPEL CT v2.81b, therefore causing MMI status show &quot;Power down&quot;.</span></p>
+<p class="ps3"><span class="ts1">The solution is:</span></p>
+<p class="ps3"><span class="ts3">1) in BIOS, set&nbsp; [PnP/PCI Configurations] to Yes, Resources controlled By [Manual], Set IRQ 5 &amp; IRQ 10 to Legacy ISA</span></p>
+<p class="ps3"><span class="ts3">2) Use EPSON CPU Upgrade Recovery CD to do recovery of Windows 2000, MMI and SPEL CT(CPU 850MHz)</span></p>
+<p class="ps3"><span class="ts3">3) Install PC I/O driver (Multimedia controller) (Contec Driver in Recovery CD or MMI CD)</span></p>
+<p class="ps3"><span class="ts3">4) Install IFUN100 driver (PCI Bridge) (Driver in Recovery CD or in MMI CD)</span></p>
+<p class="ps3"><span class="ts3">5) Use Loader.exe (in C:\NS6000\Exe) to load hex file (Hex file in Recovery CD)</span></p>
+<p class="ps3"><span class="ts3">6) Restore DU 1, 2 &amp; 3 data in SPEL CT</span></p>
+<p class="ps3"><span class="ts3">7) Restore Robot Manipulator data in SPEL CT</span></p>
+<p class="ps3"><span class="ts3">8) Copy pos data files from backup project to SPEL CT project</span></p>
+</body>
+</html>

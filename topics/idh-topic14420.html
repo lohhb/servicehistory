@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0289-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14420;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0289-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14410.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14430.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 ESD class 0 failed input, output and testsite</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (NS70-30)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 14 Feb 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">UTAC &ndash; NS70-30 ESD class 0 failed input, output and testsite</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">- check positive/negative decay time and ion balance with ION CPM in chamber, ok. All location passed within specs. 1000v to 50v under 10secs.</span></p>
+<p class="ps3"><span class="ts0">- manual trigger MKS controller and check positive/negative decay time for S1, S2 and S3 sensor, ok. All passed decay within 7secs and ion balance within +/-5 volts. </span></p>
+<p class="ps3"><span class="ts0">- found chamber ionizer pins not so good condition. Advise to change and improve the frequency of cleaning the pins of chamber and blower fans.</span></p>
+<p class="ps3"><span class="ts0">- encountered file reading error when clicked on MMI ESD parameter, checked config folder and &ldquo;ESD class 0=3&rdquo; not found in security_new.def file. Removed &ldquo;fan out.bat&rdquo; file from startup menu so that when handler reboot, the fan out.bat execution file won&rsquo;t overwrite the &ldquo;ESD class 0=3'&rdquo; settings. When this setting is not set properly, MMI ESD parameter decay time check and ion balance check may not work and handler will not prompt alarm if either of them fails. Advise to check other esd class 0 handlers also.</span></p>
+<p class="ps3"><span class="ts0">- found chamber MKS S1 sensor loose. the 2 countersunk screws unable to tighten the sensor to the bracket properly.</span></p>
+<p class="ps3"><span class="ts0">- found chamber kasuga controller always ON when chamber fan not running. power cycle handler ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

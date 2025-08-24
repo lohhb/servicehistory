@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0275-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14080;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0275-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14070.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14090.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: </span><span class="ts23">NS-8080 Socket Air (Jet Heater) temperature issue</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8000 series using Socket Air</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 17 Dec 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">NS-8080 Socket Air (Jet Heater) temperature issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps13"><span class="ts49">Received information from Hidaka. Settings on air heater alarm device should set at 200 DegC.</span></p>
+<p class="ps195"><span class="ts49">Found out both Temperature Warning Units TMP11 and TMP12 settings not same.</span></p>
+<p class="ps195"><span class="ts47">Found out solenoid valve on the air heater require to manual trigger if not air will not to</span></p>
+<p class="ps195"><span class="ts47">supply to Socket air heater(beside airflowmeter, trigger on control valve YV136). (Same condition as ASE)</span></p>
+<p class="ps195"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps195"><span class="ts49">TMP11 settings: </span><span class="ts46">0</span><span class="ts49">&nbsp;x100, </span><span class="ts43">5</span><span class="ts49">&nbsp;x10 and </span><span class="ts43">0</span><span class="ts49">&nbsp;x1&nbsp;&nbsp; =&gt; 50 DegC</span></p>
+<p class="ps13"><span class="ts49">TMP12 settings: </span><span class="ts43">2</span><span class="ts49">&nbsp;x100, </span><span class="ts43">0</span><span class="ts49">&nbsp;x10 and </span><span class="ts43">0</span><span class="ts49">&nbsp;x1&nbsp;&nbsp; =&gt; 200 DegC</span></p>
+<p class="ps13"><span class="ts49">Heat up socket air heater to 90 DegC, but socket air 1 only able to heat up to 68 DegC and socket air 2, OK.</span></p>
+<p class="ps13"><span class="ts49">Corrected Temperature Warning Unit TMP11 settings( Same as TMP12)</span></p>
+<p class="ps13"><span class="ts49">Heat up socket heater to 90DegC, OK.</span></p>
+<p class="ps13"><span class="ts49">Performed OMRON temperature auto-tuning at 130 DegC.</span></p>
+<p class="ps13"><span class="ts49">Completed and both socket air 1 and 2 temperature stable at 130 DegC)</span></p>
+<p class="ps2"><img width="765" height="480" border="0" src="images/0275-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Refer email on 26 Apr 2013 on NS8080 Jet Heater (socket blower) installation procedure.</span></p>
+<p class="ps3"><span class="ts0">Refer to </span><a href="idh-topic14010.html" class="hs0">0268-NS8K</a><span class="ts0">.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl40">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Function</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">SPEL Output Bit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Remarks</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Heater Power On</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">190</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts21">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Heater Power Off</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">191</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts21">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Chamber Fan Start</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">272</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Only NS8080 / NS8080W / NS8160W / NS8160SW</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Chamber Fan Run</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">273</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Only NS8080 / NS8080W / NS8160W / NS8160SW</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Air Blow ON</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">136</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Only NS8080 / NS8080W / NS8160W / NS8160SW</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Air Blow OFF</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">137</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps161"><span class="ts64">Only NS8080 / NS8080W / NS8160W / NS8160SW</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><span class="ts0">Chamber Fan Start and Chamber Fan Run Bit must be ON to turn on Chamber Fan</span></p>
+</body>
+</html>

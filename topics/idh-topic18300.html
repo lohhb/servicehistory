@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0427-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18300;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0427-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18290.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18310.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS8040(181206) encountered hardware conflict on pci slot 2 during boot up</span></p>
+<p class="ps3"><span class="ts0">Handler Model: Evaluation System NS8040 Handler (S/N: 181206) </span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 16 Mar 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS8040(181206) encountered hardware conflict on pci slot 2 during boot up.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">20 Mar 2012</span></p>
+<p class="ps3"><span class="ts0">1) Installed IFUNT100 driver but conflict persist.</span></p>
+<p class="ps3"><span class="ts0">2) Installed HEX file to IF UNIT but software unable to detect GPIB card.</span></p>
+<p class="ps3"><span class="ts0">3) Replaced GPIB card.</span></p>
+<p class="ps3"><span class="ts0">4) In Bios, no conflict message on PCI slot 2.</span></p>
+<p class="ps3"><span class="ts0">5) Installed IFUNT100 driver, able to detect new hardware and no conflict.</span></p>
+<p class="ps3"><span class="ts0">6) Installed HEX file, able to detect GPIB card and able to load HEX file to IF UNIT.</span></p>
+<p class="ps3"><span class="ts0">7) Able to select GPIB, RS232C and DIO communications with no error.</span></p>
+<p class="ps2"><img width="725" height="480" border="0" src="images/0427-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">PT sensor for index arm head 5/6 is N.G.</span><br /><span class="ts1">&nbsp;Temperature feedback is drifting. Sometimes -14, 4 or even 520 degrees.</span></p>
+<p class="ps3"><span class="ts1">Part code should be 8NS38a-12, 8NS38a-04, 8NS38a-10 according to NS8040 part list manual Rev.1 page 143</span></p>
+<p class="ps4"><img width="648" height="480" border="0" src="images/0427-ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Spoilt IFUNT100B card (R35N700012300, SKP383) in RC520.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

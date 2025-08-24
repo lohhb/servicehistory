@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0212-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13020;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0212-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13010.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13030.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: STM NS-8080 Low vacuum reported leading to device pick up error from index arm</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080 (S/N: 181581)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 22 Jul 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">STM NS-8080 Low vacuum reported leading to device pick up error from index arm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">1)Found problem to be not low vacuum but rather due to no contact air, contactor head did not sit into pocket for the pick up. Intermittently depending if the down motion, contactor was able to sit into pocket for pick up.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2) Found EP(Electronic Pneumatic) regulator reading is 0 for 3kgf. #1 showed 3kpa at least. </span></p>
+<p class="ps3"><span class="ts1">Checked SETUP and found compliant cylinder set at 55mm although it should be 40mm for 2x2 quad. After changed to 40mm, EP reading showed 7kpa. So far no device pick up error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts0">3) Because of EP no reading, contact test unable to pass after contact height calibration. With 7kpa, site A&amp;B able to pass after contact height calibration. Only site C&amp;D open contact.</span></p>
+<p class="ps130"><span class="ts0">4) Increased contact height to pass C&amp;D and contact force from 0.245N to 0.35N but deep probe mark on ball. N.G.</span></p>
+<p class="ps130"><span class="ts0">5) To check and verify on docking the next day. Temporary disable site D for overnight production run and monitor for jam. </span></p>
+<p class="ps130"><span class="ts0">6) Suspect socket mount N.G, docking N.G as C&amp;D open contact as VM check showed probe mark was not center of ball. The markings showed almost out of ball suggesting alignment issue of device and socket. Note socket design has floating plate assembly which could mean potential issue to device stuck and device alignment with socket.</span></p>
+<p class="ps3"><span class="ts0">7) SLK with contactor head without index arm used to try for contact test.</span></p>
+<p class="ps3"><span class="ts0">But C&amp;D unable to pass contact suspecting possible tilt below socket guide plate onwards.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts0">8)Meeting with Meilin for double device sensor for different socket size/docking height as STM has many thickness of socket.</span></p>
+<p class="ps130"><span class="ts0">9) KA to come up with design for &quot;variable&quot; socket sensor and EPSON to confirm on solution as Meilin wants socket sensor to have ability to adjust based on socket thickness/docking height.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">Low vacuum reported leading to device pick up error from index arm, found problem to be not low vacuum but rather </span><span class="ts3">due to no contact air (because wrong compliant cylinder setting)</span><span class="ts1">, contactor head did not sit into pocket for the pick up.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0001-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 290;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0001-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="ns7000series.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic360.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: Error T-4103 Motion Control Module initialization error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18825) Xilinx</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 01-01775)</span></p>
+<p class="ps3"><span class="ts0">Date: 17 May 2006</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Error T-4103 Motion Control Module initialization error upon going into MMI interface.</span></p>
+<p class="ps3"><span class="ts0">Error T-4103 Motion Control Module initialization error upon going into SPEL CT V3.0.</span></p>
+<p class="ps3"><span class="ts0">In SPEL CT, </span></p>
+<p class="ps131"><span class="ts14">-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="ts0">unable to use </span><span class="ts25">Jog &amp; Teach</span><span class="ts0">&nbsp;Windows with&nbsp; SPEL error requesting to solve error first.</span></p>
+<p class="ps131"><span class="ts14">-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="ts0">on the bottom of screen, at the status bar, for Robot 1 the the Motor power status</span></p>
+<p class="ps131"><span class="ts14">-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="ts0">(On/Off) indicates&nbsp; </span><span class="ts25">Motor ???</span><span class="ts0">&nbsp;and Power status(Low/High) indicates </span><span class="ts25">Power ???</span><span class="ts0">.</span></p>
+<p class="ps131"><span class="ts14">-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="ts0">selecting other robot such as selrb2, selrb6 also indicates </span><span class="ts25">Motor ???</span><span class="ts0">&nbsp;and </span><span class="ts25">Power ??? </span><span class="ts0">status, unable to Motor On for all robots.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">After solved for Error T4103(due to MIB2 jumper setting incorrect at JP4.), proceed to solve the errors below.</span></p>
+<p class="ps3"><span class="ts0">In SPEL CT, Error </span><span class="ts25">F-5041 Torque in the Low-power state </span><span class="ts0">when operating in Jog &amp; Teach Windows when moving Index Arm 1 (Z Axis) down or in MMI, Error </span><span class="ts25">F-5040 Torque error in the High-power state</span><span class="ts0">&nbsp;during auto height calibration of index arm.</span></p>
+<p class="ps3"><span class="ts0">Note that during Handler Dry Run mode there was no F-5040 error, it only happened when doing auto height calibration of the index arm.</span></p>
+<p class="ps3"><span class="ts0">This was due to a loose M4x16 bolt which protruded out at the U Axis linear guide (Index Arm 2). The horizontal&nbsp; linear guide of&nbsp; Index Arm 1 to hit and jammed onto this loose bolt at certain point when Index Arm 1 is lower slowly down </span><span class="ts36">directly</span><span class="ts0">&nbsp;towards the Input Shuttle 1. When lowering Index Arm 1 towards the test site there was no problem.</span></p>
+<p class="ps3"><span class="ts0">The loose bolt was replaced and thread locker applied, the rest of the 5 bolts were checked and tightened.</span></p>
+<p class="ps2"><img width="182" height="202" border="0" src="images/0001ns7kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps131"><span class="ts14">-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="ts0">In SPEL CT, check Hardware setting of individual Drive Unit, ok.</span></p>
+<p class="ps131"><span class="ts14">-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="ts0">Check external connectors/wiring between RC520 and DU1, ok.</span></p>
+<p class="ps131"><span class="ts14">-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="ts0">Check MIB1, MIB2 and MIB3 jumper setting, MIB2 jumper setting incorrect at JP4.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Incorrect jumper setting of JP4 on MIB2 in RC520. </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts1">Check for the following if there is T 5014 Torque error in low Power state:</span></p>
+<p class="ps3"><span class="ts0">- greasing</span></p>
+<p class="ps3"><span class="ts0">- screw/bolt block or rub to axis</span></p>
+<p class="ps3"><span class="ts1">- loose connection of signal connector behind the Drive Unit</span></p>
+<p class="ps3"><span class="ts1">- MCD file of robot eg. MCSys03.MCD</span></p>
+<p class="ps3"><span class="ts1">- Belt tension</span></p>
+<p class="ps3"><span class="ts1">- any dummy inertial weight missing from pulley</span></p>
+<p class="ps3"><span class="ts1">- faulty motor</span></p>
+<p class="ps3"><span class="ts1">- faulty DMB</span></p>
+<p class="ps3"><span class="ts1">- Motor Power Unit ( AC/DC Board) in Drive Unit</span></p>
+<p class="ps3"><span class="ts1">- Solid State Relay (SSR), confirm whether able to move robots that are link to that particular DU</span></p>
+<p class="ps3"><span class="ts1">- wrong power setting, CT Gain, CT Offset in SPEL </span></p>
+<p class="ps3"><span class="ts1">- wrong power rating of motor power module</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Check for Error T 4233 </span><span class="ts0">Communication error with Servo CPU:</span></p>
+<p class="ps3"><span class="ts0">- MIB</span></p>
+<p class="ps3"><span class="ts0">- DMB</span></p>
+<p class="ps3"><span class="ts0">- CPU Board</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check for Error 5047 Over speed in the Low-power state:</span></p>
+<p class="ps3"><span class="ts0">- Motor Driver Module</span></p>
+<p class="ps3"><span class="ts0">- Drive Unit</span></p>
+<p class="ps3"><span class="ts0">- Motor</span></p>
+<p class="ps3"><span class="ts0">- update MCD file; C:\ns7000\exe\config.exe</span></p>
+<p class="ps3"><span class="ts0">&nbsp; [Manipulator config] -&gt; [Update]</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If SPEL downgrade, go to C:\NS7000\Spelct backup\backup\2007...\</span></p>
+<p class="ps3"><span class="ts0">eg 2007 for the year</span></p>
+<p class="ps3"><span class="ts0">copy &amp; paste .mcd file to spel ct\sys&nbsp; after downgrade</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check </span><span class="ts1">Error T 4103 Motion Control Module initialization error:</span></p>
+<p class="ps3"><span class="ts1">- bottom-right of SPEL screen, Motor ???&nbsp; power ???</span></p>
+<p class="ps3"><span class="ts1">- can Tools-&gt;Manipulator Parameters, can parameters be displayed?</span></p>
+<p class="ps3"><span class="ts1">- check MIB board jumper setting</span></p>
+<p class="ps3"><span class="ts1">- SSR</span></p>
+<p class="ps3"><span class="ts1">- AC/DC board</span></p>
+<p class="ps3"><span class="ts1">- Motor</span></p>
+<p class="ps3"><span class="ts1">- Servo driver (Motor Driver Module)</span></p>
+<p class="ps3"><span class="ts1">- Motion cable</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check </span><span class="ts1">Error for </span><span class="ts0">T 4190 communication error with the module VSRCPG</span><span class="ts1">:</span></p>
+<p class="ps3"><span class="ts1">- Correct PG Board jumper S1 setting</span></p>
+<p class="ps3"><span class="ts1">- Correct PG Board used; C-863, C-864v1, C-873</span></p>
+<p class="ps3"><span class="ts1">If communication error with VxD, delete 0mnp.reg in C:\PSPELWORK then either restore version data or key in system data such as MIB, CT Gain &amp; Offset and etc.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If can execute Motor On but motor not engaged,</span></p>
+<p class="ps3"><span class="ts0">check:</span></p>
+<p class="ps3"><span class="ts0">- SSR in Drive Unit</span></p>
+<p class="ps3"><span class="ts0">- Servo Driver (Motor Driver Module)</span></p>
+<p class="ps3"><span class="ts0">- AC/DC Board (Motor Power Unit)</span></p>
+<p class="ps3"><span class="ts0">- Motion cable</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If SPEL cannot startup, Daemon error, check Windows Device Manager COM3, IRQ5 and IRQ10 for Legacy ISA</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check </span><span class="ts1">Error for T 4216 Servo real-time command overrun:</span></p>
+<p class="ps3"><span class="ts1">- Hardware Acceleration (</span><span class="ts0">Reduced hardware acceleration one-step from Full in Display Properties</span><span class="ts1">)</span></p>
+<p class="ps3"><span class="ts1">- MIB</span></p>
+<p class="ps3"><span class="ts1">- setup files</span></p>
+<p class="ps3"><span class="ts0">- For NS-8000, HMI 2.5 will solve the real time command error</span></p>
+<p class="ps3"><span class="ts0">- HDD</span></p>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0020-UBS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12170;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0020-UBS&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12160.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18850.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-6000 Shuttles did not stop at 2D position after CPU Board upgrade</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6000</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 10 June 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">AMD Suzhou seek their local support for upgrading NS6000 from win95 to win 2000, I remembered last time you say from win95 to win2000 upgrading, it may also including CPU upgrading Kit, motor interface board, etc. this upgrading is due to NS6000 ver 12.11 only support win2000 above.</span></p>
+<p class="ps3"><span class="ts0">Now win2000 OS upgrading complete, but handler not stop under 2D position when 2D enabled In ver 12.11 handler GUI. Pls inform how to set up 2D in SPEL since this handler never run 2D decode since win95 handler software installed before, </span></p>
+<p class="ps3"><span class="ts0">can you help to send the procedures of 2D set up (teaching points, etc) to us, meanwhile, pls confirm win95 to win2000 upgrading for ver 12.11 run, it is OS upgrading only or any hardware upgrading introduced as well.</span></p>
+<p class="ps3"><span class="ts0">The handler didn't stop at 2D position at all and go to standby position waiting for pickup for testing, or the handler stopped at wrong position and wait for 2D decode?</span></p>
+<p class="ps3"><span class="ts0">From what you described, it looks the handler didn't stop at all as if no 2D turn on, right? Pls inform which tester GPIB interface selected? Epson type A or anything else In GUI? No 2D teaching point is because no 2D verification conducted since previously win 95 not supported for ver 12.11. COM2 in 2D PC is used for 2d decode, pls check 2D PC</span></p>
+<p class="ps3"><span class="ts0">COM2 settings and the RS232 cable connection to handler COM, pls check it.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Current OS: Windows 2000</span></p>
+<p class="ps3"><span class="ts0">MMI Version: 12.11</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps2"><img width="510" height="599" border="0" src="images/0020-ubsb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Advise customer to open C:\NS6000\Config\CodeReader.def</span></p>
+<p class="ps3"><span class="ts0">Edit the &quot;Reader Base Offset&quot; value to the correct camera Base Offset.</span></p>
+<div align="left">
+  <table class="tbl44">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="308" height="193" border="0" src="images/0020-ubsb2.png" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="453" height="180" border="0" src="images/0020-ubsb3.png" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">For fine tuning of shuttle position for camera viewing at Input Shuttles,</span></p>
+<p class="ps3"><span class="ts0">in NS-taskbar, click [Maintenance] pad -&gt; Offset -&gt; Shuttle- [2D reader], change the required X offset.</span></p>
+<p class="ps2"><img width="715" height="321" border="0" src="images/0020-ubsb4.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Base Offset for Camera to Shuttle jig centre was not defined.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

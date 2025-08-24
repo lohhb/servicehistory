@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0264-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13970;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0264-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13960.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13980.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 Silicon Thermal ATC using new ATC software</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 11 Feb 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Q&amp;A</span></p>
+<p class="ps3"><span class="ts1">For NS-8040 can you let us know the difference/new feature in this new ATC software?</span></p>
+<p class="ps3"><span class="ts1">Like it is able to detect controller error and also get feedback from</span></p>
+<p class="ps3"><span class="ts1">thermal controller when having error? Cos the current HMI ver.2.6 cannot</span></p>
+<p class="ps3"><span class="ts1">give alarm when the controller display error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">We will install this software next Monday, so at least we know what are the</span></p>
+<p class="ps3"><span class="ts1">things to verify after installation.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">Ans</span></p>
+<p class="ps3"><span class="ts1">The modification is only single shuttle support software.</span></p>
+<p class="ps3"><span class="ts1">I don't think improved to detect controller error and also get feedback from thermal controller when having error.</span></p>
+<p class="ps3"><span class="ts1">Because the specification sheet does not include the matters.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts3">In that case, what is the differences to the current v2.6 HMI? Now also</span></p>
+<p class="ps3"><span class="ts3">disable shuttle 1 in setup and run only shuttle 2.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Note: Even if Index Arm 2 is disabled by Shuttle selection, With Device, during or after One Cycle, Index Arm 2 will still go down to test site to check for device in socket.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">15 Feb 2011</span></p>
+<p class="ps3"><span class="ts0">This afternoon when I checked the NS80-40 SPEL input I/O 24 and 25, I off </span></p>
+<p class="ps3"><span class="ts0">the power to the thermal controllers and the LED on the 2 I/O still ON.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Then I removed the DIO alarm cable again to confirm wiring no problem, and </span></p>
+<p class="ps3"><span class="ts0">fixed back to DU 2.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">I boot up into HMI again and switch off thermal controllers and this time </span></p>
+<p class="ps3"><span class="ts0">the 2 I/O able to turn off. However, During dry cycle run, the handler still </span></p>
+<p class="ps3"><span class="ts0">able to run without alarm. (Pls see the video link : </span></p>
+<p class="ps3"><span class="ts0">http://www.youtube.com/watch?v=VZNqW3tfxAA )</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Now, I just received call from Roel that the handler is giving alarm when </span></p>
+<p class="ps3"><span class="ts0">the thermal head 5 controller went beyond -5 degree range of setpoint(100 </span></p>
+<p class="ps3"><span class="ts0">degree) during testing. Previously there was no alarm.</span></p>
+<p class="ps3"><span class="ts0">Looks like the alarm is working now but only in normal mode? Dry cycle mode </span></p>
+<p class="ps3"><span class="ts0">unable to alarm?</span></p>
+<p class="ps3"><span class="ts0">Next we need to confirm again by turning off the thermal controller in </span></p>
+<p class="ps3"><span class="ts0">normal mode to see if it triggers alarm on handler.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

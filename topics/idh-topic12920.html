@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0190-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12920;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0190-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12680.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12700.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 Output arm unable to HOME. 2Ack error in Z-teach and &quot;No information&quot; HMI error.</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (NS88-04, S/N: 181655) 8 Hands High UPH</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 7 Jun 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">EEMS NS-8080 Output arm unable to home and no torque for all 8 hands.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">-Swapped RS485-1 and RS485-2 connectors of RS485 board and used Z-teach to trigger homing for input arm ok, but still NG when trigger output arm, 2Ack error.</span></p>
+<p class="ps3"><span class="ts0">-Reload servo drivers for all 8 hands by Hidaka-san. NG.</span></p>
+<p class="ps3"><span class="ts0">-E-hand Z motion not smooth when power OFF and found small spring of spline shaft damaged. When power ON, can feel a bit vibration on the E-hand.</span></p>
+<p class="ps3"><span class="ts0">-Swapped Input arm B-hand over but problem persist. Can feel vibration but Z motion still smooth.</span></p>
+<p class="ps3"><span class="ts0">-Checked SPEL CT and found input bit #52 OTA HOMES not ON even though all hand in upper position.</span></p>
+<p class="ps3"><span class="ts0">-Check continuity of RS485-2 connector wiring(red, white, green) to CN5 on control board ok. </span></p>
+<p class="ps3"><span class="ts0">-Swapped IO ARM IN1 and IO ARM IN2 remote IO modules NG.</span></p>
+<p class="ps3"><span class="ts0">-Hidaka-san to request for spare parts from Japan for troubleshooting and replacement.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts0">Use multi-meter to check below when handler is off:</span></p>
+<p class="ps3"><span class="ts0">1. Between D-G&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;200 Ohm( Value will be depended on equipment))</span></p>
+<p class="ps3"><span class="ts0">2. Between 0-24V&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;few kOhm (Value will be depended on equipment))</span></p>
+</body>
+</html>

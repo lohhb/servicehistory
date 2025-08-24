@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0330-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15890;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0330-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15880.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic16050.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: </span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8000</span></p>
+<p class="ps3"><span class="ts1">Controller: </span></p>
+<p class="ps3"><span class="ts1">Date: 16 &amp; 18 May 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">1. NS8080-03 RS485 unknown error</span></p>
+<p class="ps3"><span class="ts0">- Encountered RS485 unknown error after input arm hand B hand up sensor error.</span></p>
+<p class="ps3"><span class="ts0">- Upgrade HMI from v.1.8 to v.1.9.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2. NS8080-02 W0422-shuttle 1 sensor error(loading side)</span></p>
+<p class="ps3"><span class="ts0">- Found input shuttle side input IO module connector loose.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3. NS80-40 ATC peltier thermal head unable to achieve 110 deg</span></p>
+<p class="ps3"><span class="ts0">- Checked resistance of peltier over 10 Ohms.</span></p>
+<p class="ps3"><span class="ts0">- Replaced with UTAC spare peltier WITHOUT thermal grease.</span></p>
+<p class="ps3"><span class="ts0">- Checked no water leakage from thermal head.</span></p>
+<p class="ps3"><span class="ts0">- Checked chiller sp at 20 deg, heat up to 110 deg on thermal controller - Ok. Thermal controller power output at 80+%.</span></p>
+<p class="ps3"><span class="ts0">- Released and monitored production run.</span></p>
+<p class="ps3"><span class="ts0">- Advised Roel to get spare thermal grease and bring down temperature of ATC thermal head when no production to prolong the lifespan of peltier.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">1. NS8080-03 input hand B hand up sensor error</span></p>
+<p class="ps3"><span class="ts1">- Last activity for hand up sensor error issue was in Jan 27(removed input arm unit assy, resit connectors).</span></p>
+<p class="ps3"><span class="ts1">- Checked event log, last error occurred on 17 May 814pm. Production run and end lot at 5pm no occurrence.</span></p>
+<p class="ps3"><span class="ts1">- Collect observer data and log folder to send to Hidaka san. To discuss the next course of action.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2. NS8080-02 chamber temperature unstable and input arm vacuum chattering error</span></p>
+<p class="ps3"><span class="ts1">- Upgrade HMI from v1.8 to v1.9.</span></p>
+<p class="ps3"><span class="ts1">- Original setup, I5974-5x5 hot mode 75 deg. </span></p>
+<p class="ps3"><span class="ts1">- According to Albert, when handler jam and arm 1 in socket, chamber temperature will fluctuate out of range.</span></p>
+<p class="ps3"><span class="ts1">- Installed CK 48QFN-7x7 and simulate dry cycle run. Paused handler when arm 1 in socket. Monitored chamber temperature no fluctuation. Also tried on arm 2 ok.</span></p>
+<p class="ps3"><span class="ts1">- Drew out dummy units and cycle run. Encountered input hand B vacuum chattering error after pick up from hotplate to shuttle.</span></p>
+<p class="ps3"><span class="ts1">- Checked and found air tubing at top of input arm assy not in good position. Adjusted and also removed hand B adaptor to blow clean the filter.</span></p>
+<p class="ps3"><span class="ts1">- Continue cycle dummy units no occurrence.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">3. NS80-40 ATC</span></p>
+<p class="ps3"><span class="ts1">- Checked on ATC NS80-40 at 4.30pm and noticed thermal head temp was at 110 deg although handler was not in production since 12.30pm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

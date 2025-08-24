@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0342-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17470;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0342-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17460.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17480.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 Output Arm Hand Open/Close issue</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18732, NS70-01)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 11 Apr 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Silabs &ndash; NS70-001(18732) output arm open/close issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Replaced back new type stepper motor driver CSD5807N2-P and tried recommended</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&ldquo;Run 5, Stop 3.5 setting but open/close movement still unable to function properly.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Tried other settings same. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3 May 2012</span></p>
+<p class="ps3"><span class="ts0">1.Check output shuttle 80x60 pitch with shuttle alignment jig. Hand C alignment out. </span><br /><span class="ts0">2.When variable hand closed, hand B and D already touched but hand A and C still got gap. </span><br /><span class="ts0">3.Sometimes 100% speed can hear knocking sound when variable hand close. </span><br /><span class="ts0">4.Adjust output arm HOFS open/close from -280 to -500 to open up variable pitch. </span><br /><span class="ts0">5.Fixed back new motor driver CSD5807N2-P, set 100% speed, output shuttle variable 0.5mm and cycle run handler, ok. </span><br /><span class="ts0">6.Release handler for monitoring. </span><br /><span class="ts0">*Also found hand A and B lower than C and D. SR:013193. </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">6 May 2012</span></p>
+<p class="ps3"><span class="ts0">&nbsp;encountered 2 times output arm unable to open/close to position. </span></p>
+<p class="ps3"><br /><span class="ts0">&nbsp;07 May 2012</span></p>
+<p class="ps3"><span class="ts0">swapped motor driver from output to input.</span></p>
+<p class="ps3"><span class="ts0">Encountered hand open/close error and open/close pitch unable to open/close to position at loader and input shuttle. </span><br /><span class="ts0">Swapped stepper motor driver CSD5807N2-P with Getech used driver PMD07C. </span><br /><span class="ts0">Customer accepted used driver as purchased item. </span><br /><span class="ts0">SR:013196</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Faulty Stepper motor driver CSD5807N2-P, so use Getech used driver PMD07C.&nbsp;</span><span class="ts1">&nbsp;</span><span class="ts54">.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

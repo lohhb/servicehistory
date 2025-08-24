@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0136-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11550;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0136-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11540.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11560.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 &quot;Illegal&quot; Power Off</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N: 181677)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 29 Jan 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">SCS encounter 2 problem with one of their NS8080 Handler.</span></p>
+<p class="ps3"><span class="ts0">Software Version: HMI vM9.10-SSY-sp / 3.11ds</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Fault 1: The handler performed an &quot;illegal&quot; power off during production. The handler automatically power off at the control panel and the whole system stop. The hot mode (100 deg) was switch to ambient mode (50 deg) and the temperature display (Hotplates, Shuttles and chamber) at the HMI shows 50 deg. According to the event log, no power off entry was shown which mean input not triggered (rule out the possiblilties of accidentally push of E.Stop or power off button). No &quot;illegal&quot; power off was encounterd during today production..</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Had tried out on the other NS8080 regarding the temperature. In normal case, when power off button was depressed, hot mode (100 deg) will switch to ambient mode (50 deg) but the temperature display will still shows the current reading (100 deg). After depressing the power on button, temperature will shows the temperature drop or ambient reading at Shuttles and Chamber.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Fault 2: Whenever the temperature setting was changed or disable/enable of sites, &quot;setting temperature changed&quot; message was shown in the event log. Disable/enable of sites should be share the same message as temperature setting.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Hidaka requested to collect the following data:</span></p>
+<p class="ps3"><span class="ts0">correct these files as follows?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">The procedure of Windows system log correction: </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">-Right click on the &quot;My computer&quot; icon on the Windows desktop</span></p>
+<p class="ps3"><span class="ts0">-Select &quot;Manage&quot;</span></p>
+<p class="ps3"><span class="ts0">-Select &quot;System tool&quot;-&quot;Event Viewer&quot;-&quot;System&quot;</span></p>
+<p class="ps3"><span class="ts0">-Right click on the &quot;System&quot;&nbsp; </span></p>
+<p class="ps3"><span class="ts0">-Select &quot; Save&quot;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Note: The file type is &quot;*.evt&quot;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Memory.dmp (The information is related &ldquo;Blue screen display&rdquo;.) </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">C:\WINNT\Memory.dmp</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

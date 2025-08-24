@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0080-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11890;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0080-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11880.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12820.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-6040 Error Log 0 MB</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-6040</span></p>
+<p class="ps3"><span class="ts1">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts1">Date: 10 Jun 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">In the process of monitoring our handlers&rsquo; performance and I&rsquo;m gathering the Error Logs every month. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">My problem is that two of my handlers&rsquo; error log doesn&rsquo;t show any data - 0MB (please see attached picture), it always displays zero byte, so my questions are:</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Which setting do I need to change in order for us to get the error log? </span></p>
+<p class="ps3"><span class="ts0">Other handlers error log displays 6 months data while others shows only one month, and worst others shows only half month of data. Where can I set&nbsp; this error log data coverage? </span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">We have two handlers with this kind of problem, one has a 1.4a-JPN (windows98) version and the other one has a 2.1a11 (windows2000-pro) version.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">We're checking with EPSON on &quot;why&quot; it 0MB. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">You mean you open up and it's empty?</span></p>
+<p class="ps3"><span class="ts29">=&gt; </span><span class="ts37">Yes, the error log has no content when converted to Excel file.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Did you try to simulate an error to see if it's been captured?</span></p>
+<p class="ps3"><span class="ts29">=&gt; </span><span class="ts37">Yes, simulation done same with the other handlers but it's still zero (0mb).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Can you try to copy a good error log from another handler and paste it(over-write) the empty error file to try.</span></p>
+<p class="ps3"><span class="ts29">=&gt; </span><span class="ts37">Maybe by next week I will try this, as I'm on course this week.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Can I check what error are you looking for? Handler jam?</span></p>
+<p class="ps3"><span class="ts29">=&gt; </span><span class="ts37">Yes, all of the handler errors. Please refer to attached files.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Normally, we download the jam data from observer.</span></p>
+<p class="ps3"><span class="ts1">So please let us know what data are you trying to collect.</span></p>
+<p class="ps3"><span class="ts37">=&gt; The error log data I'm gathering I usually get from C:/NS6000/Log/error_log.dat. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">5 Jul 2010</span></p>
+<p class="ps3"><span class="ts3">Somehow after I copy a good error log it did start to generate a continuous error log. </span></p>
+<p class="ps3"><span class="ts3">I can get the range by deleting the old log and will generate a new log once it occurs.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

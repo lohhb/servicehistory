@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0194-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12730;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0194-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12720.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12740.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: EEMS NS88-04 S/N:181655 output arm unable to HOME. 2Ack error in Z-teach and &quot;No information&quot; HMI error.</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (NS88-04, S/N: 181655) 8 Hands High UPH</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 18 Jun 2010 ~ 7 Jul 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">EEMS&nbsp; NS88-04 S/N:181655 output arm unable to HOME. 2Ack error in Z-teach and &quot;No information&quot; HMI error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1.Replaced Output Hand E.</span></p>
+<p class="ps3"><span class="ts0">2.Replaced distribution board SKP479_2A.</span></p>
+<p class="ps3"><span class="ts0">3.Replaced control board.</span></p>
+<p class="ps3"><span class="ts0">4.Replaced distribution board SKP479_2B.</span></p>
+<p class="ps3"><span class="ts0">5.Replaced RS485 board(Serial I/O Board, R35N800022500).</span></p>
+<p class="ps3"><span class="ts0">6.Replaced all connection cables.(cables are for input side, length is different. Need to change back to original)</span></p>
+<p class="ps3"><span class="ts0">After all the above replacement, problem still exist. Awaiting Hidaka san to send driver module and requesting whole output arm 8-hand assembly.</span></p>
+<p class="ps132"><br />&nbsp;</p>
+<p class="ps131"><span class="ts0">it seems that we need driver board for Hand E:</span></p>
+<p class="ps131"><span class="ts0">&nbsp;</span></p>
+<p class="ps131"><span class="ts0">1) Home sensor actually goes through driver board. Pg175, SKH0870-F36</span></p>
+<p class="ps131"><span class="ts0">2) Simulate 1 hand no &quot;HOME&quot; on input arm, whole hand actually also no &quot;HOME&quot; and has same error message of &quot;No Information&quot;.</span></p>
+<p class="ps131"><span class="ts0">3) Driver may be the cause of Hand E vibrating.</span></p>
+<p class="ps131"><span class="ts0">&nbsp;</span></p>
+<p class="ps131"><span class="ts0">So we feel strongly that we need the driver board for Hand E. In an event driver board N.G,</span></p>
+<p class="ps131"><span class="ts0">it may cause unable to &quot;HOME&quot; and vibrate like what you see now.</span></p>
+<p class="ps132"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">7 Jul 2010</span></p>
+<p class="ps3"><span class="ts1">Changed back to old set of connection cables because the length of new set is different.</span></p>
+<p class="ps3"><span class="ts1">Replaced output arm Hand E driver board unit with encoder board.</span></p>
+<p class="ps3"><span class="ts1">Handler able to HOME in HMI and Z-Teach. SPEL CT input bit #52 (for output Hands HOME) also can ON after HOME completed.</span></p>
+<p class="ps3"><span class="ts1">Ran dry cycle mode 100% OK. Release handler to customer and monitor. Warranty </span><a href="s0435.html" class="hs0">S0435</a><span class="ts1">&nbsp;raised for driver board x2 and encoder board x2.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Faulty Driver Board SKP480 and Resolver(Encoder) Board SKP481.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Driver Module (Driver Board SKP480 with Resolver(Encoder) Board SKP481)</span></p>
+<p class="ps3"><span class="ts0">Part Code: R33N800014700 + R33N8000148000</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

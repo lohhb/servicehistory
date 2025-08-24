@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0112-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11110;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0112-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11100.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11120.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 Abnormal humming noise from Input Arm Y-Axis motor &amp; Output Arm Y-Axis motor when Homing, vibration from both Y-Axes motors</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040 (NS-103, S/N: 181671)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 2 Dec 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Abnormal humming noise from Input Arm Y-Axis motor &amp;&nbsp; Output Arm Y-Axis motor when Homing, vibration from both Y-Axes motors.</span></p>
+<p class="ps3"><span class="ts1">During dry run 50% also humming noise and vibration can be felt from the front of handlers when touching the covers for the motors.</span></p>
+<p class="ps3"><span class="ts1">At 80% speed the humming sound were even louder.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Checked the CT Data in SPEL CT, also remove Drive Unit 2 and check servo driver CT Data labels, ok.</span></p>
+<p class="ps3"><span class="ts1">Power &amp; signal(encoder) cables connection checked ok. Motor position marking checked, ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Adjustment to both input/Output Arm Y motor timing belts tension still not OK.</span></p>
+<p class="ps3"><span class="ts1">Epson will send tuning software. To try out following day.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">3 Dec 2009</span></p>
+<p class="ps3"><span class="ts1">1) Installed Custom manipulator tuning program Ver 1.4 for SPEL CT.</span></p>
+<p class="ps3"><span class="ts1">2) Adjustment to Servo Parameters, joint 2, Proportional gain and Torque filter time constant value. Input Arm joint 2 torque filter time constant from&nbsp; </span></p>
+<p class="ps3"><span class="ts1">1750 to 850 and Output Arm from 1500 to 850.</span></p>
+<p class="ps3"><span class="ts1">3) Humming noise for Output Arm seems Ok when running in 70% speed. However Input Arm encountered Overcurrent.</span></p>
+<p class="ps3"><span class="ts1">4) Interchanged Motor drivers in DU for Input/Output Y motor. Problem migrated to Output Arm.</span></p>
+<p class="ps3"><span class="ts1">5) Requested to Goto-san for new motor driver replacement</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts36">9 Dec 2009</span></p>
+<p class="ps3"><span class="ts0">1) Replaced DU slot 2 with new DMB board and new motor drivers for input/output arm Y axis. Restored back original manipulator values. Results: Noisy.</span></p>
+<p class="ps3"><span class="ts0">2) Changed back original slot 2 with new motor drivers for input/output arm Y axis. </span></p>
+<p class="ps3"><span class="ts0">3) Replaced input/output arm Y axis motors. Results: Noisy.</span></p>
+<p class="ps3"><span class="ts0">4) Re-adjust motor belts tension. Results: Noisy.</span></p>
+<p class="ps3"><span class="ts0">5) Adjustment on manipulator Torque filter Time constant and Proportional Gain. Cycle run handler in 50% speed, input arm seems ok but output arm problem same. Increase input arm speed to 70%. results ok not noisy.</span></p>
+<p class="ps3"><span class="ts0">6) Continued adjustment on output arm manipulator values, still unable to achieve good result.</span></p>
+<p class="ps3"><span class="ts0">7) Requested by ijima-san to change AC/DC board in DU. Replaced AC/DC Board from another handler. Result still same. </span></p>
+<p class="ps3"><span class="ts0">8) Pending decision by Hidaka-san and Goto-san.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">11 Dec 2009</span></p>
+<p class="ps3"><span class="ts0">1) Assisted Hidaka-san on checking of handler.</span></p>
+<p class="ps3"><span class="ts0">2) Measured resistance of&nbsp; DU slot 2 motor supply power connector to motor drivers.</span></p>
+<p class="ps3"><span class="ts0">Results no short-circuited.</span></p>
+<p class="ps3"><span class="ts0">3) Measured both Y-axis motor incoming power connectors to power connectors to DU. No cross pathed.</span></p>
+<p class="ps3"><span class="ts0">4) Measurement on another handler. Results and reading same.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts31">14 Dec 2009</span></p>
+<p class="ps3"><span class="ts1">NS-8040 transported to Getech for troubleshooting.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">12 Jan 2010</span></p>
+<p class="ps3"><span class="ts0">With Kamijo &amp; Ogata-san troubleshooting for Y Axes noise issue:</span></p>
+<p class="ps3"><span class="ts0">-use Servo Parameter Editor check Input Arm X(Joint 1) &amp; Y(Joint 2) Axes, found some values are zero with reference with data provided by EPSON</span></p>
+<p class="ps3"><span class="ts0">-change Input Arm Joint 1 &amp; 2 values using values provided by EPSON</span></p>
+<p class="ps3"><span class="ts0">-use Servo Parameter Editor check Output Arm X(Joint 1) &amp; Y(Joint 2) Axes, found some values are zero with reference with data provided by EPSON</span></p>
+<p class="ps3"><span class="ts0">-change Output Arm Joint 1 &amp; 2 values using values provided by EPSON</span></p>
+<p class="ps3"><span class="ts0">-replaced Input Arm Y motor &amp; pulley assembly</span></p>
+<p class="ps3"><span class="ts0">-check &amp; adjust short timing belt(170&iexcl;À15Hz) &amp; long timing belt(18&iexcl;À2Hz) according to EPSON spec using the frequency tension meter</span></p>
+<p class="ps3"><span class="ts0">- calibration of Input Arm Y Axes motor by AutoTeach-Calibration tool</span></p>
+<p class="ps3"><span class="ts0">-replaced Output Arm Y motor &amp; pulley assembly</span></p>
+<p class="ps3"><span class="ts0">-check &amp; adjust short timing belt(170&iexcl;À15Hz) &amp; long timing belt(18&iexcl;À2Hz) according to EPSON spec using the frequency tension meter</span></p>
+<p class="ps3"><span class="ts0">- calibration of Output Arm Y Axes motor by AutoTeach-Calibration tool</span></p>
+<p class="ps3"><span class="ts0">- Run handler in 10% &amp; 100% speed, ok, no abnormal noise.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts36">18 Jan 2010</span></p>
+<p class="ps3"><span class="ts1">NS-8040 return to Infineon for buyoff. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Unknown,</span></p>
+</body>
+</html>

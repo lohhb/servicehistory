@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0004-NX1032XS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18650;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0004-NX1032XS&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18640.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18660.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NX1032XS </span><span class="ts24">Input Shuttles Heaters' circuit Breaker 3A tripped when temperature around 60~70 DegC</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NX1032XS (S/N: 182347)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 00504), DUBOX030 (S/N: 100004), PSUNT353 (P892) </span></p>
+<p class="ps3"><span class="ts0">Date: 11 Oct 2012&nbsp; (Recovery DVD Ver 1.0,&nbsp; FD12S164)</span></p>
+<p class="ps3"><span class="ts0">Date: 18~19 Oct 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Input Shuttles Circuit Breaker (CB) 3A tripped when temperature around 60~70DegC.</span><br /><span class="ts0">&nbsp;- Advised by EPSON to replaced SSR (Solid State relay) </span><br /><span class="ts0">- Advised through email by Serizawa-san to replace Circuit Breakers for Input Shuttles' Heaters from 3A to 5A. </span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Serizawa informed that shuttle CB capacity is not match for shuttle heater wattage. </span></p>
+<p class="ps3"><span class="ts0">Actual situation now that is shuttle's CB is using 3A for CB203 and CB204. </span></p>
+<p class="ps3"><span class="ts0">However, correct CB type is 5A. </span></p>
+<p class="ps3"><span class="ts0">CB203 and CB204 should use 5A type. </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">5A breakers removed from handler in office NS-8040 and installed to NX1032XS, tested ok at 130DegC.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">At 130DegC, dry run with devices did not trip breaker, but Index Arm 2 Heads starts to lose temperature when first plunge contact to Socket Guide Base jig(Default Socket Heater is unchecked/Disabled) and temperature control alarm occurred. </span></p>
+<p class="ps3"><span class="ts0">Indexs' heaters lose heat to Socket Guide Base jig.</span><br /><span class="ts0">&nbsp;- Retry+Start but still temperature controller alarm. Retry+Start but still temperature for Heads never go up. Retry+Start, afew times also same problem </span><br /><span class="ts0">- Enable Socket Heater 1 &amp; 2, then no problem. </span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Wrong rating of circuit breakers used for Input Shuttles for its' heaters.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">22 Oct email by Serizawa-san:</span></p>
+<p class="ps150"><span class="ts55">Regard to test head temperature drop,</span></p>
+<p class="ps144"><span class="ts55">As your information, test hand did not heating cold Socket Guide Base.</span></p>
+<p class="ps144"><span class="ts55">Because, test head is contacting to Socket Guide Base during test time. </span></p>
+<p class="ps144"><span class="ts55">This is heating time not enough and also test head heater capacity not include Socket Guide Base heating.</span></p>
+<p class="ps144"><span class="ts55">So, Socket Guide Base heating need by socket heater.</span></p>
+<p class="ps144"><span class="ts55">Could you confirm using socket heater?</span></p>
+<p class="ps144"><span class="ts55">If test head temperature drop situation will not solve using socket heater,</span></p>
+<p class="ps144"><span class="ts55">We have to consider for test head temperature drop.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

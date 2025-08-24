@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0014-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 5640;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0014-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic5620.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic5670.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 Shuttles vibration</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (Amkor)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 15,17 &amp; 23 Jan 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Shuttle 2 vibration lead to index arm 2 unable to pick up device.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">15 Jan 2008</span></p>
+<p class="ps3"><span class="ts1">Checked CT data. OK</span></p>
+<p class="ps3"><span class="ts1">Shuttle 1 and 2 swap servo pack(motor driver module). Same</span></p>
+<p class="ps3"><span class="ts1">Updated manipulator settings with reducer for shuttle motors. Same</span></p>
+<p class="ps3"><span class="ts1">Used mcd file from another &ldquo;ok&rdquo; handler. Same</span></p>
+<p class="ps3"><span class="ts1">Tightened belt tension.</span></p>
+<p class="ps3"><span class="ts1">Situation improved.</span></p>
+<p class="ps3"><span class="ts1">Intermittent vibration.</span></p>
+<p class="ps3"><span class="ts1">Shuttle pick up height calibration and increased pickup 0.2mm.</span></p>
+<p class="ps3"><span class="ts1">Contact height calibration increased 0.45mm for Bin 1.</span></p>
+<p class="ps3"><span class="ts1">Suzuki-san to check if possible 17/Jan. Intermittent vibration.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">17 Jan 2008</span></p>
+<p class="ps3"><span class="ts1">Handler still has Index Arm 2 pick up error based on error log. Verified P20 and P21 with 0.5mm difference. Motor reducer found vibrating intermittent, Due to tight production, only managed to verify SPEL point.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">23 Jan 2008</span></p>
+<p class="ps3"><span class="ts0">Received new mcd files from Japan.</span></p>
+<p class="ps3"><span class="ts0">Due to tight production, tired on offline handler before trying on production handler.</span></p>
+<p class="ps131"><span class="ts0">Tried new mcd file, found N.G. Same problem</span></p>
+<p class="ps131"><span class="ts0">Extract mcd files from handler with no vibration for comparison</span></p>
+<p class="ps3"><span class="ts0">Edited with Mcdsrv.exe accordingly.</span></p>
+<p class="ps3"><span class="ts0">Try different values till no vibration. Total 3 sets for comparison.640-&gt;500 and 440-&gt;250</span></p>
+<p class="ps131"><span class="ts0">Edited with Mcdedit.exe to remove LP error</span></p>
+<p class="ps131"><span class="ts0">Verified few trays running, no vibration.</span></p>
+<p class="ps3"><span class="ts0">Upon confirmation this mcd is ok, patch on 2 handlers and no vibration.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">24 Jan 2008</span></p>
+<p class="ps3"><span class="ts0">Device pick up error and drop error on Index Arm 2. Intermittent failure on both sites.</span></p>
+<p class="ps3"><span class="ts0">Contact height found 0.9mm deeper.</span></p>
+<p class="ps3"><span class="ts0">Undock and found screw stuck in cylinder for dip board lock</span></p>
+<p class="ps3"><span class="ts0">Dip board check and Socket change</span></p>
+<p class="ps3"><span class="ts0">After contact height, increase 0.8mm to achieve stable yield with 0.2s delay</span></p>
+<p class="ps3"><span class="ts0">Found index arm and SLK tubing loose. </span></p>
+<p class="ps3"><span class="ts0">Vacuum sensitivity on arm 2 head 2 delay. Tunning done</span></p>
+<p class="ps3"><span class="ts0">Monitored few trays production. Yield stable and no jam.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

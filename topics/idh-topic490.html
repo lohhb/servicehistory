@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0005-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 490;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0005-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic400.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic530.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 MMI downgrade version downgrade issue</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date:</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Some minor problem during MMI downgrade from v2.0a to v1.1c13.&nbsp; </span></p>
+<p class="ps3"><span class="ts0">Firstly backup system data, pose data and setup files. Perform HDD recovery using </span><span class="ts3">CD-ROM Ver.1.1 (FD05S50)</span><span class="ts0">, after that restore system data, pose data and setup files and then version up using </span><span class="ts3">Ver.1.1c13 </span><span class="ts0">CD. The error &quot; File reading error c:\NS7000\Config\Table\DIO_If\27.dat&quot; occurred when DeviceSet/Tester IF icon is select.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">The normal situation of Ver.1.1c13, DIO setting files does not have 27.dat. </span></p>
+<p class="ps3"><span class="ts0">For this case, the 27.dat file is not present in C:\NS7000\Config\Table\DIO_If folder. </span></p>
+<p class="ps3"><span class="ts0">*There is a possibility that customer registered original DIO setting as the 27.dat. </span></p>
+<p class="ps3"><span class="ts0">Please ask to customer for original DIO setting of 27.dat and please register again original DIO setting as 27.dat. (Refer MMI operation manual 6.6 DIO Interface Configuration) </span></p>
+<p class="ps3"><span class="ts0">----------------------- </span></p>
+<p class="ps3"><span class="ts25">Memo:</span></p>
+<p class="ps3"><span class="ts0">Regard to backup data, </span></p>
+<p class="ps3"><span class="ts0">MMI backup are</span></p>
+<p class="ps3"><span class="ts0">C:\NS7000\SEUP </span></p>
+<p class="ps3"><span class="ts0">C:\NS7000\RUN </span></p>
+<p class="ps3"><span class="ts0">C:\NS7000\CONFIG </span></p>
+<p class="ps3"><span class="ts0">C:\NS7000\setup.inf </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">SPEL backup are</span></p>
+<p class="ps3"><span class="ts0">System data </span></p>
+<p class="ps3"><span class="ts0">Pose data </span></p>
+<p class="ps3"><span class="ts0">----------------------- </span></p>
+<p class="ps3"><span class="ts25">Regarding to Restore data</span><span class="ts0">, </span></p>
+<p class="ps3"><span class="ts0">For restoring MMI data is </span></p>
+<p class="ps3"><span class="ts0">[Copy to C:\NS7000] </span></p>
+<p class="ps3"><span class="ts0">A:\SETUP </span></p>
+<p class="ps3"><span class="ts0">A:\RUN </span></p>
+<p class="ps3"><span class="ts0">A:\setup.inf </span></p>
+<p class="ps3"><span class="ts0">If DIO setting is used, &lt;------ This time need this restore. </span></p>
+<p class="ps3"><span class="ts0">[Copy to C:\NS7000\CONFIG\Table] </span></p>
+<p class="ps3"><span class="ts0">A:\CONFIG\Table\DIO_IF </span></p>
+<p class="ps3"><span class="ts0">A:\CONFIG\Table\DioInterface.def </span></p>
+<p class="ps3"><span class="ts0">SPEL is restored by:</span></p>
+<p class="ps3"><span class="ts0">System data </span></p>
+<p class="ps3"><span class="ts0">Pose data</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

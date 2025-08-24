@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0010-NS3K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11290;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0010-NS3K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11280.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11300.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: AMD&nbsp; NS301 category display installation but LED unable to display</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-3000 ATC (NS301, S/N: 151024) MMI A9.11-AMD, SPEL CT 2.81b</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 20 Apr 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">1.Replaced top panel, cover tray buffer cover.</span></p>
+<p class="ps3"><span class="ts0">2.Installed fix tray display box.</span></p>
+<p class="ps3"><span class="ts0">3.Installed RC520 output board(PO-64).</span></p>
+<p class="ps3"><span class="ts0">4.Installed Omron LED driver board, cables for PO64-LED board.</span></p>
+<p class="ps3"><span class="ts0">5.Installed LED display x6pcs(tray buffer, LD1, LD2, Fix 1,2,3).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">- Encountered CD-rom drive unable to read contec driver installation disc. Changed CD-rom drive from another UBS handler ¨C OK.</span></p>
+<p class="ps3"><span class="ts0">- Encountered windows hang up, mouse cannot move during &iexcl;°New found&nbsp; hardware&iexcl;± wizard after boot up. Replaced another PO-64PCI card from another UBS handler, not OK. Changed PO-64(PCI) card to another available PCI slot ¨C OK.</span></p>
+<p class="ps3"><span class="ts0">- After completed contec driver installation, found LED unable to display according to bin. Confirmed SPEL hardware settings output port correct. </span></p>
+<p class="ps3"><span class="ts0">Checked Omron LED driver board dip switch S1 and S2 settings at '2'. </span></p>
+<p class="ps3"><span class="ts0">Checked NS303 setting at '0'. </span></p>
+<p class="ps3"><span class="ts0">Changed NS301 setting to '0' but category still unable to display correctly.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts118">24 Jun 2010</span></p>
+<p class="ps3"><span class="ts3">-Checking Windows 2000 Input &amp; Output address of [Multifunction adapters] for CONTEC Co., Ltd-PO-64L(PCI)&nbsp; on LED display, Resources address is &quot;EC00H&quot;</span></p>
+<p class="ps3"><span class="ts3">-Set SPEL Output Address of 7segment LED to &quot;EC00H&quot; which is same as Windows 2000 Resources address, restart NS301 and LED display able to function according to Bin setting.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Wrong setting of SPEL Output Address of 7Segment(Contec PO-64PCI).</span></p>
+</body>
+</html>

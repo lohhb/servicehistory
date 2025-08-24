@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0008-NS3K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10940;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0008-NS3K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10930.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11280.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: </span><span class="ts24">ATC installation into NS301</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-3000(S/N: 151024, Mfg: Nov 2006) </span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 27 Oct 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">ATC installation into NS-3000(S/N: 151024, Mfg: Nov 2006) NS301.</span></p>
+<p class="ps3"><span class="ts1">RC520(S/N: 01-20472, Mfg Dec 2005).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts31">27 Oct 2009</span></p>
+<p class="ps3"><span class="ts1">1) Drill 2 holes to secure support bar onto Index Arm 2 bracket.</span></p>
+<p class="ps3"><span class="ts1">2) Soldering of temp ready wires(RED, GREY) onto DIO3 connector.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">28 Oct 2009</span></p>
+<p class="ps3"><span class="ts1">1) Remove existing ION and KASUGA ionizers.</span></p>
+<p class="ps3"><span class="ts1">2) Installed Contec COM-4(LPCI)H Communication card (for communication with temperature controllers) into RC520.</span></p>
+<p class="ps3"><span class="ts1">3) Installed DIO connector and connected com cables to Communication Card.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts117">REMARKS</span><span class="ts97">: Initially, NS301 does not have Contec PIO-64L card in RC520 which is to control 7 segment LED panel on NS3000, this handler does not have 7 segment LED panel for binning display.</span></p>
+<p class="ps3"><span class="ts97">NS302 &amp; NS303 have 7 segment LED panels installed.</span></p>
+<p class="ps3"><span class="ts118">On 20 Apr 2010, NS301 was installed with Contec PIO-64L card in RC520 to output display bining on 7 segment LED panel on NS301</span></p>
+<p class="ps3"><span class="ts118">-------------------------------------------------------------------</span></p>
+<p class="ps3"><span class="ts118">24 Jun 2010</span></p>
+<p class="ps3"><span class="ts3">-Checking Windows 2000 Input &amp; Output address of [Multifunction adapters] for CONTEC Co., Ltd-PO-64L(PCI)&nbsp; on LED display, Resources address is &quot;EC00H&quot;</span></p>
+<p class="ps3"><span class="ts3">-Set SPEL Output Address of 7segment LED to &quot;EC00H&quot; which is same as Windows 2000 Resources address, restart NS301 and LED display able to function according to Bin setting</span></p>
+<p class="ps3"><span class="ts97">---------------------------------------------------------------------</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">29 Oct 2009</span></p>
+<p class="ps3"><span class="ts1">1) Installed Thermal Head 1&amp;2(Arm1), 5 &amp; 6(Arm2) onto Index Arm. Manually check index arms motion with cables to prevent rubbing to ATC cables and tubings.</span></p>
+<p class="ps3"><span class="ts1">2) Installed Manifold tubing(Supply, Return).</span></p>
+<p class="ps3"><span class="ts1">3) Installed Contec COM-4(LPCI)H driver for Communication Card in PCI slot.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">30 Oct 2009</span></p>
+<p class="ps3"><span class="ts1">1) Installed temperature controllers for Thermal Heads.</span></p>
+<p class="ps3"><span class="ts1">(Power supply for temperature controllers is 240V).</span></p>
+<p class="ps3"><span class="ts1">2) Installed Chiller(Input voltage 110V).</span></p>
+<p class="ps3"><span class="ts1">3) Installed MMI A9.11-AMD software with ATC option and installed SPEL CT 2.81b.</span></p>
+<p class="ps3"><span class="ts1">4) Encountered PC hang when execution of SPEL CT.</span></p>
+<p class="ps3"><span class="ts1">5) Seeking Suzuki advises.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Troubleshooting for NS303 that have ATC Head5 temperature cannot go up. Found setting in temperature controller not in AUTO mode.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">2 Nov 2009</span></p>
+<p class="ps3"><span class="ts1">ATC MMI A9.11-AMD, SPEL CT 2.81b</span></p>
+<p class="ps3"><span class="ts1">Using 2nd IFUNT100 address E800h as reference in [Device Manager].</span></p>
+<p class="ps3"><span class="ts0">Launch HWConfe.exe to change SPEL Input / Output I/O Board for IFUNT100A, IFUNT100A-2.</span></p>
+<p class="ps3"><span class="ts0">Auto launch of MMI must be disable by mean of remove MMI autostart up first.</span></p>
+<p class="ps3"><span class="ts0">Only after MMI auto startup short cut is remove, then use HWConfe.exe</span><br /><span class="ts0">&nbsp;Change SPEL I/O Board&nbsp; Input address as:</span><br /><span class="ts0">&nbsp;E800h for IFUN100A </span><br /><span class="ts0">E807h for IFUNT100A-2</span><br /><br /><span class="ts0">&nbsp;SPEL I/O Output address as:</span><br /><span class="ts0">&nbsp;E804h for IFUN100A</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">SPEL/MMI startup caused hang up of software solved after correct SPEL I/O address for IFUNT100A.</span></p>
+<p class="ps3"><span class="ts0">Alignment&nbsp; for BGA631 RV170 (23x23) for Auto1.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">3 Nov 2009</span></p>
+<p class="ps3"><span class="ts1">Temperature controller error for Head #5, temperature unable to reach set point of 35DegC(SPEL CT I/O Input Bit 41 (for Arm 2 Head #5 turned off).</span></p>
+<p class="ps3"><span class="ts1">Found red wire soldered to peltier Head #5 broken, resolder red wire back to peltier Head #5.</span></p>
+<p class="ps3"><span class="ts1">Alignment&nbsp; for BGA631 RV170 (23x23) for Auto2, Auto3, Fix1~4.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">SPEL/MMI startup caused hang up of software </span><span class="ts1">due to wrong</span><span class="ts0">&nbsp;SPEL I/O address for IFUNT100A.</span></p>
+<p class="ps3"><span class="ts0">Because when </span><span class="ts1">Contec COM-4(LPCI)H Communication Card which is using PCI, it caused the existing IFUNT100A (also PCI) to auto change address in Windows 2000.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps13"><span class="ts64">Below are the correct settings for temperature controller for AUTO mode</span></p>
+<div align="left">
+  <table class="tbl47">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0008-ns3kb1.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0008-ns3kb2.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0008-ns3kb3.jpg" /></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell1">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0008-ns3kb4.jpg" /></p>
+      </td>
+      <td class="cell1">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0008-ns3kb5.jpg" /></p>
+      </td>
+      <td class="cell1">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0008-ns3kb6.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0254-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13290;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0254-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13280.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13300.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-7080W hang up</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7080W(NS7KW-06 &amp; NS7KW-08)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 6 Sep 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">For NS7KW-06</span></p>
+<p class="ps3"><span class="ts1">Tester waiting SRQ signal from handler during mid testing, we need reboot handler PC to resume communication.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">For NS7KW-08</span></p>
+<p class="ps3"><span class="ts1">Handler hangs up during testing, error show below; </span></p>
+<p class="ps3"><span class="ts1">MMI status is PAUSE, pop up error message is &quot;Quick Pause DAEMON 01 Failed. (Error: 7101)&quot;</span></p>
+<p class="ps3"><span class="ts1">When error was occurred no respond even we pressed the &lsquo;stop&rsquo; button. We need to reboot the handler PC in order to continue production.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">8 Sep 2010 email from Hidaka</span></p>
+<p class="ps3"><span class="ts0">&nbsp;I would like to tell you about patch file of NS-7080W in Xilinx.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;1. Current software does not support the contents of patch file.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;So, we will make new installer and support the contents.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;When we have released the software, I will inform you.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;It will be Ver M10.12-SXC</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;2. Why 7101 error appeared in MMI?</span></p>
+<p class="ps3"><span class="ts0">&nbsp; - Not enough the tolerable amount of event.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;What is changed the patch file?</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span><span class="ts14">&rArr;</span><span class="ts0">&nbsp;To change the quantity of supported event&nbsp; Max event: From 128 to </span></p>
+<p class="ps3"><span class="ts0">&nbsp;256</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Therefore, we will not have the problem after used patch file.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Note: How to check the error condition?</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp; To push &quot;pause+start&quot; repeat twenty to thirty times</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp; while the handler is running.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">7 Sep 2010</span></p>
+<p class="ps3"><span class="ts0">Xilinx.reg patch applied to NS7KW-08 &amp; NS7KW-06 hang up for Quick Pause DAEMON error. If no more occurrence, will include in MMI version M10.12-SXC</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">Registry problem.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts0">1) Why untill now, EPSON decided to inlcude in M10.12-SXC? What happen in 2008, nobody keep track?</span></p>
+<p class="ps3"><span class="ts3">Ans: This is registry setting. So, we did not improve it.</span></p>
+<p class="ps3"><span class="ts3">&nbsp; (Usually, it does not appear in the handler.)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2) This should actually be included in BASE version? Meaning MMIv2.0n or higher? No? Cause don't forget other customers encounter this before. Or you mean standard machine will never exceed 128?</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">This is not support all of standard software.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3) What is the unit for this? 128 events? 256 events? or task? or bytes/MB/GB/TB?</span></p>
+<p class="ps3"><span class="ts0">Ans:</span></p>
+<p class="ps3"><span class="ts3">This is event count. So, this number is quantity.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">4) How does EPSON judgement what is correct number? just the next higher? </span></p>
+<p class="ps3"><span class="ts0">why not the maximum allowable?</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">There is no any problem when the handler does not have many options </span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp; especially automat.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp; The number may have affected the robot motion when it is too big numbers.</span></p>
+<p class="ps3"><span class="ts3">This is limit of events quantity.</span></p>
+<p class="ps3"><span class="ts3">&nbsp; Ex: Current System information</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp; Create System Count= 192</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp; Used Event Count = 118</span></p>
+<p class="ps173"><span class="ts3">Max Event Count = 255</span></p>
+<p class="ps173"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">5) What is classified as 1 event? like testing/command? multitasking? input signal? functions processing?</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">This is kind of minor SPEL error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">6) Is there any difference between 01 and 07 we discussed yesterday? like common or systemtask etc...sometimes even have manipulator number like now below 0 and 9.</span></p>
+<p class="ps3"><span class="ts0">--example:</span></p>
+<p class="ps3"><span class="ts0">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 </span></p>
+<p class="ps3"><span class="ts0">01/18/2008 11:30:30&nbsp; COMMON:AM_IDX_IF:24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 57500</span></p>
+<p class="ps3"><span class="ts0">G-7101&nbsp;&nbsp;&nbsp; Unknown Error !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 </span></p>
+<p class="ps3"><span class="ts0">01/13/2008 17:53:55&nbsp; SYSTEMTASK:QPDAEMON:0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">Sorry but it is not sure the actual reason. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

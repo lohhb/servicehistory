@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0097-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10870;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0097-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10860.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10880.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Input Shuttles' sensor board SKP456B problem(zener diode shorted)</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040</span><span class="ts0">&nbsp;(NS-001)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 16 Sep 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Emitter does not emit light for Input Shuttles Device floating sensor.</span></p>
+<p class="ps3"><span class="ts1">Infineon NS-8040 input shuttle sensor having some problem.</span></p>
+<p class="ps3"><span class="ts1">Measured incoming for SKP456B sensor board @ infineon which is 25.9V and office NS-8040 is 23.4V. </span></p>
+<p class="ps3"><span class="ts1">Do you have any idea where can we adjust this 24V supply? From PSU1 or PSU2? as in wiring diagram didn't mention. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Tried to replace another sensor board SKP456B, but same issue with when plug in SQ120 sensor to board X12connector and SQ112 to board X13 connector, sensors get killed(Emitter becomes very bright after connector plugged in then emitter blackout). </span></p>
+<p class="ps3"><span class="ts1">Measured components for 2 pieces of damaged SKP456B, component named ZD1 and ZD2 got short-circuited meaning through without any resistance 1.6&Omega; and 4.9&Omega;. </span></p>
+<p class="ps3"><span class="ts1">For those working sensors' components ZD measuring 9.3k&Omega;. </span></p>
+<p class="ps3"><span class="ts1">Sensor SQ120, SQ112 and SQ121 and SQ122 damaged by SKP456B sensor board.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts95">NS-8040: Uniwire line</span></p>
+<p class="ps13"><span class="ts95">Green&nbsp; 24V</span></p>
+<p class="ps13"><span class="ts95">White&nbsp; 0V</span></p>
+<p class="ps13"><span class="ts95">Red&nbsp;&nbsp;&nbsp;&nbsp; D</span></p>
+<p class="ps13"><span class="ts95">Black&nbsp;&nbsp; G</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts95">White and Black are short condition</span></p>
+<p class="ps13"><span class="ts95">Is it OK for NS-8040 standard ?</span></p>
+<p class="ps13"><span class="ts95">-&gt; This is normal condition.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">18 Sep 2009</span></p>
+<p class="ps3"><span class="ts1">These are the findings over at infineon yesterday.</span></p>
+<p class="ps3"><span class="ts1">Uniwire condition - Only white and black wire shorted. According to Hidaka san is normal condition.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Incoming 24V - Measured at infineon 25.9V. According to Hidaka san, 25.9V is correct do not need to lower down.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">We replaced another piece of SKP 456B into Infineon NS-8040, all sensors no problem. Root cause still unknown, we will continue monitor situation.</span></p>
+<p class="ps3"><span class="ts1">In the meantime, we would like to send back the defective optical sensor(Tx) and x02pcs of defective sensor board SKP456B to you. </span></p>
+<p class="ps3"><span class="ts1">Possible to ask EPSON to analyse?</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">The x02pcs of sensor boards, i tried to de-solder the component ZD out but unable to. </span></p>
+<p class="ps3"><span class="ts1">Reason is tried to make a working board as only left with 1pc of SKP456B from office NS-8040 to try in infineon.</span></p>
+<p class="ps3"><span class="ts1">1pc of SKP456B ZD 1 (damaged) removed and another SKP456B ZD 4(good)removed but component spolit during taking out, damaged ZD2 still on board so EPSON still can check and analyse condition for board.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">We will send in warranty reports for infineon NS-8040 s/n:181452</span></p>
+<p class="ps3"><span class="ts1">Items require replacement:</span></p>
+<p class="ps3"><span class="ts1">1) 1pc SKP456B sensor board&nbsp;&nbsp;&nbsp; </span><span class="ts0">R35N800012900</span></p>
+<p class="ps3"><span class="ts1">2) 5pcs of Photoelectric sensor&nbsp;&nbsp;&nbsp; R35N800004400</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">And office demo NS-8040 s/n:181394.</span></p>
+<p class="ps3"><span class="ts1">Items require replacement:</span></p>
+<p class="ps3"><span class="ts1">1) 1pc SKP456B sensor board&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="ts0">R35N800012900</span></p>
+<p class="ps3"><span class="ts1">2) 4pcs of Photoelectric sensor&nbsp;&nbsp;&nbsp; R35N800004400</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">EPSON informed that zener diode shorted on SKP456B caused the emitter to burnt.</span></p>
+<p class="ps3"><span class="ts1">Remedy is to cut(remove) the zener diode before it becomes shorted.</span></p>
+<p class="ps3"><span class="ts1">18 Feb 2010 email, sensor problem for NS-8040 and NS-8080H. The shuttle sensor sometimes breaks by the failure of the ZD diode on&nbsp; the substrate circuit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts0">For Input Shuttle</span></p>
+<p class="ps3"><span class="ts0">R35N800012900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sensor Board 1&nbsp;&nbsp; SKP456B&nbsp; (Emitter side)</span></p>
+<p class="ps3"><span class="ts1">R35N800018300</span><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sensor Board 2&nbsp; SKP456A&nbsp; (Receiver side)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">For Output Shuttle</span></p>
+<p class="ps3"><span class="ts0">R35N800025600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SKP456D (Sensor Board 3)</span></p>
+<p class="ps3"><span class="ts1">R35N800043700</span><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SKP456C (Sensor Board 4)</span></p>
+<p class="ps3"><span class="ts0">R35N800025800&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SKP456E</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">SKP456A (Receiver) for Input Shuttle 1 / Input Shuttle 2 </span></p>
+<p class="ps127"><span class="ts0">SKP456B (Emitter) for Input Shuttle 1 / Input Shuttle 2</span></p>
+<p class="ps3"><span class="ts0">SKP456C (located at Output Shuttle 1), SKP456D (between Output Shuttle 1&amp;2 ) and SKP456E (located at Output Shuttle 2)</span></p>
+</body>
+</html>

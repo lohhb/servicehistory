@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>ESD Class 0 Installation Procedure</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12180;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">ESD Class 0 Installation Procedure</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="activatekd750b.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14440.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 ESD Class 0 Installation Procedure</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 series</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 1 Mar 2010</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts46">For hardware installation, things to take note.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">1. De-installation of existing 2x kasuga fans for input and output, chamber ionizer controller(EP2). All the existing cables for the fans can keep inside the trunking. The ionizer controller use back all the cables accept for ION MONITOR and DC24V(ref: page 16).</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">2. some of the screws provided in the package may not be enough, can get from the PM room.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">3. RS485 board S1 dip switch already set, check again when installing. Installation disc is inside the package.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">4. Input and output ION ionizer are fixed upside down(ref:page 12). The position to fix the angle can determine yourself or reference from the previous 2 ESD handlers.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">5. Fan speed are fixed at, loader-low, I/P shuttle-low, O/P shuttle-high, unloader-high. The I/P shuttle may need to set to high if hotplate fails. The O/P shuttle fan position need to shift towards the fix tray 3 position to cover the fix tray 3 area better.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">6. Wires for the I/P shuttle fan according to manual go from the side trunking(ref:page 32). The previous installation we done, all go thru the center. So may need to do some adjustment to the cables housekeeping. The package i added some extra cable holders, can stick on the bracket or handler mounting to hold the cables with cable ties.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">7. Chamber IN198 need to use bypass connector because the upgrade, a new EP4 controller is feedback to the MKS controller. So no need to connect to IO module for feedback.</span></p>
+<p class="ps13"><span class="ts49">BUT if chamber controller OFF, handler still can run and MKS controller takes a longer time to detect Ion imbalance in chamber and alarm. So take note the buyoff report page 6, item no. 5 cannot carry out until EPSON send modified software. Not sure when..</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">8. To turn on chamber fan after upgrade for checking, check out128 and 129 in SPELCT IO(ref: page 30).</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">9. The grounding wire for the 4 ION ionizer fans, i think forgot to crimp with the cable ring. Got extra inside the package, crimp together and find a common point to secure all 4.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">10. Serial number for the 4 fans already taken, if possible check the serial of the kasuga controller as well(forgot to take). May need to insert into the buyoff report.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts43">For software installation, things to take note(do backup before proceed!!).</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">1. After install MMI 9.14MSM, check, config folder &gt; security_new.def &gt; [ESD]</span></p>
+<p class="ps13"><span class="ts49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ESD Class 0 = 3</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">2. Set comm port (ref: page 39).</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">3. Copy the whole MKS folder(the one Hidaka sent to your thumbdrive) to NS7000 folder. File is big so will take some time..</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">4. Execute the setup(I forgot the name) inside, follow the manual ref: page 41.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">5. After MKS finished installation, u need to reboot pc. You will get blue screen. Reboot again and go into window setup screen. i think press F8. Select last known good configuration, there should be only 1 profile unless u create another.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">6. In device manager, the driver for the ethernet will have conflict. reboot and go into BIOS, disable BIOS parallel port and re-install Lan drivers again. Can get the Lan driver from their contec cd, or use the one i attached in server.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">Total I copied into server 5 files(named under ESD CLASS 0 folder): NS7000 lan drivers, UTAC NS7000 ION upgrade list, MMi 9.14MSM, Buyoff report and Installation manual.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

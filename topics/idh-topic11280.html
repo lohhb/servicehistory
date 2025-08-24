@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0009-NS3K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11280;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0009-NS3K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10940.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11290.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:</span><span class="ts20">&nbsp;</span><span class="ts24">AMD NS3000 ATC NS303 Chiller over upper limit alarm</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-3000 ATC</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 19 Nov 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">NS303 running temperature setpoint 35DegC, same for NS301 &amp; NS302.</span></p>
+<p class="ps3"><span class="ts1">Chiller is Silicon Thermal CH1250 (M33, MD30).</span></p>
+<p class="ps3"><span class="ts1">Chiller water temperature goes up to upper limit of 40DegC and cause alarm.</span></p>
+<p class="ps3"><span class="ts1">Chiller setting:</span></p>
+<p class="ps3"><span class="ts1">- setpoint 20 DegC</span></p>
+<p class="ps3"><span class="ts1">-lower temp limit 10 DegC</span></p>
+<p class="ps3"><span class="ts1">-upper temp limit 40DegC</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">After NS303 running sometimes, chiller cannot stay at 20 DegC setpoint, it will slowly goes up to 40DegC and cause alarm.</span></p>
+<p class="ps3"><span class="ts1">Checked on NS301 &amp; 302, the chiller temperature cannot be maintained, always fluctuate around 22 to 35 DegC.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Open chiller for NS303, and found one of the copper pipe joint got air leak, small air bubbles.</span></p>
+<p class="ps3"><span class="ts1">Unable to see any other abnormalities physically with the chiller. Water in chiller is flowing.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts36">11 Dec 2009</span></p>
+<p class="ps3"><span class="ts0">APP found compressor of chiller kick in and cut off during production.</span></p>
+<p class="ps3"><span class="ts0">This is not normal as it is supposed to be always ON.</span></p>
+<p class="ps3"><span class="ts0">Found compressor to be unusually HOT and the cut off is actually not temperature cool down but rather compressor overheat.</span></p>
+<p class="ps3"><span class="ts0">Measured current during compressor kick in to be about 14amps which is not normal as it is supposed to be only 2.5amps during running. This suggest overloading of compressor.</span></p>
+<p class="ps3"><span class="ts0">All 4 chillers having the same symptoms.</span></p>
+<p class="ps3"><span class="ts0">APP also suggested the possibility of supply 50Hz sufficient making the compressor to overwork.</span></p>
+<p class="ps3"><span class="ts0">KG(S) to decide the next course of action.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">18 Dec 2009 email from APP Systems Services Pte Ltd</span></p>
+<p class="ps3"><span class="ts1">Silicon Thermal CH1250 (M33, MD30)</span><span class="ts0">M-33 with MD-30 pump is made to run at 115V/60 Hz power supply at AMD Singapore.</span></p>
+<p class="ps3"><span class="ts0">Running at 50 Hz will not be able to diagnose the chiller further.</span></p>
+<p class="ps3"><span class="ts0">In fact when we were at AMD recently, we have already done an off-load test on the chiller using the 50 Hz power supply over there and the same phenomenon was noticed.</span></p>
+<p class="ps3"><span class="ts1">So most likely the result will also be the same if the off-load test is done in our service centre. We do not have the 60 Hz power supply over here.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">24 Jun 2010</span></p>
+<p class="ps3"><span class="ts1">New type of chiller </span><span class="ts0">NESLAB ThermoFlex </span><span class="ts119">recirculating chiller </span><span class="ts0">installed by APP at AMD on NS301.</span></p>
+<p class="ps3"><span class="ts1">No more over temperature alarm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">Old Silicon Thermal CH1250 (M33, MD30) chiller not suitable for use in AMD Singapore because the this chiller&nbsp; runs at 50Hz where as the 230Vac power supply in Singapore is 60Hz.</span></p>
+</body>
+</html>

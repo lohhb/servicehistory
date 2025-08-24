@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0140-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11590;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0140-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11580.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11900.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 8 Hands High UPH Input arm hand H vacuum threshold value abnormal</span></p>
+<p class="ps3"><span class="ts1">Handler Model: UTAC NS-8080 (NS8080-01 s/n:181665) 8 Hands High UPH</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 25 Feb 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">On Tues 23 Feb, feedback by Roel input arm always encounter Jam0115-vacuum sensor off error. Feedback by line hand H vac reading abnormal. It was around -15KPa.</span></p>
+<p class="ps3"><span class="ts0">I pull out the vacuum tubing on top and below the vacuum sensor but the reading still same.</span></p>
+<p class="ps3"><span class="ts0">I re-sit the hand H black connector(CN19) and the reading became normal so I asked them to continue running and monitor.</span></p>
+<p class="ps2"><img width="640" height="480" border="0" src="images/0140-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Today 25/02, Roel informed the problem came back again. When i check the hand H vac reading, it was around -15KPa. I re-sit again the CN19 connector and monitored for an hour and check the reading again still ok. i don't think it's the problem of the hand filter. If filter is dirty, no matter how you re-sit the CN19 connector, it should still be -15Kpa.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Another issue is runtime error '6'.</span></p>
+<p class="ps3"><span class="ts0">When I pressed pause to check on vac reading for input arm, the output arm hands were closed up to place device on the unloading tray. I click on input arm to check the vacuum readings and then when I click on the ouput arm to check the reading, encountered runtime error '6':Overflow. At this time, the PC will hang up a while and a pop up window will appear with &quot; we can't close all applications&quot;. After clicked Ok on this window, the START button can be pressed and &quot;RS485 2Ack error will appear. Need to press RESET and HOME button and START to run handler again.</span></p>
+<p class="ps3"><span class="ts0">I tried 2 or 3 times when output arm hands closed at unloading tray and 1 time input arm hands closed at loading tray and then click to see the input and output hands vac reading and had the above issue.</span></p>
+<p class="ps2"><img width="734" height="480" border="0" src="images/0140-ns8kb2.jpg" /></p>
+<p class="ps2"><img width="734" height="480" border="0" src="images/0140-ns8kb3.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Swapped Hand F CN15 and Hand H CN19 vacuum sensor connector but abnormal vac threshold still persist on Hand H in HMI vac monitoring window.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">26 Feb 2010 </span><span class="ts1">NS8080-01 input arm vacuum off error issue</span></p>
+<p class="ps3"><span class="ts1">1) Checked vacuum reading when triggered vacuum in IO monitor.</span></p>
+<p class="ps3"><span class="ts1">2) Hand H found out to be -13 to -15 Kpa, whereas other hands are below -10 Kpa.</span></p>
+<p class="ps3"><span class="ts1">3) Re-sit vacuum sensor connector, when triggered vacuum reading -7 Kpa. But slowly build up from -7KPa to -13 Kpa.</span></p>
+<p class="ps3"><span class="ts1">4) Swapped vacuum sensor and vacuum switching valve from Hand F. Same symptoms. </span></p>
+<p class="ps3"><span class="ts1">5) Increased vacuum threshold to -40 Kpa and Mid threshold to -45 Kpa and monitor.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">5 Mar 2010</span></p>
+<p class="ps3"><span class="ts1">NS8080-01 now running octal 4x4.5 ambient setup. Latest issue is hand H vacuum sensor off error. Vac reading of hand H checked today around -4.00Kpa. HMI upgraded from 1.1 to 1.3 yesterday.</span></p>
+<p class="ps3"><span class="ts1">No vacuum sensor off error from 28 Feb 2010 till today 05 Mar 2010. This issue under monitoring.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Value when vacuum not trigger showed -20 Kpa. Re-sit vacuum sensor connector OK. Under monitoring.</span></p>
+<p class="ps3"><span class="ts0">Handler will encounter runtime error'6':overflow if check vac reading of input and output hands when their pitches are in the close condition. Confirmed problem with Hidaka san and advise from EPSON is not to check vac reading during hand close condition.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0328-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17330;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0328-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17320.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17340.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: </span><span class="ts23">IDT(M) NS-7000(NS03) Remote I/O burnt issue</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7000</span></p>
+<p class="ps3"><span class="ts1">Controller: </span></p>
+<p class="ps3"><span class="ts1">Date: 3 Nov 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps126"><span class="ts1">IDT(M) NS-7000(NS03) Remote I/O board </span><span class="ts14">(Specification: AI28-01-Y03</span><span class="ts15">&nbsp;/ </span><span class="ts14">Code No. R33N700002000)</span><span class="ts1">&nbsp;burnt issue. </span><span class="ts3">The uni-wire transmission line is disconnected</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Email follow up, advise customer to check resistance at Remote I/O points such as P6 &amp; N1.</span><span class="ts0">Based on wiring diagram, 24V supply goes through the 10A circuit breaker CB13 and used by SKP-350, FAN01, FAN DRIVER and Remote I/O Board.</span><img width="1066" height="430" border="0" src="images/0328-ns7kb1.png" /><br /><span class="ts1">Request to remove the additional 1A or 2A fuse on Remote I/O card and plug card back to controller. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;4 Nov 2011</span></p>
+<p class="ps3"><span class="ts1">Customer checked Remote I/O point resistance when power off, ok:</span><span class="ts0">- </span><span class="ts1">P6 &amp; N1</span><span class="ts0">&nbsp;(not 0 ohms) ---- &gt; </span><span class="ts44">about 1.5k ohms</span></p>
+<p class="ps130"><span class="ts0">- Black &amp; Red (not 0 ohms) ----&gt; </span><span class="ts44">about 3.9M ohms</span></p>
+<p class="ps130"><span class="ts0">- Green &amp; White (not 0 ohms) ----&gt;</span><span class="ts44">&nbsp;about 1.5k ohms</span></p>
+<p class="ps3"><span class="ts3">Use multi-meter to check below on Remote IO Board when power off</span></p>
+<p class="ps3"><span class="ts3">1. Between D-G&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts3">(Resistance: &gt; 200 Ohms( Value will be depended on equipment))</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts3">2. Between 0-24V&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts3">(Resistance: &gt;few kilo Ohms (Value will be depended on equipment))</span></p>
+<p class="ps130"><br /><br /><span class="ts51">Removed additional fuse.</span><br /><span class="ts51">&nbsp;Install SW1 switch and plug back to RC520, handler ok</span><span class="ts1">.</span><br /><span class="ts1">&nbsp;Send procedure on how to initialise new Remote I/O board.</span><br /><span class="ts1">&nbsp;Advise customer to do initialising of new Remote I/O board. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="557" height="349" border="0" src="images/0328-ns7kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="543" height="439" border="0" src="images/0328-ns7kb3.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps4"><span class="ts5">Remote IO board for NS7000 &amp; NS8000 can be compatible.</span></p>
+<p class="ps6"><span class="ts5">NS7000=&gt;AI28-01-Y03</span></p>
+<p class="ps6"><span class="ts5">NS8000=&gt;AI28-01-Y200</span></p>
+<p class="ps6"><img width="671" height="497" border="0" src="images/0328-ns7kb4.jpg" /></p>
+<p class="ps6"><span class="ts5">Difference between Y-03 and Y-200 is RoHS specification only....</span></p>
+<p class="ps6"><span class="ts5">Y-200 for NS-8000 series handler do not have SW1 soldered which is normal </span></p>
+<p class="ps6"><span class="ts5">Please take NOTE:</span><br /><span class="ts5">&nbsp;1. NS8000 RemoteIO board is able to use in NS7000.</span></p>
+<p class="ps6"><span class="ts5">&nbsp;BUT NS7000 RemoteIO board is </span><span class="ts84">UNABLE</span><span class="ts5">&nbsp;to use in NS8000.</span><br /><span class="ts5">&nbsp;Therefore please send us back the parts after you received the NS7000's RemoteIO board.</span><br /><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

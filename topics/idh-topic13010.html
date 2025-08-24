@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0211-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13010;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0211-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13000.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13020.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8000 Chamber ionizer controller EP3</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8000 series</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 20 Jul 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Q&amp;A</span></p>
+<p class="ps3"><span class="ts0">Need to check with u regarding NS-8000 chamber ionizer controller EP3.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">1.It can detect ion balance in the chamber right?</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">No, it is no detection ion balance, just check cleaning condition by own sensor. </span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2.If the ion cannot balance due to pins dirty, the controller will trigger cleaning alarm right?</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">Yes, anyway it can be detected cleaning alarm.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3.If the fan is turned off but ion balance still within spec, there won't be any alarm right?</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">It has Ionizer ON/OFF check. So, it is same as EP5 condition</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">4.What is the ion balance +/- range the controller will detect before alarm? I only know for EP4 ESD class 0 is +/- 5v. And it can be set in software.</span></p>
+<p class="ps3"><span class="ts3">Ans:</span></p>
+<p class="ps3"><span class="ts3">It depends on environment condition. It may have cleaning alarm +/-35 to 45 V </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If pins dirty, the ions cannot discharge properly and make the ion imbalance inside the chamber. So sensor will detect ion imbalance and alarm as cleaning alarm right?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If not, how the handler know that the pins are dirty?</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Also, you mention it may have cleaning alarm +/-35 to 45v. So this is range of ion balance in chamber correct? ion balance in chamber if more than 45v means pins are dirty and need to clean so cleaning alarm is relationship to ion balance?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Actually, it is detected decay condition.</span></p>
+<p class="ps3"><span class="ts3">Ion balance value is just for calculate.</span></p>
+<p class="ps3"><span class="ts3">(I&rsquo;m sorry but I also not sure that how to calculate the value.</span></p>
+<p class="ps3"><span class="ts3">This is replied by supplier.)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts1">To turn on Chamber fan, ON SPEL I/O Output Bit 272 &amp; 273.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

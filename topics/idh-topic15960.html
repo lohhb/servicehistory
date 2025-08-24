@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0097-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15960;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0097-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15950.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15970.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: SEP NS-6040-02&nbsp; After setup package 1-QFP05-100-3-2-01. &ndash; &ldquo;Output Arm error code 4001&rdquo; during cycling and running mode. </span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040 S/N: 15678 (NS6040-2)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520 (S/N: 02087)</span></p>
+<p class="ps3"><span class="ts0">Date: 12 Jan 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps144"><span class="ts1">Error T-4001 is Arm reach the limit of motion range.</span></p>
+<p class="ps144"><span class="ts1">Line 1457, error Task 7.</span></p>
+<p class="ps144"><span class="ts0">Robot output arm stops/hangs at output shuttle 1 position during first pick-up. </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">12 Jan 2012</span></p>
+<p class="ps3"><span class="ts1">Request customer to send Output Arm robot 3 position data (mnp03.pos) to us for analysis. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">13 Jan 2012</span></p>
+<p class="ps3"><span class="ts1">After checking on Output Arm robot 3 position data (mnp03.pos), found some robot point Z and U are 0.</span></p>
+<p class="ps3"><span class="ts1">Request customer to change Z &amp; U value of P81~P85 &amp; P94 to Z=-20.7 &amp; U=-21. P86 &amp; P87 Z &amp; U, ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">How to manually edit the SPEL pos data but advisable to do Input/Output Hand Height teaching:</span></p>
+<p class="ps3"><span class="ts3">- In SPEL95, click [P] Programming Mode, prompt &rdquo; Do you wish to switch to the Programming Mode?&rdquo;, click [OK] button</span></p>
+<p class="ps3"><span class="ts3">- Click [Abort All], prompt to abort background task, so click [Yes] button.</span></p>
+<p class="ps3"><span class="ts3">- (</span><span class="ts44">A</span><span class="ts3">) Click [JT] button to open &ldquo;Pose Data Manager&rdquo; Windows</span></p>
+<p class="ps3"><span class="ts3">- (</span><span class="ts44">B</span><span class="ts3">) Select &ldquo;Manipulator No.&rdquo; </span><span class="ts37">3</span><span class="ts3">&nbsp;for Output Arm</span></p>
+<p class="ps3"><span class="ts3">- (</span><span class="ts44">C</span><span class="ts3">) Click &ldquo;Pose List&rdquo; tab</span></p>
+<p class="ps3"><span class="ts3">- (</span><span class="ts44">D</span><span class="ts3">) Tick &ldquo;Existing Pose Only&rdquo; check box to show all pos with data</span></p>
+<p class="ps3"><span class="ts3">- point 81 to 85 &amp; 94, for </span><span class="ts45">Z</span><span class="ts3">&nbsp;Height parameter, change to </span><span class="ts45">-20.7</span><span class="ts3">&nbsp;(there is a negative sign).</span></p>
+<p class="ps3"><span class="ts3">- point 81 to 85 &amp; 94, for </span><span class="ts45">U</span><span class="ts3">&nbsp;Height parameter, change to </span><span class="ts45">-21 </span><span class="ts3">(there is a negative sign).</span></p>
+<p class="ps3"><span class="ts3">- (</span><span class="ts44">E</span><span class="ts3">) Click [Save…] button to save Output Arm pos data</span></p>
+<p class="ps3"><span class="ts3">- (</span><span class="ts44">F</span><span class="ts3">) Click [Close]</span></p>
+<p class="ps3"><span class="ts3">- click [A] Auto Mode , prompt &rdquo; Do you wish to switch to the Auto Mode?&rdquo;, click [OK] button</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="764" height="625" border="0" src="images/0097-ns6kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="1140" height="447" border="0" src="images/0097-ns6kb2.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Customer informed problem solved after amend Z &amp; U pos data.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts1">Output Arm robot 3 position data (mnp03.pos), found some robot point Z and U are 0, causing the Output pickup hands unable to go down to pick device, resulting in T-4001 is Output Arm reach the limit of motion range.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts1">Same issue as </span><a href="idh-topic16020.html" class="hs0">0103-NS6K</a><span class="ts1">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

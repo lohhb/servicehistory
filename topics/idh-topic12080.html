@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0159-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12080;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0159-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12070.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12090.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:&nbsp;</span><span class="ts23">&nbsp;STM NS8080-02&nbsp; Plunger&nbsp; broken issue</span></p>
+<p class="ps3"><span class="ts1">Handler Model: ns-8080 (</span><span class="ts0">NS8080-02, s/n:181581)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 22~26 Mar 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">3x3 device was running on multitest handler.</span><br /><span class="ts0">&nbsp;Checked the floating fiber amp setting, found that the input shuttle threshold setting has been changed to 470 instead of 600.</span><br /><span class="ts0">&nbsp;Found the device pick up error at index arm might be caused the plunger broken. When the error happen if operator doesn't make sure the input shuttle device sit properly or in this case, standing</span><br /><span class="ts0">&nbsp;and press &quot;retry + start&quot; button it might cause the plunger broken.</span><br /><span class="ts0">&nbsp;Convert to 3X3 device package, due to encounter Hight frequence ontimes up error, found the tested software with bug.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">23~24 Mar</span></p>
+<p class="ps3"><span class="ts0">Production running with 3.6X3.6 device with disable 2 site on site B and D due to loadboard problem.</span></p>
+<p class="ps128"><span class="ts53">Found another root caused the plunger broken. The input shuttle floating fiber sensor not detected when the device does not sit properly on input</span><br /><span class="ts53">&nbsp;shuttle. That is only happened on certain slanted angle.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Plunger broken issue only happened on 3x3 package. Last week production only run on 3.6x3.6 package.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">Recommend and changes on Handler parts</span></p>
+<p class="ps3"><span class="ts0">1)KA will change hard material for plunger to prevent broken again.</span></p>
+<p class="ps3"><span class="ts0">2)KA will re-design the input shuttle pocket to prevent some slanted device which unable detected .</span></p>
+<p class="ps3"><span class="ts0">3)Recommend Meilin to add cylinder pushes on tray loader to minimize the tolerance.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">- floating device cannot be detected due to Fiber sensor threshold setting change to 470 instead of 600.</span></p>
+<p class="ps3"><span class="ts0">- 3x3&nbsp; device slanted cannot be detected</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">11 Apr 2010</span></p>
+<p class="ps3"><span class="ts0">For the root caused of the broken plunger issue. </span></p>
+<p class="ps3"><span class="ts0">1)Too big of tolerance at tray loader position for small device 3X3, caused the intermittent floating error at input shuttle.</span></p>
+<p class="ps3"><span class="ts0">2)Inappropriate size of tolerance for the tray at loader due to high frequence floating error at input shuttle. The technician always changed the higher threshold instead of 600.</span></p>
+<p class="ps3"><span class="ts0">3)The input shuttle floating sensor not detected when the device does not sit properly on input shuttle.</span></p>
+<p class="ps3"><span class="ts0">It is only happened on certain slanted angle. For time by time the plunger pick up the slanted device at input shuttle, it caused the plunger surface was chipped off due to device pick up error or device drop error at index arm. Thus, it will caused the plunger broken.</span></p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0035-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 6250;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0035-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic6240.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic6260.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: MMI displayed the socket temperature shows over 500</span><sup><span class="ts23">o</span></sup><span class="ts23">C</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (Marvel Malaysia, S/N: 181202, Mfg: Jan 2007, MMI: 2.0f)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 24 Mar 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">In January 2008, on MMI displayed the socket temperature shows over 500</span><sup><span class="ts0">o</span></sup><span class="ts0">C, </span><span class="ts1">Alan</span><span class="ts0">&nbsp;request for the PT sensor warranty claim.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Replaced PT sensor but heater failed to heat to the preset temperature.</span></p>
+<p class="ps3"><span class="ts0">Thus request for the socket heater warranty claim. On 3 March 2008, replaced socket heater, found working fine.</span></p>
+<p class="ps3"><span class="ts0">On 19</span><sup><span class="ts0">th</span></sup><span class="ts0">&nbsp;March 2008, customer found socket heater malfunction. So 21</span><sup><span class="ts0">st</span></sup><span class="ts0">&nbsp;March 2008, me and Alan go to Marvell to check the heater and thermo fuse, found thermo fuse OK but socket heater open.</span></p>
+<p class="ps3"><span class="ts0">So would like to know the root cause or may be any suggestion to prevent this? Because it is unusual for socket heater to break in less then 3 weeks.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Based on our understanding. </span><span class="ts3">There are 2 socket heaters for NS7000 and the PT sensor is only mounted with socket heater 1 which is nearer to shuttle 1.</span></p>
+<p class="ps3"><span class="ts3">In this case, theoretically, if socket heater 2 is open, socket will still be able to heat up because the temperature is based on socket heater 1.</span></p>
+<p class="ps3"><span class="ts3">If socket heater 1 is open, you will be able to see temperature increase but unable to heat to set temperature. It is due to chamber heat up. </span></p>
+<p class="ps3"><span class="ts0">So which socket heater did you check is open? 2nd time is cannot heat up totally or same as 1st time where it cannot heat up to set temperature? </span></p>
+<p class="ps2"><img width="637" height="389" border="0" src="images/0035-ns7kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Socket heater cartridge, normally comes with thermo fuse and thermo fuse should blow first before the heater. So thermo fuse rating should be lower than the heater to protect the heater. For this case, I suggest to return the 2nd &quot;OPEN&quot; heater to EPSON for investigate because we do not know what is nature of this &quot;OPEN&quot;. Maybe it is over current or over power, we do not know. Because if heater blown, </span></p>
+<p class="ps3"><span class="ts0">1) maybe thermo fuse spec is too high etc.. </span></p>
+<p class="ps3"><span class="ts0">2) Or maybe for this case is quality issue? </span></p>
+<p class="ps3"><span class="ts0">3) Or the set temperature + offset exceeds the spec? How much is the offset?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Socket Heater spoilt.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts46">Remarks</span></p>
+<p class="ps3"><span class="ts0">Socket Pt Sensor and Chamber Pt Sensor are of the same specification and same part code (spec: NR141-100S2-2.5-18-500TF(6F11)A3, part code: R35N700000300).</span></p>
+</body>
+</html>

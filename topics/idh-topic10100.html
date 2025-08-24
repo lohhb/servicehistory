@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0157-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10100;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0157-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10090.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10110.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 Output Arm hang during teaching, cannot do teaching</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18724)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 28 Apr 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Upon teaching, there is an error in &quot;SPEL error history&quot; whenever the output arm hung during teaching.&nbsp; And this error is pertaining to Shuttle 1 and Shuttle 2 manipulators out of limit. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Found out that the zero pulse for both shuttle 1 and shuttle 2 were out which cause arm robots to behave weird.&nbsp; </span></p>
+<p class="ps3"><span class="ts1">a) Auto Teaching carried out. After Auto teaching at shuttle 1 &amp; 2, found out that the x-axis out by 9mm. Therefore, Shuttle 1 &amp; 2 teaching carried out found that shuttle 1 P21 is a negative value.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">b) Motor calibration carried out and the P21 value at positive value. Therefore, Shuttle 1 teaching and auto teaching for shuttle 1 &amp; 2 carried out.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">After re-calibrating the zero pulse for shuttle 1 and 2, teaching was carried out a few times without fail.&nbsp; All robot teach, heating plate taken from 18825 and installed on shuttle 1.&nbsp; Heating was good.</span></p>
+<p class="ps3"><span class="ts0">System backed up with a problem, that is, there is bad sector in HDD. After &quot;fixdisk&quot;,, back up no problem.</span></p>
+<p class="ps3"><span class="ts0">Software MMi ver 1.1c10 loaded and dry run carried out found good.</span></p>
+<p class="ps3"><span class="ts0">Note: HDD looks like failing, as there is bad sector.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

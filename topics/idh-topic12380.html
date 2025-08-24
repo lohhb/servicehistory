@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0240-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12380;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0240-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12370.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12500.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: Xilinx NS7KW-01 index arm 1 site F, G no vacuum, handler and tester no comms, power trip after shuttle 2 thermo fuse replaced</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7080W(NS7KW-01)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 12 Jul 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">Index arm 1 site F and G no vacuum.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1) Found new fittings replaced during PM loose.</span></p>
+<p class="ps3"><span class="ts0">Tighten back and check vacuum ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2) No comm between handler and tester.</span></p>
+<p class="ps3"><span class="ts0">Check with dummy tester. Re-load other HEX file and re-sit GPIB card (IFUNT100A), NG.</span></p>
+<p class="ps3"><span class="ts0">Changed with spare GPIB card from Getech TR60 ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3)Power trip when heater ON after customer replaced shuttle 2 thermo fuse.</span></p>
+<p class="ps3"><span class="ts0">Found burnt mark below heater plate. Customer only used one pc of sleeving and it was damaged during replacement resulting to the heater wire and heater plate body short.</span></p>
+<p class="ps3"><span class="ts14">&nbsp;</span><span class="ts0">Checked heater and fuse resistance ok. Sand away burnt area and added in one more high temp sleeving. Heat up to 100 deg c ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Ran 2 trays of dummy units(FG676 27x27 octal site hot) and release to production for monitoring.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">1) Index arm 1 site F and G no vacuum due to loose new air fitting at Index Arm 1.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2) No communications between NS-7080W and tester due to faulty IFUNT100A card in RC520.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3) Power trip when heater ON due to sleeving of thermo fuse torn caused thermo fuse short to handler's ground.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">IFUNT100A board(SKP383) and IFUNT100B are compatible with IFUNT100 (SKP368).</span></p>
+<p class="ps3"><span class="ts0">Though the functions are the same, IFUNT100A and IFUNT100B are much smaller in size.</span></p>
+<p class="ps3"><span class="ts0">For all IFUNT boards, use C:\NS7000\Tool\Loader.exe</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="945" height="609" border="0" src="images/0240-ns7kb1.jpg" /></p>
+</body>
+</html>

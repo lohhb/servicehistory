@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0210-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11250;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0210-NS7K</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11240.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11260.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 Jam 0303 Device drop error Arm 1 and Jam 0304 Device drop error arm 2</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18721)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 2 Dec 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">Loan NS-7000 (S/N: 18721</span><span class="ts32">) </span><span class="ts1">Jam0303 Device drop error arm 1 and Jam0304 Device drop error arm 2. When error occurs, devices are still on the contactor.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">Checked index counter air volume, vacuum, and vacuum unit sensitivity ok. </span></p>
+<p class="ps3"><span class="ts1">Also tried swapping IO module for Index input bit and error still persist.</span></p>
+<p class="ps3"><span class="ts1">Even when disable arm 1, only run index arm 2, both arm 1 and 2 device drop error will</span></p>
+<p class="ps3"><span class="ts1">happened. </span></p>
+<p class="ps3"><span class="ts1">Tried running only each of the 4 sites with the other 3 sites disable and still faced the same issue, arm 1 and arm 2 device drop error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">We are suspecting software issues right now as hardware seems ok. We will try to get a new HDD for recovery back to older version of MMI and SPELCT tomorrow.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3 Dec 2009</span></p>
+<p class="ps3"><span class="ts1">- Found index arm 1 and arm 2 tubing fitting at chamber top loose. Tighten and re-adjusted index vacuum unit sensitivity.</span></p>
+<p class="ps3"><span class="ts1">- Reset Remote IO card on RC520 controller.</span></p>
+<p class="ps3"><span class="ts1">- Remove SPELCT input and output remote IO addresses and add again.</span></p>
+<p class="ps3"><span class="ts1">- Swapped input arm INARM1 input IO module.</span></p>
+<p class="ps3"><span class="ts1">- Swapped new 20GB hardisk and recovery to MMi 1.1c10/SPELCT 2.81b. Restored system, pose data and re-created new setip file for Quad site BGA 11x11.</span></p>
+<p class="ps3"><span class="ts1">- Change setup to Dual site 1x2 TQFP 7x7.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">After all the above, device drop error on arm 1 and 2 still occurred. </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">4 Dec 2009</span></p>
+<p class="ps3"><span class="ts1">- Index arm 1 and 2 device drop issue resolved after replacing remote IO card from UTAC consignment spare.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Faulty Remote I/O card.</span></p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0026-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 5810;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0026-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic5800.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic5990.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:</span><span class="ts23">&nbsp;Site 7 Not found in Channel Map. Select appropriate chanmap and re-enable Handler</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS7080W (NS7KW-06, Xilinx)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 6 Mar 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps150"><span class="ts0">NS7KW-06 handler Test Arm 1 causing &ldquo;Site 7 Not found in Channel Map. Select appropriate channel map and re-enable Handler&rdquo; on tester screen.</span></p>
+<p class="ps145"><img width="640" height="451" border="0" src="images/0026-ns7kb1.jpg" /></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">Details:</span></p>
+<p class="ps151"><span class="ts35">1)</span><span class="ts30">&nbsp;</span><span class="ts35">Load board used is a 7 site load board with 8 site outline. See &ldquo;NS7KW mmi 06&rdquo; picture. We used the octal site setup but disabled site 7. </span></p>
+<p class="ps145"><img width="339" height="480" border="0" src="images/0026-ns7kb2.jpg" /></p>
+<p class="ps145"><br />&nbsp;</p>
+<p class="ps151"><span class="ts35">2)</span><span class="ts30">&nbsp;</span><span class="ts35">Test program is written for 7 site.</span></p>
+<p class="ps151"><span class="ts35">3)</span><span class="ts30">&nbsp;</span><span class="ts35">Interface type used &ldquo;ADVAN 8 site&rdquo;, GPIB address:01</span></p>
+<p class="ps145"><img width="640" height="284" border="0" src="images/0026-ns7kb3.jpg" /></p>
+<p class="ps145"><br />&nbsp;</p>
+<p class="ps151"><span class="ts35">4)</span><span class="ts30">&nbsp;</span><span class="ts35">Using interface version: 4.1. See attached &ldquo;NS7KW loader 06&rdquo; picture.</span></p>
+<p class="ps151"><span class="ts35">5)</span><span class="ts30">&nbsp;</span><span class="ts35">Test Arm 2 no issue, can send SOT from handler and receive EOT from tester, no problem.</span></p>
+<p class="ps151"><span class="ts35">6)</span><span class="ts30">&nbsp;</span><span class="ts35">Manual send SOT from handler for site 1, same issue.</span></p>
+<p class="ps151"><span class="ts35">7)</span><span class="ts30">&nbsp;</span><span class="ts35">Tried to send manual SOT from tester with Arm 1 plunged down. No issue seen.</span></p>
+<p class="ps144"><span class="ts0">Suspect could be handler send 8 site SOT during test arm 1 testing instead of 7 site SOT signals, causing above problem</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">7site loadboard using 8site setup disable 1 site. Tester receives &ldquo;Channel 7 mapping not found&rdquo; during Arm 1 in contact test mode but Arm 2 ok.</span></p>
+<p class="ps130"><span class="ts1">Verified this problem to be for both arms and not Arm 1 as reported. XAP disabled site but handler still issue SOT in contact test for all sites. Must disable channel instead of site.</span></p>
+<p class="ps130"><span class="ts1">No more error but hand test past and auto run fail. Tester program problem.</span></p>
+<p class="ps130"><span class="ts1">Tester program edited. Auto run for correlation unit running 1 lot.</span></p>
+<p class="ps130"><span class="ts1">Verified and no more tester hand due to channel 7 and 99% yield.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">7site loadboard using 8site setup disable 1 site. Tester receives &ldquo;Channel 7 mapping not found&rdquo; for both arms and not Arm 1 as reported. XAP disabled site but handler still issue SOT in contact test for all sites. Must disable channel instead of site.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0346-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17510;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0346-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17500.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17520.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 Hotplate 1 overheating</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18989)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 01-20267)</span></p>
+<p class="ps3"><span class="ts0">Date: 20 Nov 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">UTAC NS-7000 (S/N: NS70-62) Hotplate 1 overheating issue cause BGA ball melt and meeting.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">1.Checked resistivity of thermo fuse. </span><br /><span class="ts0">2.Health check on hdd, clean up and error check. </span><br /><span class="ts0">3.Copy out whole NS7000 folder in c drive with observer data and passed to Saito san. </span><br /><span class="ts0">4.Encountered hotplate 2 when heat up, temp displayed 159deg. Checked hotplate 2 pt sensor and wiring, and displayed showed '---' dash. Then went back to normal temp display and heat up to 90deg hot mode. Feedback to Saito san. </span><br /><br /><span class="ts0">Meeting on NS70-62 hotplate 1 overheating issue, NS7000 compliance 1x2 and 1x4 site default 40mm issue and NS7000 tray arrival no alarm issue. </span><br /><span class="ts0">1.NS70-62 hotplate 1 overheating issue. As above. </span><br /><span class="ts0">2.NS7000 compliance 1x2 and 1x4 site default 40mm issue. UTAC want software modified so that default is 55mm when selecting 1x2 and 1x4 sites. </span><br /><span class="ts0">3.NS7000 tray arrival issue. Tray arrival text settings in config default is 0. When tray arrival sensor cannot detect tray at Auto 1/2/3, handler will alarm but no option for retry. When set to '1', ok.</span></p>
+<p class="ps3"><span class="ts0">NS70-62 hotplate 1 device ball melted.</span></p>
+<p class="ps3"><span class="ts0">Encountered temperature error on hotplate 1 and temperature display showed &ldquo;---&ldquo;. After retry, temperature displayed 200-300deg. </span></p>
+<p class="ps3"><span class="ts0">According to EPSON, thermo fuse is for handler temperature safety, not for heater. Spec of fuse is that it will cut off at 196deg in hot oil. So even if temperature of heater is same as hot oil, fuse may not cut. It MAY cut at 220-240deg. For the temperature display at &ldquo;---&ldquo;, EPSON said the pt sensor measured it at less then 10deg with wrong signal. And heater continue to heat up without cut off.</span></p>
+<p class="ps3"><span class="ts0">Therefore, to counter this issue, they are researching on the following.</span></p>
+<p class="ps3"><span class="ts0">1)Pt sensor connector pin need to be examined, Sn plating &ndash;&gt; Au plating.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;2)When MMi temperature display &ldquo;---&ldquo;, software need to cut off temperature control to prevent it from heating continuously.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Modified Sw for NS8080 sent by netporter to UTAC on 26th Dec. NS7000 sw will be ready by 14th Jan 2013 after NS8080 sw ok. But received ver. is 12.14 for NS8080 now, previous ver. was 2.2. To confirm whether ver. Is correct for NS8080.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">For connector pins, Sn plating reliability is same as Au plating. Therefore Epson want to change only Pin for Pt sensor of hotplate on 2 handlers which had ball melting issue, and analyze it. Pin to be sent from 28th Dec onwards and Saito san to arrange schedule for replacement.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

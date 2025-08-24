@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0467-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 19080;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0467-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic19070.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic19090.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Own Weight Cancel Detection sensor on Error</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080 (S/N: </span><span class="ts0">182242, H46-NS88)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 03-30163) HMI P12.57-SAS / SPEl CT 3.12-h</span></p>
+<p class="ps3"><span class="ts0">Date: 15 Mar 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">Encountered an error during buy off of the new NS8080 at ASE. </span></p>
+<p class="ps3"><span class="ts0">The error happens during initial start when the start button is pressed.</span></p>
+<p class="ps3"><span class="ts0">Error message is Own Weight Cancel Detection sensor on Error.</span></p>
+<p class="ps3"><span class="ts0">Found wrong IO feed back for Own Weight Cancel Detection error message, it is supposed to be SQ285 instead of SQ284.</span></p>
+<p class="ps2"><img width="527" height="288" border="0" src="images/0467-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Found the SQ285 Own Weight Cancel detection sensor OFF when initial start.</span></p>
+<p class="ps2"><img width="623" height="287" border="0" src="images/0467-ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Error recovered after adjust the air fitting to increase the air pressure to turn On the SQ285 Own Weight Cancel Detection sensor.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="446" height="476" border="0" src="images/0467-ns8kb3.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">I would like to know if it is the correct method to just adjust the air fitting to increase the air volume. </span></p>
+<p class="ps3"><span class="ts0">Can you please advise how much air should we increase if we do this method?</span></p>
+<p class="ps126"><span class="ts0">Is there any other method to adjust the sensor if the above method doesn't work?</span></p>
+<p class="ps127"><span class="ts0">Kindly highlight to Epson to change the wrong IO message SQ285 instead of SQ284.</span></p>
+<p class="ps127"><span class="ts0">(Actually SQ284 (SQ284A + SQ284B) is for Index Door sensor switch)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">1) Pressure sensor SQ285 is ON when normal SLK(eg standard NS_7000 type) is used.</span></p>
+<p class="ps3"><span class="ts1">SQ285 is Off when special NS-8000 </span><span class="ts0">spring loaded compliance cylinder(golden brown) </span><span class="ts1">SLK is used.</span></p>
+<p class="ps3"><span class="ts1">2) Check wiring of pressure sensor SQ285</span></p>
+<p class="ps3"><span class="ts1">3) Air valves (YV277 for Index Arm 1&nbsp; Identify Air valve, YV278 for Index Arm 2&nbsp; Identify Air valve) are functioning (use SPEL Output Bit)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">If W03134 Socket layout differs from the HMI setting, check:</span></p>
+<p class="ps3"><span class="ts0">1) Sensor SQ285 is working</span></p>
+<p class="ps3"><span class="ts0">2) Air supply control by air fitting valve</span></p>
+<p class="ps3"><span class="ts0">3) Tubing is not broken, bend or pressed too much by cable tie</span></p>
+<p class="ps3"><span class="ts1">4) Air valves (YV277, YV278) are functioning (use SPEL Output Bit)</span></p>
+<p class="ps3"><span class="ts0">5) Correct type of spring loaded compliance cylinder(golden brown) SLK is used</span></p>
+<p class="ps3"><span class="ts0">6) O-ring on SLK for detecting spring loaded compliance cylinder(golden brown) is not missing.</span></p>
+<p class="ps2"><img width="465" height="389" border="0" src="images/0467-ns8kb4.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

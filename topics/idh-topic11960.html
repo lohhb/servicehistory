@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0147-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11960;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0147-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11950.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11970.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject:</span><span class="ts28">&nbsp;</span><span class="ts23">NS-8040 after RC520 bootup HMI Windows only display NS taskbar and executing SPEL, hang up</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040 (NS-001)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 11 Mar 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">RC520 bootup, only display NS taskbar and shows executing SPEL.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">- windows task manager stop SPEL CT and HMI</span></p>
+<p class="ps3"><span class="ts0">- launch SPEL ok</span></p>
+<p class="ps3"><span class="ts0">- launch HMI, many pop up windows shows unable to read file in RUN folder of NS8000</span></p>
+<p class="ps3"><span class="ts0">- re-install HMI &amp; reboot also cannot for several times.</span></p>
+<p class="ps3"><span class="ts0">- launch SPEL with many error reading files in RUN folder</span></p>
+<p class="ps3"><span class="ts0">- delete RUN folder in C:\NS8000, and copy &amp; paste backup back to c:\NS8000&nbsp; but still encounter errors reading files in RUN folder</span></p>
+<p class="ps3"><span class="ts0">- change to different setup file, no more error</span></p>
+<p class="ps3"><span class="ts0">- suspect setup file (V93K)PG-BGA323-D-AMB corrupted</span></p>
+<p class="ps3"><span class="ts0">- delete&nbsp; setup file (V93K)PG-BGA323-D-AMB</span></p>
+<p class="ps3"><span class="ts0">- import&nbsp; setup file (V93K)PG-BGA323-D-AMB from backup</span></p>
+<p class="ps3"><span class="ts0">- dummy devices run with&nbsp; setup file (V93K)PG-BGA323-D-AMB, ok</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Corrupted setup file caused RC520 bootup HMI Windows only display NS taskbar and executing SPEL, hang up.</span></p>
+</body>
+</html>

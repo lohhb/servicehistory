@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>S0288</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 3490;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">S0288</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="s0287.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="s0289.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Warranty Parts Requisition Record</span></p>
+<p class="ps3"><span class="ts0">Reference No: S0288</span></p>
+<p class="ps3"><span class="ts0">Customer: UTAC Thailand Limited (UTL3)</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080 (NS70-02)</span></p>
+<p class="ps3"><span class="ts0">Handler S/N: 181429</span></p>
+<p class="ps3"><span class="ts0">Mfg: Feb 2008</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">MMI ver: 2.0k</span></p>
+<p class="ps3"><span class="ts0">Date: 6 Mar 2008</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Item requested: 400W Motor Driver Module</span></p>
+<p class="ps2"><span class="ts23">Part Code: R12R520DRU006</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps2"><span class="ts5">UTL NS-7080 (S/N: 181429) buyoff progress for 27 Feb 08 </span></p>
+<p class="ps2"><span class="ts5">Move handler to tester as requested by customer. </span></p>
+<p class="ps2"><span class="ts5">Upon pressing HOME button, abnormal noise was heard from Index Arm, MMI display error &quot;4241 The detected speed at low power state is too fast&quot;. </span></p>
+<p class="ps2"><span class="ts5">Off power switch, check index area for any foreign objects, check any loose bolts from linear guides. </span></p>
+<p class="ps2"><span class="ts5">Check Index Arm 1 &amp; 2 and Y movement, it was smooth. Break release switch was function normal. </span></p>
+<p class="ps2"><span class="ts5">Check Index motors power, signal and break connectors connection, seem ok. </span></p>
+<p class="ps2"><span class="ts5">Reset handler, press HOME, found that Index arm Z and U upon moving up had vibration and abnormal noise. </span></p>
+<p class="ps2"><span class="ts5">Check wiring connectors behind Drive Unit 1 (DU1). </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">In SPEL, selrb1 and upon Motor ON, abnormal noise heard. </span></p>
+<p class="ps2"><span class="ts5">Open top cover above Index motors, Motor On for selrb1, saw Z Axis timing belt strong vibration and noise from Z motor. </span></p>
+<p class="ps2"><span class="ts5">In SPEL, error history shows the following: </span></p>
+<p class="ps2"><span class="ts5">F-5041 Torque error in the low power state, Manipulator 1, Joint 3. </span></p>
+<p class="ps2"><span class="ts5">F-5047 Overspeed in the low power state, Manipulator 1, Joint 3. </span></p>
+<p class="ps2"><span class="ts5">T-4241 The detected speed at the low power state is too fast, manipulator 1, Joint 3. </span></p>
+<p class="ps2"><span class="ts5">F-5041 Torque error in the low power state, Manipulator 4, Joint 1. </span></p>
+<p class="ps2"><span class="ts5">In DU1, swapped Motor Driver1(Index Y Axis) with Motor Driver 3 (Index Z Axis). </span></p>
+<p class="ps2"><span class="ts5">In SPEL, Motor On, Z and U move up and error F-5047 Overspeed in the low power state, Manipulator 1, Joint 2., so the error migrated to Index Arm Y Axis. </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">In DU1, swapped the Motor Driver 3 (Index Z Axis) with Motor Driver 2(Input Arm X Axis) from DU2. </span></p>
+<p class="ps2"><span class="ts5">Index Arm able to HOME, no abnormal noise and no vibration, however, when Homing Input Arm, vibration was seem from Input Arm and abnormal noise. </span></p>
+<p class="ps2"><span class="ts5">Based on the above, the 400W Motor driver in DU1 for Index Arm Z Axis was faulty.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps2"><span class="ts6">Faulty 400W Motor Driver Module was replaced on 3 Mar 2008.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Could have try disable Shuttle 1 (Index Arm1), then Home handler, so as to determine whether Z or U problem.</span></p>
+</body>
+</html>

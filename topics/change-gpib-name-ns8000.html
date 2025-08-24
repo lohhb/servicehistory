@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>How to change Tester Interface name for GPIB</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7940;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Change GPIB name NS8000</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="recommended-handler-setting.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7950.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: How to change Tester Interface name for GPIB in NS-8000 series</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8000 series</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: Jan 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Purpose</span></p>
+<p class="ps3"><span class="ts0">To change Tester Interface name for GPIB in NS-8000 series HMI.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1) Close HMI.</span></p>
+<p class="ps3"><span class="ts0">2) Open C:\NS8000\config\Table\GpInterface.def&nbsp;&nbsp; (using Notepad).</span></p>
+<p class="ps3"><span class="ts0">3) Edit the GPIB's tester interface name that is required.</span></p>
+<p class="ps3"><span class="ts0">4) Save GpInterface.def and close.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">eg. </span></p>
+<p class="ps3"><span class="ts32">&quot;536,</span><span class="ts15">EPSON typeI</span><span class="ts32">&quot; </span><span class="ts0">change to</span><span class="ts32">&nbsp;&quot;536,</span><span class="ts15">Infineon typeA</span><span class="ts32">&quot;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl62">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="294" height="141" border="0" src="images/change_gpib_name_ns8000b1.png" /></p>
+        <p class="ps0"><br /><span class="ts4">&nbsp;</span></p>
+        <p class="ps0"><br /><span class="ts4">&nbsp;</span></p>
+        <p class="ps125"><img width="234" height="56" border="0" src="images/change_gpib_name_ns8000b2.png" /></p>
+        <p class="ps0"><br /><span class="ts4">&nbsp;</span></p>
+        <p class="ps125"><span class="ts23">Before</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="304" height="138" border="0" src="images/change_gpib_name_ns8000b3.png" /></p>
+        <p class="ps0"><br /><span class="ts4">&nbsp;</span></p>
+        <p class="ps0"><br /><span class="ts4">&nbsp;</span></p>
+        <p class="ps125"><img width="250" height="56" border="0" src="images/change_gpib_name_ns8000b4.png" /></p>
+        <p class="ps0"><br /><span class="ts4">&nbsp;</span></p>
+        <p class="ps125"><span class="ts23">After</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">For existing setup files, need to update the individual setup file by reselecting the new tester interface name(DeviceSet-&gt;Tester I/F-&gt;Setting) so that new tester interface can be refresh on the HMI windows.</span></p>
+<p class="ps13"><span class="ts47">With HMI F8.12-SIS, Tester Interface name is updated for INFINEON typeA.</span></p>
+<p class="ps13"><span class="ts49">HMI F10.14-SIS already include the Tester Interface name INFINEON typeA</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Also take note that in C:\NS8000\Log\Product.dat,</span></p>
+<p class="ps3"><span class="ts0">Model name must to </span><span class="ts25">NS-8040</span><span class="ts0">&nbsp;if not there will be communication time out during online.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NS-8040</span></p>
+<p class="ps3"><span class="ts0">Serial Number&nbsp;&nbsp; 151244</span></p>
+<p class="ps3"><span class="ts0">Factory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EPSON-Z</span></p>
+<p class="ps3"><span class="ts0">Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F8.12-SIS</span></p>
+</body>
+</html>

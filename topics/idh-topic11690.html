@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0230-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11690;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0230-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11680.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12290.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7080 Automat Mat4 &amp; Mat10 tray finger bend and Index Device drop</span></p>
+<p class="ps3"><span class="ts0">Handler Model: Xilinx NS-7080W(NS7KW-01, S/N: 121286)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 8 Apr 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Automat error. Tray out error.</span></p>
+<p class="ps3"><span class="ts0">Device drop during auto run and pick up error arm 1 during height calibration. Now disabled arm1 for production run.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps130"><span class="ts0">Found Mat4 and Mat10 tray finger bend. Knock back finger.</span></p>
+<p class="ps130"><span class="ts0">Found transport (traverser) arm P1, P2 and home out.</span></p>
+<p class="ps130"><span class="ts0">Calibrate transverser robot 10, teach P1 and P2.</span></p>
+<p class="ps130"><span class="ts0">Verified Mat1 to Mat10 with traverser P1 and P2 by SPEL. OK.</span></p>
+<p class="ps130"><span class="ts0">Activate all vacuum of index arm. Found arm 1 site H weak vacuum.</span></p>
+<p class="ps130"><span class="ts0">As Index arm 1 moves from point to point, found site H vacuum cut off above test site.</span></p>
+<p class="ps130"><span class="ts0">Suspect index arm tube for Arm 1 H site broken.</span></p>
+<p class="ps130"><span class="ts0">Found site H tubing cracked at joint. </span></p>
+<p class="ps130"><span class="ts0">Enabled both arms, Auto Contact Height calibration. OK.</span></p>
+<p class="ps130"><span class="ts0">Running check auto 1 and automat Mat4 and Mat10. OK.</span></p>
+<p class="ps130"><span class="ts0">Released to production.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">selrb 9 for Elevator. (Calib 3)</span></p>
+<p class="ps3"><span class="ts0">selrb 10 for Traverser (Calib 2)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check points for Index Arm Device drop:</span></p>
+<p class="ps3"><span class="ts0">- vacuum cup condition, device drop more frequently in hot mode?</span></p>
+<p class="ps3"><span class="ts0">- o-ring worn out on plunger</span></p>
+<p class="ps3"><span class="ts1">-Check diameter/tolerance of guide pins on socket guide plate</span></p>
+<p class="ps3"><span class="ts1">-Check any broken/bent tubing or tubing pressed by cable tie on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check air fitting/elbow or gasket not loose on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check if guide pins bent/worn out</span></p>
+<p class="ps3"><span class="ts1">-Check vacuum filter dirty</span></p>
+<p class="ps3"><span class="ts1">-Check vacuum filter put properly</span></p>
+<p class="ps3"><span class="ts1">-Check seal for vacuum put properly and not torn</span></p>
+<p class="ps3"><span class="ts1">-Check plastic casing for vacuum filter not broken</span></p>
+<p class="ps3"><span class="ts1">-Check nest guide pin's hole </span></p>
+<p class="ps3"><span class="ts1">-Check o-ring on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check metal hooks of Socket Layout Kit (SLK)</span></p>
+<p class="ps3"><span class="ts1">-Check correct brand and specification of latch use for (Index) Test Hands</span></p>
+<p class="ps3"><span class="ts1">-Check metal latch worn out at Index Test Hand</span></p>
+<p class="ps3"><span class="ts1">-Check Index teaching position P50 and P51</span></p>
+<p class="ps3"><span class="ts1">-Check if Index Arm crash before or Index Arm bent(Index Arm alignment check)</span></p>
+<p class="ps3"><span class="ts1">- if device never drop, adjust vacuum switch sensitivity</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Correct metal latch of parts No is TL-29A, this is supplied by Tochigiya.</span></p>
+</body>
+</html>

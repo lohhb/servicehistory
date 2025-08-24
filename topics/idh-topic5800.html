@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0025-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 5800;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0025-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic5790.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic5810.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS7KW-03 Detection Sensor Error for Output Shuttle 1</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS7080W ( NS7KW-03, Xilinx)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 27~29 Feb 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Output shuttle 1 having &ldquo;Detection Sensor Error&rdquo; upon starting of handler.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts36">27 Feb 2008</span></p>
+<p class="ps3"><span class="ts0">Found output shuttle jig(Changekit by A.P) screw protruding out when tightened. Remove screw OK &ndash; Inform to Alan.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Adjusted output shuttle 1 top(emitter) and bottom(receiver) beam sensors with reference to shuttle jig.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Monitor production, still often have &ldquo;Detection Sensor Error&rdquo; at Output Shuttle 1.</span></p>
+<p class="ps3"><span class="ts0">Due to tight production schedule, Alan unable to down handler so temporary disable shuttle 1 and continue the following day.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">28 Feb 2008</span></p>
+<p class="ps3"><span class="ts0">Scheduled handler offline by customer. Setup FBGA 23x23 using K.A octal changekit. Verified with dummy units, found problem same as (day before) production setup. Adjusted Output Shuttle 1 1-S condition sensor(emitter) position and continue verification. Verified with 2000 units in Ambient setup, no more occurrence of &ldquo;Detection Sensor Error&rdquo;, released to customer.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">29 Feb 2008</span></p>
+<p class="ps3"><span class="ts0">Reported by customer, production setup FBGA 23x23 high temp last night having many &ldquo;Detection Sensor Error&rdquo; for output shuttle 1.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Feedback by customer, handler converted to BGA 19x19. Verified handler while tester having PM. Cycle run with dummy units, found out &ldquo;Detection Sensor Error&rdquo; still happen in hot mode. Check condition of output shuttle 1 slide plate uneven flatness when shuttle jig is place on top. Suspect problem lies with the output shuttle slide plate which misread by shuttle condition sensor. Informed to customer require to have new replacement for shuttle slide plate.. Temporary added 0.03mm shim under sensor block and requested K.G to send quotation to customer. Release to customer and monitor for any improvement of problem until new part arrive.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Output shuttle 1 slide plate uneven flatness when shuttle jig is place on top.</span></p>
+<p class="ps3"><span class="ts0">Suspect problem lies with the output shuttle slide plate which misread by shuttle condition sensor.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Slide Plate B&nbsp; H01-F12W-012</span></p>
+<p class="ps3"><span class="ts0">Mentioned part for NS-7080W, part name and part code taken from NS-7080W/NS-7160 Maintenance Part List Rev.1 Drawing number 7NSW05.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check points for Output Shuttle Sensor Detection Error:</span></p>
+<p class="ps3"><span class="ts0">- photoelectric switch(timing sensor)</span></p>
+<p class="ps3"><span class="ts0">- resit connector for timing sensor</span></p>
+<p class="ps3"><span class="ts0">- any uneven slide plate of output shuttle</span></p>
+<p class="ps3"><span class="ts0">- tunnel block missing on the output shuttle slide plate</span></p>
+<p class="ps3"><span class="ts0">- any hole on tunnel block</span></p>
+<p class="ps3"><span class="ts0">- Gate Sensor Board</span></p>
+<p class="ps3"><span class="ts0">- Input IO Module for Timing sensor</span></p>
+<p class="ps3"><span class="ts0">- Timing sensor positions( X direction and height)</span></p>
+<p class="ps3"><span class="ts0">- Use of retrofit kit, tick &quot;Use Side Device Exist Sensor&quot; in the Device Exist Sensor Window</span></p>
+</body>
+</html>

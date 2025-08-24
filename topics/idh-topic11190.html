@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0120-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11190;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0120-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11180.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11400.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 Index Arm 2 Alignment Out</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040 S/N: 151245 (NS-103)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 17~18 Dec 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Unwrap and setup handler(Pre-installed with HMI F9.13-SIS (FD09S111)). </span></p>
+<p class="ps3"><span class="ts1">Dry run ok.</span></p>
+<p class="ps3"><span class="ts1">After WLWFB183 Quad site changekit mounted(this is a repeated kit, number 7 set), </span></p>
+<p class="ps3"><span class="ts1">1) For Index Arm 2, nest cannot go into the input shuttle 2, only touching surface on input shuttle 2.</span></p>
+<p class="ps3"><span class="ts1">There was an offset in the -X direction for shuttle using Index Arm 2 as reference.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2) When Index Arm 2, goes into the socket guide base jig, the contactor with nest was seen being pushed to the -X direction when the Index Arm 2 goes into the socket guide base jig.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">For Index Arm 1, it seem ok.</span></p>
+<p class="ps3"><span class="ts1">We suspect that the Index Arm 2 need to be align mechanically.</span></p>
+<p class="ps3"><span class="ts1">Will bring the NS-8040 Index Arm Alignment jig tomorrow morning to Infineon to&nbsp;verify whether there is a position offset in the +Y direction for&nbsp; the Index Arm 2.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">1) Index Arm 2 alignment check using&nbsp; Index Arm Alignment jig.</span></p>
+<p class="ps130"><span class="ts1">Index Arm 2 guide pin cannot go into the alignment jig, Index Arm 2 misalignment with offset about 1 mm in the +Y direction with alignment jig as reference.</span></p>
+<p class="ps147"><img width="608" height="480" border="0" src="images/0120-ns8kb1.jpg" /></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts0">2) Index Arm 1 alignment check, ok.</span></p>
+<p class="ps130"><span class="ts0">3) Lossen 4 bolts above Index Arm 2 to alignment with the Index Arm Alignment jig. Tighten 4 bolts after alignment and check.</span></p>
+<p class="ps147"><img width="214" height="177" border="0" src="images/0120-ns8kb2.png" /></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts0">4) Dry run with WLWFB183 Quad site&nbsp; and dummy devices, ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Index Arm 2 Alignment out.</span></p>
+</body>
+</html>

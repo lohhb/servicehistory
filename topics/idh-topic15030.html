@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0313-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15030;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0313-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15020.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15040.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 unable to detect double device in socket</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (Unisem)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 12~28 Jul 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts29">When a device left inside the socket, the double device sensor unable to detect the unit and no alarm prompt out.</span></p>
+<p class="ps127"><span class="ts29">It will continue running and cause the escapee issue. But when initial check on the handler it able to detect the device left on the socket. </span></p>
+<p class="ps127"><span class="ts29">So why the sensor unable to detect the double device when in running mode ? Is this issue cause by the software upgrade last time we done ? Or related on software setting ?</span></p>
+<p class="ps3"><span class="ts0">Handler do not have SKIP-ENABLE button.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts68">Regarding double device issue, I got fews thing want to confirm with you. Below is the questions :</span></p>
+<p class="ps127"><span class="ts68">1) Before software upgrade, having this issue?</span></p>
+<p class="ps127"><span class="ts44">No. We did not encounter this issue before,</span></p>
+<p class="ps127"><span class="ts14">2) Is it this handler have double device sensor on the socket side or not? (</span><span class="ts55">If not, the handler only use &quot;Index Unit&quot; sensor to check &amp; detect device present. Whether is initial running the handler or between running.</span><span class="ts14">) </span></p>
+<p class="ps6"><span class="ts13">The handler will prompts out the &ldquo;Over Torque&rdquo; error if there is any double units. But unfortunately this time this error did not prompt out. Suspect is the new software related.</span></p>
+<p class="ps127"><span class="ts14">3) Normally, how's your operator clear the situation like this &quot;device stack on socket&quot; or &quot;device drop on Index&quot;? (</span><span class="ts55">Example, if operator facing &quot;device stack on socket&quot; problem and didn't clear the stack device out, then just press [Skip] and [Start] button. Handler will just continuous running with along the stuck device inside the socket and it won't sound up the alarm again.</span><span class="ts14">) </span></p>
+<p class="ps127"><span class="ts44">By normal procedure, our operator will inform the technician if there is any abnormality on the handler. The handler should not continue running until the stuck device is been removed.</span></p>
+<p class="ps127"><span class="ts14">4) Do your handler have &quot;Skip Enable&quot; switch installed? (</span><span class="ts55">Rear side above the chamber, got one [Skip Enable] button.</span><span class="ts14">)</span></p>
+<p class="ps127"><span class="ts82">No, we do not have this &ldquo;Skip Enable&rdquo; switch on the handler.</span><br /><span class="ts14">&nbsp;Another hand the &quot;key pad&quot;. Normally, when handler is running, the key pad must set on &quot;NORMAL&quot;. If the key pad set on &quot;MAINTENANCE&quot; while running the handler. Should be have a lot of problem, because have a lot of stuff have been by pass. I know your key pad's key was broken inside the key pad's hole and set on &quot;MAINTENANCE&quot; unable to turn back to &quot;NORMAL&quot;. I suggest better purchase the &quot;key pad&quot; and install back the way supposed too.</span></p>
+<p class="ps127"><span class="ts83">Can you please send me the list of items that will by pass if the key pad is set on &ldquo;Maintenance&rdquo;?</span></p>
+<p class="ps127"><span class="ts83">I need to have a better understanding on this &ldquo;Key Pad&rdquo;.</span></p>
+<p class="ps6"><span class="ts6">26 Jul 2011</span></p>
+<p class="ps127"><span class="ts0">Normally there are 2 prevention methods:</span></p>
+<p class="ps127"><span class="ts0">1) Is to have a skip enable switch present for double protection.</span></p>
+<p class="ps127"><span class="ts0">When device drop or device stuck in socket error happen, operator will not be able to continue operation until him/her open up the rear door and press the skip enable button.</span></p>
+<p class="ps127"><span class="ts0">This prompts the operator to check the socket condition thoroughly before continuing normal operation.</span></p>
+<p class="ps127"><span class="ts0">(Making sure there is really no device present in socket)</span></p>
+<p class="ps127"><span class="ts0">However if operator doesn't check and continue operation even with the skip enable switch, then this feature becomes redundant.</span></p>
+<p class="ps127"><span class="ts44">This feature is not a full proof system because it was still human dependents. I need to have a more secure system that will keep triggering the handler if the stuck device has not been clear out from the socket.</span></p>
+<p class="ps127"><span class="ts0">2) To have socket sensor installed for device detection in socket.</span></p>
+<p class="ps127"><span class="ts0">Sorry, I need to check the sequence for this function. I don't have the information on hand now.</span></p>
+<p class="ps127"><span class="ts44">As what I know about this sensor, it requires modification on the test socket as well as the socket adaptor on the handler conversion kit.</span></p>
+<p class="ps127"><span class="ts44">This is not practical for us because most the parts are consigned by our customer.</span></p>
+<p class="ps127"><span class="ts14">Overall, in any case, handle will alarm when device drop or device stack in socket condition happen.</span></p>
+<p class="ps127"><span class="ts14">I strongly urge the operator to check properly before continuing the operation.</span></p>
+<p class="ps127"><span class="ts14">As you mentioned, normally the handler will alarm torque error when double device is in socket.</span></p>
+<p class="ps127"><span class="ts14">It means device was not taken out from socket from the first error message prompted by handler, device drop or stuck error.</span></p>
+<p class="ps127"><span class="ts44">For your information, I want the handler to check on this but not human dependent. There is no traceability if we are depending on the operators. </span></p>
+<p class="ps127"><span class="ts44">It is not secure at all.</span></p>
+<p class="ps6"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">27 July 2011</span></p>
+<p class="ps2"><span class="ts5">After going through the file, it seems that probably, this test escapee issue may have occured between 08/July and 09/July. </span></p>
+<p class="ps2"><span class="ts5">For test escapee issue, basically there are 2 scenerios. Device drop into socket before testing and device drop/stuck in socket after testing. </span></p>
+<p class="ps2"><span class="ts5">I believe the latter scenerio may have been the cause of the test escapee. </span></p>
+<p class="ps4"><span class="ts84">Before Test</span></p>
+<p class="ps6"><span class="ts5">-Device drop from either Index Arm 1 or Index Arm 2 </span></p>
+<p class="ps6"><span class="ts5">-JAM0303 &quot;Device drop error (Arm 1)&quot; or JAM0304 &quot;Device drop error (Arm 2)&quot; - Only SKIP available </span></p>
+<p class="ps6"><span class="ts5">-MES0305 &quot;Check again! Device drop error (Arm 1)&quot; or MES0306 &quot;Check again! Device drop error (Arm 2)&quot; - Only SKIP is available </span></p>
+<p class="ps6"><span class="ts5">-Device drop during this time, almost 99% the dropped device will not be dropped into socket exactly testing position, sitted nicely like hand test... </span></p>
+<p class="ps6"><span class="ts5">-Yes, device may be dropped into socket but it may lead to device cracked due to subsequent testing and open contact due to cracked device or maybe torque error. </span></p>
+<p class="ps6"><span class="ts84">After Test</span></p>
+<p class="ps6"><span class="ts5">-Device drop error from Index Arm 1 or Index Arm 2 (or device stuck in socket after testing) </span></p>
+<p class="ps6"><span class="ts5">-JAM0303 &quot;Device drop error (Arm 1)&quot; or JAM0304 &quot;Device drop error (Arm 2)&quot; - Only SKIP available </span></p>
+<p class="ps6"><span class="ts5">-Affected index arm will proceed to check device exist in socket by vaccum sensor: </span></p>
+<p class="ps6"><span class="ts5">-If device stuck in socket (test escapee), JAM0315 &quot;Device stack error (double device)&quot; - RETRY and SKIP available </span></p>
+<p class="ps6"><span class="ts5">-If RETRY, index arm will always go down into socket to check by vacuum untill device is removed </span></p>
+<p class="ps6"><span class="ts5">-IF SKIP, index arm will not check and proceed normal operation. This is where test escapee happens if SKIP is pressed without removing device. </span></p>
+<p class="ps2"><span class="ts5">From the log file you sent us, I extract the portion in doubt: </span></p>
+<div class="block0" align="left">
+  <table class="tbl26">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1737</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">Index Unit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">JAM0304</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">Device drop error (Arm 2)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 10:35</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">skip</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">48</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1738</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">event</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">11</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">pause</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 10:35</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1739</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">event</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">19</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">door open</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 10:35</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1740</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">event</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">20</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">door close</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 10:36</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1741</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">event</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">2</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">skip</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 10:36</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts31">1742</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts31">Index Unit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts31">JAM0315</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts31">Device stack error (double device)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts31">7/8/2011 10:36</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts85">retry</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts31">26</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1743</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">event</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">retry</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 10:36</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts31">1744</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts31">Index Unit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts31">JAM0315</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts31">Device stack error (double device)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts31">7/8/2011 10:37</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts85">skip</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts31">3</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1745</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">event</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">2</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">skip</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 10:37</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">1746</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">Input Arm</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">MES0132</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">CYCLE FINISHED</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">7/8/2011 11:09</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps178"><span class="ts0">skip</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps177"><span class="ts0">28</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps6"><span class="ts5">So you can see, RETRY was executed at 1742 and I suspect device was not removed, so it led to 1744. At this moment, operator SKIP meaning device may not have been removed and it may lead to test escapee and you can see, the next event was cylce finished 30minutes later. The time for this drop event all happened in 2mins as you can see so I don't think operator raised this abnormality to technician and may have cleared jam herself/himself without removing device stuck in socket. You can see in the event of clearing JAM0315, we didnt see, PAUSE, DOOR OPEN, DOOR CLOSE </span></p>
+<p class="ps6"><span class="ts5">Of course, the above is based on analysis of log file and may not reflect the actual scenerio. If SKIP is not allowed on JAM0315, do you think it can solve potential test escapee after testing? </span></p>
+<p class="ps6"><span class="ts5">Assuming operator RETRY and unable to clear jam, device stuck was not removed, handler was PUASED+RESET+START, the initial start check will still detect the device stuck in socket </span></p>
+<p class="ps6"><span class="ts5">WAR0322 &quot;Start error&quot;. </span></p>
+<p class="ps6"><span class="ts5">In order for you to fully understand both the scenerios mentioned above, hope you can simulate it on the actual handler. </span></p>
+<p class="ps6"><span class="ts5">On the scenerio </span><span class="ts84">after testing</span><span class="ts5">, please simulate both device drop in socket and not in socket (meaning just drop onto handler dock plate surface) to see the difference in sequence check. </span></p>
+<p class="ps6"><span class="ts5">We can understand your concern on additional hardware and modifications so we're trying to see how we can help based on current configuration. So kindly simulate and if with SKIP removed, isit sufficient to minimize/removed test escapee potential after testing which we see it more possibility as compared to before testing. During simulation, if there's any difference as above mentioned, please let us know.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">28 Jul 2011</span></p>
+<p class="ps4"><span class="ts5">SKIP - Purpose is to skip error. In case it is due to vaccum sensor ON because contactor touching socket/pogo pin and not device stuck in socket. This happens when threshold is set too low for example. </span></p>
+<p class="ps6"><span class="ts5">RETRY - Index Arm will always be checking socket untill device is removed or vaccum sensor OFF. </span></p>
+<p class="ps6"><span class="ts5">With SKIP removed, only RETRY is available so operator can only RETRY. </span></p>
+<p class="ps6"><span class="ts5">SKIP removed does not mean remove SKIP button. It is only to remove the SKIP option for JAM0315. </span></p>
+<p class="ps6"><span class="ts5">So initial drop error after testing, first SKIP+START for drop error, index arm will check socket. </span></p>
+<p class="ps6"><span class="ts5">If there is device in socket, first JAM0315 will trigger only RETRY so in this case, operator has to RETRY untill device is removed. </span></p>
+<p class="ps6"><span class="ts5">Which means on JAM0315, operator can only RETRY+START untill error is cleared..no SKIP available.. </span></p>
+<p class="ps6"><span class="ts5">Is this ok? </span></p>
+<p class="ps6"><span class="ts5">If you prefer to have SKIP option remain, but after SKIP+START and check socket, there is no meaning as this is same as RETRY+START. </span></p>
+<p class="ps6"><span class="ts5">Because purpose of SKIP is to skip error when there is no device in socket but still JAM0315 as mentioned in the first line of my email. </span></p>
+<p class="ps6"><span class="ts5">Which is why I recommend to consider just don't allow SKIP in the case of JAM0315. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">8 Aug 2011</span></p>
+<p class="ps3"><span class="ts0">The content of jam file Jam0315.dat for Device stack error (double device) in NS-7000 was modified such that SKIP is disabled to prevent operator from pressing SKIP button without removing dropped/stucked device in socket.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">--------------------------------------</span></p>
+<p class="ps3"><span class="ts0">#Jam0315.dat</span></p>
+<p class="ps3"><span class="ts0">#Jam 315&nbsp;&nbsp; Device stack error (double device)</span></p>
+<p class="ps3"><span class="ts0">#Unit name</span></p>
+<p class="ps3"><span class="ts0">Index Unit</span></p>
+<p class="ps3"><span class="ts0">#execute keys = Skip </span></p>
+<p class="ps3"><span class="ts0">1,Retry</span></p>
+<p class="ps3"><span class="ts3">0,Skip</span></p>
+<p class="ps3"><span class="ts0">0,Tray End</span></p>
+<p class="ps3"><span class="ts0">0,Clean OUT</span></p>
+<p class="ps3"><span class="ts0">1,Alarm reset</span></p>
+<p class="ps3"><span class="ts0">0,Option</span></p>
+<p class="ps3"><span class="ts0">#Bitmap file and position</span></p>
+<p class="ps3"><span class="ts0">11</span></p>
+<p class="ps3"><span class="ts0">Test_Arm.bmp,230,218</span></p>
+<p class="ps3"><span class="ts0">#Error Message</span></p>
+<p class="ps3"><span class="ts0">Device stack error (double device)</span></p>
+<p class="ps3"><span class="ts0">&nbsp; The devices are stacked in the socket.</span></p>
+<p class="ps3"><span class="ts0">Push the RETRY, SKIP switch, then push the START switch.</span></p>
+<p class="ps3"><span class="ts0">#Procedure</span></p>
+<p class="ps3"><span class="ts0">(1)A device is left in the socket.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp; - Remove the device from the socket.</span></p>
+<p class="ps3"><span class="ts0">----------------------------------------------------------------</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

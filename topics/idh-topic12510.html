@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0242-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12510;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0242-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12500.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12520.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7080W After conversion to FG484 23x23 Octal encountered:</span></p>
+<p class="ps2"><span class="ts23">1)Automat Elevator abnormal noise</span></p>
+<p class="ps2"><span class="ts23">2)Index Arm2 stuck in socket</span></p>
+<p class="ps3"><span class="ts0">Handler Model: Xilinx NS-7080W(S/N: 121080; NS7KW-03) MFG Jun 2006</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 10 Aug 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">After customer conversion to FG484 23x23 Octal encountered:</span></p>
+<p class="ps130"><span class="ts0">1)Automat Elevator abnormal noise</span></p>
+<p class="ps130"><span class="ts0">2)Index Arm2 stuck in socket</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps130"><span class="ts0">-Automat slot 2, 3 &amp; 9 bent, tray clamper near to elevator slightly bent</span></p>
+<p class="ps130"><span class="ts0">-knock back slot 2,3 &amp; 9 and tray clamper for flatness</span></p>
+<p class="ps130"><span class="ts0">-Reteach robot 10 tranverser P1(inside Automnat) from Y= 4.5mm to 1mm</span></p>
+<p class="ps130"><span class="ts0">-Adjust sensor input sensor SQ212(AM_TRY_STU; Tray slot in Elevator detection)</span></p>
+<p class="ps130"><span class="ts0">-Adjust robot 10 Tranverser HOME sensor's slit plate as Y position changed after reteach P1</span></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts0">-24Vdc in PSU check for supply to ICOS, ok</span></p>
+<p class="ps130"><span class="ts0">-Customer verify that ICOS motor cannot move when power off and check with ICOS vendor and suspect motor for ICOS spoilt</span></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts0">-Index Arm 1 &amp; 2 for P50 &amp; P51 check, ok</span></p>
+<p class="ps130"><span class="ts0">-Layout kit for Arm 2 loose when latched, customer just changed the metal latches</span></p>
+<p class="ps130"><span class="ts0">-Converted to FG456 23x23 Octal, Arm 2 layout kit air leak.</span></p>
+<p class="ps130"><span class="ts0">-</span><span class="ts3">Vibration can be seen on the layout kit.</span></p>
+<p class="ps130"><span class="ts0">-Customer will add shimm to the metal latches, but mean time just disable Index Arm 2</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">1) Automat crashed</span></p>
+<p class="ps3"><span class="ts0">2) Layout kit problem due to metal latch</span></p>
+<p class="ps3"><span class="ts0">3) Icos motor spoilt.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps131"><span class="ts1">Index Arm 2 found SLK &quot;vibrating&quot;. Suggesting the latch/clip tension NG due to previous history</span></p>
+<p class="ps131"><span class="ts1">of SLK stuck.</span></p>
+<p class="ps130"><span class="ts1">SLK stuck after conditional buyoff found 3</span><sup><span class="ts1">rd</span></sup><span class="ts1">&nbsp;party nest/mix kit used although mix kit is compatible from device point of view but actual change kit like guide pin may be different.</span></p>
+<p class="ps130"><span class="ts1">Mix kit found some nest to be tight with guide base guide pin while others ok. This is primary reason for SLK stuck after testing because some nest very tight fit to guide pin.</span></p>
+<p class="ps130"><span class="ts1">Guide pin wrong size or Guide pin become loose on socket guide jig also can cause Index Arm stuck in sock.</span></p>
+<p class="ps130"><span class="ts1">Coupled with weak latch/clip, SLK dislodged with index arm moving up.</span></p>
+<p class="ps3"><span class="ts3">Correct meta Latch of parts No is TL-29A, this is supplied by Tochigiya.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">selrb 9 for Elevator. (Calib 3)</span></p>
+<p class="ps3"><span class="ts1">selrb 10 for Traverser (Calib 2)</span></p>
+</body>
+</html>

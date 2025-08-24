@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0449-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18510;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0449-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18500.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18520.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8040 HMI</span><span class="ts6">&nbsp;</span><span class="ts23">temperature offset overwrite by another setup file offset</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (HMI M11.25-SSY)</span></p>
+<p class="ps3"><span class="ts0">Date: 19 Sep 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps4"><span class="ts6">Last Saturday, STATS experienced temperature offset overwrite by another setup file offset. They didn&rsquo;t know how it happened, it was complaint by line technician that the devices were having high failure rate due to the temperature out and they found out that the temperature offset was incorrect. Nobody has changed the temperature offset.</span></p>
+<p class="ps6"><span class="ts6">Software: HMI ver M11.25-SSY</span></p>
+<p class="ps6"><span class="ts6">Tester: Offline Mode</span></p>
+<p class="ps6"><span class="ts6">Verification carried out as below:</span></p>
+<p class="ps6"><span class="ts6">1) After running Setup A, setup file was changed from Setup A to Setup B . Without running Setup B, the setup file was changed back to Setup A. This was when the Setup A temp offset have been overwrite by Setup B </span></p>
+<p class="ps6"><span class="ts6">temp offset. </span><span class="ts8">( Setup A (Running) ----&gt; Setup B ----&gt; Setup A ) - NG</span></p>
+<p class="ps6"><span class="ts6">2) After running Setup C, setup file was changed from Setup C to Setup A to Setup B and back to Setup C. Thereafter, Setup C temp offset will be overwrite by Setup B temp offset.</span></p>
+<p class="ps6"><span class="ts8">( Setup C (Running) ----&gt; Setup A ----&gt; Setup B ----&gt; Setup C ) - NG</span></p>
+<p class="ps6"><span class="ts6">3) After running Setup B, setup file was changed from Setup B to Setup C and did a running. Thereafter, changed to Setup A and back to Setup C. Setup C temp offset was overwrite by Setup A temp offset. </span></p>
+<p class="ps6"><span class="ts8">( Setup B (Running) ----&gt; Setup C (Running) ----&gt; Setup A ----&gt; Setup C ) &ndash; NG</span></p>
+<p class="ps6"><span class="ts6">4) After running Setup B, setup file was changed from Setup B to Setup C and did a running. Thereafter, changed to Setup A to Setup B and the temp offset did not overwrite by Setup A temp offset. </span></p>
+<p class="ps6"><span class="ts8">( Setup B (Running) ----&gt; Setup C (Running) ----&gt; Setup A ----&gt; Setup B ) &ndash; OK</span></p>
+<p class="ps6"><span class="ts6">5) After running Setup A, setup file was changed from Setup A to Setup B and from Setup B to D and did a running. Thereafter, changed Setup D to Setup C and back to Setup D. Setup D temp offset was overwrite </span></p>
+<p class="ps6"><span class="ts6">by Setup C temp offset. </span><span class="ts8">( Setup A (Running) ----&gt; Setup B ----&gt; Setup D (Running) ----&gt; Setup C ----&gt; Setup D ) - NG</span></p>
+<p class="ps127"><span class="ts0">Below were what I had carried out:</span></p>
+<p class="ps127"><span class="ts0">1) Changed temp offset in one of the setup files and checked on other setup files to ensure no overwrite issue. </span><span class="ts25">&ndash; OK</span></p>
+<p class="ps127"><span class="ts0">2) Changed temp offset in one of the setup files, did an ON/OFF of power at control panel and to ensure no overwrite issue. </span><span class="ts25">&ndash; OK</span></p>
+<p class="ps127"><span class="ts0">3) Reinstalled of HMI, deleted all the setup files, recreated the setup files using Epson default setup file and verified. </span><span class="ts25">&ndash; NG</span></p>
+<p class="ps127"><span class="ts0">4) Did a recovery of HDD, created the setup files and verified. </span><span class="ts25">&ndash; NG </span></p>
+<p class="ps127"><span class="ts0">5) Tried out HMI ver M12.52-SSY </span><span class="ts25">&ndash; NG </span></p>
+<p class="ps127"><span class="ts0">6) Tried out HMI ver 2.0 </span><span class="ts25">&ndash; </span><span class="ts111">OK</span></p>
+<p class="ps127"><span class="ts0">Note: These issue was very critical to STATS because they are running Intel products and each product has it own temperature offset.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">EPSON released Ver12.56-SSY already solved the problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

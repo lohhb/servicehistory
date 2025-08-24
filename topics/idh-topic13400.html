@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0262-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13400;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0262-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13390.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13410.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: EPSON finding on Xilinx Octal Layout kit(device drop &amp; Index arm stuck in socket)</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7080W</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 21 Sep 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">EPSON's findings were based on XAP SLK sent to them as follows:</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">1) Type of O-ring is reason for vacuum leak. Verification with following contact force @ 125kPa, 250kPa, 450kPa.</span></p>
+<p class="ps3"><span class="ts1">Only orange and white type is confirmed by EPSON, no vacuum leak even till 450kPa.</span></p>
+<p class="ps3"><span class="ts1">Blue type, has vacuum leak at 250kPa and 450kPa.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Therefore, EPSON's conclusion is blue type O-ring, is not appropriate for handler's application as it causes vacuum leak.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2) EPSON did not experience the &quot;gap&quot; with the SLK sent to them so they are unable to verify the cause of &quot;gap&quot; and the effect of shims.</span></p>
+<p class="ps3"><span class="ts1">But it means the hook condition of the SLK is still OK condition as they did'nt see the gap. The difference here is the possible causes as follows:</span></p>
+<p class="ps3"><span class="ts1">a) Latch condition is N.G. The spring is for purpose of pulling(holding) the SLK upwards when it locks. If spring loses it's tension, only possible way is to adds shims to increase the mounting height.</span></p>
+<p class="ps3"><span class="ts1">b) If wrong O-ring is used, @ 100+kPa CDA coupled with bad condition of latch, it may cause the &quot;dancing effect&quot;</span></p>
+<p class="ps3"><span class="ts1">c) Very bad condition of guide pins/guide pin hole. From EPSON's point of view, 2 guide pins + 1 orientation guide, once SLK latched on, very unlikely for &quot;dancing effect&quot;.</span></p>
+<p class="ps3"><span class="ts1">d) NS7KW-03 was sent back to XAP from SPIL and the handler condition is quite bad as you may know. There may have been pervious crashes or bad condition. The &quot;dancing&quot; effect is really classic and we believe it is a special and could be a one time case due to combination of factors mentioned above.</span></p>
+<p class="ps3"><span class="ts1">e) From Loh's finding of wrong diameter guide pin used, it possibly means the constant &quot;tight fit&quot; and rubbing may have cause deterioration slowly to latch condition as it didn't cause the SLK stuck immediately upon first insertion. In this case, it may indicate the latches had been under stress leading to bad condition. Or in the case of the SLK hook angle change for example.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">10kg spec is the hardware spec of 1 TAKIGEN latch(wrong latch) so based on the weight of SLK sent to EPSON, current design of 2 latches is sufficient to hold it and the &quot;gap&quot; or &quot;dancing&quot; should not happen. If due to guide pin dimensions out should SLK be stuck, definately this will be more than 20kg.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">To summarize, as EPSON did not encounter the &quot;gap&quot; on XAP SLK, they are unable to comment if shims is a must. Their opinion is as long as if it helps in XAP point of view/experience, it can be used. The current design of 2 latches with a combine capability of 20kg with 2 guide pins and orientation pin, it is sufficient. EPSON does not mean the O-ring is the cause of the gap.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts1">For Index Arm stuck in socket, check:</span></p>
+<p class="ps3"><span class="ts1">1) Guide pin dimension(eg diameter &amp; tolerance) on socket guide plate</span></p>
+<p class="ps3"><span class="ts1">2) Metal latch on Index test Hand is correct specification, use correct T fastern(Latch) of part No is TL-29A ( R335N700011700 ), supplied by Tochigiya.</span></p>
+<p class="ps3"><span class="ts1">3) Teach point P50 &amp; 51 is correct</span></p>
+<p class="ps3"><span class="ts1">4) Index Arm alignment</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">For Device drop at Index, check:</span></p>
+<p class="ps3"><span class="ts1">1) O-ring on octal layout kit surface is of correct type( orange or the translucent white)</span></p>
+<p class="ps3"><span class="ts1">2) Air fitting is secured on octal layout kit</span></p>
+<p class="ps3"><span class="ts1">3) Peek material washer(not white colour) should be used on air fitting for octal layout kit(</span><a href="idh-topic10790.html" class="hs0">0199-NS7K</a><span class="ts1">)</span></p>
+<p class="ps3"><span class="ts1">4) Air tubing on layout kit is not broken</span></p>
+<p class="ps3"><span class="ts1">5) O-ring in plunger of contact is not worn out or broken (</span><a href="idh-topic13300.html" class="hs0">0255-NS7K</a><span class="ts0">)</span></p>
+<p class="ps3"><span class="ts1">6) Plunger in contactor able to retract(clean plunger)</span></p>
+<p class="ps3"><span class="ts1">7) Suction cup protrude abit from device pickup surface of nest</span></p>
+<p class="ps3"><span class="ts1">8) Vacuum is not weak(check filter is not dirty and filter's cover is secured properly)</span></p>
+<p class="ps3"><span class="ts1">9) Vacuum sensitivity is set correctly on Index vacuum switch</span></p>
+<p class="ps3"><span class="ts1">10) Vacuum valve is working(manual trigger vacuum or by MMI I/O monitor)</span></p>
+<p class="ps3"><span class="ts1">11) Remote I/O card (</span><a href="idh-topic11250.html" class="hs0">0210-NS7K</a><span class="ts1">)</span></p>
+<p class="ps3"><span class="ts1">12) I/O Module</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check points for Index Arm Device drop:</span></p>
+<p class="ps3"><span class="ts0">- vacuum cup condition, device drop more frequently in hot mode?</span></p>
+<p class="ps3"><span class="ts0">- o-ring worn out on plunger</span></p>
+<p class="ps3"><span class="ts1">-Check diameter/tolerance of guide pins on socket guide plate</span></p>
+<p class="ps3"><span class="ts1">-Check any broken/bent tubing or tubing pressed by cable tie on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check air fitting/elbow or gasket not loose on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check if guide pins bent/worn out</span></p>
+<p class="ps3"><span class="ts1">-Check vacuum filter dirty</span></p>
+<p class="ps3"><span class="ts1">-Check vacuum filter put properly</span></p>
+<p class="ps3"><span class="ts1">-Check seal for vacuum put properly and not torn</span></p>
+<p class="ps3"><span class="ts1">-Check plastic casing for vacuum filter not broken</span></p>
+<p class="ps3"><span class="ts1">-Check nest guide pin's hole </span></p>
+<p class="ps3"><span class="ts1">-Check o-ring on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check metal hooks of Socket Layout Kit (SLK)</span></p>
+<p class="ps3"><span class="ts1">-Check correct brand and specification of latch use for (Index) Test Hands</span></p>
+<p class="ps3"><span class="ts1">-Check metal latch worn out at Index Test Hand</span></p>
+<p class="ps3"><span class="ts1">-Check Index teaching position P50 and P51</span></p>
+<p class="ps3"><span class="ts1">-Check if Index Arm crash before or Index Arm bent(Index Arm alignment check)</span></p>
+<p class="ps3"><span class="ts1">- if device never drop, adjust vacuum switch sensitivity</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Correct metal latch of parts No is TL-29A, this is supplied by Tochigiya.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Refer</span><a href="idh-topic8110.html" class="hs0">0126-NS7K</a></p>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0059-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 8310;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0059-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic8300.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic8320.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8080 JetHeater (Socket Air Blower) evaluation</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 9 Jan 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Installation of Instant Heater for Socket Air 2. </span></p>
+<p class="ps3"><span class="ts1">After installation, Operational check on 50 deg and 90 deg, and found something peculiar. (Currently, all setting is at factory default, no blockage in the docking plate and socket heater 'on') When HMI set at 90 deg, Socket Air 2 will rise to 110 deg (on the HMI screen) before stablilising at 90 deg.&nbsp; When set at 50 deg, it will rise to 60 deg before stabilising at 50 deg.&nbsp; Socket&nbsp; Air 1 only increase to +5 deg of the set temperature.</span></p>
+<p class="ps3"><span class="ts1">Temperature calibration carried out for 50 deg and reading taken at 15 min and 30 min interval.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">12~13 Jan 2009 NS8080 evaluation, Jet heater Static Calibration</span></p>
+<p class="ps3"><span class="ts1">Static Temperature calibration carried&nbsp; out for 90 deg and 130 deg.</span></p>
+<p class="ps3"><span class="ts1">Findings / happenings during the calibration:-</span></p>
+<p class="ps155"><span class="ts1">- 2 thermal couples were changed due to peculiar behavior (e.g., set at 130 deg, temperature was 140 deg and set at 90 deg, temperature was 97 deg), verification checks were carried out for both 90 deg and 130 deg.</span></p>
+<p class="ps3"><span class="ts1">- no doubt SCS claimed that their thermal couples were calibrated, some thermal couples had been swapped to verify socket air problem or thermal couples' problem, conclusion thermal couple problem</span></p>
+<p class="ps3"><span class="ts1">- SA 1, SA 2, Socket and Chamber offset had been used to fine tune the temperature.</span></p>
+<p class="ps3"><span class="ts1">- test arm was also plunged&nbsp; up and down a few times to verify some doubts during the calibration.</span></p>
+<p class="ps3"><span class="ts1">- temperature tolerance was able to obtain +/- 2 deg for both 90 deg and 130 deg.</span></p>
+<p class="ps3"><span class="ts1">- temperature tolerance was even better for 50 deg, only +/- 0.5 deg.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">14~16 Jan 2009 NS8080 evaluation, Jet heater RTD Static and Dynamic calibration</span></p>
+<p class="ps3"><span class="ts1">a) Assist SCS Engineer to set-up data logger for doing static RTD verification. Static RTD verification carried out on 50 deg. Static RTD verification was within specification but dynamic run failed. Index arm 2 found with high temp during initial plunge and 10 deg deviation after 60 sec test time. Problem it due to high temp at shuttle 2, therefore shuttle 2 was re-calibrated on 50 deg, 90 deg and 130 deg. After re-calibration of 50 deg, dynamic run was carried out and found satisfactory.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">b) Dynamic run on 50 deg was verified by SCS engineer with passed result. </span><a name="DDE_LINK"></a><span class="ts1">Verification on 90 deg static RTD found satisfactory but dynamic run failed. Continue with verification on 130 deg static RTD found satisfactory but dynamic run failed. Both 90 deg and 130 deg dynamic run found that the index arm 1 was within temp and index arm 2 has high temp. But after 60 sec test time, the temp was out of specification (low side). When selecting Temperature Priority mode, the shuttle was inside the chamber that night be the cause for high temp at index arm 2 during initial plunge.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">c) Various of methods were done by adjusting the offset on shuttle 1, shuttle 2, socket heater, socket air 1 and socket air 2 for 90 deg. After adjusting the every individual offset, dynamic run was carried out to verified the temp. Dynamic run on 90 deg awaiting for SCS engineer to verify.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Refer email on 26 Apr 2013 on NS8080 Jet Heater (socket blower) installation procedure.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">This is related to </span><a href="idh-topic8280.html" class="hs0">0056-NS8K</a></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">13 Jan 2009 email from Hidaka (Subject: NS-8000 Jet Heater Overshoot)</span></p>
+<p class="ps3"><span class="ts0">Regarding for Jet heater overshoot, 20 degree is no problem during 90 degree setting.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">15 Jan 2009 email from Hidaka (Subject: NS-8080 Hot temperature adjustment)</span></p>
+<p class="ps3"><span class="ts0">Just I talk to engineer about hot temperature adjustment.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Condition</span></p>
+<p class="ps3"><span class="ts0">-&nbsp; Arm 1 is within tolerance value </span></p>
+<p class="ps3"><span class="ts0">-&nbsp; Arm2 is out of tolerance value( actual value is lower than tolerance value) </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Idea</span></p>
+<p class="ps3"><span class="ts0">1. Set more high offset for Shuttle 2 </span></p>
+<p class="ps3"><span class="ts0">&nbsp; For example: Set temp 90 degree </span></p>
+<p class="ps3"><span class="ts0">&nbsp; Arm2 temp is 82 degree</span></p>
+<p class="ps3"><span class="ts0">&nbsp; Shuttle offset is up to +8 degree.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2. Wait 30 min after reached set temperature</span></p>
+<p class="ps3"><span class="ts0">&nbsp; (If you can do dummy running after reached set temperature,</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp; It will be waiting for 20 min.)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">16 Jan 2009 email from Hidaka (Subject: RE: NS-8080 Hot temperature adjustment)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Jet Heater offset value limit:</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Less than 70 degree</span></p>
+<p class="ps3"><span class="ts0">Exact limitation: Less than 200 degree for Jet heater surface.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The temperature is measured by surface temperature meter.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">How to adjust the offset temperature?</span></p>
+<p class="ps3"><span class="ts0">Socket heater is more priority than Jet heater.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">It seems to our engineer that the offset value is too low.</span></p>
+<p class="ps3"><span class="ts0">Our engineer request </span></p>
+<p class="ps3"><span class="ts0">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shuttle temperature offset data</span></p>
+<p class="ps3"><span class="ts0">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temperature monitor graph (captured from HMI display)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="488" height="480" border="0" src="images/0059-ns8kb1.jpg" /></p>
+<p class="ps3"><span class="ts0">Surface temperature monitor touch the point</span></p>
+<p class="ps3"><span class="ts0">Then you adjust the offset while check the jet heater surface temperature</span></p>
+<p class="ps3"><span class="ts0">(Outside of High temperature counter air)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">19 Jan Weekly Technical Meeting</span></p>
+<p class="ps3"><span class="ts0">NS-8080 evaluation temperature fluctuation - Stabilization plate installed but Temperature fluctuation still occurs. Under monitoring. (Refer to EEMS same issue)</span></p>
+<p class="ps3"><span class="ts1">To source and try out aluminum tape to tape around sensor due to sensor too sensitive to temperature change.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">19 Jan 2009 NS8080 evaluation, Jet heater RTD Static and Dynamic calibration</span></p>
+<p class="ps3"><span class="ts1">Verification on 90 deg static RTD failed . Verification on 90 deg dynamic run found within specification but SCS engineer doesn't feel comfortable due to various offset on different locations were adjusted. Data collection on 90 deg static and dynamic before and after offset adjustment required by SCS engineer. Data collection on 130 deg on static and dynamic before offset adjustment carried out. Tuning on 130 deg for dynamic run.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">20~21 Jan 2009 NS8080 evaluation, Jet heater RTD Static and Dynamic calibration</span></p>
+<p class="ps3"><span class="ts0">130 deg calibration using RTD.&nbsp; During calibration found out that sites A, B and G cannot contain heat well, this may be due to the structure of the handler as these 3 points are most subjective to exterior air turbulence.&nbsp; Socket Air 1 (SA1) and 2 (SA1) do help in containing the heat for these sites, but the best way will be to think of a way to shield off any oncoming air.&nbsp; After increasing SA1, sites A and B condition improved.&nbsp; Situation for site G was also better after increasing SA2. But during calibration, found out that instant heater for SA1 is failing as the graph on HMI shows that SA1 is very inconsistent and it take a longer time to response (sluggish).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">23 Feb 2009 NS8080 Temperature Fluctuation</span></p>
+<p class="ps3"><span class="ts0">Simulation of the temperature fluctuation with and without the aluminum tape carried out&nbsp; without any fluctuation.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

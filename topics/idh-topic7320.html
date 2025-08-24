@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0092-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7320;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0092-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7310.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7510.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: Buyoff issues of NS-7080 at NEC</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7080 (S/N: 181122, handler from NEC(J) to NEC(M))</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 18 Jul 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Vacuum cannot cutoff for Input Arm Hand D.</span></p>
+<p class="ps3"><span class="ts1">Device flipped.</span></p>
+<p class="ps3"><span class="ts1">SRC robot error</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps126"><span class="ts1">While working to solve the flip problem, suddenly vacuum on input arm hand D cannot cut off. So swapped hand D with C. After swapping worse still, both C &amp; D got this vacuum cannot cut off problem. Double checked all the vacuum unit again. All was good. </span></p>
+<p class="ps127"><span class="ts1">Checked on the MMI, that is if the vacuum is operating correctly from the MMI. After ensuring that vacuum is working correctly in MMI, proceed to try again but still the error occurred. Due to no more solution, re-start the handler. After re-starting, everything seems good, no more vacuum cannot cut off error. </span></p>
+<p class="ps127"><span class="ts1">Secondly, input arm got one SRC robot error. The scenario is after pressed one cycle, input arm unloaded all device, then went to hard stop and hit the hard stop which cause SRC robot error. After much investigation, the input arm hit the hard stop is due to mountings on the input arm and the hard stop. Please kindly refer to picture &quot;input area.jpg&quot;. When input arm move to hard stop, A will move into B, so if slight misalignment of A or B, A will hit onto B or they will pose as a barrier for each other, thus causing the input arm to have a strong resistant which in turn result into SRC error. Please kindly take a look at the other two pictures for further details. Heard from Wan that these mountings were requested by NEC Japan last time. </span></p>
+<p class="ps127"><span class="ts1">Device flipping problem is due to five problems, namely counter air on time, release height, input arm Z speed , loader X way and loader Y way. After much observation, found out that both X way and Y way were out, thus did some fine tuning and flipping became better. After that played counter air on time and release height and also reduce the Z speed to 70%. The other speed still maintained at 80%. </span></p>
+<p class="ps127"><span class="ts1">After minimising the flipping problem, proceed to do Jam rate and UPH for ambient mode.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">A lot of flipping of device while doing fine tuning of devices.&nbsp; Suspect problem lies with rubber suction cup on input.&nbsp; </span><span class="ts44">Awaiting for 3x3 metal cup for Input &amp; Output Hands before continuing the buy-off.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

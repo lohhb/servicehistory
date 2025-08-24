@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0006-NS3K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10920;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0006-NS3K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7160.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10930.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: RS232 board setup in SPEL, NS-3000 ATC</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-3000 ATC (NS303)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 7 Sep 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">RS232 board setup in SPEL for NS-3000 ATC (NS303).</span></p>
+<p class="ps3"><span class="ts0">need your advise on Contec COM-4(LPCI)H RS232 board installed for NS-3000 ATC.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">I installed the Contec COM-4(LPCI)H RS232 Communication board in the PCI slot of RC520.</span></p>
+<p class="ps3"><span class="ts0">Using the COM Setup Disk Ver. 1.9 CD, I was able to install driver for this board.</span></p>
+<p class="ps3"><span class="ts0">In Windows 2k Device Manager, under [Ports(COM &amp; LPT)], Contect Communication Port COM4, COM5, COM6 &amp; COM7 was automatic added.</span></p>
+<p class="ps3"><span class="ts0">Also the [Multi-function adapter], &quot;CONTECT C0., Ltd,-COM-4(LPCI)H&quot; was added automatically, see picture below.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">For &quot;CONTECT C0., Ltd,-COM-4(LPCI)H&quot; the I/O address in Windows 2k is E400H, see picture below.</span></p>
+<p class="ps3"><span class="ts0">For &quot;CONTECT C0., Ltd,-PO-64L(PCI) the I/O address in Windows 2k is E000H, same address as in Output SPEL I/O Board #4 (7Segment LED), see picture below.</span></p>
+<p class="ps3"><span class="ts0">For the IFUN100 address, I checked in Device Manager, no conflict.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">1)&nbsp; I am not sure for the SPEL CT side,</span></p>
+<p class="ps3"><span class="ts0">a) do I change the setting of Output SPEL I/O Board #4 (7Segment LED) to same address as &quot;CONTECT C0., Ltd,-COM-4(LPCI)H&quot; that have the I/O addess E400H?</span></p>
+<p class="ps3"><span class="ts0">or b) do I add a Output SPEL I/O #5 for this &quot;CONTECT C0., Ltd,-COM-4(LPCI)H&quot;?</span></p>
+<p class="ps3"><span class="ts3">No, ATC program scan COM4 and above automatically.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Or if you have the procedure on the software installation and setup of the &quot;CONTECT C0., Ltd,-COM-4(LPCI)H&quot; in SPEL, please send to me.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2) I only need to setup on the Output I/O using HWConfe.exe right?</span></p>
+<p class="ps3"><span class="ts1">There is no need to add Input I/O for &quot;CONTECT C0., Ltd,-COM-4(LPCI)H&quot; right?</span></p>
+<p class="ps3"><span class="ts3">Yes no need to add, but you need check IFUNT100 higher address at Windows 2k and SPEL.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">3) AS for Input Bit I/O label for Input Bit 40, 41, 42 and 43, the Input I/O label &quot;ACT_COL1&quot;, &quot;ACT_COL2&quot;, &quot;ACT_COL3&quot;, &quot;ACT_COL4&quot;, do I need to key in manually in SPEL? or it automatically add in the Input labels after I install the ATC installtion CD? </span></p>
+<p class="ps3"><span class="ts3">Pls install ATC program from ATC installation CD.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps13"><span class="ts47">PCI card installation, Only effect remaining PCI cards.</span></p>
+<p class="ps13"><span class="ts47">Pls check IFUNT100 and CONTEC I/O address(check whether the addresses were changed by Windows 2000.</span></p>
+<p class="ps13"><span class="ts47">If no changes to these address by Windows 2000 then no need to change SPEL setting IFUN100 and CONTEC I/O.</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">Contec PO-64L(PCI) address in Windows 2000 must be the same as SPEL Hardware Output I/O Board for 7segmentLED</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps209"><span class="ts22">Contec COM-4(LPCI)H is Communication card for ATC temperature controllers.</span></p>
+<p class="ps13"><span class="ts22">Contec COM-4(LPCI)H appear as &quot;PCI Simple Communication Controller&quot; under [other devices] in Windows 2000 Device Manager before the correct driver is installed</span></p>
+<p class="ps13"><span class="ts64">Use </span><span class="ts46">COM Setup Disk ver. 1.9</span><span class="ts64">&nbsp;(CD by Contec) to install driver for </span><span class="ts22">Contec COM-4(LPCI)H</span><span class="ts64">&nbsp;found in CD ROM path&nbsp; </span><span class="ts116">\</span><span class="ts46">pci\comdrv\com2k_pi.inf</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts6">Contec PIO-64L in RC520&nbsp; is to control 7 segment LED panel only(for binning display).</span><br /><span class="ts6">&nbsp;This card only output signal from RC-520</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

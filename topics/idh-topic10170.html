@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0084-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10170;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0084-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10160.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10180.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:</span><span class="ts20">&nbsp;</span><span class="ts24">Xilinx- NS8080 Load cell check</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 17 Jul 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Unable to complete load cell check as reading on the logger is too low(2.5~3.5 kgf) compared to actual settings(5kgf). </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">1. Try out 2 sets for Quad SLK for HMI setup of 5kgf device per device in NS-8080, found out pressure displayed in TEAC transducer indicator showing only 2.8kgf for Arm 1 and 3.1kgf for Arm 2. Another set of SLK also low pressure.</span></p>
+<p class="ps3"><span class="ts1">2. Verified Quad SLK in NS-7080W also pressure low, found out air leakage at compliance cylinder gasket areas. Inform to customer and was told to do checking again after they sent out their Quad SLK to K.A for servicing.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">Using Xilinx's Teac load cell and quad layout kit, perform contact force check(quad site, enable site A).</span></p>
+<p class="ps3"><span class="ts1">When set for contact force for 5kgf in MMI Contact but load cell monitor should 2.9kf when in contact.</span></p>
+<p class="ps3"><span class="ts1">Need to use Load cell at getech office to confirm whether load cell AD converter have problem because this Teac load cell AD converter has not been calibrated for at least 5 years.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts31">21 Jul 2009 NS-8080 (S/N: 181523)</span></p>
+<p class="ps3"><span class="ts1">1. Brought in 1 set of 80x60 SLK and 80x60 transducer plate from Getech Office.</span></p>
+<p class="ps3"><span class="ts1">2. Using Xilinx's load cell checker and transducer and carried out load cell check on NS-8080, but found out contact force pressure still low, 3.1kgf for both index arms. Suspect Xilinx's load cell checker may be due for calibration. </span></p>
+<p class="ps3"><span class="ts51">Remarks: Will bring in Getech's keyence load cell checker to check contact force again.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">23 Jul 2009 NS-8080 (S/N: 181523)</span></p>
+<p class="ps3"><span class="ts1">1. Carried out load cell check with Getech's Keyence load cell checker and transducer.</span></p>
+<p class="ps3"><span class="ts1">2. Performed contact force check according to Xilinx's requirements of 5kgf, 10kgf and 20kgf per device.</span></p>
+<p class="ps3"><span class="ts1">3. Measured both Index arms' site A to D. </span></p>
+<p class="ps3"><span class="ts51">Remarks: Both index arms passed within spec of +/- 1.5kgf per site</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+</body>
+</html>

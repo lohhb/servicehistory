@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0002-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 260;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0002-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+        <p class="ps125"><span class="ts5">&nbsp;&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="ns60000001.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic330.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: Output Arm Hand up error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC-520CE</span></p>
+<p class="ps3"><span class="ts0">Date: 31 Dec 2007</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">After press HOME for first time NS-6040 able to HOME.</span></p>
+<p class="ps3"><span class="ts0">The second time press HOME, after Input Arm HOME completed, Output Arm's Hand 1 &amp; 2 move up and down one time then up and down again, MMI issue HOME sensor did not turn off, Output Arm X &amp; Y Axis did not move. </span></p>
+<p class="ps3"><span class="ts0">In SPEL 95 ver 2.5, able to MCAL or HOME for robot 3(output Arm), this was tried out many times.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">- Check whether output arm Hand 1 &amp; 2 Hand Up sensor(HOME) LED cut off when Hand 1 &amp; 2 are pull up to cut it's sensor, ok </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">- In SPEL I/O monitor, Output Hand 1 &amp; 2's Hand up sensor (HOME) display on screen did not turn on when the Output Hand 1 &amp; 2 are at it's HOME position. </span></p>
+<p class="ps3"><span class="ts0">Output Hand 1 Hand up sensor is In 58, Output Hand 2 Hand up sensor is In 59.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Similarly, in I/O monitor, for Input Arm, it Hand 1 &amp; 2's Hand up sensor display on screen did not turn on when Input Hand 1&amp; 2 are at it's HOME position. </span></p>
+<p class="ps3"><span class="ts0">Input Hand 1 Hand up sensor is In 68, Input Hand 2 Hand up sensor is In 70.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">- Check I/O connector I/O 1 and I/O 2 connectors that are behind the SRC520CE controller, found that I/O connector I/O 1 and I/O 2 connectors were connected to the wrong port.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts1">Found out that the I/O connector I/O 1 and I/O 2 connectors were connected wrongly behind the SRC520CE controller.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">I/O 1 connect to</span></p>
+<p class="ps3"><span class="ts0">- Index I/O (IN 48 ~ 55, OUT 48 ~ 63)</span></p>
+<p class="ps3"><span class="ts0">- Input Arm I/O (IN 64 ~ 79, OUT 64 ~ 78)</span></p>
+<p class="ps3"><span class="ts0">- Output Arm I/O (IN 56~63)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Same situation as </span><a href="idh-topic5580.html" class="hs0">0013-NS6K</a><span class="ts0">.</span></p>
+<p class="ps3"><span class="ts0">I/O 2 connect to</span></p>
+<p class="ps3"><span class="ts0">-Output Arm Out (IN 58 ~ 63, OUT 80 ~ 95)</span></p>
+<p class="ps3"><span class="ts0">- Shuttle In (IN 80 ~ 111)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0014-NX1032XS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18750;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0014-NX1032XS</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18740.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18760.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: </span><span class="ts24">Xilinx NX1032XS Dynamic ESD EM AWARE evaluation</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NX1032XS (S/N: 182347)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 00504), DUBOX030 (S/N: 100004), PSUNT353 (P892) </span></p>
+<p class="ps3"><span class="ts0">Date: 31 Jan ~ 1 Feb 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Xilinx NX1032XS Dynamic ESD EM AWARE evaluation.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps144"><span class="ts0">SEC Toyoki Tanaka installed ferrite cores to: </span><br /><span class="ts0">-power cables of SLK </span><br /><span class="ts0">-power cable before distribution to circuit breakers in PSUNT</span><br /><span class="ts0">&nbsp;-Heater power cables after circuit breakers(above handler) for SLK heaters</span><br /><br /><span class="ts0">&nbsp;Still have ESD events. </span><br /><br /><span class="ts0">-Enable only Test Arm 2 </span><br /><span class="ts0">-Grounding wire still connect to Index Test Hand </span><br /><span class="ts0">-Socket Layout Kit (SLK) from EPSON attached to Test Arm 2 (With or without Aluminum tape shield on SLK has effect on noise) </span><br /><span class="ts0">-Connect extra grounding wire to Input Shuttle 2's slide plate top surface </span><br /><span class="ts0">-shield the Input Shuttle 2's Heat Insulation Plate (that cover the slide plate) surrounding with Aluminum tape </span><br /><span class="ts0">- Socket Guide Jig attached with Socket heaters enabled </span><br /><span class="ts0">- Heat up to 80DegC hot mode </span><br /><span class="ts0">- Dry Run without device at 80% speed </span><br /><span class="ts0">- Observed no events for interval of 2 mins and 5 mins. </span><br /><br /><span class="ts0">-removed Grounding wire from both Index Test Hand </span><br /><span class="ts0">-swapped back to original Socket Layout kit (SLK), no shield on SLK </span><br /><span class="ts0">-shield the Both Input Shuttles's Heat Insulation Plate (that cover the slide plate) surrounding with Aluminum tape </span><br /><span class="ts0">-remove ground wire on Socket Guide jig </span><br /><span class="ts0">Ambient mode run with devices, for 30 mins with 11 events </span><br /><br /><span class="ts0">-put back ground to socket Guide jig </span><br /><span class="ts0">Ambient mode run with devices, for 20 mins with 9 events </span><br /><br /><span class="ts0">-ground wire go around Input Shuttles 2's Heat Insulation Plate (that cover the slide plate) and shield with Aluminum tape </span><br /><span class="ts0">-shuttle 2 enabled only </span><br /><span class="ts0">Ambient mode run with devices, for 15 mins with 2 events (significant reduction in ESD event)</span></p>
+<p class="ps145"><br />&nbsp;</p>
+<p class="ps144"><span class="ts0">6 Feb 2013</span><br /><span class="ts0">&nbsp;A. Repeatable check for Ambient mode.</span></p>
+<p class="ps144"><span class="ts0">1. Both shuttle mode.</span></p>
+<p class="ps144"><span class="ts0">2. Contact Blade: Index1: PEEK / Index2 Semitron</span></p>
+<p class="ps144"><span class="ts0">3. With Dock plate.</span></p>
+<p class="ps144"><span class="ts0">4. NO Load board.</span></p>
+<p class="ps144"><span class="ts0">5. Sticked AL tape ON </span></p>
+<p class="ps144"><span class="ts0">6. </span><span class="ts3">Grounding wires on compliance unit for each test head</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">B. Hot mode check.</span></p>
+<p class="ps144"><span class="ts0">1. Both shuttle mode.</span></p>
+<p class="ps144"><span class="ts0">2. Contact Blade: Index1: PEEK / Index2 Semitron</span></p>
+<p class="ps144"><span class="ts0">3. With Dock plate.</span></p>
+<p class="ps144"><span class="ts0">4. NO Load board.</span></p>
+<p class="ps144"><span class="ts0">5. Sticked AL tape ON </span></p>
+<p class="ps144"><span class="ts0">6. </span><span class="ts3">Grounding wires on compliance unit for each test head</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">Both of Ambient &amp; Hot mode, we managed to get </span><span class="ts36">ZERO event for 60 min.</span></p>
+<p class="ps144"><span class="ts0">Please refer to the attached files.</span></p>
+<p class="ps144"><span class="ts0">We still have temperature issue and we are going to modify the design of the contact blade.</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">6~8 Feb 2013Ambient mode with devices:</span></p>
+<p class="ps140"><span class="ts0">1.&nbsp; &nbsp;Both shuttle mode.</span></p>
+<p class="ps140"><span class="ts0">2.&nbsp; &nbsp;Contact Blade: Index1: PEEK / Index2 Semitron</span></p>
+<p class="ps140"><span class="ts0">3.&nbsp; &nbsp;</span><span class="ts3">With Dock plate(socket guide base jig) grounding</span><span class="ts0">.</span></p>
+<p class="ps140"><span class="ts0">4.&nbsp; &nbsp;NO Load board.</span></p>
+<p class="ps140"><span class="ts0">5.&nbsp; &nbsp;Sticked AL tape on heat insulation plate for</span><span class="ts1">&nbsp;Input </span><span class="ts0">Shuttle2</span></p>
+<p class="ps140"><span class="ts0">6.&nbsp; &nbsp;</span><span class="ts3">Grounding wires on compliance unit for each test head</span><span class="ts0">Result: 0 event in 60min</span><br /><span class="ts0">Hot mode devices:</span></p>
+<p class="ps140"><span class="ts0">1.&nbsp; &nbsp;Both shuttle mode.</span></p>
+<p class="ps140"><span class="ts0">2.&nbsp; &nbsp;Contact Blade: Index1: PEEK / Index2 Semitron</span></p>
+<p class="ps140"><span class="ts0">3.&nbsp; &nbsp;</span><span class="ts3">With Dock plate(socket guide base jig) with grounding</span><span class="ts0">.</span></p>
+<p class="ps140"><span class="ts0">4.&nbsp; &nbsp;With Load board.</span></p>
+<p class="ps140"><span class="ts0">5.&nbsp; &nbsp;Sticked AL tape on heat insulation plate for Input Shuttle2</span></p>
+<p class="ps140"><span class="ts0">6.&nbsp; &nbsp;</span><span class="ts3">Grounding wires on compliance unit for each test head</span></p>
+<p class="ps140"><span class="ts0">7.&nbsp; &nbsp;</span><span class="ts3">AL shield above the flexible cable chain for Output Shuttle 2</span><span class="ts0">Result: 0 events in 60mins</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">1 Feb 2013</span></p>
+<p class="ps3"><span class="ts0">The following helps to remove ESD events:</span></p>
+<p class="ps3"><span class="ts0">- Aluminum tape shield on the Heat Insulation Plate for Input Shuttle 2</span></p>
+<p class="ps3"><span class="ts0">- Grounding to individual compliance unit cylinder on Socket Layout Kit</span></p>
+<p class="ps3"><span class="ts0">- Aluminum tape shield above Output Shuttle 2 flexible cable chain</span></p>
+<p class="ps2"><img width="542" height="439" border="0" src="images/0014-nx1032xsb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">6 Feb 2013</span></p>
+<p class="ps3"><span class="ts0">Grounding wire added for each compliance unit of SLK helps to reduce the ESD event to 0 for Test site.</span></p>
+<p class="ps3"><span class="ts0">Ground added to socket guide base jig (docking plate).</span></p>
+<p class="ps2"><img width="287" height="262" border="0" src="images/0014-nx1032xsb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">8 Feb 2013</span></p>
+<p class="ps3"><span class="ts0">Aluminum shield above the flexible cable chain for Output Shuttle 2 helps to reduce ESD event to 0 for Output area.</span></p>
+<p class="ps2"><img width="538" height="399" border="0" src="images/0014-nx1032xsb3.jpg" /></p>
+<p class="ps2"><img width="512" height="389" border="0" src="images/0014-nx1032xsb4.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts1">Xilinx has</span><span class="ts0">&nbsp;specified change kit as Black hard anodize for slow-leaking of charge, </span></p>
+<p class="ps144"><span class="ts0">but Epson&rsquo;s opinion is this should be coated by Electroless Nickel (EN coating) for preventing charge.</span></p>
+<p class="ps144"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts0">For Xilinx, for Change kit coating as long as it meets the below specs:</span></p>
+<p class="ps144"><span class="ts0">Change Kit surface resistivity readings must be within specs of 1 x 10</span><sup><span class="ts0">5</span></sup><span class="ts0">&Omega; &lt; R &lt; 1 x 10¹¹&Omega;</span></p>
+<p class="ps145"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

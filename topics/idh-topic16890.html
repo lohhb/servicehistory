@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0366-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 16890;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0366-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic16880.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic16900.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 Output Hand X pitch open at 83mm</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS8080 (S/N: 182097 , IDT(M))</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 14 Jul 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">IDT(M) new NS-8080 Output Hand X pitch open at 83mm.</span></p>
+<p class="ps2"><img width="852" height="480" border="0" src="images/0366-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="192" height="130" border="0" src="images/0366-ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">Please backup point data. </span></p>
+<p class="ps127"><span class="ts0">1) Was setup file import from another handler or created new from this handler? </span></p>
+<p class="ps127"><span class="ts0">2) Did you try to delete and create new setup file based on EPSON default 5x5? </span></p>
+<p class="ps127"><span class="ts0">3) Variable pitch offset for output arm is 0? </span></p>
+<p class="ps127"><span class="ts0">4) Did you try to use EPSON default setup file? </span></p>
+<p class="ps127"><span class="ts0">83mm looks too big to be mechanical alignment issue unless hand bent? </span></p>
+<p class="ps127"><span class="ts0">It maybe just hand pitch point data out. (check robot 8 Output Hand Open/close SPEL Point)</span></p>
+<p class="ps127"><span class="ts0">1) Using shuttle 80x60 alignment jig, check if at least A&amp;B or C&amp;D is correct alignment. I don't think you can align mechanically for 3mm offset. Don't align mechanical yet. Just check if it is A,B in and C,D out or C,D in and A,B out for x direction. </span></p>
+<p class="ps127"><span class="ts0">2) Refer to teaching manual for NS8000 to teach hand pitch for output arm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Wrong metal cone used(above cone is for NS-6000), but this is not the cause.</span></p>
+<p class="ps3"><span class="ts3">Problem due to customer import setup file from another handler, so this setup file corrupted caused output hands open at 83mm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts1">After MCAL, Input and Output Hands should open to 80mm&nbsp; which is equivalent to 0 pulse.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

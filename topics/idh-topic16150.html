@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0341-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 16150;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0341-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic16140.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic16160.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: STM NS-8080 Octal site double devices sensor upgrade issue</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 23 May 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">-STM NS8080 Octal site double unit sensor upgrade </span></p>
+<p class="ps3"><span class="ts0">EP-03 s/n:181868</span></p>
+<p class="ps3"><span class="ts0">-Octal site double unit sensor bracket installation.</span><br /><span class="ts0">&nbsp;-Fiber sensor installation.</span><br /><span class="ts0">&nbsp;-HIM upgrade to Ver10.20MSM.</span><br /><span class="ts0">&nbsp;-Spel and HMI IO lable changed for docking sensor.</span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1)Received the OMRON digital fiber sensor E3X-MDA Series.</span><br /><span class="ts0">&nbsp;found that the sensor amplifier wire has only 2 wires with one output and one 0V. It is supposed to come with 4 wires with 2 output and one 24V and one 0V.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2)Encountered high frequents of detection errors at output shuttle.</span></p>
+<p class="ps3"><span class="ts0">-Decreased index arm counter air to 0.1sec but error still persist.</span></p>
+<p class="ps3"><span class="ts1">-Detection errors solved after decreased release height by 0.5mm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3)Found the output shuttle 1 sensor amp display have been changed to analog.</span></p>
+<p class="ps3"><span class="ts0">-Digital display solved after Initialize sensor amp to default setting.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">4) using GP-IB tester interface Advance type 1 - 4 sockets passed and 4 sockets failed with &ldquo;ERROR&rdquo; Bin. </span><br /><span class="ts0">-After changed to Epson type M, the &ldquo;ERROR&rdquo; Bin was solved.</span><br /><span class="ts0">&nbsp;-Units passed on socket hand test but found high frequents open bin 6 during docking with tester.</span></p>
+<p class="ps3"><span class="ts0">-Found socket sensor bracket touched with load board and it caused the open bin.</span></p>
+<p class="ps3"><span class="ts0">-Open bin solved after isolated the socket sensor bracket which touched the load board.</span></p>
+<p class="ps3"><span class="ts0">-I will swap back the existing socket sensor bracket by Monday.</span></p>
+<p class="ps3"><span class="ts0">Octal site socket sensor upgrades EP-03.</span></p>
+<p class="ps3"><span class="ts0">-Open bin solved after swapped back to the existing socket sensor bracket. (I think is because of the docking is not co-planar).</span></p>
+<p class="ps3"><span class="ts0">-Checked socket sensor functionality. - passed.</span></p>
+<p class="ps3"><span class="ts0">-Encounter GPIB category errors during re-test rejected units with GPIB tester interface with Epson type M.</span></p>
+<p class="ps3"><span class="ts0">-GPIB category error solved after Re-installed tester driver.</span></p>
+<p class="ps3"><span class="ts0">-Currently GPIB tester interface using Advance type 1.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Quad site EP-02 </span></p>
+<p class="ps3"><span class="ts0">-Customer feedback that they encountered high frequents error at input arm &ldquo;hand-up sensor doesn&rsquo;t turn on&rdquo;. (Hand D)</span></p>
+<p class="ps3"><span class="ts0">-Hand height calibration for input arm but error still persists.</span></p>
+<p class="ps3"><span class="ts0">-Error solved after changed the hand D hofs value.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts1">Refer procedure in </span><a href="idh-topic10880.html" class="hs0">0098-NS8K</a><span class="ts3">.</span></p>
+</body>
+</html>

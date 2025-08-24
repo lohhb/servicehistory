@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0104-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 16030;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0104-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic16020.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic16040.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Time stamp error after installing MMI</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-6040</span></p>
+<p class="ps3"><span class="ts1">Controller: SRC520 Win95</span></p>
+<p class="ps3"><span class="ts1">Date: 30 Jan 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps126"><span class="ts0">After ver 12.11 NS6000 MMI software installed in our NS6000, when run NS-6000 software, encountered Time Stamp error.</span></p>
+<p class="ps6"><img width="458" height="173" border="0" src="images/0104-ns6kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps144"><span class="ts0">1. Open C:\NS6000\config\Ver.dat file.</span></p>
+<p class="ps144"><span class="ts0">2. Look for affected ( incorrect) line which is shown the pop window.</span></p>
+<p class="ps144"><span class="ts0">3. Change the YYYY:MM:DD,HH:MM:SS from Original to current.</span></p>
+<p class="ps144"><span class="ts0">Eg: BASE ON YOUR ATTACHED PICTURE.</span></p>
+<p class="ps144"><span class="ts0">C:\\WINDOWS\SYSTEM\COMDLG32.OCX.1999:07:20,01:00:30</span></p>
+<p class="ps144"><span class="ts0">Change to</span></p>
+<p class="ps144"><span class="ts0">C:\\WINDOWS\SYSTEM\COMDLG32.OCX.2000:05:22,01:00:00</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">According to EPSON, 12.11 only run in win2000, Win95 is not supported.</span></p>
+<p class="ps2"><span class="ts6">2D reader function start from X12.11</span></p>
+<p class="ps3"><span class="ts3">But existing NS-6000 operating system is Win95.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">20 Feb 2013</span></p>
+<p class="ps3"><span class="ts0">AMD installed MMI ver 3.0e to NS-6000 so as to return Handler back to China.</span></p>
+<p class="ps3"><span class="ts0">When MMI ver 3.0e launched, it pops up &quot;Run-time error '9': Subscript out of range.&quot; error message as below, it does not affect handler operation (pick &amp; place, binning, GPIB communication in Dry run mode with tester online)</span></p>
+<p class="ps2"><img width="447" height="284" border="0" src="images/0104-ns6kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">According to EPSON said, &ldquo;Run-time error &ldquo;9&rdquo; error is related with Windows OS.</span></p>
+<p class="ps3"><span class="ts0">Maybe be this error will not have any affected in production running.</span></p>
+<p class="ps3"><span class="ts0">Possible cause will be HDD. &ldquo;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

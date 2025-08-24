@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0101-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10950;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0101-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10900.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10960.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: &quot;Index vacuum unit P2 setting&quot; Chattering error of NS-8040</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040 (S/N:181207)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date:</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">During buyoff,</span><span class="ts0">&nbsp;usg Quad site kit with adaptor for M2900 package, after Clean Out or One Cycle, Index Arm 1 check on socket cause Device chattering error, Retry, ok after that Index Arm 2 check on socket also Device chattering error.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">- Removed c/k from Index Arms, dry run, no error.</span></p>
+<p class="ps3"><span class="ts0">- Install only c/k for Index Arm 1 dry on, chattering error for Arm 1.</span></p>
+<p class="ps3"><span class="ts0">- Install only c/k for Index Arm 2 dry run, no error</span></p>
+<p class="ps3"><span class="ts0">- In Mode-Up, P2 setting, change value 6 to 10 also have chattering error,</span></p>
+<p class="ps3"><span class="ts0">&nbsp;increase P2 to 15, chattering error occurred one time.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Due to old design of Index vacuum, need to increase P2 to 40 to prevent chattering error at Index after Clean Out or One Cycle.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">17 Dec 2009 email from Serizawa Hiroaki through Ogata-san email:</span></p>
+<p class="ps3"><span class="ts0">Subject:&nbsp; Technical information for &quot;Index vacuum unit P2 setting&quot; of NS8040 </span></p>
+<p class="ps3"><span class="ts0">&lt;Contents&gt; </span></p>
+<p class="ps3"><span class="ts0">Countermeasure for &quot;INDEX unit device pick-up chattering error (J0309 and J0310). </span></p>
+<p class="ps3"><span class="ts0">This trouble happen on condition that NS-8040 manufactured in 2006 to 2007 and when install common software of NS8040/NS8080.</span></p>
+<p class="ps3"><span class="ts0">NS8040 handlers manufactured in 2006 to 2007, chattering error occurs when the Index vacuum unit P2 is turned ON.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Countermeasure is P2 value change from +6 to +40. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Please see attached PDF file and please inform to your service member. </span></p>
+<p class="ps3"><span class="ts0">&lt;&lt;e_NS8000_Index Vacuum Sensor_P2.pdf&gt;&gt; </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">The&nbsp; reason: Some of the handler wiring P2 output and wrong assignment in uniwire.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P2 connect to Uniwire&nbsp; </span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; But uniwire assign some of wrong.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Temporary solution: Set P2 more than 40 KPa</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; Please change the value especially the occurred handler </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">We tried in our factory handler. We found some of the handler is reached around 36Kpa.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">P2 not used but is wired. To remove wire as advised by EPSON</span></p>
+<p class="ps3"><span class="ts0">New NS8080 and NS8080H have the wire removed from factory side</span></p>
+<p class="ps3"><span class="ts0">EPSON has conclusion on the P2 issue for index arm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Solution is some changes to hardware I/O module dipswitch settings Hidaka-san feels it is easier to change current P2 settings to 40.</span></p>
+<p class="ps3"><span class="ts0">So, in view of any potential customer questions,</span></p>
+<p class="ps3"><span class="ts0">1) All new handlers will now be set to 40 for P2.</span></p>
+<p class="ps3"><span class="ts0">2) Any new vacuum unit purchased, japan will set it to 40 for P2.</span></p>
+<p class="ps3"><span class="ts0">3) In this case, if new unit changed, it will already be set to 40 for P2.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">For us:</span></p>
+<p class="ps3"><span class="ts0">1) Current handler to change P2 value to 40.</span></p>
+</body>
+</html>

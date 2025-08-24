@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0066-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 6810;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0066-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic6800.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic6820.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS7080W SRC error on empty tray arm and index arm.</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W (STATS ChipPac Ltd,S/N: 121281)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 13~15 May 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">SRC error on Empty tray arm and Index arm.</span></p>
+<p class="ps3"><span class="ts0">Tracing through the event log, found out that the SRC error might due to tray pick up error.&nbsp; The scenario (from event log) was that there is tray pick up error, then the operator pause the handler and open the side door and after that they started the handler and SRC error occurred. They might have moved the empty tray arm when they opened the side door to correct the tray pick up error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">After confirming that there was no abnormality (e.g. bent, dent and etc) on the empty tray arm, pressed &ldquo;HOME&rdquo;, and saw that empty tray arm hit on the hard stop and SRC error came on.&nbsp; Did a &ldquo;OFF&rdquo;, &rdquo;ON&rdquo; on the handler and tried &ldquo;HOME&rdquo; again and the same thing happened. 2 errors occurred, they were namely, error 5040 &ndash; Torque error in the High-power state and error 5041- Torque error in the Low-power state.&nbsp; These 2 errors are common when SRC error occurred.</span></p>
+<p class="ps3"><span class="ts0">Use POS data from backup, still hit hard stop.</span></p>
+<p class="ps3"><span class="ts0">Use &ldquo;J/T&rdquo; in SPEL CT to move empty tray arm to P44, still got the error.</span></p>
+<p class="ps3"><span class="ts0">Teaching carried out, but still hit hard stop.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Following checks carried out:-</span></p>
+<p class="ps3"><span class="ts0">- if the arm moves around smoothly when it is moved around by hands,</span></p>
+<p class="ps3"><span class="ts0">- if the arm's movement is tight and secure when it is moved around by hands,</span></p>
+<p class="ps3"><span class="ts0">- is there is any hitches with the arm when it is moved around by hands,</span></p>
+<p class="ps3"><span class="ts0">- if the belt is slackened,</span></p>
+<p class="ps3"><span class="ts0">- check if the manipulator's arm is not colliding with the peripheral units around, and</span></p>
+<p class="ps3"><span class="ts0">- check on the power cables inside the manipulator for any loose pins, cable disconnection or short-circuit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Did an encoder reset and calibration of ABS motor and problem solved.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Finally, &ldquo;home&rdquo; pressed and empty tray arm can home with no problem,</span></p>
+<p class="ps3"><span class="ts1">but index arms both cannot home and both arms instead of move up, they moved all the way down and a 'bang' sound was heard.&nbsp; There is no SRC error at all.&nbsp; Suspect 0 pulse position for both index arms were out, index arm encoder was reseted and abs motor calibrated.&nbsp; Did &ldquo;home&rdquo; again, everything was good.&nbsp; Tried a 2</span><sup><span class="ts1">nd</span></sup><span class="ts1">&nbsp;times, both the index arms cannot home and extended fully downwards.&nbsp; AGAIN reset encoder and calibrated the motor, everything was good again. Tried a few times Homing, everything was good.</span></p>
+<p class="ps3"><span class="ts1">Set up 20x20 package and run 7 trays of dummies, everything was good.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Empty arm crashed and cause SPEL point out of position.</span></p>
+<p class="ps3"><span class="ts0">Empty tray arm motor encoder reset and calibration solved the problem.</span></p>
+</body>
+</html>

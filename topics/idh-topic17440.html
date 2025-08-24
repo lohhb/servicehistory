@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0339-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17440;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0339-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17430.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17450.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Xilinx NS-7080W NS7KW-08 Door Open error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W (NS7KW-08)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 2~3 Feb 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">Xilinx NS-7080W NS7KW-08 Door Open error.</span></p>
+<p class="ps2"><img width="527" height="362" border="0" src="images/0339-ns7kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts1">2 </span><span class="ts0">Feb 2012: </span><br /><span class="ts0">Check the following: </span><br /><span class="ts0">1) All doors able to close fully and no loose connection of door connectors. Ensure safety door key able to insert correctly into the Safety door switch </span><br /><span class="ts0">2) Ensure behind the Drive unit, the Emergency Connectors are connected fully. </span><br /><span class="ts0">3) In SPEL, check Input Bit 241 (Safety Door switch monitor) is ON when all doors are closed. </span><br /><span class="ts0">4) In SPEL, check Input Bit 252 (24V-2 monitor) is ON </span><br /><span class="ts0">5) Multimeter check that 24Vdc for door on XC911A, XC912A, XC913A, XC914A, XC915A and XC916A (see pg 1, Sheet No. SKH0755-A21) </span><br /><span class="ts0">6) Resistance check on the Safety door switch's connector wires(6 wires) XC911A, XC912A, XC913A, XC914A, XC915A and XC916A </span><br /><span class="ts0">7) Make sure breaker CB11 for 24V-1 is not trip(see wiring diagram pg 7, Sheet No. SKH0755-B01) </span><br /><span class="ts0">8) In MMI, change to other setup file. </span><br /><br /><span class="ts0">3 Feb 2012: </span></p>
+<p class="ps127"><span class="ts0">Refer NS-7000 series Wiring Diagrams manual Rev.4, Page 1, Drawing No. Wiring 1, Sheet No. SKH0755-A21</span></p>
+<p class="ps127"><span class="ts0">For each of the connector(XC911A, XC912A, XC913A, XC914A, XC915A, XC916A), disconnect the connector.</span></p>
+<p class="ps127"><span class="ts0">Measure the resistance for the Safety Door switch connector side between the wires at the connector based on the table below:</span></p>
+<p class="ps2"><img width="564" height="393" border="0" src="images/0339-ns7kb2.jpg" /></p>
+<div class="block0" align="left">
+  <table class="tbl28">
+    <tr class="row0">
+      <td class="cell0" colspan="3">
+        <p class="ps5"><span class="ts11">OMRON D4GS-N4R Safety Door Switch</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts11">Resistance WITHOUT bypass key</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts11">Resistance WITH bypass key</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Blue &amp; Blue-White wire</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Open circuit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">0 ~ 1.5 ohms</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Brown &amp; Brown-White wire</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Open circuit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">0 ~ 1.5 ohms</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Orange &amp; Orange-White wire</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">Open circuit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps5"><span class="ts5">0 ~ 1.5 ohms</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps127"><span class="ts0">The above is to check that each Safety Door Switch is functional and not faulty.</span></p>
+<p class="ps127"><span class="ts0">Did you check in SPEL, Input Bit 241 (Safety Door switch monitor) is ON when all doors are closed?</span><br /><span class="ts0">&nbsp;Customer informed door open error was due to rear left safety door switch key not insert fully in the safety switch.</span></p>
+<p class="ps127"><span class="ts0">Problem solved after realign the entire safety switch. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Misalignment of safety switch at rear door of NS-7080W.</span></p>
+</body>
+</html>

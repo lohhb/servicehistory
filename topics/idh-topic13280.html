@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0253-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13280;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0253-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13270.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13290.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7080W hang during Auto Run at Hot mode 90DegC, MMI status show &quot;Pause&quot;. In SPEL CT error history shows &quot;Unknown error!&quot;, Function AM_IDX_IF. Index Arm 1 at socket</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W(S/N: 121040; NS7KW-06) </span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 01-20283)</span></p>
+<p class="ps3"><span class="ts0">Date: 2 Sep 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Handler suddenly hang during Auto Run at Hot mode 90DegC, MMI status show Pause. In SPEL CT error history shows &quot;Unknown error!&quot;, Function AM_IDX_IF. Index Arm 1 at socket.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps130"><span class="ts0">-Replaced to new 2.5&quot; 40GB HDD</span></p>
+<p class="ps130"><span class="ts0">-Software Recovery by Recovery CD Ver 1.20 as stated in EPSON Factory certificate, but did not work</span></p>
+<p class="ps130"><span class="ts0">-Software Recovery by Recovery CD Ver 1.0 FD04S050 (EasyRestore)</span></p>
+<p class="ps130"><span class="ts0">-After restart Handler, Windows 2000 detect Multifunction adapter for CONTEC PO-64L(PCI) - for Automat 7Segment LED display, NStask bar loading but hang, mouse cannot move</span></p>
+<p class="ps130"><span class="ts0">-Force restart handler, press F8 and go to Safe Mode for Windows 2000</span></p>
+<p class="ps130"><span class="ts0">-In safe mode, remove NS-task short cut from Program-&gt;Start</span></p>
+<p class="ps130"><span class="ts0">-Restart Handler</span></p>
+<p class="ps130"><span class="ts0">-launch C:\PSPELWORK\exe\HWConfe.exe, check Windows 2000 Device Resources for IFUNT100(Input/Output Range lower address), CONTEC Co.,Ltd.-PIO-32/32L(PCI) &amp; CONTEC PO-64L(PCI) address to same as in SPEL I/O Board respective address</span></p>
+<p class="ps130"><span class="ts0">-Add SPEL I/O Output card for Contec 64L card</span></p>
+<p class="ps130"><span class="ts0">-Re-install SPEL CT to 2.81b1H</span></p>
+<p class="ps130"><span class="ts0">-Upgrade MMI to 8.10-SXC</span></p>
+<p class="ps130"><span class="ts0">-Restore SPEL System data, Pose data and MMI setup files</span></p>
+<p class="ps130"><span class="ts0">-Cycle run handler at 90DegC</span></p>
+<p class="ps130"><span class="ts0">-Shuttle.res error when click Shuttle in UnitSet</span></p>
+<p class="ps130"><span class="ts0">-Copy Shuttle.res from NS7KW-08(in C:\NS7000\Localize\Env\English) and overwrite in this handler, ok</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Faulty 2.5&quot; HDD.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">2.5&quot; HDD without OS, R13A110401000</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Automat installed in August 2010</span></p>
+<p class="ps3"><span class="ts0">RC520 S/N: 01-20283</span></p>
+<p class="ps3"><span class="ts0">DUBOX010 S/N: 250203NF</span></p>
+<p class="ps3"><span class="ts0">CPU Board SPI-6941, 3 PG Board(C-864v1) on RC520 Rear-Left</span></p>
+<p class="ps3"><span class="ts0">Contec Co.,Ltd.-PIO-32/32L(PCI)</span></p>
+<p class="ps3"><span class="ts0">Contec Co.,Ltd.-PIO-64L(PCI)</span></p>
+<p class="ps3"><span class="ts0">MMI 8.10-SXC&nbsp;&nbsp; SPEL CT 2.81b1H</span></p>
+<p class="ps3"><span class="ts0">40GB HDD</span></p>
+<p class="ps3"><span class="ts0">Cannot use Recovery CD Ver 1.2 : SPI-6941 + PG Board C-873 +Win2k</span></p>
+<p class="ps3"><span class="ts0">Use Recovery EasyRestore CD 1.0 : SPI-6941&nbsp; + PG Board C-864v1+Win2k</span></p>
+<p class="ps3"><span class="ts0">Maybe type of PG Board used will also affect which Recovery CD version to use.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">FD04S050&nbsp;&nbsp; Ver 1.0</span></p>
+<p class="ps3"><span class="ts0">NS-7000 Recovery CD Ver1.00 (SPEL CT 2.81b, MMI 1.1c4)</span></p>
+<p class="ps3"><span class="ts0">SPI-6941&nbsp; + PG Board C-864v1+Win2k</span></p>
+<p class="ps3"><span class="ts0">2004/12/24</span></p>
+</body>
+</html>

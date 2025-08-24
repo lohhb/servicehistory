@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0127-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11460;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0127-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11450.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11470.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8040 During ONLINE Production hang up</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040(NS-102)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 29 Dec 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-102 with WFWLB183/217 setup for production run to replace NS-002, NG.</span></p>
+<p class="ps3"><span class="ts0">Handler issue Input Arm out of range error during Hand D trying to pickup device at loader tray(after place device at Input Shuttle 1 &amp; 2).</span></p>
+<p class="ps3"><span class="ts3">HMI error: Input Arm&quot;,&quot;WAR0199&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;00&quot;,&quot;Robot controller (RC520) error occurs.</span></p>
+<p class="ps3"><span class="ts3">SPEL error: I-2031&nbsp;&nbsp;&nbsp; The subscription of Array Variable is out of the user-defined range</span><span class="ts0">.</span></p>
+<p class="ps3"><span class="ts0">Handler hang up.</span></p>
+<p class="ps3"><span class="ts0">Symptom is similar to error occurred when NS-101 go ONLINE, but OFFLINE no hang up.</span></p>
+<p class="ps3"><span class="ts0">Re-install HMI F8.12-SIS, changed I/F to INFINEON typeA.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts3">Bug for Real Time Command error.</span></p>
+<p class="ps3"><span class="ts3">HMI ver 2.5 will remove the bug.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">The following errors in SPEL:</span></p>
+<p class="ps3"><span class="ts0">1) I-2031&nbsp;&nbsp;&nbsp; The subscription of Array Variable is out of the user-defined range.</span></p>
+<p class="ps3"><span class="ts0">2) T-4102&nbsp;&nbsp;&nbsp; The Drive Unit power is not turned on.&nbsp; </span></p>
+<p class="ps3"><span class="ts0">3) T-4003&nbsp;&nbsp;&nbsp; Communication error within the Motion Control Module.</span></p>
+<p class="ps3"><span class="ts0">4) Error G-7101&nbsp;&nbsp;&nbsp; Unknown Error !! </span></p>
+<p class="ps3"><span class="ts0">are the same that occurred in </span><a href="idh-topic10200.html" class="hs0">0087-NS8K</a><span class="ts0">&nbsp;and </span><a href="idh-topic11440.html" class="hs0">0125-NS8K</a></p>
+</body>
+</html>

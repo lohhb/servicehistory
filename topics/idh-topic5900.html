@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0013-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 5900;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0013-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic5710.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic5830.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Technical Support Notes</span></p>
+<p class="ps179"><span class="ts24">Subject: NS-8080 Hotplate engraved X-Pitch 26.66mm(79mm Hand pitch issue)</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080 S/N: 181417 (STATSChippac, evaluation)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 1 Feb 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">At SCS, during NS8080 evaluation, for QFN 4x4.5 fine tuning, the Input arm Hand pitch was not at it 80mm pitch when it goes to Hotplate 1 and 2 for placement.</span></p>
+<p class="ps3"><span class="ts0">Hand pitch was at 80mm when mcal at Loader, ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">The engraved X-pitch of the Hotplate was 26.66mm. The hand pitch should be 80mm when placement of devices at hotplate. After Mcal, the hand pitch was 80mm but at hotplate during release to Hotplate the hand X-pitch was 79mm.</span></p>
+<p class="ps3"><span class="ts0">In SPEL, after select selrb 7 (for Input Arm Hand Open/Close), Mcal. For X pose, it showed 0mm with a measured 80mm Hand pitch, for Hotplate matrix in HMI&nbsp; X-pitch set as 26.67.</span></p>
+<p class="ps3"><span class="ts0">After change Hotplate matrix X-pitch to 26.66mm in HMI, and handler release device to Hotplate the Hand pitch was 79mm, in SPEL, the selrb7 pose X was 1mm.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl31">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Engraving on Hotplate for X-pitch was 26.66</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Input Hand X Pitch after MCAL</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Input Hand X Pitch at Loader when pick devices</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Input Hand X Pitch at Hotplate when place devices</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Input Hand Open/Close X value in SPEL</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">HotPlate X-Pitch in HMI</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts25">26.66</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">80mm</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">80mm</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts25">79mm</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts25">1mm</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">HotPlate X-Pitch in HMI</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">26.67</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">80mm</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">80mm</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">80mm</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0mm</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="530" height="348" border="0" src="images/0013-ns8kb1.png" /></p>
+<p class="ps2"><img width="640" height="480" border="0" src="images/0013-ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="640" height="480" border="0" src="images/0013-ns8kb3.jpg" /></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">Remedy:</span></p>
+<p class="ps3"><span class="ts0">Change&nbsp;Hotplate matrix for X-Pitch to 26.67 in HMI, the hand pitch at Hotplate becomes 80mm.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Note:</span></p>
+<p class="ps3"><span class="ts0">It could be that the handler use Absolute value calculation for the Hand pitch at Hotplate.</span></p>
+<p class="ps3"><span class="ts0">Case 1) 26.66mm x 3 = 79.98mm =&gt;Abs = 79mm</span></p>
+<p class="ps3"><span class="ts0">Case 2) 26.67mm x 3 = 80.01mm =&gt;Abs=80mm</span></p>
+<p class="ps2"><span class="ts90">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">This problem as also experienced on 8080(S/N: 181415), demo unit for STM.</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">EPSON has found problem (arithmetic processing trouble) on HMI software for this issue.</span><br /><br /><span class="ts0">&nbsp;Meantime, Please temporary set 26.67 for X-pitch until software released.</span><br /><span class="ts0">&nbsp;It may be released by early March 08.</span></p>
+<p class="ps3"><span class="ts0">This bug was corrected in HMI version 1.91.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<p class="ps2"><br />&nbsp;</p>
+</body>
+</html>

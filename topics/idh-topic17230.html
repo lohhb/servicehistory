@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0400-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17230;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0400-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17220.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17240.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080HW Contact test alternate Index Arm fail</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N: 182025)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 03-2061)</span></p>
+<p class="ps3"><span class="ts0">Date: 23 Nov 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-8080HW -Manual contact test in OneCycle mode. Arm 1 Contact test passed, Arm 2 Contact test test failed, Arm 1 Contact test contact test failed.Alternate Arm Contact passed.Current HMI T10.56-KSS.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">SMC valve reading for Arm1 was 0.427 Kpa during High Contact Force, Index Arm 2 was 0.137 Kpa-Using Index Arm1 (Disable Index Arm 2), Handler manual contact test in Ambient but unable to communicate with tester, found handler's driver not loaded in tester. Tester Engineer load NS-6000 driver to tester, GPIB able to communicate with address 6.-Ambient functional tester with Handler but not all function tested as test program incomplete.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">-Enable Index Arm2 only, manual contact test in One Cycle mode. </span></p>
+<p class="ps3"><span class="ts0">First Contact test passed,</span></p>
+<p class="ps3"><span class="ts0">&nbsp;2</span><sup><span class="ts0">nd</span></sup><span class="ts0">&nbsp;contact test failed, </span></p>
+<p class="ps3"><span class="ts0">3</span><sup><span class="ts0">rd</span></sup><span class="ts0">&nbsp;contact test failed.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Alternate pass cycle, according to Hidaka-san this could be a HMI software bug.</span></p>
+<p class="ps3"><span class="ts0">Advise to install HMI T11.52-KSS.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">24 Nov 2011</span></p>
+<p class="ps3"><span class="ts0">After installed HMI T11.52-KSS, ok.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Software bug in T10.56-KSS.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Regarding for contact force on the SMC display, it shows transfer contact force. </span></p>
+<p class="ps3"><span class="ts0">(The transfer contact force is while Index hand pick up devices at Input shuttle.) </span></p>
+<p class="ps3"><span class="ts0">I think that the latest software should be kind of stable number on the display.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">According to Hidaka-san email on 12Dec 2011:</span></p>
+<p class="ps3"><span class="ts0">Ver11.52-KSS (based on HMI 3.2)&nbsp; do NOT have 6 bins support. Because, it is special software of Korea. </span></p>
+<p class="ps3"><span class="ts0">After Ver3.6 software is supported 6 bins(Auto 1, Auto 2, Auto 3, Fix 1, Fix 2, Fix 3). </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">T13.70-KSS (Released on 15 Mar 2013):</span></p>
+<p class="ps3"><span class="ts0">1. Fixed a Bug when Online Bin enable Double Contact Motion in High Contact Mode (Online test Error 4024 for Index after test).</span></p>
+<p class="ps3"><span class="ts0">2. Fixed a Bug that Output Arm crash into Tray Arm during Tray Changing (Found in ASE NS-8080 8 Hand crashed 14 Mar 2013).</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0091-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7310;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0091-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7300.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7320.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: &ldquo;Protect test site assign&rdquo; NS-7160 site channel number issue as similar to NS-8080</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7160 &amp; NS-8080</span></p>
+<p class="ps3"><span class="ts0">Controller: </span></p>
+<p class="ps3"><span class="ts0">Date: 24 Jun 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">Found out the NS7160(for EEMS) also having the similar problem as we have found out on the NS8080 on the site channel number issue. Please refer to attached picture for the scenario. </span></p>
+<p class="ps127"><span class="ts0">It was found that if we turn on the &ldquo;protect test site assign&rdquo; option in the config.exe, the channel number for each site will not return to the correct value and will stay as per last setting. This problem just like the NS8080 case that we have reported recently</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">11 Jul 2008</span></p>
+<p class="ps127"><span class="ts0">Regarding the EEMS &ldquo;protect test site assign&rdquo; issue that listed in these email has already solved for both NS8080 and NS7160W. </span></p>
+<p class="ps127"><span class="ts39">NS8080</span></p>
+<p class="ps127"><span class="ts0">Issue was solved by using the &quot;Default_site.def&quot; patch that you have sent over to me. </span></p>
+<p class="ps127"><span class="ts39">NS7160W</span></p>
+<p class="ps127"><span class="ts0">&quot;Default_site&quot; file was also found at the C:\NS7000\Config\Table folder therefore, NS8080 &quot;Default_site&quot; patch was used on the NS7160W and everything looks fine. </span></p>
+<p class="ps127"><span class="ts0">NS8080 &quot;Default_site&quot; file might be different from NS7160W &quot;Default_site&quot; so the orginal NS7160W &quot;Default_site&quot; file will be modified and patch on NS7160W for verification next week.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

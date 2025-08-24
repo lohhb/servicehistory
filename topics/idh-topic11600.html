@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0221-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11600;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0221-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11390.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11610.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-7000 MMI H7.11-SSY issues</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7000</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 19 Jan 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">SCS faced some issue on NS7000. As for the software version is MMI H7.11-SSY. </span></p>
+<p class="ps3"><span class="ts0">Qin Li, Keok Boon and I had tired out on the handler in 2 situations.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">Situation #1</span></p>
+<p class="ps3"><span class="ts0">After Arm 1 pickup devices from shuttle, we pause the handler and turn off the Site D vacuum sensitivity manually. Then we depressed &quot;Start&quot; button and &quot;Device drop Error (Arm1)&quot; occurred. &quot;Skip Enable&quot; , &quot;Skip&quot; and Alarm Reset&quot; came on. We turn on the vacuum sensitivity manually, followed by depressing &quot;Skip Enable&quot;, &quot;&quot;Skip&quot; and &quot;Start&quot; button. Arm 1 plunged into the socket and a start of test signal was send to the tester. Bin 1 was asisgned to the arm 1 Site D by the tester but after test, Site D was asigned to Error Bin.&nbsp; </span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">Situation #2</span></p>
+<p class="ps3"><span class="ts0">After Arm 1 pickup devices from shuttle, we pause the handler and removed device from Site D manually. Then we depressed &quot;Start&quot; button and &quot;Device drop Error (Arm1)&quot; occurred. &quot;Skip Enable&quot; , &quot;Skip&quot; and Alarm Reset&quot; came on. We the device back on to Arm 1 Site D manually, followed by depressing &quot;Skip Enable&quot;, &quot;&quot;Skip&quot; and &quot;Start&quot; button. Arm 1 plunged into the socket and a start of test signal was send to the tester. Bin 1 was assigned to the arm 1 Site D by the tester but after test, Site D device was sorted out to Error Bin.&nbsp; </span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Enquiries</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">1) Why does this happen? Normal?</span></p>
+<p class="ps3"><span class="ts0">2) Why does handler send a SOT signal for Arm 1 Site D to the Tester?</span></p>
+<p class="ps3"><span class="ts0">3) Why Site D device was sorted out to error bin instead of Bin 1 even though the tester assigned a Bin 1 to Site D device?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">This is serious causing test result integrity issue.</span></p>
+<p class="ps3"><span class="ts0">Is there any other situation that after error skip and test device will be bin out accordingly instead of &ldquo;Error&rdquo; bin?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts36">20 Jan 2010 email reply from Goto</span></p>
+<p class="ps3"><span class="ts0">In NS7000/NS8000 series, when device drop error is caused in between Input Shuttle and Socket, the device, which is putting back to socket manually, goes to Error Bin. It is software design for NS7000/NS8000 series and different from the sequence of NS6000</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">The background of this change is concerning the possibility that device may have damage after it is dropped even if test result is OK.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Email by SCS</span></p>
+<p class="ps3"><span class="ts0">There&rsquo;re actually two issues here.</span></p>
+<p class="ps3"><span class="ts0">1. When we did the simulation, the unit was tested but sorted to error bin. This caused test summary not tally to physical bin. As per your explanation, the software is written to sort the unit to error bin. In this case, handler should not send SOT to test this unit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2. During production, when there&rsquo;s intermittent sensor error at arm 2, handler gives device drop error on arm1. After skip, all units are tested and sorted according to the test result. No unit sorted to error bin. This must be software bug need to be fixed.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

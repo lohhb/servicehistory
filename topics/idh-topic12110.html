@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0014-UBS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12110;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0014-UBS&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12100.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12120.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: UBS#17 setting for CONTEC COM-2(PCI)H communication card </span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-UBS</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 30 Dec 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps126"><span class="ts3">Setting for the CONTEC COM-2(PCI)H communication card, refer below:</span></p>
+<p class="ps3"><img width="607" height="386" border="0" src="images/0014-ubsb1.png" /><span class="ts3">NSUBS 17</span></p>
+<p class="ps3"><span class="ts3">S/N: 151078</span></p>
+<p class="ps3"><span class="ts3">MMI A11.15-SAS</span></p>
+<p class="ps3"><span class="ts3">SPEL 2.81b</span></p>
+<p class="ps126"><span class="ts62">Windows 2000 Device Manager Address Range</span></p>
+<p class="ps127"><span class="ts3">IFUNT 100 E400;E800</span></p>
+<p class="ps127"><span class="ts44">CONTEC COM-2</span><span class="ts3">&nbsp;: </span><span class="ts44">E000</span></p>
+<p class="ps127"><span class="ts3">CONTEC PO-64 : EC00</span></p>
+<p class="ps127"><span class="ts62">COM 4 Buffer setting in Windows 2000:</span></p>
+<p class="ps127"><span class="ts3">BPS 57600</span></p>
+<p class="ps127"><span class="ts3">DATA BIT 8</span></p>
+<p class="ps127"><span class="ts3">PARITY NONE</span></p>
+<p class="ps127"><span class="ts3">STOP BIT 2</span></p>
+<p class="ps127"><span class="ts3">FLOW CONTROL NONE</span></p>
+<p class="ps127"><span class="ts3">RECEIVER BUFFER 32</span></p>
+<p class="ps127"><span class="ts3">TRANSMIT BUFFER 32</span></p>
+<p class="ps127"><span class="ts1">Installation notes on 22 Aug 2011:</span></p>
+<p class="ps127"><span class="ts1">-COM-2(PCI)H (RS232 2-port card) and cable installed in RC520.RS232 conflict problem found causing MMI hand up after reboot.</span><br /><span class="ts1">&nbsp;- Change COM-2(PCI)H card PCI slot, problem solved. Do not use PCI-4</span><br /><span class="ts1">&nbsp;PIO64 card on PCI-1, IFUNT200 card on PCI-2, COM-2(PCI)H card on PCI-3</span></p>
+<p class="ps127"><span class="ts1">-there is no need to add SPEL I/O port address in SPEL for COM-2(PCI)H card.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

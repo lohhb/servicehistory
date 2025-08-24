@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0014-TR60</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 9890;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0014-TR60</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic9880.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic9900.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NEC TR-60</span></p>
+<p class="ps3"><span class="ts0">Handler Model: TR60 (S/N:121175) NEC</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 ( S/N: 01-20947) 3 DU</span></p>
+<p class="ps3"><span class="ts0">Date: 3~4 Aug 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Problem 1 - Device Stuck on Socket issue. </span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Problem 2: Device pickup on Soak Boat. Error frequency increased after adjustment for Index Vacuum threshold to -50KPa. Randomly Arm 1 and 2 have device pickup error. But mostly on Arm 1 Head C.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Problem 3: Device drop issue. Randomly Arm 1/2 have device drop. But mostly on Arm 1 Head C.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Problem 1 - Device Stuck on Socket issue. </span></p>
+<p class="ps3"><span class="ts0">Remedy: Found index vacuum unit threshold set too low -35KPa. Changed to -50KPa to prevent any poorly pickup device contact to socket.</span></p>
+<p class="ps3"><span class="ts0">Situation: Last 2 days no device stuck on socket issue.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Problem 2: Device pickup on Soak Boat. Error frequency increased after adjustment for Index Vacuum threshold to -50KPa. Randomly Arm 1 and 2 have device pickup error. But mostly on Arm 1 Head C.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Remedy: Fine-tuned Index pickup height on Soak Boat. Making sure Index Arm 1/2 pickup height not too low.(Pressing too much on Soak Boat, prevent Soak Boats from jumping as may lead to devices flip on Tester Buffer). Found out Arm 1 head C contactor blade and suction cup inside contactor blade worn out. Replaced with new contactor blade and suction cup from TSSOP 14P contactor. Verfied vacuum pickup with device, managed to achieve -75KPa, previously -67KPa.</span></p>
+<p class="ps3"><span class="ts0">Situation: Improved for Cold TSSOP 8P -40&iexcl;ãC and TSSOP 8P Active Ambient 25&iexcl;ãC setup file.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Problem 3: Device drop issue. Randomly Arm 1/2 have device drop. But mostly on Arm 1 Head C.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Situation: Improved after changed new contactor blade and suction cup on Arm 1 Head C. Customer to moinitor and advised to check/replace suction cups inside contactors blade in case of any device drop on other contactors.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts36">3 Aug 2009</span></p>
+<p class="ps3"><span class="ts1">1. Check index vacuum units' vacuum level with device pickup. Vacuum level satisfactory( -67KPA to -83KPa)</span></p>
+<p class="ps3"><span class="ts1">2. Check threshold level for index vacuum units. Found out threshold level too low(-35KPa), adjusted to -50KPa.</span></p>
+<p class="ps3"><span class="ts1">3. Intial problem was device stuck in socket. Device pickup error on soak boats error frequency increase due to vacuum threshold increased. </span></p>
+<p class="ps3"><span class="ts1">4. Fine-tuned index pickup height on soak boats(Tester Buffer). Ensure both index arms' height not pressing hard on soak boat to minimise device flip on soak boats(Tester Buffer). Fine-tuned Picker arm release height on soak boat(Input Buffer).</span></p>
+<p class="ps3"><span class="ts1">5. All the above items carried out on TSSOP 8P Cold -43DegC. After fine-tuned, device stuck on socket issue resolved. However, Index Arm 1 Head C frequently have device pickup&nbsp; and device drop errors.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">4 Aug 2009</span></p>
+<p class="ps3"><span class="ts1">1. Feedback from customer, handler having a lot of device stuck and drop error overnight after they changed setup to TSSOP 8P Active Ambient.</span></p>
+<p class="ps3"><span class="ts1">2. Fine-tuned index arm pickup height on soak boat(Tester Buffer) and Picker arm release height on Soak boat(Input Buffer).</span></p>
+<p class="ps3"><span class="ts1">3. Handler error frequency minimise, but Arm 1 Head C often have device pick up and device drop error.</span></p>
+<p class="ps3"><span class="ts1">4. Disassembled Arm 1 head C contactor, and found out suction cup inside already worn out. Replaced suction cup from TSSOP 14P Changekit and replaced with new contactor blade.</span></p>
+<p class="ps3"><span class="ts1">5. Verified vacuum level when pickup device improved from -67 to -75KPa. Device sitting firmly on contactor blade.</span></p>
+<p class="ps3"><span class="ts1">6. Monitor handler performance, Arm 1 Head C ¨C OK. Advised customer to check/replace if any other contactors having device pickup or drop error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0018-UBS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12150;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0018-UBS</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12140.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12160.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:</span><span class="ts20">&nbsp;</span><span class="ts24">AMD &ndash; UBS VBLD &amp; 2D reader support for MMI A12.21SAC software modification by Miyasaka-san</span></p>
+<p class="ps3"><span class="ts0">Handler Model: UBS</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 23 &amp; 24 Jan 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">AMD &ndash; UBS VBLD &amp; 2D reader support for MMI A12.21SAC software modification by Miyasaka-san</span></p>
+<p class="ps3"><span class="ts0">MMI A21.21SAC issues: </span><br /><span class="ts0">-Ball Damaged(BD) Total Count alarm does not activate when count reach 2 </span><br /><span class="ts0">-After BD error, Pause+Reset followed by Continuous start will bin to wrong binning </span><br /><span class="ts0">-2D reader &ldquo;Decode Unit : Time Out&rdquo; error after input arm pickup 20~30 devices </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps144"><span class="ts0">On UBS15 modified Variable.inc, Const.prg &amp; Outarm.prg for total BD count alarm. </span><br /><span class="ts0">BD counter will only reset to zero when Initial Start or after BD alarm. </span><br /><span class="ts0">Correction to wrong binning. </span><br /><span class="ts0">Interim MMI A12.21A SAC created. </span><br /><span class="ts0">Verification run with package by customer. </span><br /><span class="ts0">On UBS09 simulation for input 2D reader &ldquo;Decode Unit: Time Out&rdquo; error using RS232 analyser. (Previously, AMD solved by adding 50ms delay after 2D PC send length (15 char) of bar code to UBS and followed by the 2D barcode.) </span><br /><span class="ts0">Using RS232 Analyser, 2D PC send 15 characters to UBS but UBS received 14 characters. </span><br /><span class="ts0">Sleep 0.5 command removed from OCR.prg and add auto retry to scan 2D and read back to UBS again. </span><br /><span class="ts0">MMI A12.22 SAC created. </span><br /><span class="ts0">Customer will do further verification on this new MMI. </span><br /><span class="ts0">SR: 012518</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps144"><span class="ts0">Issue:</span></p>
+<p class="ps144"><span class="ts0">· AOI (previously call VBLD) BD Counter in Total mode not working in total, but in two sockets consecutive failure to trigger alarm.</span></p>
+<p class="ps144"><span class="ts0">· When AOI alarm happened, the AOI failed device on output arm binned to final test binning tray instead of fix tray (for AOI failure device only) </span></p>
+<p class="ps144"><span class="ts0">The other device on another output arm binned to I/F tray instead of respective tray based on testing result. </span></p>
+<p class="ps144"><span class="ts0">· UBS sometimes missing 2d result from 2d pc to cause no data received time out error (occurs every 20 to 30 units). This issue has been</span></p>
+<p class="ps144"><span class="ts0">settled before Epson engineer come with 50ms delay between sending barcode data length and barcode data result. But Epson still need</span></p>
+<p class="ps144"><span class="ts0">investigate why missing to receive 2d result sometimes </span></p>
+<p class="ps144"><span class="ts0">Result:</span></p>
+<p class="ps144"><span class="ts0">· BD Counter issue has been fixed and verified working fine as the way we designed. When AOI alarm happens, only UBS changed to initial start can reset the BD Counter.</span></p>
+<p class="ps144"><span class="ts0">· When BD Counter reaches and AOI alarmed, output arm AOI failed device binned to fix tray, and the other device on another output arm binned to correct tray based on</span></p>
+<p class="ps144"><span class="ts0">it&rsquo;s final testing result</span></p>
+<p class="ps144"><span class="ts0">· 2D no data received error has been observed by using Epson RS232 analyzer. RS232 analyzer shows 15 characters sent from 2d software (15 is the correct data length of 2d barcode)</span></p>
+<p class="ps144"><span class="ts0">But in UBS software, it shows received 14 characters, in order not to interfere operator to click retry start, UBS software make changes to send auto-retry to 2D pc for 2D decoding command</span></p>
+<p class="ps144"><span class="ts0">(maximum three times). With both 2d software and UBS software changes regarding this 2D issue, it is more reliable to avoid 2d no data received time out error in production run.</span></p>
+<p class="ps144"><span class="ts0">· Epson will provide latest ver 13.22 official release to AMD by end of next week (Feb/03/13)</span></p>
+<p class="ps144"><span class="ts0">Ver 13.22 is the latest modified UBS software and installed in UBS15 and UBS09, we still need monitor the new software for a few weeks to make sure any new changes will not introduce new</span></p>
+<p class="ps144"><span class="ts0">Issue or affect normal testing.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

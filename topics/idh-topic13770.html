@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0254-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13770;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0254-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13760.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13780.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: What is backup by NS-8000 BackupSan</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8000 series</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 2 Nov 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Q&amp;A</span></p>
+<p class="ps3"><span class="ts0">What is backup by BackupSan?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">&nbsp;Reply you what is data backup when you use &ldquo;BackupSan&rdquo; as follows;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parameter: EPSON_FA.dat,&nbsp; DriveBox.dat</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Config: All of folder and files under NS8000/Config folder</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetUp File: All of folder and files under NS8000/Setup folder</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Setup.inf (The current selected setup file.)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Log File: All of folder and files under NS8000/Log folder</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Point data of SPEL(POS file, PRM file, Errmsg.log and Sysvar.var)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Run :All of folder and files under NS8000/Run folder</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Note: They found that it has some of irregular case.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp;&nbsp; So, we will analyze in detail.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Remarks:</span></p>
+<p class="ps3"><span class="ts1">2. Config folder=&gt;Not all files in Config folder are restored(also not sure all files are backup)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">4. Log folder, Not all files in Log folder are restored(also not sure all files are backup)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts102">&lt;Conclusion&gt;</span></p>
+<p class="ps13"><span class="ts102">If some restored file is older than existing file, The data does not be update.</span></p>
+<p class="ps13"><span class="ts102">(Please see attached file.)</span></p>
+<p class="ps2"><img width="560" height="418" border="0" src="images/0254-ns8kb1.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="551" height="422" border="0" src="images/0254-ns8kb2.png" /></p>
+<p class="ps13"><span class="ts102">&lt;Countermeasure&gt;</span></p>
+<p class="ps13"><span class="ts102">Delete the files from folder as follows, before executing BackSan &lt;In case of Restore&gt; All of data files erase \C\BackuSan &lt;In case of BackUp&gt; All of data files erase \C\NS8000_***.LHZ (This is including compile data of BackUpSan made and ZIP file)</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts102">It will be happened all of install CD.</span></p>
+<p class="ps13"><span class="ts102">Unfortunately we can not improve previous software.</span></p>
+<p class="ps13"><span class="ts102">However, we will be improved from Ver3.6 especially BackUpSan .</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

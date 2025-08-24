@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0028-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7680;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0028-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7670.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7690.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:</span><span class="ts28">&nbsp;</span><span class="ts23">NS60-06 Error T-4001 input arm limit error during initial start.</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040(UTAC, NS60-06, S/N: 15542)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 28 Aug 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps130"><span class="ts1">MMI display T4001 error code, the Arm reached the limit of motion range.</span></p>
+<p class="ps130"><span class="ts1">Input arm hit soft limit error when initial start. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">Check&nbsp; input arm hard limit pulse position, open up input arm J1 and J2 range, also cannot.</span></p>
+<p class="ps130"><span class="ts1">Advise customer to restore back old system and project files and re teach position again because error happened after input arm teaching.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts1">Can check the Input pickup hand Z &amp; U height in mnp02.pos.</span></p>
+<p class="ps3"><span class="ts1">Usually, the Z &amp; U pickup height for Input/Output Hand should be around -25mm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">T- 4001 &quot;The Arm reached the limit of motion range&quot; during cycling and running mode.</span></p>
+<p class="ps3"><span class="ts1">Usually, after HDD Recovery if Input or Output Hands encountered error 4001 &quot;The Arm reached the limit of motion range&quot;, it is advisable to make sure that Input or Output Arm Z &amp; U in mnp02.pos or mnp03.pos are not zero, usually Z &amp; U are -20 to -25mm.</span></p>
+<p class="ps3"><span class="ts1">Use GenPos in SPEL to teach the Z &amp; U height for Input Hands height teaching with jig place on Input Shuttle and for Output Hands height teaching with jig place on Output Shuttle.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">For Robot 2 Input Arm, make sure Z &amp; U are not zero, around -20 to -25mm for the following points:</span></p>
+<p class="ps3"><span class="ts0">P50 ' Load Tray</span></p>
+<p class="ps3"><span class="ts0">P51 'Input Shuttle1</span></p>
+<p class="ps3"><span class="ts0">P52 'Input Shuttle2</span></p>
+<p class="ps3"><span class="ts0">P53 'HotPlate1</span></p>
+<p class="ps3"><span class="ts0">P54 'HotPlate2</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">For Robot 3 Output Arm, make sure Z &amp; U are not zero, around 20 to -25mm for the following points:</span></p>
+<p class="ps3"><span class="ts0">P81 'Auto1</span></p>
+<p class="ps3"><span class="ts0">P82 'Auto2</span></p>
+<p class="ps3"><span class="ts0">P83 'Auto3</span></p>
+<p class="ps3"><span class="ts0">P84 'Fix1</span></p>
+<p class="ps3"><span class="ts0">P85 'Fix2</span></p>
+<p class="ps3"><span class="ts0">P94 'Fix3</span></p>
+<p class="ps3"><span class="ts0">P95 'AutoMat</span></p>
+<p class="ps3"><span class="ts0">P96 'Fix4</span></p>
+<p class="ps3"><span class="ts0">P86 'Output Shuttle1</span></p>
+<p class="ps3"><span class="ts0">P87 'Output Shuttle2</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Refer </span><a href="idh-topic15960.html" class="hs0">0097-NS6K</a><span class="ts0">&nbsp;and </span><a href="idh-topic16020.html" class="hs0">0103-NS6K</a><span class="ts0">&nbsp;that encountered same error of 4001 the arm reached the limit of motion range.</span></p>
+</body>
+</html>

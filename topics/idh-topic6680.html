@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0031-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 6680;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0031-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic6410.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic6690.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS8080 has the hang up problem with Random and busy shuttle mode</span></p>
+<p class="ps3"><span class="ts0">Handler Model: Evaluation NS-8080(EEMS, S/N:181416</span><span class="ts15">)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (HMI ver 1.71</span><span class="ts15">&nbsp;, </span><span class="ts0">SPEL CT3.11ds)</span></p>
+<p class="ps3"><span class="ts0">Date: 23 Jun 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">EEMS NS8080 has the same hang up issue as NS7000 after clean out when the lot ends.</span></p>
+<p class="ps3"><span class="ts0">EEMS NS8080 has the hang up problem with Random and busy shuttle mode. </span></p>
+<p class="ps3"><span class="ts0">Now they tried switch to 'Z' pick up and busy shuttle mode, encounter the same hang problem.</span></p>
+<p class="ps3"><span class="ts0">Hang up condition:</span></p>
+<p class="ps3"><span class="ts0">- 37.5 x 37.5 package</span></p>
+<p class="ps3"><span class="ts0">- long test time 14~16secs</span></p>
+<p class="ps3"><span class="ts0">- single site busy shuttle</span></p>
+<p class="ps3"><span class="ts0">- 3x7 tray matrix, 2x7 hotplate matrix</span></p>
+<p class="ps3"><span class="ts0">- random mode or 'Z' mode for input arm </span></p>
+<p class="ps3"><span class="ts0">- happened on HMi version 1.71</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">26 Jun 2008:</span></p>
+<p class="ps3"><span class="ts0">EPSON request to install the HMI&nbsp; 2.0. </span></p>
+<p class="ps3"><span class="ts0">The hang-up problem will be cleared by it. </span></p>
+<p class="ps3"><span class="ts0">The following serial number is required to software upgrading. </span></p>
+<p class="ps3"><span class="ts1">s/n:181415 (NS-8040)</span></p>
+<p class="ps3"><span class="ts1">s/n:181416 (NS-8080)</span></p>
+<p class="ps3"><span class="ts1">s/n:181417 (NS-8040)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2 Jul 2008:</span></p>
+<p class="ps126"><span class="ts0">Installed the software version 2.0 the index arm hang up problem still persist.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">4 Jul 2008:</span></p>
+<p class="ps4"><span class="ts6">Collect the LOG as per EPSON request.</span><br /><br /><span class="ts6">&nbsp;1. Open SPEL and select Debug pane</span><br /><span class="ts6">&nbsp;2. Start Handler</span><br /><span class="ts6">&nbsp;3. </span><span class="ts8">When handler hung up</span><span class="ts6">, to open the&quot;TASK_DUMP&quot;</span><span class="ts5">&nbsp;</span><span class="ts6">in &quot;Operating Function-Executive/View&quot;and press the Start (Beside the abort all)</span><br /><span class="ts6">&nbsp;4.If Data log correct, The &quot;SysErrTaskStatus_XXXXX(Date/Time)&quot; will be inside the &quot;NS8000/LOG/SRC_ERC&quot;folder. </span><br /><span class="ts6">5.Please sent folder (&quot;NS8000/LOG/SRC_ERCEPSON/&quot;) to Aki san </span><br /><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">23 Jul 2008:</span></p>
+<p class="ps150"><span class="ts1">NS8080 HMI ver.2.1 which had been installed at EEMS and after 2 weeks monitoring software verification.</span></p>
+<p class="ps144"><span class="ts0">1) Handler hang up after clean out during run with busy shuttle and randam mode.</span><span class="ts29">&nbsp;</span><span class="ts3">(Solved)</span></p>
+<p class="ps144"><span class="ts1">2) Temperature fluctuate at chamber (70°C) during running. </span><span class="ts44">(Unsolve - Awaiting for part)</span></p>
+<p class="ps144"><span class="ts0">3) Protect test site assign and site mapping. </span><span class="ts3">(Solved)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">14 Jul 2008</span></p>
+<p class="ps3"><span class="ts3">EPSON software engineer confirmed the hang-up issue on NS8080 by single serial mode.</span></p>
+<p class="ps3"><span class="ts3">I will send a modified software; version HMI 2.1 by SFT to your address later. </span></p>
+<p class="ps3"><span class="ts3">Please install it to NS8080 and please monitor it about for a week.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

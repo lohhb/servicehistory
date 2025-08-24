@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0261-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13940;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0261-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13830.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13950.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8040 ATC upgrade for BCM56840 50x50(single site on arm 2 head 5)</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040 (NS80-40, S/N:181748)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 12 Nov 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">UTAC NS80-40 ATC upgrade for BCM56840 50x50(single site on arm 2 head 5)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Carry out hardware installation.</span></p>
+<p class="ps3"><span class="ts1">Install chiller, atc controller with PSU, thermal head 5 on index arm 2.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Remove socket heater and shuttle C/K for modification. Thermal head will hit the side of socket heater assembly, shuttle C/K supplied is for wide handler shuttle.</span></p>
+<p class="ps3"><span class="ts1">Package came with RS232 Contec board. Iwata san to update ETA of outstanding parts next monday.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">15 Nov 2010</span></p>
+<p class="ps3"><span class="ts1">Received the contec board today afternoon, we went down to UTAC to install it.</span></p>
+<p class="ps3"><span class="ts1">The following were our actions:</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">1.Checked interface unit was IFUNT200, so set jumper on contec board to J1 and J2 as stated in procedure. SW1 is set at 0. Fix DIO cable into DU2.</span></p>
+<p class="ps3"><span class="ts1">2.Fix contec board into top PCI slot. Procedure stated (Don&rsquo;t use solt 1, bios no need setting), but picture showed top PCI slot used. Pls confirm on this.</span></p>
+<p class="ps3"><span class="ts1">3.Fix the thermal controller rs-232 connector into CH1 port of contec board.</span></p>
+<p class="ps3"><span class="ts1">4.Power up handler. Installed driver for contec board. OK.</span></p>
+<p class="ps3"><span class="ts1">5.Installed HMI v.2.6 and check SILICON THERMAL option in config.exe.</span></p>
+<p class="ps3"><span class="ts1">6.Boot into HMI and select active cooling ON, RS-232 temp set ON, temp check for handler start and test start ON, single site.</span></p>
+<p class="ps3"><span class="ts1">7.Chiller no DI water so did not ON chiller. </span></p>
+<p class="ps3"><span class="ts1">8.ON thermal controller to test but encountered &ldquo;Active cooling CH2 echo back error&rdquo;. (Attached picture is showing CH1 because we pulled out rs-232 cable from CH1 port and connected to CH2).</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<div align="left">
+  <table class="tbl38">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="320" height="99" border="0" src="images/0261-ns8kb1.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="854" height="296" border="0" src="images/0261-ns8kb2.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Pls advise if there are anything we missed out or done incorrectly.</span></p>
+<p class="ps3"><span class="ts1">Also pls confirm on the attached drawing sent by Iwata san.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span><img width="678" height="515" border="0" src="images/0261-ns8kb3.png" /></p>
+<p class="ps3"><span class="ts1">In the drawing, there are 2x LB500i controller but only use single thermal head.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;Remember we received extra 1 set LB500i and cables, Iwata san said they are extra parts.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;Pls confirm if we need to install the extra parts according to the attached drawing.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">16 Nov 2010</span></p>
+<p class="ps3"><span class="ts3">Install the spare LB500i controller and re-soldered the DIO-2 cable. </span></p>
+<p class="ps3"><span class="ts3">We did not encountered &quot;Active cooling echo back error&quot;. Instead, we have &quot;Active cooling temperature error CH1&quot;. Ogata san checked with Suzuki san and he said the HMI software cannot support for this single head testing and need to modify the software.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">19 Nov 2010</span></p>
+<p class="ps3"><span class="ts1">Found no 24Vdc supply(into DIO-2) after measuring wired P6. Relocate to another 24Vdc point &ndash; OK. We shorted the grey and red wires for LB500i head 1 controller and did not encounter anymore &ldquo;active cooling temperature control error CH1&rdquo;.</span></p>
+<p class="ps3"><span class="ts1">However this is temporary solution. Modified software still required.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">Spare LB500i temperature controller need to be installled and with DIO-2 connection. HMI software need to modify to cater for single head ATC.</span></p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0443-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18450;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0443-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18440.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18470.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8040 &ldquo;The distance from the Home Sensor to the Encoder Z Phase varies significantly from the previous value&rdquo; and&nbsp; &ldquo;The arm reached the limit of motion range&rdquo; error happened at input arm after start the run</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8040</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 18 Jul 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">SCS (18/07/2012 - 19/07/2012) - NS8040 HDD crashed.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">1. Surprisingly, when I power on the Handler, it able to boot up. At that point, all backup data were copy to the thumbdrive. </span><br /><span class="ts0">2. Did a disk error check found no issues. </span><br /><span class="ts0">3. Tried reboot again but failed. So recovery carried out using Recovery CD ver 4.0 on Epson original HDD 250GB. </span><br /><span class="ts0">4. After recovery, HMI ver was 1.9 and SPEL ver 3.11ds-sp. With the basic version tried to run the handler but unable to cos status windows showing &ldquo;Please Wait&rdquo;. </span><br /><span class="ts0">5. Upgrade the SPEL and HMI ver to 3.12h and M11.50-SSY respectively. Restored back the POSE data. </span><br /><span class="ts0">6. &ldquo;The distance from the Home Sensor to the Encoder Z Phase varies significantly from the previous value&rdquo; error happened after carried out Homing. Mcorg was done for all robot axis and problem solved. </span><br /><span class="ts0">7. &ldquo;The arm reached the limit of motion range&rdquo; error happened at input arm after start the run. Restored the Manipulator data and tried again but failed. Motor calibration carried out, restored system data and compared the robot range values with other handler found values the same. Tried to open up the range values and tried again but problem still persisted. </span><br /><span class="ts0">8. Did a 2nd recovery and found out no data at the robot parameter and manipulator. Restored the system data and All Project data. Mcorg carried out after &ldquo;The arm reached the limit of motion range&rdquo; error happened. But &ldquo;The arm reached the limit of motion range&rdquo; error happened at input arm still after start the run. </span><br /><span class="ts0">9. Customer required trying out their 120GB HDD. Recovery carried out but after reboot, System boot up disk error occurred. </span><br /><span class="ts0">10. Next day did a recovery using Recovery CD ver 2.0 on 250GB but it turn out to be blue screen after reboot. </span><br /><span class="ts0">11. Tried another round of recovery using Recovery CD ver 4.0. After recovery, HMI and SPEL were upgraded to ver11.50-SSY and ver3.12h respectively. After upgrading the software, HMI unable to launch. Tried to start the SPEL first by clicking on the icon manually, to error occurred. Followed by launching HMI but unable to. </span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Recovery CD Ver 4.0&nbsp; (FD11S057, 04/28/2011) for NS-8000 4 Hands has a bug. </span></p>
+<p class="ps3"><span class="ts0">NS8000 Handler which using the new controller (Black) RC520 S/N: 03-3**** has problem when doing recovery using Recovery CD Ver 4.0 (04/28/2011) FD11S057 for SPI-IB945 CPU Board. </span></p>
+<p class="ps3"><span class="ts0">After recovery, &ldquo;The arm reached the limit of motion range&rdquo; error happened at Input/Output arms. </span></p>
+<p class="ps3"><span class="ts0">Only POSE and SYSTEM data were restored at the point of recovery. </span></p>
+<p class="ps3"><span class="ts0">Tried open up the range for both input/output arms but result still the same. </span></p>
+<p class="ps3"><span class="ts0">After recovery, the Hand Pitch at Handler Configuration for X-pitch was at 40mm. these pitch couldn&rsquo;t be changed even HMI was reinstalled. </span></p>
+<p class="ps3"><span class="ts0">The only way to changed was to through the handler.def from the config file and the X-pitch value should be 80mm. </span></p>
+<p class="ps3"><span class="ts0">or copy back the Config folder. </span></p>
+<p class="ps3"><span class="ts0">Use Recovery CD Ver 4.1 (FD12S019, 02/13/2012) for 4 Hands to solve the problem. </span></p>
+<p class="ps3"><span class="ts0">Refer </span><a href="idh-topic18070.html" class="hs0">0405-NS8K</a><span class="ts1">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="469" height="588" border="0" src="images/0443-ns8kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="254" height="415" border="0" src="images/0443-ns8kb2.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

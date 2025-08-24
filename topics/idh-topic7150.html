@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0004-NS3K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7150;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0004-NS3K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7140.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7160.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-3000 ATC check on alarm for &quot;Temp Ready&quot; signal</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-3000 ATC</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 1 Sep 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-3000 ATC temperature ready check on alarm for &quot;Temp Ready&quot; signal.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">Suzuki-san, NS-3000 ATC check on alarm when &quot;Temp Ready&quot; (Temperature Ready) wire disconnected from ATC controller for MMI Active Cooling monitor set to Tester Start /Handler Start at ON/OFF condition.</span></p>
+<p class="ps130"><span class="ts1">(ATC Active Cooling always monitor when running).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Temperature ready signal Function can only be seen in ONLINE mode.</span></p>
+<p class="ps3"><span class="ts0">KG(S) to confirm with AMD(S).</span></p>
+<p class="ps3"><span class="ts0">But temperature ready signal bit for each Head can be seen on the SPEL Input I/O.</span></p>
+<p class="ps3"><span class="ts0">ATC I/O in SPEL CT:</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl46">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts68">&nbsp;</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts51">SPEL Input Bit</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts51">SPEL Label</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts51">Remarks</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Head 1&nbsp;&nbsp; Arm 1</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">40</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">ACT_COL1</span></p>
+      </td>
+      <td class="cell0" rowspan="4">
+        <p class="ps0"><span class="ts0">All 4 I/O bit must be ON when ATC &quot;Temp Ready&quot; is connected (2 pin white connected behind ATC controller)</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Head 2&nbsp;&nbsp; Arm 1</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">41</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">ACT_COL2</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Head 5&nbsp;&nbsp; Arm 2</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">42</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">ACT_COL3</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">Head 6&nbsp;&nbsp; Arm 2</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">43</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps152"><span class="ts0">ACT_COL4</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><span class="ts0">When ATC have alarm the respective Bit will be OFF.</span></p>
+<p class="ps3"><span class="ts0">eg. when ATC Head 6 error, Bit 43 will be OFF.</span></p>
+</body>
+</html>

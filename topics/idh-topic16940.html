@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0371-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 16940;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0371-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic16930.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic16950.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8040 wrong ATC fitting</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040 (S/N:181840, NS80-37 ATC)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 03-10112)</span></p>
+<p class="ps3"><span class="ts0">Date: 3 Aug 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">Wrong ATC fitting elbow(45 degree) fitting for thermal head.</span></p>
+<p class="ps2"><img width="793" height="267" border="0" src="images/0371-ns8kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Straight fitting is correct.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Custom made straight fitting by hardware shop.</span></p>
+<p class="ps2"><img width="630" height="273" border="0" src="images/0371-ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">ATC installation for NS-8040</span></p>
+<p class="ps3"><span class="ts0">1 Aug 2011</span></p>
+<p class="ps3"><span class="ts0">-Remove socket Dock Plate Heater assembly(for KA to modify)-Place LB960-i temperature controllers(Head#1 &amp; #5) and Power Supply PS960-24 above NS-8040-Connect power supply connection (with circuit breaker) to&nbsp; Power Supply PS960-24-Connect 24Vdc power connector from&nbsp; Power Supply PS960-24 to&nbsp; LB960-i temperature controllers-Install Head#5 to Index Arm2 Head 5/6Need to wait for modified socket Dock Plate Heater assembly and Input Shuttle cover and change kit for cable house keeping and to determine pickup and release height-DIO2 wiring for Temperature Ready and P6(24Vdc) &amp; N1(RGND) done in office-Connect DIO2 connector to Drive Unit 2-Connect P6(24Vdc) and N1(RGND) to PSUNT from DIO2 connector-Connect Temperature Ready Cable from DIO2 connector to ATC temperature controllers-As IFUNT200 card is used, set JP1 &amp; JP2 short on Contec COM-4(LPCI)H card, card ID on rotator switch ensure set to 0-Insert Contec COM-4(LPCI)H card to &ldquo;PCI 1&rdquo; slot in RC520-Power up NS-8040 and install driver for Contec COM-4(LPCI)H card </span><br /><span class="ts0">2 Aug 2011</span></p>
+<p class="ps3"><span class="ts1">-Install HMI X10.10-SUS(select Silicon Thermal, uncheck Socket Heater)</span></p>
+<p class="ps3"><span class="ts0">-In HMI select Active Cooling for Single Head</span></p>
+<p class="ps3"><span class="ts0">-Relocate water manifold into handler(above empty tray buffer) due to ATC Head #5 cable &amp; Return &amp; Supply water hose too short</span></p>
+<p class="ps3"><span class="ts0">-Connect PCE44/9P4S RS232 cable(1 port split to 4 serial port) to Contec COM-4(LPCI)H card </span></p>
+<p class="ps3"><span class="ts0">-Connect&nbsp; LB960-i temperature controller's RS232 #1 to RS232 #1 of Contec COM-4(LPCI)H card </span></p>
+<p class="ps3"><span class="ts0">-Connect&nbsp; LB960-i temperature controller's RS232 #5 to RS232 #3 of Contec COM-4(LPCI)H card (later encountered error)</span></p>
+<p class="ps3"><span class="ts0">-Connect Return &amp; Supply water hose to Slicon Thermal Chiller CH1250</span></p>
+<p class="ps3"><span class="ts0">-Connect 230Vac cable &amp; power up Silicon Thermal Chiller CH1250</span></p>
+<p class="ps3"><span class="ts0">-Power up LB960-i temperature controllers</span></p>
+<p class="ps3"><span class="ts0">-HOME handler, encountered &quot;Active cooling echo back error&quot;, reconnect&nbsp;</span><span class="ts1">&nbsp;</span><span class="ts0">LB960-i temperature controller's RS232 #5 to RS232 #2 of Contec COM-4(LPCI)H card , ok</span></p>
+<p class="ps3"><span class="ts0">-HOME handler, encountered &quot;Active cooling temperature error CH1&quot;.</span></p>
+<p class="ps3"><span class="ts0">-Check SPEL I/O, found Temperature Ready Input Bit 24(ATC_COL1; for Head #1) was OFF and Input Bit 25(ATC_COL2; for Head #5) was ON.</span></p>
+<p class="ps3"><span class="ts0">ATC Input bit for Temperature Ready should be ON to indicate temperature controller is ok.</span></p>
+<p class="ps3"><span class="ts0">-Short Temperature Ready Cable(Red &amp; Grey) for #1 at DIO2, Input Bit 24(ATC_COL1; for Head #1) turn ON, able to HOME handler.</span></p>
+<p class="ps3"><span class="ts0">-In HMI, switch to high temperature at 50DegC, temperature controller able to control ATC head #5 to hot temperature</span></p>
+<p class="ps3"><span class="ts0">-50x50 BGA C/K ( U-NS6040-867/C) (reversed eng'r) by KA , found shuttle jigs too long and hotplate physical matrix incorrect.</span></p>
+<p class="ps3"><span class="ts0">Actually Hotplate jig physically is too long which extend out of Hotplate 2 in the Y direction.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3 Aug 2011</span></p>
+<p class="ps3"><span class="ts0">-Install socket Dock Plate Heater assembly(modified by KA) &amp; socket heater with heaters' connector</span></p>
+<p class="ps3"><span class="ts0">-Install Socket Guide jig</span></p>
+<p class="ps3"><span class="ts0">-Install modified cover for Input Shuttle's 2 heater connector</span></p>
+<p class="ps3"><span class="ts0">-Install modified(cut short) Input Shuttle 2 jigs</span></p>
+<p class="ps3"><span class="ts0">-Temperature printout for ATC Head at 25DegC(6 printout with 5 mins interval printing)</span></p>
+<p class="ps3"><span class="ts0">-Temperature before calibration printout for ATC Head at 110 DegC(6 printout with 5 mins interval printing)</span></p>
+<p class="ps3"><span class="ts0">-Change temperature controller temperature offset to -1.5DegC, Temperature printout for ATC Head at 110 DegC(6 printout with 5 mins interval printing)</span></p>
+<p class="ps3"><span class="ts0">-House keeping on ATC Head at Index Arm 2 Head 5/6 on socket &amp; Input Shuttle 2 but found water Return &amp; Supply brass fitting were actually 45Deg, in this case tubings &amp; cables rub on the Index Area</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

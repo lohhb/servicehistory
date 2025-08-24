@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0453-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18770;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0453-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18540.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18780.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8160W Device condition error at output shuttles during Testing R2 (Running site3,9,10&amp;15)</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8160W(S/N: 121476, H02-NS816) High UPH 8 Hands</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 121476) HMI 8G11.51-SAS</span></p>
+<p class="ps3"><span class="ts0">Date: 3 Jan 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps144"><span class="ts0">NS-8160W Device condition error at output shuttles during Testing R2 (Running site3,9,10&amp;15).</span></p>
+<p class="ps144"><span class="ts0">· No units found on output shuttle2.</span></p>
+<p class="ps144"><span class="ts0">· Check the input shuttles detected double units.</span></p>
+<p class="ps144"><span class="ts0">· Remove all the jamming units and continue to testing but problem persist.</span></p>
+<p class="ps144"><span class="ts0">· Notice that both index arms didn&rsquo;t released the units after testing.</span></p>
+<p class="ps2"><img width="456" height="338" border="0" src="images/0453-ns8kb1.jpg" /></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps4"><span class="ts28">· Reset handler and found wrong site mapping during run Production.</span></p>
+<p class="ps2"><img width="636" height="467" border="0" src="images/0453-ns8kb2.jpg" /></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts39">Action taken</span><span class="ts25">: </span></p>
+<p class="ps3"><span class="ts0">&gt;Noticed handler setup testing site selected and index arm contactor device pickup was not tally.</span></p>
+<p class="ps3"><span class="ts0">(Handler site selected on site 4,10,11,16,but handler is suction device on site 8,12,14,15)</span></p>
+<p class="ps3"><span class="ts0">&gt;Reset handler and clean out all device.</span></p>
+<p class="ps3"><span class="ts0">&gt;Perform contact test , index arm was able to pick up correct enabled site units.</span></p>
+<p class="ps3"><span class="ts0">&gt;Tried dynamic dummy run using same handler setting but no abnormality found.</span></p>
+<p class="ps3"><span class="ts0">&gt;Checked handler log file and simulated exact scenario where &ldquo;skip&rdquo; &amp; &ldquo;start&rdquo; button pressed during device pick up error alarm on loader tray:</span></p>
+<p class="ps3"><span class="ts113">Result :</span></p>
+<p class="ps3"><span class="ts77">i. Input arm pick up sequence becomes wrong when &ldquo;skip&rdquo; and &ldquo;start&rdquo; button pressed.</span></p>
+<p class="ps3"><span class="ts77">ii. False alarm triggered on hotplate pockets filled with units (Device Remaining Error).</span></p>
+<p class="ps3"><span class="ts77">iii. Input arm places units on shuttle pocket for disabled sites and index arm picks up the units.</span></p>
+<p class="ps3"><span class="ts77">iv. Disabled sites tested and output shuttle alarms on &ldquo;Device Condition Error&rdquo;.</span></p>
+<p class="ps3"><span class="ts0">&gt;Simulated the problem on H01-NS816 and the result was same as above.</span></p>
+<p class="ps3"><span class="ts0">&gt;Checked the settings and handler configuration but no abnormality found.</span></p>
+<p class="ps3"><span class="ts0">&gt;Tried different site disabled condition but still encountered the same issue.</span></p>
+<p class="ps3"><span class="ts0">&gt;This is could be a software bug. Need to follow-up with vendor.</span></p>
+<p class="ps3"><span class="ts25">At the moment, please do not press &ldquo;Skip&rdquo; &amp; &ldquo;Start&rdquo; button when encounter device pick up error on loader tray especially when sites disabled.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">This happened only on disable sites when partial tray is load in and 8 IO hand pick up empty pocket on tray. </span></p>
+<p class="ps127"><span class="ts0">1) 8IO hands pick up empty pocket (no unit on tray) so operator press &ldquo;skip + start&rdquo; in order to continue handler operation. </span></p>
+<p class="ps127"><span class="ts0">2) Follow by input hand place units on hotplate and pick up units on next row of hotplate pockets, this time &ldquo;device remaining error&rdquo; happened on hotplate.(units already on hotplate) </span></p>
+<p class="ps127"><span class="ts0">3) Require operator to remove remaining unit on hotplate pocket then Retry + Start to continue. </span></p>
+<p class="ps127"><span class="ts0">4) Next, input hand goes to empty hotplate pocket to pick which result device pickup error(there is no unit on hotplate), so operator have to skip in order to continue. </span></p>
+<p class="ps127"><span class="ts0">5) Input hand load units to input shuttle from hotplate, but load units to disabled sites on shuttle pocket. </span></p>
+<p class="ps127"><span class="ts0">6) Input shuttle moves to test site, Test arm pick up disabled sites units and continue testing. </span></p>
+<p class="ps127"><span class="ts0">7) After test, Test arm place units on output shuttle, but those units on hands remain on test hand, did not place on output shuttle, output shuttle move to unloading side and encountered device condition error. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">ASE tried another NS-8160W s/n: 121448 with HMI ver1.8 this morning, encountered the same issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0137-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11560;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0137-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11550.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11570.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8000 HMI 2.6 &quot;Device Confirm&quot; function</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8000 series</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 4 Feb 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">In HMI ver. 2.6 there is an additional function of &quot;Device confirm&quot; found in unitset/ input arm, index arm and output arm condition.</span></p>
+<div align="left">
+  <table class="tbl6">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="320" height="241" border="0" src="images/0137-ns8kb1.jpg" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="320" height="239" border="0" src="images/0137-ns8kb2.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">1) Any update for my enquires on &quot;device confirm&quot;?</span></p>
+<p class="ps3"><span class="ts1">Will there be any added advantage if the function is turn on? </span></p>
+<p class="ps3"><span class="ts1">Please state example or situation whereby we need to turn on this function.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Device confirm function is checking the vacuum condition after placed the device and finished counter air on time.</span></p>
+<p class="ps3"><span class="ts0">However if customer enable this function, UPH may slightly down.</span></p>
+<p class="ps3"><span class="ts1">According to device surface condition.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Especially it is high viscosity condition.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">(Because it is easy to stick between device and pad.)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">So, usually there is not necessary to select by customer.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2) Additional item &quot;Index Direct move valve&quot; found in HMI v.2.6 Handler Config</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp; It has been using new vacuum unit since 2008 shipment.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp; This is improved vacuum and counter air response time.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Please take note function [Turn off and rise] in HMI [Unitset]- [ Index Arm Condition] will only appear if &quot;Index Direct move valve&quot; in Handler Config is enable.</span></p>
+<p class="ps3"><span class="ts1">The stability transportation mode is added, for a small device. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;If &quot;Index Direct move valve&quot; is enabled during HMI installation,</span></p>
+<p class="ps3"><span class="ts1">the Unitset for Index Arm will add [Turn off and rise], (after place device on the output shuttle, ) wait for the duration time after vacuum is cut off before index arm move above output shuttle. </span></p>
+<div align="left">
+  <table class="tbl36">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="226" height="259" border="0" src="images/0137-ns8kb3.png" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="555" height="274" border="0" src="images/0137-ns8kb4.png" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

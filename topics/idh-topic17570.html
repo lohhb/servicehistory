@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0352-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17570;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0352-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17560.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17580.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: </span><span class="ts23">NS-7080 Arm 1/ Arm 2 device drop false alarm</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7080W</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 9 Jan 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">9 Jan 2013 - ASE(Penang) NS-7080 Arm 1/ Arm 2 device drop false alarm. </span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps126"><span class="ts0">1)Cycle run handler with units. </span><br /><span class="ts0">2) Witness the &ldquo;Arm 1/ Arm 2 device drop false alarm&rdquo; </span><br /><span class="ts0">3) Upgraded MMI to 2.0p </span><br /><span class="ts0">4) Continue cycle run handler, same problem occurred </span><br /><span class="ts0">5) Check/ fine-tune vacuum sensors&rsquo;sensitivity with device. - </span><br /><span class="ts0">6) Found Arm 2 layout kit site A silicon tubing too long causing twisting, trim the tubing length. &ndash; Rectified </span><br /><span class="ts0">7) Continue cycle run handler, same problem occurred. </span><br /><span class="ts0">8) Check INDEX IN1 176 Input 8CH IO module addressing. &ndash; Correct </span><br /><span class="ts0">9) Check INDEX IN1 176 Input 8CH IO module light indication corresponding to respective sites on the index arm by triggering the vacuum from MMI. &ndash; Correct. </span><br /><span class="ts0">10) Request from Kamijo san to check index arm vacuum check wait time. &ndash; Regardless of the how long/ short of the check wait time, problem still occurred. </span><br /><span class="ts0">11) Found false device drop error at Arm 2 happened during initial start during index arm checking on test site. </span><br /><span class="ts0">12) Found false alarm occurred on arm 1 or 2 when using SINGLE shuttle 1 or 2. </span><br /><span class="ts0">13) Request from Kamijo san to check and take photo of the back/ inside of controller. </span><br /><span class="ts0">14) Put back controller and power up handler, found handler unable to boot up to windows. </span><br /><span class="ts0">15) Unable boot up handler even in safe mode. </span><br /><span class="ts0">16) Request recovery CD from Raj and perform HDD recovery using spare HDD from Chuah. </span><br /><span class="ts0">17) Able to boot to recovery CD but unable to boot into HDD for windows installation. </span><br /><span class="ts0">18) Informed Raj about CPU Board unable to boot up and Controller&rsquo;s PSU fan not turning. </span><br /><span class="ts0">19) According to Chuah, he also encountered handler unable to boot up to windows before. </span></p>
+<p class="ps127"><span class="ts0">1) Unable to boot up to windows - Request customer to swop or replace SPI-6941 CPU Board. </span><br /><span class="ts0">2) CPU fan not turning - Request customer to replace. </span><br /><span class="ts0">3) KGS propose ASE to send back handler back to EPSON for repair.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

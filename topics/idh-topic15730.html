@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>A8-1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15730;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">A8-1</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="q8.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15740.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps13"><span class="ts49">A8-1 How to adjust about hand height of Input arm / Output arm ( 2 hands )</span></p>
+<p class="ps13"><span class="ts49">Input arm / Output arm hand height adjustment for NS-6000</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps225"><span class="ts64">&nbsp;</span><span class="ts46">Hand Height Adjustment of Input / Output Arm </span></p>
+<p class="ps270"><span class="ts64">The height of Hand 1 (Z axis), Hand 2 (U axis) is usually adjusted when teaching. However, you can change the height when there is difference between the pickup and release of small devices or thin devices. </span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps270"><span class="ts46">Adjustment (Input Arm) </span></p>
+<p class="ps279"><span class="ts64">&nbsp;&nbsp;&nbsp;&nbsp; 1. Show the SPEL's [Debug window] panel as when teaching. </span></p>
+<p class="ps251"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps238"><span class="ts64">2. Input commands in the [Command:] combo box of the [Command Execution Window] dialog. </span></p>
+<p class="ps238"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps221"><img width="484" height="271" border="0" src="images/a8-1b1.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps279"><span class="ts64">&nbsp;3. Input Selrb 2 into the combo box and click the &lt;Execute&gt; button. Then, Input Arm is selected. (Input SELBR 3 for Output Arm.) </span></p>
+<p class="ps279"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps279"><span class="ts64">4. Input hofs into the combo box and click the &lt;Execute&gt; button. Then, the Hofs value is displayed. </span></p>
+<p class="ps238"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. If you want to lower the pickup height, decrease the values of Z and U axes</span></p>
+<p class="ps13"><span class="ts64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shown below. To heighten the pickup height, increase the values of Z and U axes</span></p>
+<p class="ps13"><span class="ts64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and rewrite the Hofs value. To change the height by 1 mm, change the value by</span></p>
+<p class="ps13"><span class="ts64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50. </span></p>
+<p class="ps221"><img width="393" height="251" border="0" src="images/a8-1b2.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps262"><span class="ts64">[Example 1] </span></p>
+<p class="ps262"><span class="ts64">To lower the Hand 1 (Z axis) pickup height by 0.2 mm. </span></p>
+<p class="ps262"><span class="ts64">50 × 0.2 = 10 --- Z axis value 80 - 10 = 70 </span></p>
+<p class="ps262"><span class="ts64">Input hofs - 444, &minus; 1648, 70, 80 into the combo box and click the &lt;Execute&gt; button. Hofs Z axis value is rewritten. </span></p>
+<p class="ps238"><span class="ts64">Input hofs into the combo box and click the &lt;Execute&gt; button. Confirm that the Z axis offset value is rewritten. </span></p>
+<p class="ps2"><img width="397" height="253" border="0" src="images/a8-1b3.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps262"><span class="ts64">[Example 2] </span></p>
+<p class="ps262"><span class="ts64">To heighten the Hand 2 (U axis) pickup height by 0.4 mm. </span></p>
+<p class="ps262"><span class="ts64">50 × 0.4 = 20 --- U axis value 80 + 20 = 100 </span></p>
+<p class="ps262"><span class="ts64">Input hofs -444,-1648,80,100 into the combo box and click the &lt;Execute&gt; button. Hofs U axis value is rewritten. </span></p>
+<p class="ps262"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps238"><span class="ts64">Input hofs into the combo box and click the &lt;Execute&gt; button. Confirm that the U axis offset value is rewritten. </span></p>
+<p class="ps2"><img width="396" height="255" border="0" src="images/a8-1b4.png" /></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps280"><span class="ts64">6. When the rewrite is completed, go back to the normal operation window by clicking &lt;A&gt; button on the [SPEL_CT] window. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps238"><span class="ts64">&nbsp; 7. Perform the device pickup and check the pickup height. </span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0201-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11000;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0201-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10800.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11010.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Intel(M) NS-7000 </span><span class="ts23">Input Hand B device drop to open area between Hot plate 1 &amp; 2</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18606)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 22 Oct 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">When input Hand A &amp; C purge device to HotPlate2 last row(that is below HotPlate 1), Hand B device drop to open area between Hot plate 1 &amp; 2, skip start to continue.</span></p>
+<p class="ps3"><span class="ts0">Same issue of Hand B&nbsp;device drop to open area between Hot plate 1 &amp; 2, skip start to continue.</span></p>
+<p class="ps3"><span class="ts0">For Hotplate1, at the last row Hand B also drop device outside Hotplate1 when Hand A&amp;C purge device to release to Hotplate1 last row.</span></p>
+<p class="ps3"><span class="ts0">Therefore, Hotplate 1 will have 3 missing devices at 1st row and 3 missing at last row.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">Replaced vacuum unit and counter-air unit for Input Hand B, running check at Hotmode.</span></p>
+<p class="ps3"><span class="ts1">When input Hand A &amp; C purge device to HotPlate2 last row, Hand B device drop to open area between Hot plate 1 &amp; 2, skip start to continue.</span></p>
+<p class="ps3"><span class="ts1">Same issue of Hand B&nbsp;device drop to open area between Hot plate 1 &amp; 2, skip start to continue.</span></p>
+<p class="ps3"><span class="ts1">For Hotplate1, at the last row Hand B also drop device outside Hotplate1 when Hand A&amp;C purge device to release to Hotplate1 last row.</span></p>
+<p class="ps3"><span class="ts1">Therefore, Hotplate 1 will have 3 missing devices at 1st row and 3 missing at last row.</span></p>
+<p class="ps3"><span class="ts1">No time for further check of this issue, as customer want to run open/short test(Bin 10)&nbsp;of devices for 1 tray where no single Bin10 is allowed.</span></p>
+<p class="ps3"><span class="ts1">Temporarily unplug the counter-air electrical connector from Hand B counter air unit.</span></p>
+<p class="ps3"><span class="ts1">First round Bin 10 check fail.</span></p>
+<p class="ps3"><span class="ts1">2nd round Bin 10 fail bcos one device fail.</span></p>
+<p class="ps3"><span class="ts1">Customer key in latest force per pin, Bin 10 test pass.</span></p>
+<p class="ps3"><span class="ts68">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Misplacement check at Unloader 1, 2, 3, found purge air too strong for Output Hand A, B, C and D.</span></p>
+<p class="ps3"><span class="ts0">Reduce counter air (purge air) volume for output Hand A,B, C and D, placement at Unloader 1 ok.</span></p>
+<p class="ps2"><img width="310" height="342" border="0" src="images/0201-ns7kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Device pickup error for Hand A at output shuttle 1, output Hand A seem higher.</span></p>
+<p class="ps3"><span class="ts0">Perform Auto hand Height Cal afew times and ok.</span></p>
+<p class="ps3"><span class="ts0">Placement check for Unloader 1, 2, 3.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Individual Input Hand vacuum and purge air check in MMI I/O Monitor for Input Hands.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">- problem solved for Input Hand B device drop to open area between Hot plate 1 &amp; 2 due to loose wrong connections(such as to I/O modules or Counter-Air unit for Input Hand B)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Running check at Hot mode 40DegC for 3 times.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">-The actual cause of the Input Hand B device drop to open area between Hot plate 1 &amp; 2 is because wrongly plug the connectors for Counter-Air unit for Hand B &amp; C Individual Input Hand vacuum and purge air check in MMI I/O Monitor for Input Hands.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">------------------------------------------------------------------------------------------------------------------------------</span></p>
+<p class="ps2"><span class="ts23">Symptom:</span></p>
+<p class="ps3"><span class="ts0">Test site: 80mm x 60mm</span></p>
+<p class="ps3"><span class="ts0">Ambient mode, pickup at loader one by one, place device on input shuttle is 4 devices at one time.</span></p>
+<p class="ps3"><span class="ts0">Hotplate pocket is 11 row x 6 col.</span></p>
+<p class="ps3"><span class="ts0">Hotplate X-pitch: 20mm</span></p>
+<p class="ps3"><span class="ts0">Hotplate Y-pitch: 30mm</span></p>
+<p class="ps3"><span class="ts0">Place 4 devices at the same time at hotplate.</span></p>
+<p class="ps3"><span class="ts0">When input Hand A &amp; C purge device to HotPlate2 last row(from operator left), Hand B device drop to open area between Hot plate 1 &amp; 2, skip start to continue.</span></p>
+<p class="ps3"><span class="ts0">Same issue of Hand B device drop to open area between Hot plate 1 &amp; 2, skip start to continue.</span></p>
+<p class="ps3"><span class="ts0">Same issue of Hand B device drop to open area between Hot plate 1 &amp; 2, skip start to continue.</span></p>
+<p class="ps3"><span class="ts0">For Hotplate1, at the last row Hand B also drop device outside Hotplate1 when Hand A&amp;C purge device to release to Hotplate1 last row.</span></p>
+<p class="ps3"><span class="ts0">Therefore, Hotplate 1 will have 3 missing devices at 1st row and 3 missing at last row.</span></p>
+<p class="ps3"><span class="ts0">So purging of device seem to be the problem.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remedy:</span></p>
+<p class="ps3"><span class="ts0">- activate vacuum on Input Hand A, B, C and D with devices.</span></p>
+<p class="ps3"><span class="ts0">- activate counter-air on Input Hand A, device drop from Hand A, ok.</span></p>
+<p class="ps3"><span class="ts0">- activate counter-air on Input Hand B, device drop from Hand C instead.</span></p>
+<p class="ps3"><span class="ts0">- activate counter-air on Input Hand C, device drop from Hand&nbsp; B instead.</span></p>
+<p class="ps3"><span class="ts0">- swap counter-air connectors for Hand B &amp; C.</span></p>
+<p class="ps3"><span class="ts0">- activate counter air on Input Hand B, device drop from Hand B.</span></p>
+<p class="ps3"><span class="ts0">- activate counter air on Input Hand C, device drop from Hand C.</span></p>
+<p class="ps3"><span class="ts0">Actual cause of the Input Hand B device drop to open area between Hot plate 1 &amp; 2 is because wrong connections of connectors for Counter-Air unit for Hand B &amp; C.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0309-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14990;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0309-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14980.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15000.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7000 cannot boot up and Cover open but handler did not stop</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (S/N: 18825, IDT(M))</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 3 June 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-7000 cannot boot up and Cover open but handler did not stop.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">IDT Penang NS02 NS7K 18825 having other issue coming up during last friday night, handler boot-up problem. Below is today troubleshooting details. </span></p>
+<p class="ps127"><span class="ts0">1. Checking and reboot the handler, cannot boot-up. Reboot the handler again, this time reboot with recovery CD. Still cannot boot-up. (Using customer original HDD) </span></p>
+<p class="ps127"><span class="ts0">2. Change HDD that you and Loh sent and reboot the handler, can boot-up. Setup new file and running 10% speeds with &quot;Dry. No tray&quot; mode, while running the handler, press the [Cover Open] door switch as your requested, still the same. Handler still operational and MMI still show [Cover Open] icon. forget to perform contact height calibration, causing handler Index over work press error. Turn off from operation panel for 10 sec and turn back on. Trying performing contact height calibration, click on [Contact parameter] dialog, mouser arrow key cannot move and keyboard also inoperational. Reboot handler, cannot start at booting. Attachment Figure 1 is the example.</span></p>
+<p class="ps127"><img width="800" height="600" border="0" src="images/0309-ns7kb1.jpg" /><br /><span class="ts0">&nbsp;3. Change customer other HDD, boot-up cannot. Again boot-up with recovery CD, okay. Homing the handler, can. Homing the process I also try out pressing [Cover Open] door switch as your requested, still the same. While pressing the [Cover Open] door switch, handler still operational and MMI still show [Cover Open] icon. After homing the handler, setup new file, perform contact height calibration and try run 10% speeds with &quot;Dry. No tray&quot; mode. Handler running about few minutes, error message came up. (About 4 minutes error message came up) After I trying to print-screen the error message by pressing the [Print Screen] key on keyboard. Again the mouser arrow key cannot move and also the keyboard are inoperational. Too late to print-screen the error message. After then monitor sudden black-out and note circuit breaker CB15 have been tripped. PC Controller don't have current. Attachment Figure 2 is the example. </span></p>
+<p class="ps6"><img width="800" height="600" border="0" src="images/0309-ns7kb2.jpg" /></p>
+<p class="ps127"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps127"><span class="ts0">4. Swap back to our HDD, boot-up okay. Homing the handler, can. Homing the process I also try out pressing [Cover Open] door switch. Still the same, handler still operational while pressing the [Cover Open] and also MMI show the [Cover Open] icon. After homing, try run 10% speeds with &quot;Dry. No tray&quot; mode, few minutes later. Heard the air sound &quot;Tot&quot; like pressing the [PAUSE] or [START] botton. Noted the error message came up and mouser arrow key cannot move and also the keyboard are inoperational again. Also monitor sudden black-out and note circuit breaker CB15 have been tripped. PC Controller don't have current. Attachment Figure 3 is the error message. (This time make it to take the error message picture also this HDD run much more long time only error message came up, 8 minutes plus.) </span></p>
+<p class="ps6"><img width="800" height="600" border="0" src="images/0309-ns7kb3.jpg" /></p>
+<p class="ps6"><img width="800" height="600" border="0" src="images/0309-ns7kb4.jpg" /></p>
+<p class="ps127"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps127"><span class="ts0">5. Trace CB15 wire diagram, checking the PC Controller, HDD, HDD slot, re-sit the CPU Board refer to attachment Figure 4 and re-sit PC Ram. Try run handler with 10% speeds increase till 80% speeds. After past 15 minutes error message came up again. And mouser arrow key cannot move and also the keyboard are inoperational again. Also monitor sudden black-out and note circuit breaker CB15 have been tripped. PC Controller don't have current. Attachment Figure 5 is the error message. (This show that, handler always intermittent show non real error message and every time show the difference error message even no error &quot;Running&quot; on status also can causing handler monitor sudden black out, CB15 circuit tripped and PC Controller don't have current.) Attachment Figure 6 &amp; 7 is the example. </span></p>
+<p class="ps6"><img width="475" height="470" border="0" src="images/0309-ns7kb5.jpg" /></p>
+<p class="ps6"><img width="800" height="600" border="0" src="images/0309-ns7kb6.jpg" /></p>
+<p class="ps6"><img width="800" height="600" border="0" src="images/0309-ns7kb7.jpg" /></p>
+<p class="ps127"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps127"><span class="ts0">6. Last trouble-shooting, on &quot;Cover Open&quot; door switch is not function able&quot;. Swap the PC I/O card. Still the same, after swap the card, pressing the [Cover Open] the handler still operational and MMI still show the cover door open icon. And I also find out some of customer PC I/O card's IC are cracked. Attachment is the example.</span></p>
+<p class="ps6"><img width="800" height="583" border="0" src="images/0309-ns7kb8.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">- HDD spoilt caused cannot bootup</span></p>
+<p class="ps126"><span class="ts0">- CB15 tripped and error message came up and mouser arrow key cannot move and also the keyboard are inoperational due to PSU in RC520 not in good condition.</span></p>
+<p class="ps3"><span class="ts0">- Cover Open pressed ON but handler does not stop, this is due to</span><span class="ts1">&nbsp;VD1 zerner diode on front operation panel burnt, see </span><a href="idh-topic14940.html" class="hs0">0304-NS7K</a><span class="ts1">.</span></p>
+<p class="ps3"><span class="ts1">Cannot be sure if spoilt PC I/O card caused zerner diode to spoilt.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps126"><span class="ts0">MMI 2.0m the IO Monitor without the COVER OPEN icon, I have checked and it seem this COVER OPEN icon was removed in MMI 2.0m.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0195-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12740;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0195-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12730.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12750.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 Chamber temperature fluctuate when running Hot at 75 DegC</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (NS8080-11, S/N: 181805)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 15 Jun 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">UTAC&nbsp; NS-8080 chamber temp fluctuate when running hot 75 deg.</span></p>
+<p class="ps2"><img width="564" height="287" border="0" src="images/0195-ns8kb1.png" /></p>
+<p class="ps2"><img width="819" height="509" border="0" src="images/0195-ns8kb2.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Found chamber fan not running in hot mode and some more no alarm.</span></p>
+<p class="ps3"><span class="ts0">Using a fan option for ambient mode was not checked.</span></p>
+<p class="ps3"><span class="ts0">Check option, switch to ambient mode and fan able to turn.</span></p>
+<p class="ps3"><span class="ts0">Switch back to hot mode, fan able to turn also.</span></p>
+<p class="ps3"><span class="ts0">Under monitoring.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">25 Jun 2010</span></p>
+<p class="ps3"><span class="ts0">brief update on NS8080-11 chamber temp check today.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">1. Below graphs on the left showed the fluctuation during production. The running setup is using 0 deg temp offset.</span></p>
+<p class="ps3"><span class="ts0">The graph on the right showed the static temp after we restored back the buyoff temp offset data.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span><img width="799" height="496" border="0" src="images/0195-ns8kb3.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2. After restored back buyoff temp offset data, we ran the handler in dry cycle mode with 0sec test time.</span></p>
+<p class="ps3"><span class="ts0">Then we change the dummy test time to 15secs and we could see some fluctuations.</span></p>
+<p class="ps2"><img width="799" height="499" border="0" src="images/0195-ns8kb4.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts0">&nbsp;3. We re-sit the chamber temp sensor connector, adjust the current plate(8NS13-17) higher and open up the direction plates .Adjusted chamber thermal sensor cover &amp; fin position.</span></p>
+<p class="ps3"><span class="ts0">We ran the handler again and the graph on the temp monitor window showed a much stable curve.</span></p>
+<p class="ps2"><img width="798" height="496" border="0" src="images/0195-ns8kb5.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">summary action:</span></p>
+<p class="ps3"><span class="ts0">-restore back original temp calibration offset data.</span></p>
+<p class="ps3"><span class="ts0">-re-sit chamber temp sensor connector</span></p>
+<p class="ps3"><span class="ts0">-adjust chamber current plate higher</span></p>
+<p class="ps3"><span class="ts0">-open up chamber direction plates</span></p>
+<p class="ps3"><span class="ts0">After above actions, the graph shown on the temp monitor window was much stable.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">30 Jun 2010</span></p>
+<p class="ps3"><span class="ts0">There are still quite a number of Jam1506 and Jam1523 from the alarm log, and from the OEE activity, there was a report that they found the&nbsp; chamber fan not turning this morning 30 Jun.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">FYI, this handler is running dual site single DUT A with Dut B empty(there's a opening gap). Not sure if this will affect the temp stability of the chamber, but according to ah soon, he already tried to cover up the gap and that was before our action last friday.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">21 Jul 2010</span></p>
+<p class="ps3"><span class="ts0">Pls see from event #7851 onwards, I input some remarks on the right side on those chamber temp error jam1523 and jam1506. Some of the remarks are tallied from their OEE activities. And I have some questions below.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">1. How do we know if door open/close in the event log is for chamber door or handler door?</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">2. What is the difference between jam1523 and jam1506? They are both CH6 temperature control error (Chamber).</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3. Event #8393,8430 and 8519 are all jam1506. Before error, there are no door open/close. What could be the possibilities?</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">They found chamber fan not turning without any alarm again yesterday. And i checked the temp graph, although fluctuation on the graph seems better than before, we still can see the 'up' and 'down'. The graph for other handler is more of a straighter curve. So pls check with Japan regarding 1) chamber fan not turning in hot mode without alarm, 2) possible cause to the fluctuation and how to achieve better temp graph.</span></p>
+<p class="ps2"><img width="801" height="499" border="0" src="images/0195-ns8kb6.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">23 Jul 2010</span></p>
+<p class="ps3"><span class="ts1">1. Event log for Door open/close</span></p>
+<p class="ps3"><span class="ts3">This is handler door.</span></p>
+<p class="ps3"><span class="ts3">There is no record of chamber door.</span></p>
+<p class="ps3"><span class="ts44">&gt; Noted. But I think better to have chamber door open/close record in event also.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">2. What is difference between Jam1523 and 1506?</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp;&nbsp; Jam 1523 is occurred when the error is detected while the handler is running.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp;&nbsp; Jam 1506 is occurred when the error is detected while the handler is stop.</span></p>
+<p class="ps3"><span class="ts44">&nbsp;&gt; Noted. But this was not explain clearly in the alarm and countermeasure manual.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">3. This is monitoring while the handler is stop.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp; So, it has some of reason for the situation.</span></p>
+<p class="ps3"><span class="ts3">&nbsp; Ex:&nbsp; Re-dock the test dead with socket. </span></p>
+<p class="ps3"><span class="ts44">&gt; Noted as above that J1506 occurred while handler is stopped. But there was no door open/close event, which means not possible to open handler door &gt; chamber door to remove docking screws to undock. So I guess still unknown.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">4.&nbsp; What is possibility of chamber fan not turning without any alarm</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp; Break down chamber fan error signal wire.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp; If the wire is broken (open), the handler can not detect any chamber fan condition.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp; So, it will be happened chamber fan is not turning without any alarm.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">The Chamber Fan SPEL CT Output bit are OUT272 and 273 to start/stop Chamber Fan.</span></p>
+<p class="ps3"><span class="ts3">Note: When the chamber fan does not move during hot mode,</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chamber temperature may have rising up continuously.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Please watch out the condition.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts44">&gt; Pls confirm in details which error signal to check. Is it wiring manual page 113 input IN281 or page 118 fan driver control. To simulate error I/O working or not, can I just pull out fan driver to fan connector and start hot mode to see whether any fan malfunction alarm?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp; Chamber fan error signal is chattering.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp; It will be occurred the process as follows;</span></p>
+<p class="ps3"><span class="ts3">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Detect abnormal chamber fan, error show on the display.</span></p>
+<p class="ps3"><span class="ts3">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pause + Reset</span></p>
+<p class="ps3"><span class="ts3">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clear the abnormal chamber fan condition by unusual factor.</span></p>
+<p class="ps3"><span class="ts3">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Start</span></p>
+<p class="ps3"><span class="ts3">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The handler is running but chamber fan is not running. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">&nbsp; Note: We did not find any error log about chamber fan.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So, we guess first case is high possibility.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

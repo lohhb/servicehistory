@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0186-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12650;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0186-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12640.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12660.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8040 Index Arm device pickup error,&nbsp; low vacuum reading at Index</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 3 Jun 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">At Infineon doing NS-8040 buyoff using PG-WF2SGA-121-1 Quad 6x6x0.73 change kit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">During AutoContact Height, some devices were able to pickup and some devices dropped, vacuum reading for devices that were able to pickup at Index shows -40kpa to -68kpa.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">The pickup tip for the Index Contactors were all metal plunger, no rubber cup.</span></p>
+<p class="ps3"><span class="ts0">I guess because the device was too small for rubber cup.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">After change the default Index vacuum sensitivity from -50kpa to -35kpa, able to do AutoContact height and running with devices.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">FYI,&nbsp; we starting encounter vacuum low/leak issue at early year 2008 for PG-WF2SGA-121-1 and PG-WF2SGA-143-1 single site kit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Then we found previous plunger design (without suction cup) which able to run in NS6040 and NS7000 cannot apply to NS8040 / NS8080.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">We make improvement design to longer plunger to close the gap between plunger and device to prevent vacuum low/leak issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">The result show the vacuum reading increase to -60kpa to -70kpa for the new plunger design compare previous plunger design -40kpa.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Then the latest plunger design (longer) apply to all Infineon change kit (small device without suction cup):</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-1</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-2</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-3</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-4</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-5</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-6</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-7</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-8</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-9</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-10</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-11</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-12</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-13</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-14</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-121-15</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-143-1</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PG-WF2SGA-143-2</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TFSGA-121 #01</span></p>
+<p class="ps3"><span class="ts0">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TFSGA-121 #02</span></p>
+<p class="ps3"><span class="ts0">&nbsp;I informed that only few kits encounter serious vacuum low/leak issue -35kpa to -50kpa.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

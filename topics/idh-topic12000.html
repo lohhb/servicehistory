@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0151-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12000;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0151-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11990.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12010.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 encountered the following error:</span></p>
+<p class="ps2"><span class="ts23">1.&nbsp; &ldquo;The uniwire 1 transmission line is disconnected&rdquo;</span></p>
+<p class="ps2"><span class="ts23">2.&nbsp; Index door not close</span></p>
+<p class="ps2"><span class="ts23">3. Chamber fan error </span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N: 181648)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 15 Mar 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps127"><span class="ts0">NS-8080 (S/N: 181648) is down. Handler giving the following main error :</span></p>
+<p class="ps127"><span class="ts0">1.&nbsp; &ldquo;The uniwire 1 transmission line is disconnected&rdquo;</span></p>
+<p class="ps127"><span class="ts0">2.&nbsp; Index door not close</span></p>
+<p class="ps127"><span class="ts0">3. Chamber fan error </span></p>
+<p class="ps127"><span class="ts0">Index door &amp; Chamber fan signal belongs to same Input I/O Module EIN30.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">-Reset Remote I/O board, then restart handler and try to homing found the error still persist.</span></p>
+<p class="ps3"><span class="ts0">-Check I/O modules in power RDY and LINK&nbsp; power is power on.</span></p>
+<p class="ps3"><span class="ts0">-Open top cover of index area, resit all I/O modules power connector error still persist.</span></p>
+<p class="ps3"><span class="ts0">-Check the input I/O address -ok</span></p>
+<p class="ps3"><span class="ts0">-I/O check found the index door signal wasn't feed back.</span></p>
+<p class="ps3"><span class="ts0">-Swapped the FANDRV output module from other handler the error still persist.</span></p>
+<p class="ps3"><span class="ts0">-Swapped the INDEXIN1 input module from other hand</span><span class="ts1">l</span><span class="ts0">er problem solved.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Input I/O module EIN30(232) causing the problems.</span></p>
+<p class="ps3"><span class="ts0">Remote I/O Input Unit 8CH ------R33NS700001500 </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Use multi-meter to check below when handler is power off:</span></p>
+<p class="ps3"><span class="ts0">1. Between D-G&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;200</span><span class="ts1">&nbsp;</span><span class="ts0">Ohm( Value will be depended on equipment))</span></p>
+<p class="ps3"><span class="ts0">2. Between 0-24V&nbsp; NO short-circuit.</span></p>
+<p class="ps3"><span class="ts0">(Resistance: &gt;few kOhm (Value will be depended on equipment))</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts55">Email by Hidaka, 25 May 2011:</span></p>
+<p class="ps144"><span class="ts55">To change EIN30 label of 232&nbsp; Input Module 8 CH (located at Index area)</span></p>
+<p class="ps144"><span class="ts55">EIN30&nbsp;&nbsp;&nbsp; -&gt; OP IN</span></p>
+<p class="ps144"><span class="ts55">EOUT30 -&gt;OP OUT</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">EIN30(23) of 8 CH above Index connects the following:</span></p>
+<p class="ps3"><span class="ts14">1) IN280, SKIP ENABLE</span></p>
+<p class="ps3"><span class="ts14">2) IN281, </span><span class="ts68">not use for NS-8040 (NS-8080/8160 Chamber Fan Driver Alarm)</span></p>
+<p class="ps3"><span class="ts68">3) IN282, ionizer for chamber(test area)</span></p>
+<p class="ps3"><span class="ts68">4) IN283, Ionizer for Loader &amp; Unloader (Ionizer Alarm 2A &amp; 2B)</span></p>
+<p class="ps3"><span class="ts68">5) IN284, Index Cover Unit</span></p>
+<p class="ps3"><span class="ts68">6) IN285, not use in NS-8040 (NS-8080/8160 Test Hand spring compliance sensor)</span></p>
+<p class="ps3"><span class="ts0">7) IN286, Index Cooling Fan for Z motor</span></p>
+<p class="ps3"><span class="ts0">8) IN287, Index Cooling Fan for </span><span class="ts1">U motor</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Refer Drawing Name. Skip enable SW / Sheet No. SKH0811-G16-3 / Drawing No. Remote I/O 16</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">There are part code mistake for the I/O modules in Maintenance Manual Rev 4.</span></p>
+<p class="ps128"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts64">Part Code for I/O Module from NS-8000 Maintenance Manual Rev 5.</span></p>
+<div align="left">
+  <table class="tbl4">
+    <tr class="row0">
+      <td class="cell3">
+        <p class="ps161"><span class="ts46">Part Name</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts46">Specification</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts46">Part Code</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">Remote I/O Input Unit 8CH</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts64">A21SB-08UY04</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">R33N700001500</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">Remote I/O Input Unit 16CH</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts64">A21SB-16U-2Y04</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">R33N700001600</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">Remote I/O Output Unit 8CH</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts64">A21PB-08UY04</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">R33N700001700</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">Remote I/O Output Unit 16CH </span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts64">A21PB-16U-2Y04</span></p>
+      </td>
+      <td class="cell3">
+        <p class="ps161"><span class="ts49">R33N700001800</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps150"><span class="ts37">1) EIN30 of 16CH (located below Loader unit) include Cover Open Switch(Input Bit 299)</span></p>
+<p class="ps144"><span class="ts37">2) EIN7 consist of Input Bit104~110 (connected to SKP452 E-stop board) for Doors</span></p>
+<p class="ps3"><span class="ts37">3) EIN30 of 8 CH (located above Index) include Input Bit 284 for Index side cover door</span></p>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0248-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12570;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0248-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13360.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12580.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: </span><span class="ts24">W0715 Tester interface control abnormal when Index Arm 1 at socket</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W(S/N: 121040, NS7KW-06)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 25 Aug 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">Customer informed handler encountered W0715 Tester interface control abnormal. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Error message:The abnormal of hardware occurred. </span></p>
+<p class="ps172"><span class="ts1">Please confirm the power supply of PC.</span></p>
+<p class="ps172"><span class="ts1">Remedy message: Noise and voltage decline by, the tester interface circuit of action abnormal occurred. Please confirm the condition of FAPC power supply DC5V</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">26 Aug 2010</span></p>
+<p class="ps3"><span class="ts1">Checking by dummy tester(HP Compaq notebook) through GPIB interface(Handler slave address 0, Tester address 1), error W0715 Tester Interface control Abnormal occurred</span></p>
+<p class="ps3"><span class="ts1">-change to different setup file also same error</span></p>
+<p class="ps130"><span class="ts1">-reload loader.exe for tester I/F driver(Hex file), same error</span></p>
+<p class="ps130"><span class="ts1">-use dummy tester GPIB tester I/F check with NS-8080W, ok</span></p>
+<p class="ps130"><span class="ts1">-swapped to a repaired IFUNT card in RC520 with reload tester I/F driver, same error</span></p>
+<p class="ps130"><span class="ts1">-swapped another new IFUNT card with reload Tester I/F driver, same error</span></p>
+<p class="ps130"><span class="ts1">-swapped Tester I/F board at rear-left of handler, same error</span></p>
+<p class="ps130"><span class="ts1">-In SPEL, use Output I/O bit to trigger test site bin, able to communicate with dummy tester</span></p>
+<p class="ps130"><span class="ts1">-swapped to another PCI slot for IFUNT card, same error</span></p>
+<p class="ps130"><span class="ts1">-5Vdc checking by HMutility in C:\NS7000\Tool folder, measure at 4.91V, voltage ok</span></p>
+<p class="ps130"><span class="ts1">-uncheck 5Vdc monitoring also same error</span></p>
+<p class="ps130"><span class="ts1">-replaced to 400W power supply in RC520, same error</span></p>
+<p class="ps130"><span class="ts1">-replaced to a 3.5&iexcl;± HDD(WD 160GB, did recovery with Recovery by EasyRestore Ver 1.0, took almost an hour for recovery(surpisingly able to use EasyrRestore on HDD capacity larger than 40GB)</span></p>
+<p class="ps130"><span class="ts1">Wrong Recovery CD(ver 1.2) prepared by EPSON-T</span></p>
+<p class="ps130"><span class="ts1">This RC520 uses CPU Board SPI-6941 with C-864 x03pcs of PG Board on ISA slots, other RC520 in Xilinx uses only 1 pc of C-873 PG Board</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">27 Aug 2010</span></p>
+<p class="ps3"><span class="ts1">-after recovery, PC hang-mouse cannot move, MMI shows executing spel with NS-taskbar</span></p>
+<p class="ps130"><span class="ts1">-replace to another 2.5&iexcl;± HDD, did software Recovery, also&nbsp; PC hang-mouse cannot move, MMI shows executing spel with NS-taskbar</span></p>
+<p class="ps130"><span class="ts1">-checked Windows 2000 Device Manager resouces setting(Input/Output Range) for&nbsp; IFUNT100, PC I/O 32 &amp; PC I/O 64, MIB1, MIB2, MIB3, PG1, PG2 and PG3. Found some Input/Output Range not the same as in SPEL Hardware I/O Board Address range</span></p>
+<p class="ps130"><span class="ts1">-launch C:\PSPELWORK\exe\HWconfe.exe, change the Input/output range in SPEL same as Windows 2000, </span></p>
+<p class="ps130"><span class="ts1">-add 7SegmentLED for PC I/O 64 in SPEL Output</span></p>
+<p class="ps130"><span class="ts1">-MMI able to launch, SPEL &amp; MMI version up, restore system data &amp; pos</span></p>
+<p class="ps130"><span class="ts1">-run handler but still encounter W0715 Tester interface control abnormal</span></p>
+<p class="ps130"><span class="ts1">-disconnect all cables from connection ports of IFUNT card at RC520 also same error</span></p>
+<p class="ps130"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps130"><span class="ts1">will replace backplane board in RC520 next week from TR60 in office</span></p>
+<p class="ps3"><span class="ts0">30 Aug 2010</span></p>
+<p class="ps3"><span class="ts1">-Replaced with RC520(from NS-6040 in office), only with backplane, 300W power supply, IFUNT100 card</span></p>
+<p class="ps130"><span class="ts1">-Install rest of the cards such as MIBs, PG to this RC520</span></p>
+<p class="ps130"><span class="ts1">-Boot up handler, same error W0715 Tester Interface control Abnormal occurred</span></p>
+<p class="ps3"><span class="ts3">-checked IFUNT100 address for Windows 2000 Resources hardware settings upper address was used and not address (EC00-EC1F) (Lower address) does not match SPEL software IFUNCT100 address </span></p>
+<p class="ps130"><span class="ts3">-set SPEL I/O Input address for IFUNT100 as EC00</span></p>
+<p class="ps130"><span class="ts3">-restart MMI, able to communicate and do bining with GPIB dummy tester</span></p>
+<p class="ps130"><span class="ts1">-swapped cards back to original RC520</span></p>
+<p class="ps130"><span class="ts1">-conversion to FT256 17x17 Quad</span></p>
+<p class="ps130"><span class="ts1">-alignment check in Hot 85DegC</span></p>
+<p class="ps130"><span class="ts1">-release handler to production</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts3">Wrong SPEL I/O Input address for IFUNT100 that do not match IFUNT100 address for Windows 2000 Resources hardware settings upper address caused </span><span class="ts1">error W0715 Tester Interface control Abnormal.</span></p>
+<p class="ps3"><span class="ts1">In this case&nbsp;</span><span class="ts3">&nbsp;IFUNT100 address for Windows 2000 Resources hardware settings upper address</span><span class="ts1">&nbsp;is EC00 so </span><span class="ts3">SPEL I/O Input address for IFUNT100 as EC00 is correct</span><span class="ts1">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts0">Recovery CD by EPSON is for standard NS-7000 series.</span></p>
+<p class="ps3"><span class="ts0">Automat is an option which include Bin display on Automat, 7SegmentLED is an output using PC I/O 64 card.</span></p>
+<p class="ps3"><span class="ts0">Therefore, after Recovery need to add Contec I/O 64 card 7SegmentLED in SPEL I/O Output.</span></p>
+<p class="ps2"><span class="ts23">IFUNT100</span><span class="ts28">&nbsp; Input/Output Range&nbsp; </span><span class="ts70">EC00</span><span class="ts28">&nbsp;- EC1F(Higher Address).</span></p>
+<p class="ps2"><span class="ts23">Contec PIO-32/32L(PCI)</span><span class="ts28">&nbsp; Input/Output Range&nbsp; </span><span class="ts71">E400</span></p>
+<p class="ps2"><span class="ts72">Contec PIO-64/64L(PCI)</span><span class="ts73">&nbsp; </span><span class="ts28">Input/Output Range&nbsp; </span><span class="ts74">E000</span></p>
+<div align="left">
+  <table class="tbl24">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="481" height="385" border="0" src="images/0248-ns7kb1.png" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="493" height="402" border="0" src="images/0248-ns7kb2.png" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Backplane is Contec MB-PCI14/9(PC) for NS-7000 which is also use in NS-6000.</span></p>
+<p class="ps3"><span class="ts1">Backplane is Contec BPI-1411 for NS-8000.</span></p>
+</body>
+</html>

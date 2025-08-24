@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>A8-2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15740;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">A8-2</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15730.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp; </span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps13"><span class="ts22">A8-2 How to adjust hand height of Input arm / Output arm ( 2 hands or 4 hands )</span></p>
+<p class="ps13"><span class="ts22">Input arm / Output arm hand height adjustment for NS-7000 / NS-8000</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps225"><span class="ts64">&nbsp;</span><span class="ts46">Input / Output Arm Hand Height Adjustment </span></p>
+<p class="ps13"><span class="ts49">The hand height of the Input Arm / Output Arm is adjusted by the auto teaching program using the hand height calibration of the Input Arm / Output Arm Z, U, V, and W axes. </span></p>
+<p class="ps241"><span class="ts46">NS7000 Auto Teaching </span></p>
+<p class="ps238"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps238"><span class="ts49">1. Select the &quot;Supervisor&quot; from the [User Select] box in the HMI main window. </span></p>
+<p class="ps2"><img width="729" height="551" border="0" src="images/a8-2b1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps281"><span class="ts64">&nbsp;2. Move the pointer of the mouse to the inside of the dotted line and double-click the left mouse button. </span></p>
+<p class="ps281"><span class="ts64">3. Select the &quot;SPEL (enable)&quot; from the list displayed by double-click. </span></p>
+<p class="ps281"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps282"><span class="ts64">4. The system task bar will be displayed at the bottom of the monitor. Click the &lt;SPEL-NS7000&gt; button to display the SPEL window in the AUTO Mode. </span></p>
+<p class="ps2"><img width="834" height="625" border="0" src="images/a8-2b2.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps281"><span class="ts64">5. Click the &lt;P&gt; button and switch the program mode from AUTO MODE to PROGRAM MODE. </span></p>
+<p class="ps281"><span class="ts64">6. Click the &lt;Close&gt; button of the [SPEL-NS7000] dialog. </span></p>
+<p class="ps281"><span class="ts64">7. Select the &lt;Restart SPEL&gt; option button in the [Exit SPEL] dialog and click the &lt;OK&gt; button. </span></p>
+<p class="ps281"><span class="ts64">8. When SPEL is restarted, click the [Operating Window]-&lt;Abort All&gt; button. </span></p>
+<p class="ps281"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps283"><span class="ts64">9. Use the Windows explorer and start the following program. C:¥NS7000¥TOOL¥AUTO_TEACH.EXE </span></p>
+<p class="ps283"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps283"><span class="ts64">10. Show the [Auto Teaching] window. </span></p>
+<p class="ps2"><img width="628" height="459" border="0" src="images/a8-2b3.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps281"><span class="ts64">11. Select the [Hand Height Calibration] group box-&lt;Input Arm&gt; option button. </span></p>
+<p class="ps281"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps284"><span class="ts64">12. Click the &lt;START&gt; button. Then, it starts the hand height calibration of the Input Arm Z, U, V, and W axes. </span></p>
+<p class="ps2"><img width="794" height="584" border="0" src="images/a8-2b4.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps285"><span class="ts64">13. Select the [Hand Height Calibration] group box - &lt;Output Arm&gt; option button. </span></p>
+<p class="ps285"><span class="ts64">14. Click the &lt;START&gt; button. Then, it starts the hand height calibration of the Output Arm Z, U, V, and W axes. </span></p>
+<p class="ps285"><span class="ts64">15. After the height calibrations of the Input Hand and Output Hand are completed, click the &lt;Exit&gt; button to finish the auto teaching. </span></p>
+<p class="ps285"><span class="ts64">16. Finish SPEL and reboot MMI and SPEL. </span></p>
+<p class="ps286"><span class="ts64">17. Click the &lt;P&gt; button in the tool bar of the SPEL Auto Mode Window and switch to PROGRAMMING MODE. </span></p>
+<p class="ps285"><span class="ts64">18. Click the SPEL-[Operation Window]-&lt;Abort All&gt; button and stop the program. </span></p>
+<p class="ps13"><span class="ts64">&lt; NOTE &gt; Perform the hand height calibration to align the four hands height. If the vacuum pad dimension is wrong or the set screw for the vacuum pad is loose, accurate height calibration is impossible and troubles may occur. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps287"><span class="ts46">NS8000 Auto Teaching </span></p>
+<p class="ps288"><span class="ts64">1. Refer to the procedure for NS-8000 and show [Auto Teaching] window. </span></p>
+<p class="ps288"><span class="ts64">2. Select the [In/Out Arm 3 Point Teach] tab. </span></p>
+<p class="ps288"><span class="ts64">3. Select the [Hand Height Calibration] group box-&lt;Input Arm&gt; button. </span></p>
+<p class="ps288"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps289"><span class="ts64">4. Click the &lt;START&gt; button in the [Hand Height Calibration] group box. Then, it starts the hand height calibration of the Input Arm Z, U, V, and W axes. </span></p>
+<p class="ps290"><img width="782" height="488" border="0" src="images/a8-2b5.png" /></p>
+<p class="ps291"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps288"><span class="ts64">5. Select the [Hand Height Calibration] group box-&lt;Output Arm&gt; button. </span></p>
+<p class="ps288"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps289"><span class="ts64">6. Click the &lt;START&gt; button in the [Hand Height Calibration] group box. Then, it starts the hand height calibration of the Output Arm Z, U, V, and W axes. </span></p>
+<p class="ps289"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps290"><img width="813" height="498" border="0" src="images/a8-2b6.png" /></p>
+<p class="ps291"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps289"><span class="ts64">7. Refer to the procedure for NS-8000 and finish the Auto Teaching. </span></p>
+</body>
+</html>

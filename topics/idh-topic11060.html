@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0107-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11060;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0107-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11050.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11070.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Qualcomm NS-8080HW hang up during HOME</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080HW</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 15~16 Oct 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Handler hang up during HOME.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps190"><span class="ts0">1.&nbsp; &nbsp;In SPEL CT, Individual mcal of each robot.</span></p>
+<p class="ps190"><span class="ts0">2.&nbsp; &nbsp;Found Input arm unable to mcal.</span></p>
+<p class="ps190"><span class="ts0">3.&nbsp; &nbsp;Found Hand A has no torque after power on.</span></p>
+<p class="ps190"><span class="ts0">4.&nbsp; &nbsp;Swap motor connector at SKP-456G between Hand A and Hand B. Problem migrated to Hand B. Conclusion Motor A is ok.</span></p>
+<p class="ps190"><span class="ts0">5.&nbsp; &nbsp;Swap connectors at Drv12 and Drv13. Problem did not migrate. Conclusion Drv 12 is ok except the path after SKP-430 J1 to Drv12 and Drv12 to SKP-456G.</span></p>
+<p class="ps190"><span class="ts0">6.&nbsp; &nbsp;To Verify 12CN3 and 13CN3 connector swap. If migrate, possibly SKP-430 J1 problem. If still Hand A, path after Drv12 to SKP-456G including SKP-456F.</span></p>
+<p class="ps190"><span class="ts0">7.&nbsp; &nbsp;Swapped 12NC3 and 13cN3, problem did not migrate. Confirmed path is after Drv12 to SKP456G.</span></p>
+<p class="ps190"><span class="ts0">8.&nbsp; &nbsp;Replaced new SKP456G. Problem did not migrate.</span></p>
+<p class="ps190"><span class="ts0">9.&nbsp; &nbsp;Replaced new Stepper motor. Problem did not migrate.</span></p>
+<p class="ps190"><span class="ts0">10. However, today different symptoms. Hand C and D going down and Hand A and B moving up but vibrating.</span></p>
+<p class="ps190"><span class="ts0">11. Swapped Drv12 and Drv13. Problem same.</span></p>
+<p class="ps190"><span class="ts0">12. Swapped PG board. Problem same.</span></p>
+<p class="ps190"><span class="ts0">13. Verified SKP430 connection. No Problem.</span></p>
+<p class="ps190"><span class="ts0">14. It seems Input hand all 4 pick up hand has abnormalities. Suspect coming from general source. Attempted auto height calibration but unable to.</span></p>
+<p class="ps190"><span class="ts0">15. Checked SKP456F and X1 connector ok, but found X2 connector loosely connected. Resit ensuring both connect is &ldquo;clipped&rdquo;, mcal and now all 4 pickup hands no problem.</span></p>
+<p class="ps190"><span class="ts0">16. Conclusion, suspect X2 connector, which is the main connector for input arm loosely connected causing abnormalities. After resit with &ldquo;clipped&rdquo; dry run no problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">X2 connector which is main connector for Input Arm connection loose caused abnormalities include handler hang during Homing.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Dip switch on stepper driver if wrong setting will cause stepper motor to vibrate and unable to complete HOME or unable to complete Auto Hand Height calibration.</span></p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0331-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17360;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0331-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17350.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17370.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: 1) Customer feedback index time longer than NS8080, about 3s. </span><br /><span class="ts24">2) Even at 0s test time, index arm is not moving. </span><br /><span class="ts24">3) Handler transferred from calamba, unable to adjust speed. Greyed off. </span><br /><span class="ts24">4) Previous visit by EPSON engineer found system or data file corrupted because new HDD, system and data restored, speed unable to adjust.</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7000</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 15~16 Dec 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps126"><span class="ts0">STE NS7000 on call support </span><br /><span class="ts0">1) Customer feedback index time longer than NS8080, about 3s. </span><br /><span class="ts0">2) Even at 0s test time, index arm is not moving. </span><br /><span class="ts0">3) Handler transferred from calamba, unable to adjust speed. Greyed off. </span><br /><span class="ts0">4) Previous visit by EPSON engineer found system or data file corrupted because new HDD, system and data restored, speed unable to adjust.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps126"><span class="ts1">1</span><span class="ts0">) To carry out recovery of HDD with no/minimal restoration step by step. </span><br /><span class="ts0">2) However, long index time was not due to speed settings but index arm was waiting for input to load device. It was not slow but input arm is always moving to a bypass/waiting point before loading onto shuttle. </span><br /><span class="ts0">3) Recovery carried out but input/ouput stepper unable to home. </span><br /><span class="ts0">4) Hardware, wiring, parameters, IO settings/addressing all checked and compared, no abnormalities. </span><br /><span class="ts0">5) Used HDD from another handler and able to mcal for input/output but rotator for both remains unable to mcal. </span><br /><span class="ts0">6) #2 handler power on and able to mcal for all. </span><br /><span class="ts0">7) Recovery carried out again and this time, input/output able to mcal but rotator still unable to mcal. </span><br /><span class="ts0">8) During mcal, rotator arm is vibrating and does not mcal at all. Checked sensor and dogplate. Saw sensor unable to cut dogplate. </span><br /><span class="ts0">9) Dogplate removed and installed again. Rotator able to home. </span><br /><span class="ts0">10) Dry cycle and handler released to customer. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts1">Speed setting in MMI cannot be adjusted due to someone change setting in ArmCondition.def </span><span class="ts0">in C:\NS7000\config\Range</span><span class="ts15">.</span></p>
+<p class="ps126"><span class="ts0">So change the setting in &quot;ArmCondition.def&quot; for &quot;</span><span class="ts25">Speed=100,100,10</span><span class="ts0">&quot; &amp; &quot;</span><span class="ts25">Accel= 100,100,10</span><span class="ts0">&quot;</span></p>
+<p class="ps3"><span class="ts1">Refer </span><a href="idh-topic14980.html" class="hs0">0308-NS7K</a><span class="ts1">.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

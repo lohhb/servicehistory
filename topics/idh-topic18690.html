@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0008-NX1032XS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18690;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0008-NX1032XS&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic18680.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18700.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Tester Time up error</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NX1032XS (S/N: 182347)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520 (S/N: 00504), DUBOX030 (S/N: 100004), PSUNT353 (P892) </span></p>
+<p class="ps3"><span class="ts1">Date: 1 Nov 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps202"><span class="ts89">Online Amb run Binning check FF900 31x31 Octal but disable site B &amp; H</span><span class="ts35">1</span><sup><span class="ts35">st</span></sup><span class="ts35">&nbsp;round, 1</span><sup><span class="ts35">st</span></sup><span class="ts35">&nbsp;&amp; 2</span><sup><span class="ts35">nd</span></sup><span class="ts35">&nbsp;device test bin to bin 1 but 3</span><sup><span class="ts35">rd</span></sup><span class="ts35">&nbsp;device testing tester time up error.Clear out devices</span><sup><span class="ts114">2nd</span></sup><span class="ts35">&nbsp;round, 1</span><sup><span class="ts35">st</span></sup><span class="ts35">&nbsp;&amp; 2</span><sup><span class="ts35">nd</span></sup><span class="ts35">&nbsp;device test bin to bin 1 but 3</span><sup><span class="ts35">rd</span></sup><span class="ts35">&nbsp;device testing tester time up error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">SPEL software corruption after IFTUNT300 driver upgrade from ver 1030 to 1040</span></p>
+<p class="ps3"><span class="ts1">After reboot, &ldquo;Retrun value is 0&rdquo; error message was displayed during launching of SPEL.Also SPEL hangup.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">HDD Recovery and system data, pos and setupfiles restore due to SPEL software corruption after IFUNT driver upgrade from ver 1030 to 1040. </span></p>
+<p class="ps3"><span class="ts0">We performed the following: </span></p>
+<p class="ps3"><span class="ts0">- Use Recovery DVD Ver 1.0 to do HDD Recovery </span></p>
+<p class="ps3"><span class="ts0">- HMI upgrade to ver 1.41 </span></p>
+<p class="ps3"><span class="ts0">- HMI System Restore </span></p>
+<p class="ps3"><span class="ts0">- HMI Pos Restore </span></p>
+<p class="ps3"><span class="ts0">- HMI setup files restore by importing </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">- Running check with devices but found device pickup error at loader and also at output shuttles. After found X &amp; Y pickup &amp; release offset was out </span></p>
+<p class="ps3"><span class="ts0">- After advise by Shimizu-san to copy PG parameters from backup to C:\NX1000\Config\PG. Backup of PG parameters were copies to C:\NX100\Config\PG </span></p>
+<p class="ps3"><span class="ts44">When doing HMI SYSTEM or SPEL SYSTEM backup, the PG Parameters are not included.</span></p>
+<p class="ps3"><span class="ts44">But yet PG setting such as it's address are in SPEL.</span></p>
+<p class="ps3"><span class="ts0">- Restore backup setup files and running check with devices, pick </span><span class="ts1">&amp;</span><span class="ts0">&nbsp;place offset, ok </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">IFUNT driver downgrade to ver 1030.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">4 Nov 2012</span></p>
+<p class="ps3"><span class="ts1">EPSON release HMI ver 1.42 to patch Tester communication issue(test end at the tester communication).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts0">HMI ver 1.41 bug caused Tester communication issue.</span></p>
+<p class="ps3"><span class="ts0">HMI ver 1.42 (SPEL-CT Ver3.20-h2) patch this bug.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

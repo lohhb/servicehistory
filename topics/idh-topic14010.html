@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0268-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14010;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0268-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14000.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14020.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:&nbsp;</span><span class="ts23">&nbsp;NS-8080 is having Socket Air Heater (jet heater) temperature unstable on socket air 1 &amp; 2 upon heating up to 100DegC</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080 (S/N: 181649)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 8 Dec 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">ASE NS-8080 is having Socket Air temperature unstable on Socket Air 1 &amp; 2 upon heating up to 100&iexcl;ãC. (refer to below pictorial)</span></p>
+<p class="ps2"><img width="600" height="371" border="0" src="images/0268-ns8kb1.png" /></p>
+<p class="ps3"><span class="ts1">Temperature not stabilise after heat up for 10 mins.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Did verification on another handler s/n: 181900 and it able to heat up to 130&iexcl;ãC.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span><img width="581" height="480" border="0" src="images/0268-ns8kb2.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Upon verification, notice that socket air 1 &amp; 2 air flow is control by flowmeter that is locate beside vacuum pump.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Did verify by controlling air flow from flowmeter but it unable to stabilise the temperature.&nbsp; </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Would like to check what is the root cause for socket air 1 &amp; 2 temperature unstable upon heating up?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">Advise to try OMRON tuning.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts103">Feedback from Terry that H03-NS88 setpoint to 100DegC, socket air heater fluctuate +/- 5 DegC.</span></p>
+<p class="ps195"><span class="ts103">Perform Omron utility auto tuning at 100 DegC SP. Auto tuning able to complete but both socket air heaters temperature not stable.</span></p>
+<p class="ps170"><span class="ts103">Performed Auto tuning at 130 DegC, both socket air heaters unable to achieve 130 DegC, only reach 112 to 116 DegC.</span></p>
+<p class="ps170"><span class="ts104">Check on another handler H08-NS88, found out solenoid valve on the air heater require to trigger if not air will not to supply to air heater.</span></p>
+<p class="ps170"><span class="ts103">Perform 130 DegC auto tuning. </span></p>
+<p class="ps170"><span class="ts103">Completed auto-tuning and both socket air 1 and 2 temperature stable.</span></p>
+<p class="ps170"><span class="ts103">KIV, awaiting for EPSON advises from Hidaka.</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Remarks</span></p>
+<p class="ps3"><span class="ts0">This is related to </span><a href="idh-topic14080.html" class="hs0">0275-NS8K</a><span class="ts0">.</span></p>
+</body>
+</html>

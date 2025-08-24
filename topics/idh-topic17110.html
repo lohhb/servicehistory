@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0388-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17110;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0388-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17100.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17120.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Field upgrade NS-8080 to High UPH 8 Hands</span></p>
+<p class="ps3"><span class="ts1">Handler Model:&nbsp;</span><span class="ts0">&nbsp;NS-8080 (S/N: 181594, H14-NS88)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 17 Oct 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">ASE 8 IO upgrade on H14-NS88 s/n:181594 by MIKUNI.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">17 Oct 2011</span></p>
+<p class="ps3"><span class="ts0">- Precheck on handler condition and backup handler data.</span><br /><span class="ts0">&nbsp;- Remove 4 hands assembly on input/output arm.</span><br /><span class="ts0">&nbsp;- Remove belt holder.</span><br /><span class="ts0">&nbsp;- Remove linkage and cam follower on X-axis(input/output arm)</span><br /><span class="ts0">&nbsp;- Remove existing vacuum lines(input/output arm)</span><br /><span class="ts0">&nbsp;- Relocate X-axis home sensor location(input/output arm)</span><br /><span class="ts0">&nbsp;- Remove X-axis hard stoppers on both ends(input/output arm)</span><br /><span class="ts0">&nbsp;- Installed 8 IO assembly on but input/output arm.</span><br /><span class="ts0">&nbsp;- Installed new belt holder(input/output arm)</span><br /><span class="ts0">&nbsp;- Installed new linkage.</span><br /><span class="ts0">&nbsp;- Installed new hard stoppers(input/output arm)</span><br /><span class="ts0">&nbsp;- Replaced Y-axis home sensor plates(input/output arm)</span><br /><span class="ts0">&nbsp;- Split vacuum lines for 8 IO vacuum supply for both input/out arm.</span><br /><span class="ts0">&nbsp;- Installed RS485 communication card (Serial I/O Board ; R35N800022500 (</span><span class="ts108">COM-2DL-PCI</span><span class="ts1">)), </span><span class="ts0">in RC520.</span></p>
+<p class="ps4"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">18 Oct 2011</span></p>
+<p class="ps3"><span class="ts0">- Harddisk recovery (for High UPH 8 Hands) and restore handler data.</span><br /><span class="ts0">&nbsp;- Replaced fixed tray plate.</span><br /><span class="ts0">&nbsp;- Using dial gauge to check fixed tray plate parallelism/perpendicular with output arm by mounting dial gauge on output arm(checking on fixed tray X and Y axis guide pins)</span><br /><span class="ts0">&nbsp;- Check fixed tray tray presence sensor in SPEL.</span><br /><span class="ts0">&nbsp;- Reduce PSU1 supply to 24.7Vdc.</span><br /><span class="ts0">&nbsp;- Check both input and output vacuum and counter air in Z-Teach program.</span><br /><span class="ts0">&nbsp;- MCAL openclose for both input and output arm. Check in SPEL input bit 56 INA_HD_OS and 60 OTA_HD_OS. Check 40mm between individual hands.</span><br /><span class="ts0">&nbsp;- Relocate loader position to -60mm(Config require for 8IO)</span><br /><span class="ts0">&nbsp;- Using dial gauge on input arm to check X and Y axis of loader lane.</span><br /><span class="ts0">&nbsp;- Adjust loader tray lifter parallelism with ref. to tray.</span><br /><span class="ts0">&nbsp;- Reteach Tray arm loader position. </span><br /><span class="ts0">- Master Calibration for both input/output arm.</span><br /><span class="ts0">&nbsp;- Hand pitch check for both input/output arm.</span><br /><span class="ts0">&nbsp;- Auto teaching for both input/output arm.</span><br /><span class="ts0">&nbsp;- Verified tray arm pickup position.</span><br /><span class="ts0">&nbsp;- Cycle run handler.</span><br /><span class="ts0">&nbsp;- RS485 2Ack error found on Output arm follow by Hand H servo error.</span><br /><span class="ts0">&nbsp;- Unable to recover, informed to EPSON by mikuni members and requested for Hand actuator replacement.</span></p>
+<p class="ps4"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">20 Oct 2011</span></p>
+<p class="ps3"><span class="ts0">- Troubleshoot on Output Arm Hand H servo error.</span><br /><span class="ts0">&nbsp;- Error recovered but simulated error during cycle run by Pause+Reset and Start. RS485 2Ack error and Hand Servo error Hand H occur.</span><br /><span class="ts0">&nbsp;- Suspect Hand H wiring problem.</span><br /><span class="ts0">&nbsp;- New hand H replacement arrive.</span><br /><span class="ts0">&nbsp;- Replaced Output Arm Hand H.</span><br /><span class="ts0">&nbsp;- Simulation of error OK, no occurance.</span><br /><span class="ts0">&nbsp;- Housekeeping of wirings on Hand H.</span><br /><span class="ts0">&nbsp;- Check vacuum and counter air.</span><br /><span class="ts0">&nbsp;- Master calibration and Hand pitch adjustment on output arm.</span><br /><span class="ts0">&nbsp;- Cycle run handler.</span></p>
+<p class="ps3"><span class="ts0">21 Oct 2011</span></p>
+<p class="ps3"><span class="ts0">- Convert handler to Octal 4x4.5 package.</span><br /><span class="ts0">&nbsp;- Fine-tune pickup and placement on handler.</span><br /><span class="ts0">&nbsp;- Found out Output arm pickup Y pickup/placement offset more than 1mm due to Hand pitch adjustment not done with reference to Hand A after Hand H replacement.</span><br /><span class="ts0">&nbsp;- Redo auto teaching on output arm.</span><br /><span class="ts0">&nbsp;- Found loader pickup starting of tray and end of tray not level.</span><br /><span class="ts0">&nbsp;- Attached dial gauge on input arm and check on loader lane co-planarity. Readjust loader lane.</span><br /><span class="ts0">&nbsp;- Redo Auto teaching on input arm.</span><br /><span class="ts0">&nbsp;- Fine-tune in Hot mode for pickup/placement on loader, hotplate, input shuttles, output shuttles and unloader trays.</span><br /><span class="ts0">&nbsp;- Installed HMI v1.9 and release to customer.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

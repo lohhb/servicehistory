@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0288-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14410;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0288-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14400.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14420.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: Absolute Encoder backup alarm F-5016 for Input Arm</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 26 May 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts29">ESP NS-7000 handler, it&rsquo;s been OFF for almost a month now due to low volume and now when we ON the machine the following errors occurred:</span></p>
+<p class="ps7"><span class="ts15">1.&nbsp; &nbsp;</span><span class="ts29">An error lights up at slot 1 board at initial start up. (pls refer to pic.1), after index homing was finished it cannot home the arm 1.</span></p>
+<p class="ps174"><img width="520" height="190" border="0" src="images/0288-ns7kb1.jpg" /></p>
+<p class="ps174"><br />&nbsp;</p>
+<p class="ps7"><span class="ts15">2.&nbsp; &nbsp;</span><span class="ts29">Picture 2, this is the error message that appears after it failed to home, no obstruction and the arm can be moved smoothly when off.</span></p>
+<p class="ps174"><img width="636" height="440" border="0" src="images/0288-ns7kb2.jpg" /></p>
+<p class="ps174"><br />&nbsp;</p>
+<p class="ps175"><span class="ts6">3.&nbsp; &nbsp;</span><span class="ts80">Picture 3, is the error that comes out when I go to Spel for manual checking.</span><span class="ts6">&nbsp;</span><img width="480" height="298" border="0" src="images/0288-ns7kb3.jpg" /></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">NS-7000 uses Absolute Servo Motor with a super charged capacitor. This capacitor remembers the encoder data whenever you power down so that you do not need to &quot;mcal&quot; each time you power on like NS6000. So during power on status, capacitor is charged by normal 5V supply.</span></p>
+<p class="ps127"><span class="ts0">In the event of power down/offline status, it is charged by the lithium battery. If lithium battery is low voltage, capacitor unable to maintain its charge and data will be loss. In good condition/new lithium battery condition, you'll be able to power down from days to months.</span></p>
+<p class="ps127"><span class="ts0">But if you disconnect the motor connector or battery is low voltage, it can only last in term of hours cause it is depending on capacitor ability to maintain charge without battery/5v.</span></p>
+<p class="ps127"><span class="ts0">You encountered this error because:</span></p>
+<p class="ps127"><span class="ts0">1) Lithium battery low voltage (Drive Unit 2 ; DU2)</span></p>
+<p class="ps127"><span class="ts0">2) In this case, servo motor capacitor gets discharged (as you mentioned almost a month)</span></p>
+<p class="ps127"><span class="ts0">3) Encoder data lost.</span></p>
+<p class="ps127"><span class="ts0">What you can do:</span></p>
+<p class="ps127"><span class="ts0">1) Reset encoder by DIP switch.</span></p>
+<p class="ps127"><span class="ts0">2) You can refer to calibration chapter of Maintenance Manual for the encoder reset </span></p>
+<p class="ps127"><span class="ts0">3) Note the revision of manual wrt your NS7000 version. SEP is old model of NS7000 but reset concept is the same. DU version may be different between old type NS7000 and new type NS7000.</span></p>
+<p class="ps127"><span class="ts0">4) If reset encoder does not clear the message, probably, lithium battery is low voltage. Please measure and change if low voltage. New good battery is 3.6V.</span></p>
+<p class="ps127"><span class="ts0">5) Please reset encoder again after you change battery.</span></p>
+<p class="ps3"><span class="ts0">6) This time, allow few minutes to charge up the capacitor before you proceed to try and run input arm by SPEL.</span></p>
+<p class="ps3"><span class="ts0">Ensure Front Operation Panel is Power On so that 5Vdc can charge motor's encoder.</span></p>
+<p class="ps126"><span class="ts0">7) You may need to calibrate input arm again as encoder data of y-axis is lost</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts1">Lithium Battery ER17500V&nbsp; -&nbsp; R35N700002100</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

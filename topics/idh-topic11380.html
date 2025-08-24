@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0219-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11380;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0219-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11370.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11390.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NEC(M) NS-7000 Index Arm Torque error</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7000 (S/N: 181350)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 13 Jan 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Was informed that handler down due to index arm torque error.&nbsp; </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Check handler history and found many RC520 controller error for index arm over the night.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Recovered the error and tried to run handler. Observed output shuttle 1 and 2 jerking when index arm pick up device from input shuttles.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Stop handler and removed index SLK. Found many sites nest damaged(pls refer to attached picture). Replaced total 7pcs of TSSOP 14p nests. Also tighten up some loose fittings on the SLK and replaced 1 white teflon gasket with a dark color(peek?) gasket.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<div align="left">
+  <table class="tbl4">
+    <tr class="row0">
+      <td class="cell1">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0219-ns7kb1.jpg" /></p>
+      </td>
+      <td class="cell1">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0219-ns7kb2.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Fixed back SLK and start alignment check on index arm P50 and P51 pose on input shuttles. Index arm alignment to socket pose is fine. But alignment on shuttle is NG. After adjustment shuttle pose is; P23=302.926(original=303.597), P24=303.483(original=303.797).</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- After alignment completed, also adjusted input shuttle floating sensor and device present sensor as the sensors cannot detect floating and device present. Checked index arm vacuum units and adjusted threshold. Lowered contact force by regulator to 0.1Mpa from 0.2Mpa. Contact parameter setting is direct &amp; soft contact, tried direct contact mode. Still encountered device stucked in socket at site C after testing when index arm moved up.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Swapped socket between A and C, device stuck error improved a little. Swapped the whole socket plate(include socket) with another old TSSOP 14p socket plate(include socket) and handler can run fine without any device stuck in socket for 2 Dut TSSOP 14p setup.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Convert 2 Dut to 4 Dut TSSOP 14p setup and fine tuning. Completed 4 Dut 1/5000 hot jamrate with 100% running speed with 1 floating jam offline(with socket but no testing).</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Release handler to production and set back running speed to 70%. Monitored a while and will feedback results tomorrow morning.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Regarding for KA's activities the night before, i don't think they helped much and had little findings. Basically they came, did some checks, bring back SLK and only ran 1 and half tray of device and went back. Not sure if this was the intented plan for them but anyway Sean will update their activities following my mail.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">13/01/10 Acivities</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Handler encountered some device drop error on index arm 2 over the night. Also Site A(Dut 4) failed bin 2.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Replaced socket, swapped whole Dut, swapped new C/K contactor with old C/K contactor, tried original short plunger spring and original long plunger spring, tried longer start delay time, increase and decrease contact height. Problem(Site A failed bin 2) still persist. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Disable Site A and temporary run handler with 3 Duts. No jamming encountered.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Reboot tester system and replaced Dut 4 PPVI controller card at 2030hrs. Enabled all 4 sites and run handler. Site 1 able to get bin 1, bin 2 issue resolved.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- Continue online monitoring of jamrate 5k completed with no jam.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">- tomorrow to check result again and discuss with Wan to release handler for TSSOP 14p 4Dut ambient jamrate and TSSOP 8p changekit buyoff.</span></p>
+<div align="left">
+  <table class="tbl19">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0219-ns7kb3.jpg" /></p>
+        <p class="ps0"><span class="ts1">Old TSSOP 14 plunger</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0219-ns7kb4.jpg" /></p>
+        <p class="ps0"><span class="ts1">New TSSOP plunger</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">picture of the old and new TSSOP 14p contactor. Note that the plunger surface of the new kit is chamfered</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">14/01/10 Activites</span></p>
+<p class="ps3"><span class="ts1">&nbsp;1000hrs - Checked jam history. Total units around 22k plus. Total jams 4 counts. 1x RC520 controller error and 1x start error for TSSOP 14p. At 0300hrs, conversion to 2 DUT TSSOP 14p, 1x input shuttle 2 floating error and 1x arm 2 device drop error.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">1130hrs - Meeting with NECSEM members(including Mr.Wu and Mr. Lim) to discuss on issues faced and action. Action plan for the day is to complete conversion to TSSOP 8p and veify C/K for hot temp vision check and then production support. Remaining items are ambient TSSOP 14p offline jamrate and ambient TSSOP 8p C/K vision check. These 2 items are to reschedule again when socket sensor, external chamber fan and some parts arrive. However, they insist to have jamrate for online production for both package. We already explained to them we DO NOT buyoff jamrate online, only support online. Additional items highlighted to them was we observed many particles in the handler when running their units(refer to attached pictures).</span></p>
+<p class="ps3"><span class="ts1">&nbsp;Hotplate 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hotplate 2</span></p>
+<div align="left">
+  <table class="tbl7">
+    <tr class="row0">
+      <td class="cell1">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0219-ns7kb5.jpg" /></p>
+      </td>
+      <td class="cell1">
+        <p class="ps125"><img width="640" height="480" border="0" src="images/0219-ns7kb6.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">1500hrs - Handler released for conversion to TSSOP 8p hot C/K fine tuning and vision check. Encounterd device stucked in socket for arm 1 and 2 using the new socket plate.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">1645hrs - </span><span class="ts3">Received new SLK arm 1 and arm 2 and swapped in. However, still encountered device stuck in socket after test. Unable to smoothly complete 1 tray running. Changed to NECSEM old socket plate and able to complete 1 tray without device stuck in socket. Continue fine tuning with their old socket plate. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2000hrs - Due to shortage of time, we started online production and use production units for vision check. But tester encountered issues so we cleared remaining units in the handler and done vision check on the output units which is about 3/4 of tray. Result passed(visual check by Wan-san).</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2130hrs - Tester continue to down. Received info from Mr. Wu to convert back to TSSOP 14p 2Dut hot.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2330hrs - Tester continue to down with NECSEM member troubleshooting. Mr. Wu refused to release Getech members and want 1 member to stay till their tester up.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">0000hrs - Negotiate with Mr. Wu and he agreed to release Getech members after we run 5 trays of dummy units offline to confirm no issue on handler.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">0100hrs - Completed 2000 units dummy offline run with no jam. Socket plate we used is NECSEM's old one.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">28 Jan 2010 email from KA for NEC Malaysia TSSOP 8/14 Kit update</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Here's our update for TSSOP8/14 Kit in NEC Malaysia.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">1. TSSOP 8 KIT</span></p>
+<p class="ps3"><span class="ts1">a) SOCKET GUIDE BASE.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Socket Guide Base Jam was due to Contact Blade Guide Pin Assembly problem. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Guide Pins were assembled in NEC site.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Solution</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Brought back TSSOP8 Guide base to Singapore and replaced all Guide pins.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Installed back Socket Guide Base Last Tuesday,26 Jan, on production.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Completed at least 12K device testing.No Issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">b) SOCKET JAM/DEVICE DROP</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; - Check the plunger and found no SHIM on it.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is the reason for SOCKET JAM/DEVICE DROP.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; - Installed SHIM on the PLUNGER. ( 2 pcs 0.05 mm and 1 pc 0.02 mm )</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adjust all the VACUUM setting and also solved the START Error.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; START error is due to vacuum sensitivity level.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOTE: SHIM is very important.Please maintain the SHIM.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Proposal/Solution</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; - To further improve the VACUUM LEVEL. KA will replace the PLUNGER same as</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the existing kit.This will solve this Jam issue.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;c. DEVICE NOT RELEASE BY PLUNGER.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Device still stuck on the plunger after release on shuttle.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is due to stuck plunger.At 128 deg the plunger is more sticky.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Currently using 5 coil spring.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; - I elongated the spring to overcome this problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Proposal/Solution</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; - Replace and make the spring standard at 7 coil.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">RESULT:</span></p>
+<p class="ps3"><span class="ts1">Completed 12K device testing at with intermittent jam on socket.</span></p>
+<p class="ps3"><span class="ts1">We will monitor further after all the propose solutions are implemented.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2. TSSOP 14 KIT</span></p>
+<p class="ps3"><span class="ts1">a) SOCKET GUIDE BASE.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Socket Guide Base Jam was due to Contact Blade Guide Pin Assembly problem. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Guide Pins were assembled in NEC site.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Solution</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Brought back TSSOP14 Guide base to Singapore and replaced all Guide pins.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Installed back Socket Guide Base Last Tuesday,26 Jan, on production.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">b) PLUNGER</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; - Installed SHIM on the plunger. ( 1 pc 0.05 mm )</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOTE: SHIM is very important.Please maintain the SHIM. </span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; - To replace plunger to make it the same as the existing Kit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; RESULT:</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp; Completed at least 1.6K device testing.No Handler Jam at all.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts58">-Findings so far is using old socket guide plate no problem. New socket plate is catered for NS8k and NS7k while old design is only for NS7k.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

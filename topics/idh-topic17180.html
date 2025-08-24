@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0395-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17180;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0395-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17170.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17190.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8080 High UPH 8 Hands Output Hand C servo error &amp; RS485 error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N: 181666, </span><span class="ts1">NS8080-02)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 03-02143)</span></p>
+<p class="ps3"><span class="ts0">Date: 9 Nov 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">UTAC NS8080-02 High UPH 8 Hands &ndash; Output Hand C servo error &amp; RS485 error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Only Output Hand A &amp; B with rubber cups, the rest of the Hands not in use(also no suction cup).</span></p>
+<p class="ps130"><span class="ts0">During Homing, Output Hands all hands able to home normally but Hand C go down in step motion(1 or 2 cm) and sometimes hit the rib.</span></p>
+<p class="ps130"><span class="ts0">Sometimes can complete Home but during dry running Hand C servo error or RS485 unknown error or RS485 2Ack error.</span></p>
+<p class="ps130"><span class="ts0">SPEL Input Bit 52 (8 Hands HOME check for Output Hands) check is ON after Home, normal.</span></p>
+<p class="ps130"><span class="ts0">Pull Hand A or B down, Input Bit 52 is OFF, pull Hand Input Bit 52 is still ON.</span></p>
+<p class="ps130"><span class="ts0">Already resit the 4 connectors for Output Hand C Home sensor, Vac&amp;C-Air sensor, Motor &amp; Encoder.</span></p>
+<p class="ps130"><span class="ts0">Pull all Actuators, Hand E ball spline movement abit unsmooth, Hand E will not spring up. Rest of the Hands are smooth for motion.</span></p>
+<p class="ps130"><span class="ts0">Auto Hand Height Cal for Output 8 Hands, can complete A &amp; B but for C, totally never move but Hand C vacuum activated.</span></p>
+<p class="ps130"><span class="ts0">Error message was &ldquo;vacuum sensor error. Set Vacuum pump and tuning on&rdquo;.</span></p>
+<p class="ps130"><span class="ts0">Exit Auto Hand Height Cal GUI and perform Auto Hand Height Cal. Same problem as above.</span></p>
+<p class="ps130"><span class="ts0">-------------------------</span></p>
+<p class="ps3"><span class="ts1">1. NS8080-02 output arm c RS485 unknown error, servo error, hand up sensor doesn&rsquo;t turn off.</span></p>
+<p class="ps3"><span class="ts1">- Output arm hand c unable to home. Jerking motion. Moved down and up during homing and hand height calibration.</span></p>
+<p class="ps3"><span class="ts1">- Found SPEL Input bit #52(For Output Hands HOME) led light did not turn off when pulled down hand C. Pulled down hand a and b ok.</span></p>
+<p class="ps3"><span class="ts1">- Resit home sensor connector ok but problem occurred again later.</span></p>
+<p class="ps3"><span class="ts1">-&gt;Suspect faulty Home sensor for Output Hand C</span></p>
+<p class="ps130"><span class="ts0">-------------------------</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts1">Suspect faulty Home sensor for Output Hand C.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts1">Warranty </span><a href="s0502.html" class="hs0">S0502</a><span class="ts1">&nbsp;raised for Z-axis module C home sensor R33N800018200 (PM-L24-R).</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

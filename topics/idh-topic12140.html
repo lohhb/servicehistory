@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0017-UBS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12140;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0017-UBS&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12130.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12150.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: UBS09 show&nbsp; multimedia controller in system\hardware list and seems no driver installed</span></p>
+<p class="ps3"><span class="ts1">Handler Model: UBS (S/N: 151044, UBS09)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520 (S/N: 01-20500)</span></p>
+<p class="ps3"><span class="ts1">Date: 9 Jan 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps144"><span class="ts0">AMD UBS09 shows multimedia controller in system\hardware list and seems no driver installed, the other good UBS03 shows Multifunction adapters.</span><br /><span class="ts0">&nbsp;As you talked, it is for 7 segment LED usage, I'd like to know where can I get the driver for this Multimedia controller, can you help to check Normally which CD is used for this driver installation. Can you help to send the driver to us if you have?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">Below is the guide to re-install the Contec PO-64L(PCI) driver for 7segment LED display of UBS. </span></p>
+<p class="ps3"><span class="ts1">As mentioned, Contec PO-64L(PCI) is just for Binning display as an Output display and the port is not the same as the RS232C. </span></p>
+<p class="ps3"><span class="ts1">This board has no relation with the Contec COM-2 (PCI) card.</span><br /><img width="410" height="285" border="0" src="images/0017-ubsb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts1">1) Insert UBS MMI CD into CD ROM Drive</span></p>
+<p class="ps144"><span class="ts1">2) Access the Windows 2000 Device Manager page and show the &quot;Multimedia Controller&quot;</span></p>
+<p class="ps144"><span class="ts1">3) Double-click &quot;Multimedia Controller&quot;</span></p>
+<p class="ps144"><span class="ts1">4) &quot;Multimedia controller&quot; Properties dialog Windows appear</span></p>
+<p class="ps144"><span class="ts1">5) On &quot;Multimedia controller&quot; Properties dialog Window, click the [driver] tab</span></p>
+<p class="ps144"><span class="ts1">6) Click the [Update Driver...] button</span></p>
+<p class="ps144"><span class="ts1">7) Click [Next&gt;] button for &quot; Upgrade the Device Driver Wizard&quot; dialog Window</span></p>
+<p class="ps144"><span class="ts1">8) Select radio button &quot;Search for a suitable driver for my device(recommended)&quot; for &quot;upgrade device Driver Wizard&quot; dialog Window</span></p>
+<p class="ps144"><span class="ts1">9) &quot;Locate Driver files&quot; dialog appear. Select &quot;CD-ROM drives&quot; check box and click [Next&gt;] button</span></p>
+<p class="ps144"><span class="ts1">10) The &quot;driver File Search results&quot; dialog appear.</span></p>
+<p class="ps144"><span class="ts1">Check that the driver is for &quot;Contec&quot; and clcik the [Next&gt;] button to install driver.</span></p>
+<p class="ps144"><span class="ts1">(d:\driver\contec\dio_pi1.inf)</span></p>
+<p class="ps144"><span class="ts1">11) Click [Finish] button</span></p>
+<p class="ps144"><span class="ts1">12) remove UBS MMI CD</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

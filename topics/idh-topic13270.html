@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0252-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13270;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0252-NS7K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13260.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13280.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-7080W TAC_Try variable overflow = 100</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W(NS7KW-08)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 30 Aug 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Feedback from line tech last nite that for NS-08, when operator enabled all 10 slots of Automat (Cat 3 &ndash; 3 slots, Cat 4 &ndash; 3 slots, Cat 5 &ndash; 3 slots and unknown &ndash; 1 slot), handler having hangup (TAC_Try variable overflow = 100) error. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Action taken: Power OFF/ON handler, same. Automat over travel, manually move automat to safe position and avoid using all the slot. (Only use slot 1,3,5 &amp; 10) OK. Under monitoring now.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">If it happens again, can you ask them to get a screen shot of the error message? Because we need to know it happens on which manipulator(robot). Last time, it happened to NS7KW-01 before and was for the output arm. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">There's 2 scenerio this error may happen.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Scenerio 1</span></p>
+<p class="ps3"><span class="ts0">1) After Bin assignment change, handler must start from INITIAL START mode.</span></p>
+<p class="ps3"><span class="ts0">2) This is a protection feature to prevent mis-sorting in the event bin assignment change and CONTINUOUS START mode.</span></p>
+<p class="ps3"><span class="ts0">3) Thus, this error message may appear when controller does not understand which output tray binning to use in continuous start mode. Remedy for this case is usually just change to initial start mode and press START.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Scenerio 2</span></p>
+<p class="ps3"><span class="ts0">1) Error happens in the middle of production run.</span></p>
+<p class="ps3"><span class="ts0">2) This may be a different issue from scenerio 1 but we need to know which manipulator(robot) is causing it and what position when it happens.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">If possible, kindly check with operator:</span></p>
+<p class="ps3"><span class="ts0">1) Did it happen during start or middle of production?</span></p>
+<p class="ps3"><span class="ts0">2) If it happened during start, was it after bin assignment change? If yes, was CONTINUOUS START selected or INITIAL START mode?</span></p>
+<p class="ps3"><span class="ts0">3) If it happened middle of lot, was automat at any particular slot? Was tray already out to unloading lane?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Have checked with the nite shift techs and error happened during scenario 1, during start of production, bin assignment change &amp; CONTINUOUS START selected. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">In this case, please disseminate this information:</span></p>
+<p class="ps3"><span class="ts3">1) When ever bin assignment is changed, please ensure INITIAL START is selected.</span></p>
+<p class="ps3"><span class="ts3">&nbsp;EPSON described this error as: The controller detected the bin assignment changed and CONTINUOUS START selected, to prevent a mis-sorting, thus issued the error message.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

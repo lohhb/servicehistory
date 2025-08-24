@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0095-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7530;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0095-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7520.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7540.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Running Ambient mode without index door</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7000 (NEC)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 20 Jul 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">In NEC, unable to run ambient mode without the index door. Heard from Wan that Suzuki san did show it to him in Japan on this handler. But how come, upon power on with the setup file (TSSOP08) in the handler, I was unable to do it (maybe Japan change back all settings to default before sending to NEC). The attached files showed all the initial configuration that I set but still to no avail. The following are the procedure that I carried out to enable this option of &quot;Ambient mode without index door&quot;. </span></p>
+<p class="ps127"><span class="ts0">After shutting down MMI, I enabled &quot;Keep Chamber Fan Running&quot; and &quot;Chamber Door Exits Sensor&quot; in &quot;config.exe&quot;. Upon MMI start up, I enabled &quot;Ambient Check&quot; and &quot;running&quot; in &quot;temperature parameter&quot; tab. Upon I pressed Start, the error &quot;Please attach or close index door&quot; was shown on MMI. Please kindly refer to the attached photographs for a better picture. </span></p>
+<p class="ps3"><span class="ts0">Please kindly help me check with Suzuki san or any EPSON engineer on how to run ambient mode without index door and any steps that I had missed out. By the way, the software version is MMI ver N8.10-MNK. </span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl4">
+    <tr class="row0">
+      <td class="cell1" colspan="2">
+        <p class="ps125"><img width="571" height="490" border="0" src="images/0095-ns7kb1.png" /></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell1">
+        <p class="ps125"><img width="286" height="200" border="0" src="images/0095-ns7kb2.png" /></p>
+      </td>
+      <td class="cell1">
+        <p class="ps125"><img width="282" height="186" border="0" src="images/0095-ns7kb3.png" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">22 Jul 2008</span></p>
+<p class="ps3"><span class="ts0">Asked Suzuki-san regarding this issue. According to him, he said </span></p>
+<p class="ps3"><span class="ts0">&quot;Checked [Chamber Door Exit Sensor] in Config.exe and start the MMI. </span><br /><span class="ts0">Then closed the back door and turn on the cooling fan.&quot; </span><br /><span class="ts0">However I think you already tried it. So I asked him again for any other possible cause for this.</span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">23 Jul 2008</span></p>
+<p class="ps3"><span class="ts0">According to EPSON, need to remove 2 pcs of chamber doors if you want to set the ambient control.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">Daryl and KH tried on one NS7000 in UTAC. MMI version 1.1C13. </span></p>
+<p class="ps3"><span class="ts0">Only check &quot;Chamber door exist sensor&quot; in config.exe and handler can run in dry cycle ambient mode without the 2 doors. </span></p>
+<p class="ps3"><span class="ts0">Uncheck option again in config.exe and try to run without the 2 doors, error &quot;Please attach or close index door&quot; will show in MMI display which is normal.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">Tried in SCS on monday and scenario is the same as in UTAC (that is, only removing one index door and checked &quot;chamber door exists sensor&quot;, then it is good to run ambient without chamber door). This I also told Suzuki san, but he said that this handler in NEC has special modification, that is, there is one additional hinge sensor each on both the index doors. So we need to remove these two doors and enable &quot;Chamber door exists sensor&quot; in config.exe, then should be good to run ambient without doors.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">28 Jul 2008</span></p>
+<p class="ps3"><span class="ts0">At NEC, tried out ambient mode running without 2 index doors as advised by Suzuki san.&nbsp; And able to run without both doors in ambient mode. (but Wan did not seem happy about the removal of 2 doors)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+</body>
+</html>

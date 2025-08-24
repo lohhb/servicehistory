@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0024-TR60</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 13870;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0024-TR60</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic13860.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic13880.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: TR60 Chamber Fan error and Input Hand pickup error</span></p>
+<p class="ps3"><span class="ts1">Handler Model: TR60 (S/N:121175) Renesas </span></p>
+<p class="ps3"><span class="ts1">Controller: RC520 S/N: 01-20947)</span></p>
+<p class="ps3"><span class="ts1">Date:</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">Renesas TR60 Chamber Fan error and Input Hand pickup error. </span></p>
+<p class="ps3"><span class="ts1">RETRY button always ON.</span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps126"><span class="ts1">1) Encounter chamber FAN error middle of production and input arm pick up error. </span><br /><span class="ts1">2) Chamber fan replaced. </span><br /><span class="ts1">3) Input arm pick up error due to pick up height too low and hit tray. </span><br /><span class="ts1">4) During MMI offset of pick up height for input arm, too high and encountered pick up error, handler hang. </span><br /><span class="ts1">5) When handler alarm for pick up error, tower light red, MMI shows running, control panel related buttons flashing BUT retry button always on. </span><br /><span class="ts1">6) Pressing other buttons no response. Only way is power off button. </span><br /><span class="ts1">7) Restart pc same. </span><br /><span class="ts1">8) As long as able to pick up device, no hang up. But when pick up error like half tray or too high, will hang up. </span><br /><span class="ts1">9) To check SPEL user I/O Input bit of RETRY button as it is always ON when error happens. </span><br /><span class="ts1">10) Upon restart handler and no running, from SPEL already can see Input bit of RETRY button always ON. </span><br /><span class="ts1">11) Suspect continuous feedback(short condition) leading to hang up (no response from all buttons) when error happens requiring retry button. </span><br /><span class="ts1">12) This explains why when error happens, all related buttons flashing but retry always on when no button was pressed. </span><br /><span class="ts1">13) Customer replaced RETRY button and ok. </span><br /><span class="ts1">14) When device pick up error, no more hang up.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

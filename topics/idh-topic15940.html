@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0095-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15940;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0095-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15930.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15950.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-6040 new CPU Board installed but unable to detect Drive Unit</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040 (NST-25)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 1 &amp; 2 Nov 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">ASE(M) NS6040 NST-25 New CPU Board installed and unable to detect Drive Unit (DU).</span><br /><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">1) All heater unable to ON/OFF. </span><br /><span class="ts0">2) Swap CU and able to heat up. </span><br /><span class="ts0">3) Found COM connector wrongly connected. For NS-6000, Heater use COM1</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Returned to correct connection and able to ON/OFF. </span></p>
+<p class="ps3"><span class="ts0">4) Motor/Power status shows ??? in SPEL bottom-right screen</span><br /><span class="ts0">&nbsp;5) Removed old LAN card as it will cause address conflict. </span><br /><span class="ts0">6) CPU Board Bios setting IRQ5 and IRQ10 to Legacy ISA. </span><br /><span class="ts0">7) Still unable to detect DU. </span><br /><span class="ts0">8) Replaced HDD from another running handler, same problem. </span><br /><span class="ts0">9) Replaced CU from another running handler, same problem. </span><br /><span class="ts0">10) Advised to check handler wiring connection from DU to CU. </span><br /><span class="ts0">11) Resit all DU to CU connection. </span><br /><span class="ts0">12) Able to detect DU now but Door Open on MMI and from SPEL shows E-Stop and Safety Door. </span><br /><span class="ts0">13) Replaced HDD and CU to confirm CU is ok but same problem. </span><br /><span class="ts0">14) Measured but no 24V on door sensor thus suspect door open error. </span><br /><span class="ts0">15) Measured SKP-387A in PSUNT, incoming P6 has +24V supply. </span><br /><span class="ts0">16) Out going found no 24V (TP30 Pin 5). </span></p>
+<p class="ps3"><span class="ts0">Can Tower light turn for Red output Bit 136, Yellow Output Bit 137, Green Output Bit 138, Buzzer Output Bit 139?</span><br /><span class="ts0">&nbsp;17) To replace SKP-387A board to verify.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Resit all DU cables to CU (SRC520) solved unable to detect DU problem, it is due to loose connection of Motion cables.</span></p>
+</body>
+</html>

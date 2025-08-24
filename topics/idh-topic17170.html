@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0394-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 17170;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0394-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic17160.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic17180.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS8080-01 input arm hand c and d servo and RS485 error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8080 (S/N: 181665, NS8080-01)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (S/N: 03-02140)</span></p>
+<p class="ps3"><span class="ts0">Date: 31 Oct 2011 &amp; 1 Nov 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">UTAC - NS8080-01 input arm hand c and d servo and RS485 error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">31 Oct 2011</span></p>
+<p class="ps126"><span class="ts0">- Found somebody took out hand C motor cable and did not secure back properly. </span><br /><span class="ts0">- Input arm vac threshold was set to &ndash;20,-25,-70. Set back to default &ndash;35,-40,-70. </span><br /><span class="ts0">- Did hand height calibration and ran dry cycle for 2hrs. </span><br /><span class="ts0">- Handler encountered RS485 2ack error and unable to home and do hand height calibration during setup at 4pm. </span><br /><span class="ts0">- Input hand C and D moved up and down when homing and hand height calibration. </span><br /><span class="ts0">- Found SPEL input bit #48 led light did not turn off when pulled down hand C and D. Rest of the hands when pulled down, SPEL input bit #48 able to turn off. </span><br /><span class="ts0">- Disconnect hand C and D home sensor connector from distribution board then can turn off SPEL input bit #48. </span><br /><span class="ts0">- Checked resistivity of hand C and D home sensor wires, same as other hands. </span><br /><span class="ts0">- After resit connectors a few times able to cycle run. </span><br /><span class="ts0">- But when start again to try and run dummy units, encountered hand C servo error. Feel both hand C and D no torque. </span><br /><span class="ts0">- Open spel IO, pulled down hand C and D, input bit #48 still ON (abnormal). </span><br /><span class="ts0">- Swapped hand C and hand A home sensor connectors. </span><br /><span class="ts0">-&gt; SPEL Input Bit #48 (Input Hands still ON when pull down hand C. </span><br /><span class="ts0">-&gt; SPEL Input Bit&nbsp; #48 turned OFF when pulled down hand A. </span><br /><span class="ts0">- Suspect home sensor of hand C and D to have problem. </span><br /><span class="ts0">- Feedback to Hidaka san and waiting for advise.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">1 Nov 2011</span></p>
+<p class="ps126"><span class="ts0">- Heat up to 85 deg and cycle run. One cycle and start handler again, encountered input arm hand C servo error. </span><br /><span class="ts0">- Checked and found hand C and D no torque. </span><br /><span class="ts0">- Found SPEL input bit #48 led light did not turn off when pulled down hand C and D. Rest of the hands when pulled down, SPEL input bit #48 able to turn off. </span><br /><span class="ts0">- Swapped hand C and A home sensor. Problem migrated to hand A. </span><br /><span class="ts0">- Replaced both hand A and D home sensor with spare. </span><br /><span class="ts0">- Home and performed hand height calibration ok. </span><br /><span class="ts0">- Continue dry cycle running. Released to Fuzari and under monitoring.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

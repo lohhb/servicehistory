@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0021-UBS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 18850;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0021-UBS</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12170.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic18860.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-UBS encounter one error 2015 at the System Panel</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-UBS (UBS02, S/N: 15932 ) also know as UBS-P008 in AMD Penang</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520 (CPU Board SPI-6941)</span></p>
+<p class="ps3"><span class="ts0">Date: 12 June 2013</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">NS-UBS 002 encounter error 2015 at the RC520 System Panel.</span></p>
+<p class="ps3"><span class="ts0">Error 2015 is &quot;The (Input or Output) Port No. entered is out of available range.&quot;</span></p>
+<p class="ps3"><span class="ts0">Description &amp; Fix:</span></p>
+<p class="ps3"><span class="ts0">There is no hardware settings made for the specified User I/O.</span></p>
+<p class="ps3"><span class="ts0">Check on the number of connected Drive Units and expanded I/O Boards connected.</span></p>
+<div align="left">
+  <table class="tbl4">
+    <tr class="row0">
+      <td class="cell1">
+        <p class="ps125"><img width="378" height="202" border="0" src="images/0021-ubsb1.jpg" /></p>
+      </td>
+      <td class="cell1">
+        <p class="ps125"><img width="414" height="265" border="0" src="images/0021-ubsb2.jpg" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">S/N: 15932, config as below:</span></p>
+<p class="ps3"><span class="ts0">a) Drawer for empty tray</span></p>
+<p class="ps3"><span class="ts0">b) Vacuum for Tray Arm</span></p>
+<p class="ps3"><span class="ts0">c) Automat 14 slot</span></p>
+<p class="ps3"><span class="ts0">d) No PCI COM-PO 32/32 card, but going to install</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Advise by email:</span></p>
+<p class="ps126"><span class="ts1">The important thing to note/change is to make sure that Contec PO-64L(PCI) address in Windows 2000 is the SAME as SPEL Output I/O Board address.</span></p>
+<p class="ps127"><span class="ts1">Eg for UB#17 the Contec PO-64L(PCI) address in Windows 2000 is EC00 so this same address is key into the SPEL Output I/O Board address for 7Segment LED(for Bining display in UBS).</span></p>
+<p class="ps127"><span class="ts1">By right, installing Contec COM-2(PCI)H/COM-2(PCI) should not affect the Contec PO-64L(PCI) address in Windows 2000.</span></p>
+<p class="ps127"><span class="ts1">Also the adding of Contec COM-2(PCI)H/COM-2(PCI) does not affect the Remote I/O board unless there is conflict in addressing.</span></p>
+<p class="ps127"><span class="ts1">Did you try to Reset the Remote I/O board?</span></p>
+<p class="ps127"><span class="ts1">To reset the Remote I/O Board:</span></p>
+<p class="ps127"><span class="ts1">1) Front Operation Panel is Power ON</span></p>
+<p class="ps127"><span class="ts1">2) Press &amp; Hold the SET button on the Remote I/O Board(behind RC520) until set LED(yellow) turns on</span></p>
+<p class="ps127"><span class="ts1">3) Release SET button, check that SET LED is ON for a few seconds and turns OFF.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">13 Jun 2013</span></p>
+<p class="ps3"><span class="ts0">Customer informed that original Remote I/O Board faulty as customer swapped Remote I/O Board but it is not related to Error 2015.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">As there was no other UBS in Penang, it was not possible to swap RC520 to determine if it was RC520 problem or DU or any other part of the UBS having problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">14 Jun 2013</span></p>
+<p class="ps3"><span class="ts1">Sent by email UBS02 EPSON factory backup to AMD Penang.</span></p>
+<p class="ps3"><span class="ts1">After using the SPEL Restore but still error 2015.</span></p>
+<p class="ps3"><span class="ts1">This was also same even when customer restore the backup SPEL System after HDD Recovery CD.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">16 Jun 2013</span></p>
+<p class="ps3"><span class="ts1">Items done by Chuah:</span></p>
+<p class="ps3"><span class="ts1">- Press Home button for homing the handler, error message 2015 appear by looking at Control Unit status digital display. </span></p>
+<p class="ps3"><span class="ts1">- Swap the HDD, original HDD swap with spare HDD. (Control Unit didn't swap.) </span></p>
+<p class="ps3"><span class="ts1">- Error message 2015 didn't appear on Control Unit status digital display. </span></p>
+<p class="ps3"><span class="ts1">- After then use Recovery CD (Version 2.3b.) to recover the spare HDD. (Successfully no blue screen.) </span></p>
+<p class="ps3"><span class="ts1">- Installing SPEL to MMI. (Version 13.22.) </span></p>
+<p class="ps3"><span class="ts1">- Performing restore backup by using Hong last backup from last Monday. (Restore backup &quot;AllProject&quot; and &quot;System&quot;.) </span></p>
+<p class="ps3"><span class="ts1">- Press Home button for homing the handler, error message 2015 appear by looking at Control Unit status digital display.</span></p>
+<p class="ps3"><span class="ts1">- Check the Control Unit cable connection, found out &quot;DU2 &amp; DU3&quot; cable miss-swap, swap back &quot;DU2 &amp; DU3&quot; cable. </span></p>
+<p class="ps3"><span class="ts1">- Check the [SPEL Hardware Setting] &quot;MIB&quot; address. </span></p>
+<p class="ps3"><span class="ts1">- Press Home button for homing the handler, error message 2015 appear by looking at Control Unit status digital display.</span></p>
+<p class="ps3"><span class="ts1">- Suspect Hong's backup got problem, performing recovery by using Recovery CD (Version 2.3b.) again. (Successfully no blue screen.) </span></p>
+<p class="ps3"><span class="ts1">- Installing SPEL to MMI. (Version 13.22.)</span></p>
+<p class="ps3"><span class="ts1">- Restore Hong's backup again. (Restore backup &quot;AllProject&quot; only.) </span></p>
+<p class="ps3"><span class="ts1">- Performing MCAL on each manipulator, all manipulator can be perform MCAL successfully. Except manipulator 2 &quot;Input Arm&quot;, after executing MCAL on manipulator 2, Input Arm just hang and didn't move at all. (Check the Input Arm, nothing stuck at Input Arm.) </span></p>
+<p class="ps3"><span class="ts1">- Performing MCORG at all robot, all robot and axis, successfully. Except robot Input Arm, after execute MCORG and MCAL on Input Arm, error message appear &quot;T-4040 Communication error with the Pulse Generating Board.&quot; </span></p>
+<p class="ps3"><span class="ts1">- Next step want to restore backup from you. Restore &quot;Config&quot;, &quot;Sysback&quot; and &quot;NSUBS1&quot;. And reboot the SPEL having this error message &quot;I-2302 The specified function can not be found.&quot; Attachment is the example. </span></p>
+<p class="ps3"><span class="ts1">- Try homing handler, MMI display show &quot;Running&quot; but handler just hang and didn't move. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts3">It seem now MAYBE only error is &quot;</span><span class="ts1">I-2302 The specified function can not be found.</span><span class="ts3">&quot; but no Error 2015 after restore </span><span class="ts1">&quot;Config&quot;, &quot;Sysback&quot; for SPEL System and &quot;NSUBS1&quot; SPEL Project</span><span class="ts3">&nbsp;for USB after using UBS Recovery CD.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><img width="701" height="498" border="0" src="images/0021-ubsb3.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">17 Jun 2013</span></p>
+<p class="ps3"><span class="ts0">Request to:</span></p>
+<p class="ps3"><span class="ts0">1) HDD&nbsp; Recovery by Recovery CD Version 2.3b. but do not restore Project and System files. </span></p>
+<p class="ps3"><span class="ts0">2) In SPEL, and Close project (such that you do not see any windows. programs all closed). You should be able to see project name at top left corner before you close the project. </span></p>
+<p class="ps3"><span class="ts0">3) In SPEL,&nbsp; delete this project using Project-&gt;Delete.</span></p>
+<p class="ps3"><span class="ts0">4) After delete project, please install MMI only. This will also install back the SPEL project</span></p>
+<p class="ps3"><span class="ts0">5) Copy back the SPEL Pos</span></p>
+<p class="ps3"><span class="ts0">6) In SPEL, do System restore</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">18 Jun 2013</span></p>
+<p class="ps3"><span class="ts3">What was done was:</span></p>
+<p class="ps3"><span class="ts3">- Use UBS Recovery CD to recovery hdd</span></p>
+<p class="ps3"><span class="ts3">- Close SPEL project</span></p>
+<p class="ps3"><span class="ts3">- Delete SPEL project</span></p>
+<p class="ps3"><span class="ts3">- Install MMI again which will also install SPEL project</span></p>
+<p class="ps3"><span class="ts1">- Restore DU data</span></p>
+<p class="ps3"><span class="ts3">- MCORG all axes</span></p>
+<p class="ps3"><span class="ts3">- copy back backup SPEL pose data from EPSON backup</span></p>
+<p class="ps3"><span class="ts3">after that able to HOME by pressing HOME button.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts1">For Error 2015, it could be that by installing MMI which also copy project into SPEL project but not all files are overwrite or updated during the MMI installation.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

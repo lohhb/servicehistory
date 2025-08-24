@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0170-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 12280;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0170-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic12270.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic12400.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-8040 T-4210 - The RAS circuit detected the control unit malfunction</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040 (NS80-26)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 8 Apr 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Previous errors before HDD recovery:</span></p>
+<p class="ps3"><span class="ts0">1) The HMI cannot launch</span></p>
+<p class="ps3"><span class="ts0">2) Spel also cannot launch</span></p>
+<p class="ps3"><span class="ts0">3) And errors appears during win 2k boot up, pls see below.</span></p>
+<p class="ps2"><img width="320" height="248" border="0" src="images/0170-ns8kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">This was after we did the recovery, HMI/SPEL installation and restoring the backup data.</span></p>
+<div align="left">
+  <table class="tbl17">
+    <tr class="row0">
+      <td class="cell1">
+        <p class="ps125"><img width="320" height="221" border="0" src="images/0170-ns8kb2.png" /></p>
+      </td>
+      <td class="cell1">
+        <p class="ps125"><img width="320" height="218" border="0" src="images/0170-ns8kb3.png" /></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">T4210 - The RAS circuit detected the control unit malfunction</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">9 Apr 2010, recovered the system with recovery disc 1.56. Restored system and pose and upgrade HMI to 2.0.</span></p>
+<p class="ps3"><span class="ts0">Able to clear the error and dry cycle run without problem so I release the handler to Ray.</span></p>
+<p class="ps3"><span class="ts0">However, customer just informed me again the error came back</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Suspect that it may have problem on MIB board or DMB.</span></p>
+<p class="ps3"><span class="ts0">If you already know which Drive Unit (DU) caused the problem, replace the affected one.</span></p>
+<p class="ps3"><span class="ts0">It may have affected by Input arm because of crash.</span></p>
+<p class="ps3"><span class="ts0">In this case, I think replaced only DU2. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Display screen during boot up show &quot;Resource Conflict - PCI in slot 2</span></p>
+<p class="ps3"><span class="ts3">Bus:02, Device 0E, Function:00&quot;</span></p>
+<p class="ps3"><span class="ts3">This slot 2 or Bus 02 is not related Drive Unit 2.</span></p>
+<p class="ps3"><span class="ts3">Need to open RC520 and see which board sit in PCI slot 2 and then resit board(eg IFUNT or PG).</span></p>
+<p class="ps3"><span class="ts3">Could be backplane board or CPU board or PC power supply problem also.</span></p>
+<p class="ps3"><span class="ts3">Also error show &quot;Index Arm&quot;, so MIB 1 is for Index Arm. Maybe can resit/replace MIB1 in RC520.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">12 Apr 2010</span></p>
+<p class="ps3"><span class="ts0">Checked handler BIOS settings, no problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Did not swap or change any parts.</span></p>
+<p class="ps3"><span class="ts0">Just power up the handler and dry cycle mode running at 80% speed from 1225hrs to 1615hrs, did not encounter any controller errors.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts1">Same &quot;The RAS circuit detected control unit malfunction&quot; error in </span><a href="idh-topic12070.html" class="hs0">0158-NS8K</a><span class="ts1">.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

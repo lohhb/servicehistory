@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0098-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7580;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0098-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7570.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7590.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject:&nbsp; PD-EPH#1 &quot;Chamber sensor not work&quot;</span></p>
+<p class="ps3"><span class="ts0">Handler Model: PDIC(SDT, NS-7080W)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 5 Aug 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">SDT found problem of PD-EPH#1 about chamber sensor not work.</span></p>
+<p class="ps127"><span class="ts0">This problem not effect to human safety because rear cover sensor is working as normal but if somebody forgot to close chamber door</span></p>
+<p class="ps127"><span class="ts0">It cause of output robot damage by hit with chamber cover.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="648" height="486" border="0" src="images/0098-ns7kb1.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">6 Aug 2008</span></p>
+<p class="ps3"><span class="ts0">Email to SDT</span></p>
+<p class="ps3"><span class="ts0">1) you do not see any green/red color? If totally no light, perhaps sensor is damage. </span></p>
+<p class="ps3"><span class="ts3">SDT replied that sensor no light</span><span class="ts0">.</span></p>
+<p class="ps3"><span class="ts0">2) If you can see green/red but no alarm, maybe it is just some setting.</span></p>
+<p class="ps3"><span class="ts0">In case of you can see green/red, meaning sensor functionality is ok,</span></p>
+<p class="ps3"><span class="ts0">I/O label is 196 so you see from SPEL I/O, under IN196 for Chamber Door Switch SQ196A &amp; SQ196B, if have ON/OFF, means software no activate this sensor for check.</span></p>
+<p class="ps3"><span class="ts0">IN196 no ON/OFF, maybe the connector is in wrong port of I/O module.</span></p>
+<p class="ps3"><span class="ts0">Please let us know after you check. Just some check point to see if it is sensor damage or just setting.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">20 Aug 2008</span></p>
+<p class="ps3"><span class="ts0">Troubleshooting using new sensor but the problem still persist. Chamber door exit sensor at Config.exe was unchecked. </span></p>
+<p class="ps3"><span class="ts0">Wiring check by comparing with PDIC #2 found no abnormalities. Data collected to feedback to Epson.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts0">28 Aug 2008</span></p>
+<p class="ps3"><span class="ts0">SDT sent the following files in PDIC#1 &amp; #2&nbsp; to EPSON for analysis:</span></p>
+<p class="ps126"><span class="ts3">C:\ NS7000... log</span></p>
+<p class="ps127"><span class="ts3">C:\ NS7000... config</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">3 Sep 2008</span></p>
+<p class="ps3"><span class="ts55">Email by Asano, We found a difference of config settings.</span></p>
+<p class="ps3"><span class="ts55">PDIC#1 config settings . Temperature control = None -&gt; please change to &quot;Ambient&quot;</span></p>
+<p class="ps3"><span class="ts55">PDIC#2 config settings . Temperature control = Ambient</span></p>
+<p class="ps3"><span class="ts55">Could you try to change this setting and confirm?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

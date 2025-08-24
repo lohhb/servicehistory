@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0061-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 6660;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0061-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic6650.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic6670.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: Issue on NS7080W S/N:121080 at Xilinx</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-7080W (Xilinx)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 29 Apr 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps129"><span class="ts33">a)</span><span class="ts34">&nbsp;</span><span class="ts33">NS7KW-01 &ndash; Upgraded to new software G8.10-SXC , having numerous Automat error, causing overspeed in low power state error. (Recover by POWER OFF/ON).</span></p>
+<p class="ps143"><span class="ts33">b)</span><span class="ts34">&nbsp;</span><span class="ts33">NS7KW-02, 03 &amp; 04 &ndash; pause start, hang up running G6.10-SXC. CPU execution issue causing hangup? Should we upgrade RAM? XAP handler having numerous interfacing, eg. in line scan etc (for NS7KW-01,02,03 &amp;04). Only 128MB RAM currently on motherboard. Should we upgrade to 512MB?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">NS7KW-01-Handler hang up and automat error </span></p>
+<p class="ps3"><span class="ts0">Motor tunning done since 29/04/08. No more automat error. 13/05/08, fine tune again for optimised performance and will monitor. </span></p>
+<p class="ps126"><span class="ts0">Software patch since 05/05/08, no more hang up of G-7101 &quot;UNKNOWN ERROR&quot; based on error log.&nbsp; This G-7101 &quot;UNKNOWN ERROR&quot; is actually the &quot;Quick Pause DAEMON 07 Failed (Error:7101)&quot;, The error came out due to PC was busy. </span><br /><span class="ts0">When you operate too fast, PC will not be able to proceed it then this error come out. It is like hang/jam in PC. The patch file from EPSON is Xilinx.reg</span></p>
+<p class="ps127"><span class="ts0">The procedure to apply Xilinx.reg patch is as below:</span><br /><br /><span class="ts0">&nbsp;1. Closed MMI.</span><br /><span class="ts0">&nbsp;2. To copy the attached file to FD or Thumb drive and insert to Handler.</span><br /><span class="ts0">&nbsp;3. Double click the file. Pop up window(Registry Editor) appear, and press &quot;OK&quot;.</span><br /><span class="ts0">&nbsp;4. Start&nbsp; MMI.</span><br /><br /><span class="ts0">&nbsp;This file will be reduce the error.</span><br /><span class="ts0">NS7KW-03-False device drop alarm </span></p>
+<p class="ps3"><span class="ts0">Verified ARM 1 vaccum sensitivity w.r.t &quot;1 1/2 turn&quot; concept. </span></p>
+<p class="ps3"><span class="ts0">Adjust counter air purge due to output shuttle device flip. </span></p>
+<p class="ps3"><span class="ts0">Perform Index Arm height calibration on shuttle/socket. Running check with dummy units &ndash; O.K</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">NS7KW-06-Device scratch issue, suspected index alignment out </span></p>
+<p class="ps3"><span class="ts0">As it happened on AP kit, we're unable to look further so used KA kit to verify handler alignment. </span></p>
+<p class="ps3"><span class="ts0">P21, P22, P23, P24, P50, P51 verification. Less than 0.2mm. Condition &quot;ok&quot;. </span></p>
+<p class="ps126"><span class="ts0">Just a note: </span></p>
+<p class="ps127"><span class="ts0">Change kit used for NS7KW-03 was from AP. Significant play of the device in the contact head was noticed after device pick up from shuttle. This play MAY cause device scratch issue. For the device scratch issue on NS7KW-06, there are many factors to look at. Change kit from AP, we're unable to advise/comment further.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">There was a case of device drop for both Index Arm 1 &amp; 2, after replacement of Remote I/O Board, problem solved.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Check points for Index Arm Device drop:</span></p>
+<p class="ps3"><span class="ts0">- vacuum cup condition, device drop more frequently in hot mode?</span></p>
+<p class="ps3"><span class="ts0">- o-ring worn out on plunger</span></p>
+<p class="ps3"><span class="ts1">-Check diameter/tolerance of guide pins on socket guide plate</span></p>
+<p class="ps3"><span class="ts1">-Check any broken/bent tubing or tubing pressed by cable tie on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check air fitting/elbow or gasket not loose on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check if guide pins bent/worn out</span></p>
+<p class="ps3"><span class="ts1">-Check vacuum filter dirty</span></p>
+<p class="ps3"><span class="ts1">-Check vacuum filter put properly</span></p>
+<p class="ps3"><span class="ts1">-Check seal for vacuum put properly and not torn</span></p>
+<p class="ps3"><span class="ts1">-Check plastic casing for vacuum filter not broken</span></p>
+<p class="ps3"><span class="ts1">-Check nest guide pin's hole </span></p>
+<p class="ps3"><span class="ts1">-Check o-ring on SLK</span></p>
+<p class="ps3"><span class="ts1">-Check metal hooks of Socket Layout Kit (SLK)</span></p>
+<p class="ps3"><span class="ts1">-Check correct brand and specification of latch use for (Index) Test Hands</span></p>
+<p class="ps3"><span class="ts1">-Check metal latch worn out at Index Test Hand</span></p>
+<p class="ps3"><span class="ts1">-Check Index teaching position P50 and P51</span></p>
+<p class="ps3"><span class="ts1">-Check if Index Arm crash before or Index Arm bent(Index Arm alignment check)</span></p>
+<p class="ps3"><span class="ts1">- if device never drop, adjust vacuum switch sensitivity</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts3">Correct metal latch of parts No is TL-29A, this is supplied by Tochigiya.</span></p>
+</body>
+</html>

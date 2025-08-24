@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0054-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 8260;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0054-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic8250.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic8270.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: WSFGA-81-S Site mapping error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040(Infineon, NS-001)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 18 Dec 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">WSFGA-81-S (device size 6x6, running&nbsp; single site; 2-site disable site B)</span></p>
+<p class="ps3"><span class="ts0">Site mapping error reported by customer before HMI upgrade to F10.12-SIS.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;HMI upgrade, reboot and start at Initial Start after Index Arm 1 plunge to test site, HMI error msg: &quot;IFUNT time up error&quot; Code:351, sub: 7, [Retry]+[Start] at NS-8040</span></p>
+<p class="ps131"><span class="ts0">J750, msg: &quot; Site: 1 not found in Channel map select appropriate chanmap and re-enable Handler&quot;</span></p>
+<p class="ps131"><span class="ts0">operator reload test program </span></p>
+<p class="ps131"><span class="ts0">press [Retry]+[Start] at NS-8040, then testing ok and continue. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">Suggest to use &quot;Busy Shuttle&quot; instead of 2 site disable site B.</span></p>
+<p class="ps3"><span class="ts0">It could be that tester program maybe expecting a single site(1 digit) answer&nbsp;but the existing setup at handler replied to tester with &quot;1,2&quot; ( 2 digits) which may explain why tester response &quot;Site: 1 not found in Channel map select appropriate chanmap and re-enable Handler&quot; during handler start in Initial Start mode.</span></p>
+<p class="ps3"><span class="ts0">Will try out&nbsp; &quot;busy shuttle&quot; setup when system time is available.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps184"><span class="ts0">1)Monitor site mapping error. It seem that only Initial Start then site mapping error issued from J750. During Pause, clear jam, One Cycle or Continuous Start there was no site mapping error. KT Goh from Tester SW &amp; Host Management suggest to MK Mang that </span></p>
+<p class="ps185"><span class="ts0">1) hand shaking issue between the handler and tester's hander driver.&nbsp; In this case, in addition, we need to get Teradyne to debug.&nbsp;&nbsp; OR</span></p>
+<p class="ps3"><span class="ts0">2) channel map also concerns with the &quot;chanmap&quot; kind of stuff.&nbsp; Then the yield engineer can clarify this is whether an issue with the test program.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">additional information for the discussion on 23 Dec.</span></p>
+<p class="ps3"><span class="ts0">I suggest to try out using &quot;busy shuttle&quot; setup refer &quot;Suggestion1.jpg&quot; </span></p>
+<p class="ps3"><span class="ts0">(or 2nd option that is non-assignment of channel for un-use site, refer &quot;Suggestion2.jpg&quot;, which is not recommend as it is still 2-site).</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="854" height="460" border="0" src="images/0054-ns8kb1.jpg" /></p>
+<p class="ps3"><span class="ts25">Suggestion1.jpg</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="854" height="470" border="0" src="images/0054-ns8kb2.jpg" /></p>
+<p class="ps3"><span class="ts25">Suggestion2.jpg</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Existing setup for WFSGA81-3-S, refer &quot;Sitemap WFSGA81-3-S.jpg&quot; use 2-site setup in SETUP windows (&quot;Channeling Setup Window&quot;) but at HMI screen disable Site 2 (or rather Infineon Channel 1).</span></p>
+<p class="ps2"><img width="852" height="480" border="0" src="images/0054-ns8kb3.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">(for NS-8040 for Site 1,2 at Infineon it corresponse directly to Channel 0,1 at the tester side which may cause confusion to those who are not familiar with EPSON handler).</span></p>
+<p class="ps3"><span class="ts0">I guess tester program maybe expecting a single site(1 digit) answer but the existing setup at handler replied to tester with &quot;1,2&quot; ( 2 digits) which may explain why tester responsed &quot;Site: 1 not found in Channel map select appropriate chanmap and re-enable Handler&quot; during handler start in Initial Start mode.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Please also refer attached &quot;InfineonGPIB_commands.pdf&quot;, &quot;3.3 Sites Mapping&quot; on assignment.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

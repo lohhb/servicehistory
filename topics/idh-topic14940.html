@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0304-NS7K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 14940;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0304-NS7K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic14930.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic14950.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject:&nbsp; IDT (M) NS-7000 &quot;Cover Open&quot; door switch is not functioning </span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-7000(NS02, S/N: 18825)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 3 Jun 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">&nbsp;IDT (M) NS-7000 18825 - &quot;Cover Open&quot; door switch is not function. Cover Open button pressed but handler still running.</span></p>
+<p class="ps2"><img width="1103" height="364" border="0" src="images/0304-ns7kb1.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts1">9 Jun 2011</span></p>
+<p class="ps3"><span class="ts1">1. Referring to page 29 of wiring diagram rev.4, sheet #SKH0703-E01. The front output, rear input and rear output are all connected in series to the front input on the front operation panel. </span></p>
+<p class="ps3"><span class="ts1">- Open the front operation panel side cover. </span></p>
+<p class="ps3"><span class="ts1">You will see the connectors on the front operation panel.</span></p>
+<p class="ps3"><span class="ts1">Remove the panel if necessary. </span></p>
+<p class="ps3"><span class="ts1">- Check on the panel board, XC2A-0 connector is not loose. Then remove and re-sit it. </span></p>
+<p class="ps3"><span class="ts1">- Next check the big XC2A connector. Make sure connector not loose.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;Then remove and re-sit it. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2. Inside the PSUNT, remove TB180 terminal. You will see SKP-350-2 board behind it. </span></p>
+<p class="ps3"><span class="ts1">- On the board, check both the XC2 and XC1 connectors. </span></p>
+<p class="ps3"><span class="ts1">- XC2 connector comes from the front operation panel. XC1 connector goes to the PC I/O board. All these information can be seen on the same page 29. </span></p>
+<p class="ps3"><span class="ts1">- Re-sit both the connectors. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">3. If the above fails, remove the RC520 controller pc.</span></p>
+<p class="ps3"><span class="ts1">Make sure you remember/take note the connector location where you remove from the pc. </span></p>
+<p class="ps3"><span class="ts1">- Swap another PC I/O card, make sure the selector switch on the board of old and new is same and is not accidentally changed before you close the pc. </span></p>
+<p class="ps3"><span class="ts1">- Power up and try.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">4. Check VD1 zener diode is not broken at Front Operation Panel's PCB SKP-351.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">5. Swap Front Operation Panel.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><img width="888" height="155" border="0" src="images/0304-ns7kb2.png" /></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><img width="820" height="520" border="0" src="images/0304-ns7kb3.png" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">VD1 zener diode on Front Operation panel is spoilt causing COVER OPEN not functioning but handler did not stop running even when cover&nbsp; open pressed.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Replaced to another Front Operation Panel's PCB SKP-351, problem solved.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><span class="ts1">Zener diode on Front Operation Panel's PCB was found open circuit.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts1">See </span><a href="idh-topic14990.html" class="hs0">0309-NS7K</a><span class="ts1">&nbsp;on other issues on this NS-7000.</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

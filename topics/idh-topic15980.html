@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0099-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15980;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0099-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15970.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15990.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-6040 Restoring backup data after recovery Windows</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-6040</span></p>
+<p class="ps3"><span class="ts1">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts1">Date: 16 Jul 2012</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps126"><span class="ts0">UTL found the NS 6040 m/c can not boot up&nbsp; and replace the new hard disk and recovering Windows already but need help to advise about &quot; How to Restoring the Backup data &quot; to the new hard disk . </span></p>
+<p class="ps127"><span class="ts0">Please see data back up in attached file ( From the old hard disk ) in attached file and advise. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">For NS-6040 restore, main items very important: </span></p>
+<p class="ps3"><span class="ts0">1) SPEL system data &ndash; motor calibration data. </span></p>
+<p class="ps3"><span class="ts0">2) SPEL pose data &ndash; pick and place position data. For your case, it is in Project. </span></p>
+<p class="ps3"><span class="ts0">3) MMI Setup file &ndash; production setup for all package/device. If unable to restore, no choice but re-create all again. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Your backup is very old. 5 years ago. So if restore is unable to run, it means you need to do manual calibration, teaching and data input. </span></p>
+<p class="ps3"><span class="ts0">I&rsquo;ll guide you first on normal restore: </span></p>
+<p class="ps3"><span class="ts0">1) Go into SPEL, switch to P(Program mode) and Click Abort all to close all programs running. </span></p>
+<p class="ps3"><span class="ts0">2) In SPEL, click Project &ndash;&gt; Close </span></p>
+<p class="ps3"><span class="ts0">3) In SPEL, click Project &ndash;&gt; Restore &ndash;&gt; All Projects </span></p>
+<p class="ps3"><span class="ts0">4) In SPEL, click Project &ndash;&gt; Restore &ndash;&gt; System </span></p>
+<p class="ps3"><span class="ts0">5) In SPEL, click Project &ndash;&gt; Open (you should see only the one folder eg NS6000. Or select the latest date) </span></p>
+<p class="ps3"><span class="ts0">6) In SPEL, Switch to A(Auto-Mode) and start background tasks. </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">You should at least be able to HOME handler and dry cycle. </span></p>
+<p class="ps3"><span class="ts0">If you still encounter some error like Torque error, it means your back up data is not good for this handler. </span></p>
+<p class="ps3"><span class="ts0">In this case, you&rsquo;ll need to: </span></p>
+<p class="ps3"><span class="ts0">1) Manually input Drive Units data (4D/GAIN and 4B/OFFSET) into SPEL (Refer Maintenance Manual, Chapter 8.4.3 CT Data to Chapter 8.4.5 CT Data Setting)</span></p>
+<p class="ps3"><span class="ts0">2) Calibrate all robots in SPEL (Refer Maintenance Manual, Chapter 3 Replacement Of Motors)</span></p>
+<p class="ps3"><span class="ts0">3) Manual Teaching for all robots points in SPEL (Refer Teaching Manual)</span></p>
+<p class="ps3"><span class="ts0">4) Create setup file in MMI (refer User's Manual, Chapter 4.2 Setup File). </span></p>
+<p class="ps3"><span class="ts0">RUN and CONFIG folder is the settings of the handler data like security, tower light settings, tester settings etc... </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

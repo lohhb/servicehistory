@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0035-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7750;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0035-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7740.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7870.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS6040 J0732 &ldquo;IFUNT time up error&rdquo; and J0733 &ldquo;Tester time up error&rdquo;</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040(ASE)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 7 Nov 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps126"><span class="ts0">1. What are likely the possible causes for 0732 &ldquo;IFUNT time up error&rdquo; and 0733&nbsp; &ldquo;Tester time up error&rdquo;?</span></p>
+<p class="ps128"><span class="ts33">2.</span><span class="ts34">&nbsp;</span><span class="ts35">If the user always press &ldquo;skip&rdquo; button or &ldquo;retry&rdquo; button (&ldquo;alarm reset&rdquo;, &ldquo;retry&rdquo;, &ldquo;skip&rdquo; button are prompting user when error occur) </span></p>
+<p class="ps3"><span class="ts0">when encountering tester time up for consecutive several times, what will likely be the outcome? </span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps129"><span class="ts33">3.</span><span class="ts34">&nbsp;</span><span class="ts35">What are the possible causes if the outcome on question 2 is IFUNT time up error? </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps126"><span class="ts0">If possible, please provide the full error message or print screen. Because there are some explanation below each error like &quot;Test end signal not received&quot; or &quot;abnormal 5v&quot; etc..Sometimes, it can be just tester time up error so appreciate if you can provide the print screen.</span><img width="665" height="632" border="0" src="images/0035-ns6kb1.jpg" /></p>
+<p class="ps127"><span class="ts0">1) IFUNT100A spoil-this would mean permanant error always and not intermittent. Meaning always cannot communicate.</span></p>
+<p class="ps127"><span class="ts0">IFUNT100A has a CPU itself so in a case of long usuage(HEX corrupted), pins oxidised, dust collection, may result in intermittent error either one mentioned above.</span></p>
+<p class="ps127"><span class="ts0">IFUNT100A CPU communication with control unit CPU/HDD in a case of OLD handler may also result in this error.</span></p>
+<p class="ps127"><span class="ts0">Possible solutions-Reload HEX file into IFUNT100A CPU, scandisk(bad sector), defrag HDD, maintenance of IFUNT100A. Every setup file same problem?</span></p>
+<p class="ps127"><span class="ts0">I assume tester side, communciation cables all checked.</span></p>
+<p class="ps127"><span class="ts0">Need you to confirm which error occurs or both occurs intermittently on same handler.</span></p>
+<p class="ps127"><span class="ts0">Last few resorts would be to change HDD, IFUNT100A. Because as you mentioned, the 2 CPU upgrade has no problem which indicates a possible OLD HDD/IFUNT100A sync issue or as suggested above.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps126"><span class="ts0">This tester time up error is a result of EOT not received within the timeout setting. Which means, SOT has been sent out. Question now is IF tester received SOT but did not returned EOT or replied EOT but handler could not receive. Or maybe handler has sent SOT but tester did not received thus no testing occured. </span></p>
+<p class="ps127"><span class="ts0">Just to check, during this error, index arm is in socket, testing already started? Or you see the tester and already finished testing? This will be able to tell you which of the scenerio possibly happened above. </span></p>
+<p class="ps127"><span class="ts0">2) RETRY, SOT will be sent again and testing will commence again. </span></p>
+<p class="ps127"><span class="ts0">SKIP, bin to ERROR(E) bin as assigned in bin assignment and next arm will plunge in. </span></p>
+<p class="ps127"><span class="ts0">3) If possible, can you send me the print screen for IFUNT time up error? With persistent SKIP, I think at most all will bin to error bin. With RETRY, maybe IFUNT time up error will occur. Can you </span></p>
+<p class="ps127"><span class="ts0">kindly try both because I do not know which/what will happen with continuous SKIP/RETRY. I have no chance to try this. </span></p>
+<p class="ps127"><span class="ts0">So are you able to confirm with production </span></p>
+<p class="ps127"><span class="ts0">a) Instead of SKIP/RETRY, if PAUSE-&gt;RESET-&gt;HOME-&gt;START, can solve? </span></p>
+<p class="ps127"><span class="ts0">b) During this error occur, index arm is in test site BUT isit testing? </span></p>
+<p class="ps127"><span class="ts0">c) The 2 new handlers we CPU upgrade, no such occurance? </span></p>
+<p class="ps127"><span class="ts0">d) Continuous SKIP-&gt;what error? RETRY-&gt;any new error or always same error?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Check point:</span></p>
+<p class="ps3"><span class="ts0">- Check Maximum Time Out in MMI Tester I/F</span></p>
+<p class="ps3"><span class="ts0">- Reload ifunt driver using Loader.exe</span></p>
+<p class="ps3"><span class="ts0">- Check cabled connection to and from IFUNT100 card, eg replace cable for IFUNT100</span></p>
+<p class="ps3"><span class="ts0">- Change setup file</span></p>
+<p class="ps3"><span class="ts0">- Re-install MMI</span></p>
+<p class="ps3"><span class="ts0">- Resit IFUNT100 card</span></p>
+<p class="ps3"><span class="ts0">- Replace IFUNT100 card</span></p>
+<p class="ps3"><span class="ts0">- Replace IFUNT interface panel at rear of handler</span></p>
+<p class="ps3"><span class="ts0">- Replace CPU Board</span></p>
+<p class="ps3"><span class="ts0">- Replace power supply in SRC520</span></p>
+</body>
+</html>

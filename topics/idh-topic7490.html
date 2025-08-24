@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0025-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 7490;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0025-NS6K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic7480.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic7660.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: Z-axis motor in index arm 1 cannot release brake</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040(CARSEM, S/N:12903, SEIKO04)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 14 Aug 2008</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">Z-axis motor in index arm 1 cannot release brake.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts1">After changing 'Z' axis motor of index arm 1, we did an initial teaching on index robot and shuttles.&nbsp; While doing teaching, we found out that 'U' axis motor of index arm 2 also had the same problem, that is, cannot release brake.</span></p>
+<p class="ps3"><span class="ts1">Took 'U' axis motor from SEIKO03 and fitted into this handler.</span></p>
+<p class="ps3"><span class="ts1">After fitting this good motor, teaching carried out in index and shuttle area found good.</span></p>
+<p class="ps3"><span class="ts1">Teaching was also carried out on all other robots.&nbsp; After teaching, we did a homing with SRC error on index arm and we found out that a plate on the index arm 1 is preventing index arm 2 from homing, thus plate removed and homing was good.</span></p>
+<p class="ps3"><span class="ts1">Upon running dry run, SRC error came on again indicating that the pose data for empty tray arm are not defined.&nbsp; After much troubleshooting found out that this handler in CARSEM was modified from drawer to colour tray, thus, an additional point of P43 was required to be taught.</span></p>
+<p class="ps3"><span class="ts1">After teaching P43, no more SRC error.</span></p>
+<p class="ps3"><span class="ts1">During Dry run, we noticed that input arm hand A got problem in picking from pocket (hand A only lowered 2-5mm and then returned to top position).&nbsp; After much troubleshooting, we suspect that the stepper motor is not functioning correctly.&nbsp; Currently, we removed the spring on hand A, and it is able to pick from pocket.</span></p>
+<p class="ps3"><span class="ts1">After all this, we try to run some dummy and notice that index arm1 hand B do not have vacuum, suspect that vacuum unit is not working.&nbsp; We by-pass site 2 and did a run on the dummy and was successful.&nbsp; Fine tuning was also carried out while running the dummy.</span></p>
+<p class="ps3"><span class="ts1">Current status is to try out a new stepper motor or spring on input arm hand A and to replace the vacuum unit for index arm 1 hand B. It could also be stepper driver problem.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">- faulty Z-axis motor in index arm 1 cause built-in break cannot release brake.</span></p>
+<p class="ps3"><span class="ts0">- faulty U-axis motor in index arm 1 cause built-in break cannot release brake.</span></p>
+<p class="ps3"><span class="ts0">- SRC error came on again indicating that the pose data for empty tray arm are not defined.</span></p>
+<p class="ps3"><span class="ts0">After much troubleshooting found out that this handler in CARSEM was modified from Manual Drawer to colour tray, thus, an additional point of P43 was required to be taught.&nbsp; </span></p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0073-NS6K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11820;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0073-NS6K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11810.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11830.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: NS-6040 LD/ULD motor cannot turn, control panel no response</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-6040 (NS60-25, S/N: 181610)</span></p>
+<p class="ps3"><span class="ts0">Controller: SRC520</span></p>
+<p class="ps3"><span class="ts0">Date: 28 &amp; 29 Apr 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts0">UTAC&nbsp; NS60-25, s/n:18610(off warranty) LD/ULD motor cannot turn, control panel no response.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">28 Apr 2010</span></p>
+<p class="ps3"><span class="ts0">1. LD/ULD induction motor unable to turn when triggered from SPEL95.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Checked and found address on IO module incorrect.</span></p>
+<p class="ps3"><span class="ts0">2. Index Head 5 thermo fuse blown.</span></p>
+<p class="ps3"><span class="ts0">3. Shuttle 2 missing 1x roller stay A and 2x mini cam-follower.</span></p>
+<p class="ps3"><span class="ts0">4. Operational panel no response after home completed or cycle finished. Suspect UTAC member used incorrect recovery cd version 2.0 to recover the HDD and restored with old system data from the floppy diskette. To confirm hardware configuration of this handler(CPU upgraded) and perform another recovery with version 2.1 cd.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">29 Apr 2010</span></p>
+<p class="ps3"><span class="ts0">1. Perform recovery with Recovery cd version 2.1 (FD04S015).</span></p>
+<p class="ps3"><span class="ts0">2. Upgrade MMI to 2.0c12.</span></p>
+<p class="ps3"><span class="ts0">3. Restored DU CT gain and CT offset.</span></p>
+<p class="ps3"><span class="ts0">4. Handler able to home and cycle run without hang up.</span></p>
+<p class="ps3"><span class="ts0">5. Teach all robot pose(input/output arm, shuttles, index arm and empty tray arm).</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">LD/ULD induction motor unable to turn when triggered from SPEL95 due to physical address on IO module incorrect.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">Operation Panel no response maybe due to wrong recovery cd or incorrect/incompatible SPEL System backup.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Recovery CD FD04S015 is for (EasyRestore) Win98, MMI 2.0c1, SPEL 95 2.53i</span></p>
+<p class="ps3"><span class="ts0">To use with PC-686BX CPU board.</span></p>
+</body>
+</html>

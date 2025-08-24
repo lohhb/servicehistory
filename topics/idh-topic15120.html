@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0302-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 15120;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0302-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic15110.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic15130.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts23">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject: </span><span class="ts24">NS8080-01&nbsp; 8 Hands output arm hand up sensor error</span></p>
+<p class="ps3"><span class="ts1">Handler Model: UTAC NS-8080 (NS8080-01, S/N: 181665)</span></p>
+<p class="ps3"><span class="ts0">Controller: RC520</span></p>
+<p class="ps3"><span class="ts0">Date: 16 Feb 2011</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts23">Symptom</span></p>
+<p class="ps3"><span class="ts1">UTAC NS8080-01&nbsp; 8 Hands output arm hand up sensor error.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Action</span></p>
+<p class="ps3"><span class="ts0">16 Feb 2011</span></p>
+<p class="ps3"><span class="ts1">- Informed by Ray at 9am hand up sensor error on output arm. Last activity for hand up sensor error issue was on 13 Jan 2011.</span></p>
+<p class="ps3"><span class="ts1">- Advised Ray to check for abnormalities on every hands and perform hand height calibration. After that, he encountered z-axis servo error also.</span></p>
+<p class="ps3"><span class="ts1">- Checked handler at 11am but no more z-axis servo error. However, still got frequent output hand up sensor error.</span></p>
+<p class="ps3"><span class="ts1">- Checked output arm z-axis hands movement ok. Checked the arm assembly for any loose parts/connections, ok. Push and slightly shake the top cover of arm assembly.</span></p>
+<p class="ps3"><span class="ts1">- Resumed production and monitored.</span></p>
+<p class="ps3"><span class="ts1">- From 1130am to 530pm(end lot), total 4 counts of hand up sensor errors.</span></p>
+<p class="ps3"><span class="ts1">- Feedback to Hidaka san, he said Japan will release software for handler to detect which hand servo error but hand up sensor error not sure when can get solution.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">17 Feb 2011</span></p>
+<p class="ps3"><span class="ts1">- Encountered hand up sensor issue again and also RS485 2ack error and RS485 unknown error.</span></p>
+<p class="ps3"><span class="ts1">- According to Hidaka san, no advise from Japan for hand up sensor error. But Japan released new HMI ver.1.8 for improved detection of z-axis servo error on particular hand.</span></p>
+<p class="ps3"><span class="ts1">- Installed HMI ver.1.8 and SPEL CT 3.11dh-sp. Tested on handler and able to prompt which hand z-axis servo error. Also included individual hand home sensor IO check in HMI and zteach.</span></p>
+<p class="ps3"><span class="ts1">- Continue monitoring.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">18 Feb 2011</span></p>
+<p class="ps3"><span class="ts1">- Checked error history and encountered few counts of hand up sensor error on hand G for night shift.</span></p>
+<p class="ps3"><span class="ts1">- Started to encounter hand G sensor error again at 12pm. When error happened, press retry start will lead to output arm z-axis alarm code=6 error and RS485 unknown error. Had to clear error with pause reset start.</span></p>
+<p class="ps3"><span class="ts1">- Also observed when error happened, by pressing the hand G sensor connector, lightly knock on home sensor or adjust/resit sensor wiring, the HMi hand G I/O will light up.</span></p>
+<p class="ps3"><span class="ts1">- At 2pm, disable site 7 for hand G. Run till 330pm no hand up sensor error, but 1 count RS485 unknown error.</span></p>
+<p class="ps3"><span class="ts1">- At 330pm, swapped hand G and hand E sensor to see if problem migrate to hand E. Resume production at 4pm.</span></p>
+<p class="ps3"><span class="ts1">- Continue running till 615pm no occurrence of hand up sensor error.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><span class="ts1">19 Feb 2011</span></p>
+<p class="ps3"><span class="ts1">Last action swapped hand G and hand E home sensor. No problem during the weekends. So root cause still unknown.</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0089-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 10220;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts0">0089-NS8K&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic10210.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic10230.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts24">Subject: NS-8080 setup with NS-6040 change kit (Retro fit kit)</span></p>
+<p class="ps3"><span class="ts1">Handler Model: NS-8080</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 21 Aug 2009</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts1">if installing NS6k changekit into NS-8080, if output shuttle w/o through holes, do we need to enable or disable &quot;Device exist sensor&quot; in HMI [Deviceset] -&gt;[Setup]? </span></p>
+<p class="ps3"><span class="ts1">Current buyoff in ASE, if enable &quot;Device exist sensor&quot; for output shuttle w/o through holes during initial start handler will give intial start error(unloading side). </span></p>
+<p class="ps3"><span class="ts1">Condition now is running output shuttle w/o through holes and disable &quot;Device exist sensor&quot; function. </span></p>
+<p class="ps3"><span class="ts1">We find out HMI [Maintenance]-&gt;[Controller]-&gt;maintenance &quot;checking the IC detection sensor of the unloading side Shuttle&quot; unable to give proper display of device condition.</span></p>
+<p class="ps3"><span class="ts1">See following situation:</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Output shuttle w/o through holes</span></p>
+<p class="ps3"><span class="ts1">1)&quot;Device exist sensor&quot; in HMI setup disabled.</span></p>
+<p class="ps3"><span class="ts1">2) Followed procedures in adjusting the IC Detection Sensor of the Unloading side Shuttle from Handler Manual.</span></p>
+<p class="ps3"><span class="ts1">- no device on shuttle result show O</span></p>
+<p class="ps3"><span class="ts1">- device on shuttle result show X</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">We had also tried on Quad site changekit, scenario also the same. </span></p>
+<p class="ps3"><span class="ts1">Currently ASE NS-8080 is installed with HMI v2.2sp. Previously had tired HMI v2.0 in other customer site is OK.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Can you check with EPSON is there anything wrong with this software?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps13"><span class="ts49">&nbsp;1. Device exist sensor:</span></p>
+<p class="ps13"><span class="ts49">&nbsp;Different selection for NS-7000 and NS-8080</span></p>
+<p class="ps13"><span class="ts49">&nbsp;This is some of history.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;NS-7000 case:</span></p>
+<p class="ps13"><span class="ts49">&nbsp;- First concept for retrofit kit.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;NS-6000 Change Kit support retrofit kit with sensor holes.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;- Device exist sensor is &quot;Gate type&quot; is standard.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;- Thereafter retrofit kit support &quot;without sensor holes&quot;.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;- So, Side sensor is selected by &quot;check box&quot; on the NS-7000</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">&nbsp;NS-8000 case</span></p>
+<p class="ps13"><span class="ts49">&nbsp;- NS-6000 Change Kit support retrofit kit without sensor holes.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;- Device exist sensor is &quot;Side type&quot; is standard.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;- So, Gate sensor is selected by &quot;check box&quot; on the NS-8000</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">&nbsp;Please understand the situation.</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">&nbsp;2. - no device on shuttle result show We will be changed manual </span></p>
+<p class="ps13"><span class="ts49">&nbsp;information.</span></p>
+<p class="ps13"><span class="ts49">&nbsp;So, no device on shuttle result show &quot;O&quot;</span></p>
+<p class="ps13"><span class="ts49">&nbsp;Device on shuttle result show &quot;X&quot;</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps13"><span class="ts49">&nbsp;This is correct condition for NS-8080.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Device exist sensor information(Retrofit kit)</span></p>
+<p class="ps2"><img width="908" height="410" border="0" src="images/0089-ns8kb1.png" /></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+<div align="left">
+  <table class="tbl32">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="24" height="22" border="0" src="images/0089-ns8kb2.png" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><span class="ts20">Gate Sensor</span></p>
+      </td>
+    </tr>
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps125"><img width="24" height="23" border="0" src="images/0089-ns8kb3.png" /></p>
+      </td>
+      <td class="cell0">
+        <p class="ps125"><span class="ts20">Side Sensor</span></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="781" height="395" border="0" src="images/0089-ns8kb4.png" /></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NS-7000 Setup file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NS-8000 Setup file</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Condition : Both of handler use device exist sensor on </span><span class="ts44">side sensor</span><span class="ts1">&nbsp;during retrofit kit supporting</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Selecting exist sensor </span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Case1. NS-8080</span></p>
+<p class="ps3"><span class="ts1">&quot;Use Gate Device Exist Sensor&quot; in the Device Exist Sensor Window</span></p>
+<p class="ps3"><span class="ts1">-&gt; This is &quot;Red circle&quot; Sensor on the above picture.</span></p>
+<p class="ps3"><span class="ts1">&nbsp;when you use retrofit kit,&nbsp; disable(uncheck) &quot;Use Side Device Exist Sensor&quot;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Case2. NS-7000</span></p>
+<p class="ps3"><span class="ts1">&quot;Use Side Device Exist Sensor&quot; in the Device Exist Sensor Window</span></p>
+<p class="ps3"><span class="ts1">-&gt; This is &quot;Blue circle&quot; Sensor on the above picture</span></p>
+<p class="ps3"><span class="ts1">&nbsp;when you use retrofit kit , enable &quot;Use Side Device Exist Sensor&quot;.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts31">1 Sep 2009 email from Ogata</span></p>
+<p class="ps3"><span class="ts1">Received answer from EPSON regarding Output shuttle device detection sensor in NS8000.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">First of all, user's manual is correct.</span></p>
+<p class="ps3"><span class="ts1">Sorry for wrong information to you guys.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">For CH2, It is using for in-line only...</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">There are two type of sensors for Output sensor.</span></p>
+<p class="ps3"><span class="ts1">1. Fiber sensor at side output shuttle.</span></p>
+<p class="ps3"><span class="ts1">2. Photo sensor at top output shuttle.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Sequence of those sensors should different function between Square and in-Line C/K.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">1. For Square,</span></p>
+<p class="ps3"><span class="ts1">Fiber sensor is checking the timing.</span></p>
+<p class="ps3"><span class="ts1">Photo sensor(Gate) is checking device present</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">2. For in-Line,</span></p>
+<p class="ps3"><span class="ts1">Fiber sensor is checking timing and device present.(CH1: Timing, CH2: Device present)</span></p>
+<p class="ps3"><span class="ts1">Photo sensor is NOT using.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Am i right to say that, if using inline 4 shuttles w/o thru holes we do not need to check &quot;Use Gate device exist sensor&quot; as NS-8080 side sensors function as timing sensor and IC detection sensors?</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">If using 2x2 or 2x4, in default NS-8080 uses Gate Device Exist Sensor as there no option.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts1">Adjustment of Output sensor (Using Inline 4 NS-6000 CK) 1. </span></p>
+<p class="ps3"><span class="ts1">Adjustment of Output Shuttle gate fiber sensor</span></p>
+<p class="ps3"><span class="ts1">(1) Set up the value of CH1=SQ1-S, CH2=SQ1-D3, CH1=SQ2-S, CH2=SQ2-D3</span></p>
+<p class="ps3"><span class="ts1">&nbsp;&nbsp; following the attached file</span></p>
+<p class="ps3"><span class="ts1">(2) Manually move Output Shuttle slit to timing sensor. (Without device on the shuttle pocket)</span></p>
+<p class="ps3"><span class="ts1">(3) Then you should find biggest value on the timing sensor.</span></p>
+<p class="ps3"><span class="ts1">(4) Execute &quot;Power tuning&quot; (Set to RUN, press MODE for 3sec or more)</span></p>
+<p class="ps3"><span class="ts1">(5) Put device on the shuttle pocket</span></p>
+<p class="ps3"><span class="ts1">(6) CH2 is lower than 3000. (CH2: Device present)</span></p>
+<p class="ps3"><span class="ts1">(7) CH1 is more than 10. (CH1: Timing)</span></p>
+<p class="ps13"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><img width="541" height="417" border="0" src="images/0089-ns8kb5.jpg" /></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Cause</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Remarks</span></p>
+<p class="ps3"><span class="ts1">Refer </span><a href="idh-topic18080.html" class="hs0">0406-NS8K</a><span class="ts1">&nbsp;on &quot;Use Gate Device Exist Sensor&quot; for NS-8080HW</span></p>
+<p class="ps2"><span class="ts5">&nbsp;&nbsp;</span></p>
+</body>
+</html>

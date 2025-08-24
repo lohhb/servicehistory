@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- saved from url=(0025)http://www.helpsmith.com/ -->
+<head>
+<title>0148-NS8K</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta name="generator" content="HelpSmith 6.4 (Build 17.127)" />
+<style type="text/css" media="screen">
+html {
+  height: 100%;
+}
+body {
+  background-color: #fffcea;
+  margin: 8px 8px 8px 8px;
+}
+</style>
+<link type="text/css" href="../css/topics/style.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/settings.js?a4530e69"></script>
+<script type="text/javascript" src="../js/core.js?e3fa3091"></script>
+<script type="text/javascript" src="../js/topic.js?e3fa3091"></script>
+<script type="text/javascript">
+	var topicContext = 11970;
+</script>
+</head>
+<body>
+<div align="left">
+  <table class="tbl0">
+    <tr class="row0">
+      <td class="cell0">
+        <p class="ps0"><span class="ts1">0148-NS8K</span><span class="ts0">&nbsp; (Compiled by Loh HB)</span></p>
+      </td>
+      <td class="cell0">
+        <p class="ps1"><a href="idh-topic11960.html" class="hs0">Previous</a><span class="ts1">&nbsp;</span><a href="technicalsupportnotes.html" class="hs0">Top</a><span class="ts1">&nbsp;</span><a href="idh-topic11980.html" class="hs0">Next</a></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <div class="hline0"></div>
+</div>
+<p class="ps2"><span class="ts24">Service History</span></p>
+<p class="ps2"><span class="ts23">Subject:</span><span class="ts28">&nbsp;</span><span class="ts23">NS-8040 After power up encountered Uniwire disconnection error</span></p>
+<p class="ps3"><span class="ts0">Handler Model: NS-8040 (S/N: 181394)</span></p>
+<p class="ps3"><span class="ts1">Controller: RC520</span></p>
+<p class="ps3"><span class="ts1">Date: 12 Mar 2010</span></p>
+<p class="ps2"><br />&nbsp;</p>
+<p class="ps2"><span class="ts24">Symptom</span></p>
+<p class="ps3"><span class="ts0">Power up handler, encountered &quot;Disconnection of uni-wire1 transmission line or terminal problem&quot;.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts24">Action</span></p>
+<p class="ps3"><span class="ts0">Remedy by HMI software states (1) Remove the cause of the problem of uni-wire No1. </span></p>
+<p class="ps3"><span class="ts0">I performed the following:</span></p>
+<p class="ps3"><span class="ts0">- reset Remote I/O board, pressed HOME but HMI status windows indicate please close Index side door</span></p>
+<p class="ps3"><span class="ts0">- found at rear top-left of Index, 2 I/O modules no power, no light.</span></p>
+<p class="ps3"><span class="ts0">- open top cover of Index and resit all I/O modules black power connectors</span></p>
+<p class="ps3"><span class="ts0">- reset Remote I/O board</span><span class="ts1">&nbsp;Able to HOME handler</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Cause</span></p>
+<p class="ps3"><span class="ts0">Loose connection on 2 I/O Modules behind hander rear-left Index.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps2"><span class="ts23">Remarks</span></p>
+<p class="ps3"><span class="ts0">Just check all of uniwire wiring condition.</span></p>
+<p class="ps3"><span class="ts0">&nbsp;(Check uniwire LED is turned on or off one by one.)</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;There is no identify which uniwire is problem because of mechanical limitation.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;Note: Uniwire-01 =&nbsp; No.1 Remote I/O board happen error</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uniwire-02 = No.2 Remote I/O board happen error</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps3"><span class="ts0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In case of NS-8160W and 8160SW, 2 sets of Remote I/O are assembled to PC.</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps150"><span class="ts37">1) EIN 30 of 16CH (located below Loader unit) include Cover Open Switch(Input Bit 299)</span></p>
+<p class="ps144"><span class="ts37">2) EIN7 consist of Input Bit( 104~110 connected to SKP452 E-stop board) for Doors</span></p>
+<p class="ps3"><span class="ts37">3) EIN30 of 8 CH (located above Index) include Input Bit 284 for Index side cover door</span></p>
+<p class="ps3"><br /><span class="ts4">&nbsp;</span></p>
+<p class="ps144"><span class="ts55">Email by Hidaka, 25 May 2011:</span></p>
+<p class="ps144"><span class="ts55">To change EIN30 label of 232&nbsp; Input Module 8 CH (located at Index area)</span></p>
+<p class="ps144"><span class="ts55">EIN30&nbsp;&nbsp;&nbsp; -&gt; OP IN</span></p>
+<p class="ps3"><span class="ts55">EOUT30 -&gt;OP OUT</span></p>
+</body>
+</html>
